@@ -89,10 +89,31 @@ class OpenAICompatModel(Model):
                 raise
         raise RuntimeError("unreachable")
 
+    @staticmethod
+    def _sanitize_schema(schema):
+        """OpenAI rejects schemas whose ``required`` names properties that are
+        not defined (seen in third-party Bedrock-style toolspecs, which
+        tolerate it). Recursively drop such entries; never mutate the input."""
+        if isinstance(schema, list):
+            return [OpenAICompatModel._sanitize_schema(v) for v in schema]
+        if not isinstance(schema, dict):
+            return schema
+        out = {k: OpenAICompatModel._sanitize_schema(v) for k, v in schema.items()}
+        req, props = out.get("required"), out.get("properties")
+        if isinstance(req, list) and isinstance(props, dict):
+            out["required"] = [r for r in req if r in props]
+        return out
+
     def generate(self, messages, tools, system=None) -> ModelTurn:
         body: dict = {"model": self.model, "messages": self._to_messages(messages, system)}
         if tools:
-            body["tools"] = [{"type": "function", "function": t} for t in tools]
+            body["tools"] = [
+                {
+                    "type": "function",
+                    "function": {**t, "parameters": self._sanitize_schema(t.get("parameters"))},
+                }
+                for t in tools
+            ]
         if self.temperature is not None:
             body["temperature"] = self.temperature
         resp = self._post(body)

@@ -91,6 +91,7 @@ def iterate(
     auditor: SymbolicController | None = None,
     control_mode: str = "full",
     probe_cache=None,
+    mask_granularity: str = "step",
 ) -> Generator[Frame, None, RunResult]:
     if controller is None:
         tracer = Tracer(trace_path)
@@ -102,6 +103,7 @@ def iterate(
             predicate_evaluator=predicate_evaluator,
             control_mode=control_mode,
             probe_cache=probe_cache,
+            mask_granularity=mask_granularity,
         )
     else:
         tracer = controller.tracer  # one stream for controller + loop events
@@ -201,6 +203,13 @@ def iterate(
             continue
 
         # NEURAL_CHOICE — dynamic per-step tool exposure.
+        if getattr(controller, "mask_granularity", "step") == "hint":
+            # Cache-friendly soft masking: the tools block stays stable;
+            # the restriction rides in an appended message (validate() is
+            # still the hard boundary).
+            allowed = getattr(controller, "last_admissible", None)
+            if allowed is not None and set(allowed) != set(decision.actions):
+                flow.nudge("[ACORN] Currently permitted tools: " + ", ".join(allowed) + ".")
         _t0 = time.perf_counter()
         turn = model.generate(
             flow.build_context(), tools=tools.schemas(decision.actions), system=system

@@ -38,6 +38,7 @@ os.environ.setdefault("TAU2_DATA_DIR", str(TAU2 / "data"))
 _LIBRARY = None
 _MODEL_SPEC = None
 _CONTROL_MODE = "full"
+_CACHE = None
 
 
 def _load_library(domain: str):
@@ -76,11 +77,12 @@ def _acorn_factory(tools=None, domain_policy=None, **kwargs):
         model=models.resolve(_MODEL_SPEC),
         library=_LIBRARY,
         control_mode=_CONTROL_MODE,
+        probe_cache=_CACHE,
     )
 
 
 def main() -> None:
-    global _LIBRARY, _MODEL_SPEC, _CONTROL_MODE
+    global _LIBRARY, _MODEL_SPEC, _CONTROL_MODE, _CACHE
     ap = argparse.ArgumentParser()
     ap.add_argument("--domain", default="retail")
     ap.add_argument("--agent-model", default="gpt-4.1-mini", help="official model name (matched)")
@@ -101,6 +103,9 @@ def main() -> None:
     _CONTROL_MODE = args.control_mode
 
     if args.arm == "acorn":
+        from acorn.cache import ResidualPolicyCache
+
+        _CACHE = ResidualPolicyCache()
         _LIBRARY = _load_library(args.domain)
         registry.register_agent_factory(_acorn_factory, "acorn_agent")
         agent_name, llm_label = "acorn_agent", f"acorn-{args.agent_model}"
@@ -128,6 +133,8 @@ def main() -> None:
     print(f"avg reward: {metrics.avg_reward:.3f}")
     print(f"pass^k: {metrics.pass_hat_ks}")
     print(f"simulations: {len(results.simulations)}")
+    if _CACHE is not None:
+        print(f"residual cache: {_CACHE.stats()}")
 
 
 if __name__ == "__main__":

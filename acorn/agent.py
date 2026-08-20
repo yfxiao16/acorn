@@ -46,6 +46,7 @@ class Agent:
         predicate_evaluator: Any = None,
         control_mode: str = "full",
         cache: bool = False,
+        mask_granularity: str = "step",
     ) -> None:
         self.model = model
         if isinstance(tools, ToolRegistry):
@@ -59,6 +60,7 @@ class Agent:
         self.max_steps = max_steps
         self.predicate_evaluator = predicate_evaluator
         self.control_mode = control_mode
+        self.mask_granularity = mask_granularity
         # Residual policy cache (opt-in): shared across this Agent's runs
         # so repeated procedural states across tasks reuse compiled probes.
         from acorn.cache import ResidualPolicyCache
@@ -109,6 +111,7 @@ class Agent:
             auditor=auditor,
             control_mode=self.control_mode,
             probe_cache=self.probe_cache,
+            mask_granularity=self.mask_granularity,
         )
         result = yield from gen
         self.last_result = result

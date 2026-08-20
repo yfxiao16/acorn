@@ -55,7 +55,16 @@ class SymbolicController:
         tracer: Tracer | None = None,
         control_mode: str = "full",
         probe_cache=None,
+        mask_granularity: str = "step",
     ) -> None:
+        # "step": expose only the per-step admissible set (max masking, but
+        # schema churn breaks provider prompt caches). "phase": expose the
+        # flow's stable candidate set; contract admissibility still drives
+        # jump detection internally and validate() enforces per call —
+        # trading some invalid-proposal risk for prefix-cache stability.
+        if mask_granularity not in ("step", "phase", "hint"):
+            raise ValueError(f"unknown mask_granularity {mask_granularity!r}")
+        self.mask_granularity = mask_granularity
         self.probe_cache = probe_cache
         # control_mode — the ablation ladder:
         #   "passive": validate-only (block + reprompt); no masking, no jump.
@@ -254,7 +263,13 @@ class SymbolicController:
                 )
 
         # Case A — genuine freedom: the model chooses among admissible actions.
-        return StepDecision.neural(admissible, obligations=self.obligations.pending())
+        self.last_admissible = list(admissible)
+        exposed = (
+            list(candidate_actions)
+            if self.mask_granularity in ("phase", "hint")
+            else admissible
+        )
+        return StepDecision.neural(exposed, obligations=self.obligations.pending())
 
     def _bind_args(self, tool_name: str, agent_state: Any = None) -> dict | None:
         """Deterministic argument binding; None = LLM must decide."""

@@ -160,7 +160,7 @@ SUBMIT_SCHEMA = {
 CONDITIONS = ("baseline", "passive", "mask", "acorn")
 
 
-def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None) -> acorn.Agent:
+def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step") -> acorn.Agent:
     """`sink` receives {'hazard_score', 'hazard_class'} on submit.
 
     The four-condition ablation ladder:
@@ -211,6 +211,7 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         contracts=build_library(),
         predicate_evaluator=DGPredicates(),
         control_mode={"passive": "passive", "mask": "mask", "acorn": "full"}[condition],
+        mask_granularity=mask_granularity,
         max_steps=12,
     )
 
@@ -226,13 +227,15 @@ def task_prompt(pack: Pack, row: dict) -> str:
     return "\n".join(lines)
 
 
-def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn"):
+def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step"):
     """Run one dev-set row; returns (submitted_result, RunResult).
 
     Every condition carries the same observe-mode auditor, so procedural
     compliance is measured identically with and without enforcement."""
     sink: dict = {}
-    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row)
+    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity)
+    if probe_cache is not None and condition in ("mask", "acorn"):
+        agent.probe_cache = probe_cache
     facts = {"product_id_valid": bool(PID_RE.match(row[pack.key_field]))}
     auditor = build_library().auditor(predicate_evaluator=DGPredicates())
     result = agent.run(task_prompt(pack, row), facts=facts, auditor=auditor)

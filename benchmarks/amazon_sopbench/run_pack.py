@@ -30,13 +30,31 @@ except ModuleNotFoundError:
 from acorn import models
 from acorn.envfile import load_dotenv
 
-from benchmarks.amazon_sopbench import customer_service, dangerous_goods, patient_intake
+from benchmarks.amazon_sopbench import (
+    aircraft_inspection,
+    content_flagging,
+    customer_service,
+    dangerous_goods,
+    email_intent,
+    know_your_business,
+    patient_intake,
+    video_annotation,
+    video_classification,
+    warehouse_package_inspection,
+)
 from benchmarks.amazon_sopbench.pack import load_pack
 
 DOMAINS = {
     "dangerous_goods_sop": dangerous_goods,
     "customer_service_sop": customer_service,
     "patient_intake_sop": patient_intake,
+    "know_your_business_sop": know_your_business,
+    "aircraft_inspection_sop": aircraft_inspection,
+    "warehouse_package_inspection_sop": warehouse_package_inspection,
+    "email_intent_sop": email_intent,
+    "content_flagging_sop": content_flagging,
+    "video_annotation_sop": video_annotation,
+    "video_classification_sop": video_classification,
 }
 
 
@@ -54,6 +72,7 @@ def main() -> None:
     ap.add_argument("--condition", choices=["baseline", "passive", "mask", "acorn"], default="acorn")
     ap.add_argument("--limit", type=int, default=0, help="0 = all rows")
     ap.add_argument("--out", default=None, help="write per-row results JSON here")
+    ap.add_argument("--mask-granularity", choices=["step", "phase", "hint"], default="step")
     args = ap.parse_args()
 
     pack = load_pack(args.pack)
@@ -62,6 +81,9 @@ def main() -> None:
         raise SystemExit(f"no adapter for pack {pack.name!r} yet (have: {sorted(DOMAINS)})")
 
     rows = pack.rows[: args.limit] if args.limit else pack.rows
+    from acorn.cache import ResidualPolicyCache
+
+    probe_cache = ResidualPolicyCache() if args.condition in ("mask", "acorn") else None
 
     per_row, correct, completed = [], 0, 0
     tot_model_calls = tot_symbolic = tot_blocked = tot_tokens = 0
@@ -72,7 +94,8 @@ def main() -> None:
     for i, row in enumerate(rows):
         try:
             submitted, result = domain.run_row(
-                lambda: models.resolve(args.model), pack, row, condition=args.condition
+                lambda: models.resolve(args.model), pack, row, condition=args.condition,
+                probe_cache=probe_cache, mask_granularity=args.mask_granularity,
             )
         except Exception as exc:  # noqa: BLE001 — a row must never kill the run
             print(f"[{i + 1}/{len(rows)}] {row[pack.key_field]}: ERROR {str(exc)[:120]}")
@@ -123,6 +146,7 @@ def main() -> None:
         "pack": pack.name,
         "model": args.model,
         "condition": args.condition,
+        "mask_granularity": args.mask_granularity,
         "n": n,
         "TSR": correct / n,
         "ECR": completed / n,
@@ -142,6 +166,7 @@ def main() -> None:
         "decision_states": len(state_sigs),
         "unique_states": len(set(state_sigs)),
         "state_reuse_rate": round(1 - len(set(state_sigs)) / max(1, len(state_sigs)), 4),
+        "cache": probe_cache.stats() if probe_cache is not None else None,
         "wall_clock_s": round(time.time() - t0, 1),
     }
     print(json.dumps(summary, indent=2))

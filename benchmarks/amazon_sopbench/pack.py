@@ -76,6 +76,7 @@ def build_registry(
     *,
     output_columns: dict[str, list[str]] | None = None,
     row: dict | None = None,
+    custom: dict | None = None,
 ) -> ToolRegistry:
     """Registry of deterministic lookup tools mirroring the pack's tools.py.
 
@@ -87,10 +88,23 @@ def build_registry(
     schemas carry no key field (e.g. session-scoped tools) resolve to the
     bound row — mirroring the official tools, which resolve state via
     session/ticket internally. A key passed in args still wins.
+
+    ``custom`` maps tool name -> callable for tools whose outputs are not
+    CSV columns (e.g. content_flagging's calculateBotProbabilityIndex,
+    whose outputs live only in the pack's unshipped data.csv); the
+    callable is registered with the pack's schema, bypassing column relay.
     """
     registry = ToolRegistry()
     for spec in pack.specs:
         name = spec["name"]
+        if custom is not None and name in custom:
+            registry.tool(
+                custom[name],
+                name=name,
+                description=spec["description"],
+                parameters=spec["parameters"],
+            )
+            continue
         if output_columns is not None:
             cols = output_columns.get(name)
             if not cols:

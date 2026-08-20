@@ -276,7 +276,7 @@ TOOL_ORDER = [
 CONDITIONS = ("baseline", "passive", "mask", "acorn")
 
 
-def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None) -> acorn.Agent:
+def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step") -> acorn.Agent:
     assert condition in CONDITIONS, condition
     registry = build_registry(pack, output_columns=OUTPUT_COLUMNS, row=row)
 
@@ -348,6 +348,7 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         contracts=build_library(),
         predicate_evaluator=CSPredicates(),
         control_mode={"passive": "passive", "mask": "mask", "acorn": "full"}[condition],
+        mask_granularity=mask_granularity,
         max_steps=16,
     )
 
@@ -364,9 +365,11 @@ def task_prompt(pack: Pack, row: dict) -> str:
     return "\n".join(lines)
 
 
-def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn"):
+def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step"):
     sink: dict = {}
-    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row)
+    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity)
+    if probe_cache is not None and condition in ("mask", "acorn"):
+        agent.probe_cache = probe_cache
     auditor = build_library().auditor(predicate_evaluator=CSPredicates())
     result = agent.run(task_prompt(pack, row), auditor=auditor)
     return sink.get("result"), result

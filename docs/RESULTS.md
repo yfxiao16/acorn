@@ -20,10 +20,14 @@ observe mode across every condition.
 | customer_service | gpt-5-mini | baseline | 156 | **68.6%** | 7.28 | 0.00 | 73% | 4,023,794 | $2.41 | 25.9s | 0.0003 | 0.97 |
 | customer_service | gpt-5-mini | mask | 156 | **69.9%** | 6.39 | 0.00 | 100% | 2,727,985 | $1.64 | 62.0s | 0.0001 | 0.47 |
 | customer_service | gpt-5-mini | passive | 156 | **69.9%** | 7.39 | 0.00 | 100% | 4,166,792 | $2.50 | 33.4s | 0.0001 | 0.46 |
+| patient_intake | gpt-5-mini | baseline | 66 | **45.5%** | 2.94 | 0.00 | 98% | 539,312 | $0.32 | 21.9s | 0.0001 | 0.93 |
+| patient_intake | gpt-5-mini | passive | 66 | **43.9%** | 2.89 | 0.00 | 100% | 523,012 | $0.31 | 20.3s | 0.0001 | 0.85 |
+| patient_intake | gpt-5-mini | mask | 66 | **100.0%** | 4.73 | 0.00 | 100% | 726,955 | $0.44 | 38.0s | 0.0002 | 0.90 |
+| patient_intake | gpt-5-mini | acorn | 66 | **100.0%** | 3.73 | 0.21 | 100% | 605,381 | $0.36 | 32.0s | 0.0003 | 0.90 |
 
 ## Run-to-run variance (dangerous_goods, gpt-5-mini, 20 rows × 3 trials)
 
 - **acorn**: ['100%', '100%', '100%'] — mean 100.0% ± 0.0pp
 - **base**: ['65%', '75%', '75%'] — mean 71.7% ± 5.8pp
 
-_Estimated total model cost of all listed runs: $18.06 (blended per-Mtok estimates; exact billing lags 24h in Cost Explorer)._
+_Estimated total model cost of all listed runs: $19.49 (blended per-Mtok estimates; exact billing lags 24h in Cost Explorer)._

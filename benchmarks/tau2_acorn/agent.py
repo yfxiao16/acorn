@@ -75,6 +75,9 @@ class AcornTau2Agent(HalfDuplexAgent[AcornState]):
         self.control_mode = control_mode
         self.probe_cache = probe_cache
         self.max_block_retries = max_block_retries
+        self.model_calls = 0
+        self.model_tokens = 0
+        self.symbolic_emits = 0
         self.schemas = [_schema_of(t) for t in tools]
         self.tool_names = [s["name"] for s in self.schemas]
 
@@ -102,6 +105,7 @@ class AcornTau2Agent(HalfDuplexAgent[AcornState]):
             action = decision.action
             verdict = controller.validate(action)
             if verdict.allowed:
+                self.symbolic_emits += 1
                 return self._emit_calls([action], state), state
             # fall through to neural if the symbolic pick failed validation
 
@@ -110,6 +114,8 @@ class AcornTau2Agent(HalfDuplexAgent[AcornState]):
 
         for _attempt in range(self.max_block_retries + 1):
             turn = self.model.generate(list(state.neutral), tools=schemas, system=self.domain_policy)
+            self.model_calls += 1
+            self.model_tokens += turn.usage.get("total", 0)
             if not turn.tool_calls:
                 # Floor-yield gate: no text turn (a potential episode end)
                 # while eventually-obligations are pending.

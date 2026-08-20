@@ -17,6 +17,10 @@ RUNS = [
     ("cs_base_full", "customer_service", "gpt-5-mini", "baseline", 156),
     ("cs_mask_full", "customer_service", "gpt-5-mini", "mask", 156),
     ("cs_passive_full", "customer_service", "gpt-5-mini", "passive", 156),
+    ("pi_baseline_full", "patient_intake", "gpt-5-mini", "baseline", 66),
+    ("pi_passive_full", "patient_intake", "gpt-5-mini", "passive", 66),
+    ("pi_mask_full", "patient_intake", "gpt-5-mini", "mask", 66),
+    ("pi_acorn_full", "patient_intake", "gpt-5-mini", "acorn", 66),
 ]
 # rough blended $/Mtok estimates for cost REPORTING (marked as estimates)
 PRICE = {"gpt-5-mini": 0.6, "claude-4.5-haiku": 1.8, "gpt-oss-120b": 0.3, "llama-3.3-70b": 0.9}

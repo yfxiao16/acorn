@@ -33,6 +33,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--domain", default="retail")
     ap.add_argument("--tasks", type=int, default=3)
+    ap.add_argument("--task-ids", default=None, help="comma-separated task ids")
     ap.add_argument("--agent-model", default="openai:gpt-5-mini")
     ap.add_argument("--user-model", default="openai/gpt-4.1-mini")
     ap.add_argument("--max-steps", type=int, default=60)
@@ -49,7 +50,10 @@ def main() -> None:
     from acorn import models
     from benchmarks.tau2_acorn.agent import AcornTau2Agent
 
-    tasks = get_tasks(args.domain, num_tasks=args.tasks)
+    if args.task_ids:
+        tasks = get_tasks(args.domain, task_ids=args.task_ids.split(","))
+    else:
+        tasks = get_tasks(args.domain, num_tasks=args.tasks)
     print(f"{len(tasks)} tasks from {args.domain}")
 
     library = None
@@ -120,6 +124,10 @@ def main() -> None:
             )
         print(line)
         rec = {"task": str(task.id), "reward": ri.reward if ri else None,
+               "model_calls": agent.model_calls, "model_tokens": agent.model_tokens,
+               "symbolic_emits": agent.symbolic_emits,
+               "reward_breakdown": (ri.model_dump(mode="json") if ri else None),
+               "sim_messages": [m.model_dump(mode="json") for m in sim.messages],
                "termination": str(sim.termination_reason), "msgs": len(sim.messages)}
         if library is not None and ctrl is not None:
             rec.update({"masked": masked, "committed_violations": violations,

@@ -69,6 +69,15 @@ class AcornTau2Agent(HalfDuplexAgent[AcornState]):
         max_block_retries: int = 3,
     ) -> None:
         super().__init__(tools=tools, domain_policy=domain_policy)
+        # Prompt parity with tau2's official LLMAgent: the same
+        # <instructions> preamble + <policy> wrapper. Passing the bare
+        # policy text measurably degrades the agent (generic-assistant
+        # behavior: hallucinated ids, return-instead-of-exchange).
+        from tau2.agent.llm_agent import AGENT_INSTRUCTION, SYSTEM_PROMPT
+
+        self._system_prompt = SYSTEM_PROMPT.format(
+            agent_instruction=AGENT_INSTRUCTION, domain_policy=domain_policy
+        )
         self.model = model
         self.library = library
         self.predicate_evaluator = predicate_evaluator
@@ -113,7 +122,7 @@ class AcornTau2Agent(HalfDuplexAgent[AcornState]):
         schemas = [s for s in self.schemas if s["name"] in exposed] or self.schemas
 
         for _attempt in range(self.max_block_retries + 1):
-            turn = self.model.generate(list(state.neutral), tools=schemas, system=self.domain_policy)
+            turn = self.model.generate(list(state.neutral), tools=schemas, system=self._system_prompt)
             self.model_calls += 1
             self.model_tokens += turn.usage.get("total", 0)
             if not turn.tool_calls:

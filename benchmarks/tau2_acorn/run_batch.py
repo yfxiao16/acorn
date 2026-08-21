@@ -82,7 +82,10 @@ def _acorn_factory(tools=None, domain_policy=None, **kwargs):
     return AcornTau2Agent(
         tools=tools,
         domain_policy=domain_policy,
-        model=models.resolve(_MODEL_SPEC),
+        # temperature parity with the official arm (llm_args_agent
+        # temperature=0.0); an unset temperature means the provider default
+        # (1.0), which tanks pass^k through cross-trial inconsistency.
+        model=models.resolve(_MODEL_SPEC, temperature=0.0),
         library=_LIBRARY,
         control_mode=_CONTROL_MODE,
         probe_cache=_CACHE,

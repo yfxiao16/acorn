@@ -73,6 +73,12 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=0, help="0 = all rows")
     ap.add_argument("--out", default=None, help="write per-row results JSON here")
     ap.add_argument("--mask-granularity", choices=["step", "phase", "hint"], default="step")
+    ap.add_argument(
+        "--flow-profile",
+        default=None,
+        help="flow internalization profile for domains that support the "
+        "workflow<->agent sweep (know_your_business, warehouse_package_inspection)",
+    )
     args = ap.parse_args()
 
     pack = load_pack(args.pack)
@@ -89,13 +95,15 @@ def main() -> None:
     tot_model_calls = tot_symbolic = tot_blocked = tot_tokens = 0
     proc_clean = tot_violations = tot_cached = 0
     state_sigs = []
+    freedom_samples: list[int] = []  # |exposed actions| at each neural decision
     t_model = t_ctrl = t_tools = 0.0
     t0 = time.time()
     for i, row in enumerate(rows):
         try:
+            extra = {"flow_profile": args.flow_profile} if args.flow_profile else {}
             submitted, result = domain.run_row(
                 lambda: models.resolve(args.model), pack, row, condition=args.condition,
-                probe_cache=probe_cache, mask_granularity=args.mask_granularity,
+                probe_cache=probe_cache, mask_granularity=args.mask_granularity, **extra,
             )
         except Exception as exc:  # noqa: BLE001 — a row must never kill the run
             print(f"[{i + 1}/{len(rows)}] {row[pack.key_field]}: ERROR {str(exc)[:120]}")
@@ -115,6 +123,11 @@ def main() -> None:
         t_ctrl += result.time_controller_s
         t_tools += result.time_tools_s
         state_sigs += [r["sig"] for r in result.tracer.records if r["kind"] == "controller/state_sig"]
+        freedom_samples += [
+            len(r.get("actions") or [])
+            for r in result.tracer.records
+            if r["kind"] == "controller/decision" and r.get("decision") == "neural_choice"
+        ]
         audit = result.audit or {}
         proc_clean += bool(audit.get("proc_clean"))
         tot_violations += audit.get("violation_count", 0)
@@ -147,6 +160,8 @@ def main() -> None:
         "model": args.model,
         "condition": args.condition,
         "mask_granularity": args.mask_granularity,
+        "flow_profile": args.flow_profile,
+        "freedom": round(sum(freedom_samples) / max(1, len(freedom_samples)), 2),
         "n": n,
         "TSR": correct / n,
         "ECR": completed / n,

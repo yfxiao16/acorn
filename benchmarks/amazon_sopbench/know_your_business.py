@@ -210,6 +210,60 @@ SUBMIT_SCHEMA = {
 }
 
 
+# Workflow<->agent sweep (paper analysis): how much of the procedure is
+# internalized as prescriptive flow states vs left to the (constant)
+# external contracts. Contracts never change across profiles — only the
+# per-step exposure structure does. Stage groups, in SOP order:
+_STAGES = [
+    ["getBusinessProfile"],
+    ["verifyBusinessRegistration"],
+    ["getOwnershipData"],
+    ["verifyUBO"],
+    ["performSanctionsCheck"],
+    ["getBankData", "verifyBankAccount"],
+    ["calculateRiskScore"],
+    ["submit_result"],
+]
+_STAGE_FACTS = [
+    "profile_fetched", "registration_checked", "ownership_fetched",
+    "ubo_verified", "sanctions_screened", "bank_checked", "risk_scored",
+    "result_submitted",
+]
+# profile -> how the 7 chain stages merge into flow states (None = FreeFlow;
+# submit is always its own state, so states = len(spans) + 2 incl. done)
+FLOW_PROFILES = {
+    "free": None,
+    "k2": [(0, 6)],                                  # one verify superstate
+    "k4": [(0, 2), (3, 5), (6, 6)],                  # fetch / screen / risk
+    "k6": [(0, 0), (1, 1), (2, 3), (4, 4), (5, 5), (6, 6)],
+    "full": [(i, i) for i in range(7)],              # the 8-state pipeline
+}
+
+
+def _build_flow(profile: str):
+    spans = FLOW_PROFILES[profile]
+    if spans is None:
+        return None
+    flow = acorn.GraphFlow(start="s0")
+    names = [f"s{i}" for i in range(len(spans))] + ["submit", "done"]
+    for i, (lo, hi) in enumerate(spans):
+        tools = [t for g in _STAGES[lo : hi + 1] for t in g]
+        done_fact = _STAGE_FACTS[hi]
+        flow = flow.state(
+            names[i],
+            tools=tools,
+            next=lambda ctx, f=done_fact, nxt=names[i + 1]: nxt
+            if ctx.facts.truthy(f)
+            else None,
+        )
+    flow = flow.state(
+        "submit",
+        tools=["submit_result"],
+        next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+    ).state("done", tools=[], terminal=True)
+    return flow
+
+
 def build_agent(
     model,
     pack: Pack,
@@ -218,8 +272,10 @@ def build_agent(
     condition: str = "acorn",
     row: dict | None = None,
     mask_granularity: str = "step",
+    flow_profile: str = "full",
 ) -> acorn.Agent:
     assert condition in CONDITIONS, condition
+    assert flow_profile in FLOW_PROFILES, flow_profile
     registry = build_registry(pack, output_columns=OUTPUT_COLUMNS, row=row)
 
     def submit_result(**kwargs):
@@ -275,53 +331,7 @@ def build_agent(
             }
             for name, binder in binders.items():
                 registry.get(name).args_binder = binder
-        flow = (
-            acorn.GraphFlow(start="profile")
-            .state(
-                "profile",
-                tools=["getBusinessProfile"],
-                next=lambda ctx: "registration" if ctx.facts.truthy("profile_fetched") else None,
-            )
-            .state(
-                "registration",
-                tools=["verifyBusinessRegistration"],
-                next=lambda ctx: "ownership"
-                if ctx.facts.truthy("registration_checked")
-                else None,
-            )
-            .state(
-                "ownership",
-                tools=["getOwnershipData"],
-                next=lambda ctx: "ubo" if ctx.facts.truthy("ownership_fetched") else None,
-            )
-            # §5.3 (UBO analysis) precedes §5.4 (sanctions screening).
-            .state(
-                "ubo",
-                tools=["verifyUBO"],
-                next=lambda ctx: "sanctions" if ctx.facts.truthy("ubo_verified") else None,
-            )
-            .state(
-                "sanctions",
-                tools=["performSanctionsCheck"],
-                next=lambda ctx: "bank" if ctx.facts.truthy("sanctions_screened") else None,
-            )
-            .state(
-                "bank",
-                tools=["getBankData", "verifyBankAccount"],
-                next=lambda ctx: "risk" if ctx.facts.truthy("bank_checked") else None,
-            )
-            .state(
-                "risk",
-                tools=["calculateRiskScore"],
-                next=lambda ctx: "submit" if ctx.facts.truthy("risk_scored") else None,
-            )
-            .state(
-                "submit",
-                tools=["submit_result"],
-                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
-            )
-            .state("done", tools=[], terminal=True)
-        )
+        flow = _build_flow(flow_profile)
     return acorn.Agent(
         model,
         tools=registry,
@@ -356,10 +366,12 @@ def run_row(
     condition: str = "acorn",
     probe_cache=None,
     mask_granularity: str = "step",
+    flow_profile: str = "full",
 ):
     sink: dict = {}
     agent = build_agent(
-        model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity
+        model_factory(), pack, sink, condition=condition, row=row,
+        mask_granularity=mask_granularity, flow_profile=flow_profile,
     )
     if probe_cache is not None and condition in ("mask", "acorn"):
         agent.probe_cache = probe_cache

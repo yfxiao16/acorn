@@ -257,9 +257,130 @@ SUBMIT_SCHEMA = {
 
 ALL_TOOLS = list(OUTPUT_COLUMNS)
 
+CLASSIFY = ["calculateQuantityVariance", "verifyWarehouseLocation", "assessPackageCondition"]
+RESOLVE = ["calculateChargeback", "updateResolutionStatus", "generateProblemReport"]
 
-def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step") -> acorn.Agent:
+# Workflow<->agent sweep profiles. Contracts are constant everywhere —
+# only the prescriptive exposure structure varies. ``branch`` internalizes
+# the §5.1.1 barcode branch; ``naive`` is the deliberately branch-blind
+# linear pipeline a workflow author without that insight would write (the
+# over-internalization arm: on Wrong-Item rows its states demand tools the
+# contracts forbid).
+FLOW_PROFILES = ("free", "flat", "coarse", "branch", "naive")
+
+
+def _build_flow(profile: str):
+    if profile == "free":
+        return None
+    g = acorn.GraphFlow(start="work" if profile == "flat" else "intake")
+    if profile == "flat":
+        return (
+            g.state(
+                "work",
+                tools=[*ALL_TOOLS, "submit_result"],
+                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+            ).state("done", tools=[], terminal=True)
+        )
+    if profile == "coarse":
+        return (
+            g.state(
+                "intake",
+                tools=["validateBarcode"],
+                next=lambda ctx: "process" if ctx.facts.get("barcode_checked") else None,
+            )
+            .state(
+                "process",
+                tools=[*CLASSIFY, *RESOLVE],
+                next=lambda ctx: "submit" if ctx.facts.get("report_generated") else None,
+            )
+            .state(
+                "submit",
+                tools=["submit_result"],
+                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+            )
+            .state("done", tools=[], terminal=True)
+        )
+    if profile == "branch":
+        return (
+            g.state(
+                "intake",
+                tools=["validateBarcode"],
+                next=lambda ctx: (
+                    None
+                    if ctx.facts.get("barcode_match") is None
+                    else ("classify" if ctx.facts.truthy("barcode_match") else "report")
+                ),
+            )
+            .state(
+                "classify",
+                tools=CLASSIFY,
+                next=lambda ctx: "resolve"
+                if all(
+                    ctx.facts.get(m) is not None
+                    for m in ("variance_done", "location_checked", "condition_checked")
+                )
+                else None,
+            )
+            .state(
+                "resolve",
+                tools=["calculateChargeback", "updateResolutionStatus"],
+                next=lambda ctx: "report"
+                if ctx.facts.get("chargeback_done") and ctx.facts.get("status_updated")
+                else None,
+            )
+            .state(
+                "report",
+                tools=["generateProblemReport"],
+                next=lambda ctx: "submit" if ctx.facts.get("report_generated") else None,
+            )
+            .state(
+                "submit",
+                tools=["submit_result"],
+                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+            )
+            .state("done", tools=[], terminal=True)
+        )
+    # naive: branch-blind linear pipeline (assessment forced on every row).
+    return (
+        g.state(
+            "intake",
+            tools=["validateBarcode"],
+            next=lambda ctx: "classify" if ctx.facts.get("barcode_checked") else None,
+        )
+        .state(
+            "classify",
+            tools=CLASSIFY,
+            next=lambda ctx: "resolve"
+            if all(
+                ctx.facts.get(m) is not None
+                for m in ("variance_done", "location_checked", "condition_checked")
+            )
+            else None,
+        )
+        .state(
+            "resolve",
+            tools=["calculateChargeback", "updateResolutionStatus"],
+            next=lambda ctx: "report"
+            if ctx.facts.get("chargeback_done") and ctx.facts.get("status_updated")
+            else None,
+        )
+        .state(
+            "report",
+            tools=["generateProblemReport"],
+            next=lambda ctx: "submit" if ctx.facts.get("report_generated") else None,
+        )
+        .state(
+            "submit",
+            tools=["submit_result"],
+            next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+        )
+        .state("done", tools=[], terminal=True)
+    )
+
+
+def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step", flow_profile: str = "flat") -> acorn.Agent:
     assert condition in CONDITIONS, condition
+    assert flow_profile in FLOW_PROFILES, flow_profile
     registry = build_registry(pack, output_columns=OUTPUT_COLUMNS, row=row)
 
     def submit_result(**kwargs):
@@ -279,15 +400,7 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
 
     flow = None
     if condition in ("mask", "acorn"):
-        flow = (
-            acorn.GraphFlow(start="work")
-            .state(
-                "work",
-                tools=[*ALL_TOOLS, "submit_result"],
-                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
-            )
-            .state("done", tools=[], terminal=True)
-        )
+        flow = _build_flow(flow_profile)
     return acorn.Agent(
         model,
         tools=registry,
@@ -312,9 +425,9 @@ def task_prompt(pack: Pack, row: dict) -> str:
     return "\n".join(lines)
 
 
-def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step"):
+def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step", flow_profile: str = "flat"):
     sink: dict = {}
-    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity)
+    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity, flow_profile=flow_profile)
     if probe_cache is not None and condition in ("mask", "acorn"):
         agent.probe_cache = probe_cache
     auditor = build_library().auditor(predicate_evaluator=WHPredicates())

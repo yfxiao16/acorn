@@ -117,7 +117,10 @@ def main() -> None:
         domain=args.domain,
         agent=agent_name,
         llm_agent=llm_label if args.arm == "acorn" else args.agent_model,
-        llm_args_agent={"temperature": 0.0},
+        # num_retries reaches litellm; sustained 429 windows killed a full
+        # batch arm at tau2's default of 3 when other runs share the key.
+        llm_args_agent={"temperature": 0.0, "num_retries": 8},
+        llm_args_user={"num_retries": 8},
         num_trials=args.trials,
         num_tasks=args.tasks or None,
         max_steps=60,

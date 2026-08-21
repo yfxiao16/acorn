@@ -101,6 +101,13 @@ def main() -> None:
     ap.add_argument("--tasks", type=int, default=0, help="0 = full task set")
     ap.add_argument("--arm", choices=["acorn", "official"], required=True)
     ap.add_argument("--control-mode", default="full", choices=["full", "mask", "passive"])
+    ap.add_argument(
+        "--shell",
+        action="store_true",
+        help="acorn arm with an EMPTY contract library: our agent protocol "
+        "shell with zero masking/validation/obligations. Isolates the "
+        "protocol shell from control interventions in the official-arm gap.",
+    )
     ap.add_argument("--concurrency", type=int, default=4)
     ap.add_argument("--run-name", default=None)
     args = ap.parse_args()
@@ -117,7 +124,12 @@ def main() -> None:
         from acorn.cache import ResidualPolicyCache
 
         _CACHE = ResidualPolicyCache()
-        _LIBRARY = _load_library(args.domain)
+        if args.shell:
+            from acorn import ContractLibrary
+
+            _LIBRARY = ContractLibrary("empty-shell", [])
+        else:
+            _LIBRARY = _load_library(args.domain)
         registry.register_agent_factory(_acorn_factory, "acorn_agent")
         agent_name, llm_label = "acorn_agent", f"acorn-{args.agent_model}"
     else:

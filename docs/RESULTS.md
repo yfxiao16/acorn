@@ -119,20 +119,42 @@ shared: Haiku baseline trails gpt-5-mini by 16pp on customer_service
 
 Billed-equivalent tokens = uncached + 0.1×cached (OpenAI cache discount).
 
+### step vs phase, all 10 domains (clean runs, 0 error rows)
+
+| domain | step TSR | phase TSR | step lat | phase lat | step billed | phase billed | Δbilled |
+|---|---|---|---|---|---|---|---|
+| dangerous_goods | 100.0% | 100.0% | – | 5.6s | 501k | 505k | +1% |
+| customer_service | 100.0% | 100.0% | 31.5s | 14.2s | 970k | 818k | −16% |
+| patient_intake | 100.0% | 100.0% | 32.0s | 22.8s | 542k | 313k | −42% |
+| know_your_business | 55.6% | 55.6% | 8.8s | 6.6s | 303k | 307k | +1% |
+| aircraft_inspection | 99.1% | 100.0% | 48.2s | 20.2s | 1170k | 628k | −46% |
+| warehouse_package_inspection | 100.0% | 97.3% | 32.5s | 26.1s | 1223k | 861k | −30% |
+| email_intent | 100.0% | 99.5% | 12.6s | 9.9s | 593k | 332k | −44% |
+| content_flagging | 100.0% | 100.0% | 14.2s | 9.9s | 1043k | 511k | −51% |
+| video_annotation | 100.0% | 100.0% | 22.4s | 13.0s | 997k | 708k | −29% |
+| video_classification | 90.5% | 90.5% | 21.3s | 18.8s | 1149k | 966k | −16% |
+| **total / macro** | **94.5%** | **94.3%** | | | **8.49M** | **5.95M** | **−30%** |
+
+phase matches step on TSR (macro −0.2pp) at −30% billed tokens overall
+(up to −51%) and up to 2.4× lower latency. The only non-saving domains
+(dangerous_goods, know_your_business) are the fully-jumped ones —
+≈1 model call per row leaves no cache to recover.
+
+### Three granularities incl. hint (PI + CS)
+
 | domain | granularity | TSR | avg latency | calls/row | billed tokens |
 |---|---|---|---|---|---|
 | patient_intake | step | **100.0%** | 32.0s | 3.7 | ≈541k |
-| patient_intake | phase | **100.0%** | 29.7s | 4.0 | ≈311k |
+| patient_intake | phase | **100.0%** | 22.8s | 4.0 | ≈313k |
 | patient_intake | hint | 98.5% | 48.4s | 6.0 | ≈497k |
 | customer_service | step | **100.0%** | 31.5s | 5.4 | ≈969k |
-| customer_service | phase | 99.4% | 17.6s | 5.4 | ≈793k |
+| customer_service | phase | **100.0%** | 14.2s | 5.4 | ≈818k |
 | customer_service | hint | **100.0%** | 19.8s | 5.5 | ≈947k |
 
 No dominance: step is the accuracy-safest (headline setting), phase is
-the deployment default (−20–43% billed tokens, up to 1.8× faster, ≤1 row
-of TSR risk), hint is the fallback when tool schemas cannot be touched
-(validate remains the hard boundary; 0 committed violations in all
-settings).
+the deployment default, hint is the fallback when tool schemas cannot be
+touched (validate remains the hard boundary; 0 committed violations in
+all settings).
 
 ## Run-to-run variance (gpt-5-mini)
 

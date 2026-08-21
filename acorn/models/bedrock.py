@@ -150,7 +150,7 @@ class BedrockModel(Model):
                     time.sleep(min(60, 2 * 2**attempt))
                     continue
                 raise RuntimeError(f"Bedrock HTTP {e.code}: {raw[:300]}") from e
-            except (urllib.error.URLError, TimeoutError):
+            except (urllib.error.URLError, TimeoutError, OSError):
                 if attempt < max_retries - 1:
                     time.sleep(min(60, 2 * 2**attempt))
                     continue

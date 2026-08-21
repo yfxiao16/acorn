@@ -87,7 +87,7 @@ class GeminiModel(Model):
                     time.sleep(min(max_backoff, delay))
                     continue
                 raise RuntimeError(f"Gemini HTTP {e.code}: {raw[:300]}") from e
-            except (urllib.error.URLError, TimeoutError):
+            except (urllib.error.URLError, TimeoutError, OSError):
                 if attempt < max_retries - 1:
                     time.sleep(min(max_backoff, 3 * 2**attempt))
                     continue

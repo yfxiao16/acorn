@@ -56,7 +56,15 @@ def _load_library(domain: str):
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     honest, _needs_ctx, _bad = mod.load_classified_contracts()
-    library = ContractLibrary.from_contragent([c for c, _ in honest], name="tau2-honest")
+    # Two-tier enforcement: trace-mined transition conventions (e.g.
+    # "get_product_details must precede exchange") are not precise domain
+    # rules — masking on them silently removes the *correct* write action
+    # and the model substitutes a wrong-but-admissible one (task 49 class
+    # of failures). Soft tier = validate-time feedback only.
+    soft_ids = {id(c) for c, meta in honest if "transition_spec" in str(meta)}
+    library = ContractLibrary.from_contragent(
+        [c for c, _ in honest], name="tau2-honest", soft=lambda c: id(c) in soft_ids
+    )
     env0 = build_environment(domain)
     schemas = {}
     for t in env0.get_tools():

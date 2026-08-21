@@ -137,6 +137,13 @@ class Contract:
     requirements: tuple[str, ...] = ()  # fact predicates (for REQUIRE feedback)
     prerequisites: tuple[str, ...] = ()  # tool names (precedence feedback)
     args_dependent: bool = False
+    # Two-tier enforcement: masking=True (authored domain rules) silently
+    # removes violating tools from the exposed set; masking=False (soft
+    # contracts, e.g. trace-mined conventions) enforces only at validate,
+    # where the model gets the violation as feedback. Silent removal turns
+    # a spec imprecision into an unexplained dead end — mined patterns are
+    # not precise enough to earn that.
+    masking: bool = True
 
     # REQUIRE (recoverable in-session) vs BLOCK (hard) classification —
     # the same soft/hard split the SOPBench LiveEnforcer validated.
@@ -266,6 +273,7 @@ class CustomRule:
     recoverable: bool = False
     assumption: Formula | None = None
     activate_at: str | None = None
+    masking: bool = True  # False = soft tier: validate-time feedback only, no masking
 
 
 def ag(
@@ -325,6 +333,7 @@ def compile_contracts(specs: list) -> CompiledContracts:
                     activate_at=spec.activate_at,
                     args_dependent=_references_args(spec.formula)
                     or (spec.assumption is not None and _references_args(spec.assumption)),
+                    masking=spec.masking,
                 )
             )
         else:

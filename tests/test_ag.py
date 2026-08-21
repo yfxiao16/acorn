@@ -150,3 +150,29 @@ def test_deep_conflict_check_via_contragent():
     lib = acorn.ContractLibrary("ag-lib", [_split_rule()])
     report = lib.check_conflicts()
     assert report.ok, report.render()
+
+
+def test_soft_tier_contracts_do_not_mask_but_still_validate():
+    import acorn
+    from acorn.contracts import CustomRule, G, Not, Atom
+    from acorn.control import SymbolicController
+
+    # Soft precedence: never call b before a — mined convention, masking=False.
+    from contragent.formulas.formula import U
+
+    soft = CustomRule(
+        formula=U(Not(Atom("called", "b")), Atom("called", "a"))
+        | G(Not(Atom("called", "b"))),
+        name="soft a-before-b",
+        masking=False,
+    )
+    lib = acorn.ContractLibrary("soft-tier", [soft])
+    ctl = SymbolicController(lib)
+    # b stays exposed (no silent removal)...
+    assert "b" in ctl.admissible_actions(["a", "b"])
+    # ...but validating a concrete premature call still reports the violation.
+    from acorn.decisions import ProposedAction
+
+    decision = ctl.validate(ProposedAction(tool="b", args={}))
+    assert decision.kind.name != "ALLOW"
+    assert any("soft a-before-b" in r for r in decision.reasons)

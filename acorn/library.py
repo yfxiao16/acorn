@@ -90,7 +90,9 @@ class ContractLibrary:
         self._compiled: CompiledContracts | None = None
 
     @classmethod
-    def from_contragent(cls, source, *, agent: str = "*", name: str | None = None) -> "ContractLibrary":
+    def from_contragent(
+        cls, source, *, agent: str = "*", name: str | None = None, soft=None
+    ) -> "ContractLibrary":
         """Import a ContrAgent contract library.
 
         ``source`` is either an iterable of ``contragent.models.contract.
@@ -100,6 +102,12 @@ class ContractLibrary:
         the conjunction of the contract's assumptions. Only global
         semantics is supported (``activate_at="first_match"`` raises).
         Non-deterministic (sto) constraints are skipped.
+
+        ``soft`` is an optional predicate over the source contract object:
+        where it returns True the imported contract joins the soft tier
+        (``masking=False``) — enforced at validate with feedback, but never
+        silently removing tools from the exposed set. Use it for trace-mined
+        convention patterns, whose precision does not earn masking.
         """
         from functools import reduce
 
@@ -110,7 +118,7 @@ class ContractLibrary:
 
         specs: list = []
 
-        def _add(assumptions, guarantees, desc, activate_at=None):
+        def _add(assumptions, guarantees, desc, activate_at=None, masking=True):
             raw_as = [_raw(a) for a in assumptions]
             assumption = reduce(lambda x, y: x & y, raw_as) if raw_as else None
             for i, g in enumerate(guarantees):
@@ -121,6 +129,7 @@ class ContractLibrary:
                         assumption=assumption,
                         name=(desc or "imported") + suffix,
                         activate_at=activate_at,
+                        masking=masking,
                     )
                 )
 
@@ -154,6 +163,7 @@ class ContractLibrary:
                     list(getattr(contract, "guarantees", []) or []),
                     getattr(contract, "desc", None),
                     activate_at=getattr(contract, "activate_at", None),
+                    masking=not (soft is not None and soft(contract)),
                 )
         return cls(name or f"contragent:{agent}", specs)
 

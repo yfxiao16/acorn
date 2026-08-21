@@ -162,7 +162,9 @@ class SymbolicController:
             if violated_names is None:
                 grounding = copy.deepcopy(self._grounding)
                 valuation = self._valuation_for(tool, {}, agent_state, grounding)
-                violated = self.backend.probe(valuation, include_args_dependent=False)
+                violated = self.backend.probe(
+                    valuation, include_args_dependent=False, masking_only=True
+                )
                 violated_names = tuple(r.name for r in violated)
                 if key_base is not None:
                     self.probe_cache.store((key_base, tool), violated_names)

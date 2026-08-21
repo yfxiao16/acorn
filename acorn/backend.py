@@ -32,7 +32,13 @@ Valuation = dict[str, object]
 
 @runtime_checkable
 class ContractBackend(Protocol):
-    def probe(self, valuation: Valuation, *, include_args_dependent: bool = True) -> list[Contract]: ...
+    def probe(
+        self,
+        valuation: Valuation,
+        *,
+        include_args_dependent: bool = True,
+        masking_only: bool = False,
+    ) -> list[Contract]: ...
 
     def step(self, valuation: Valuation) -> list[Contract]: ...
 
@@ -115,12 +121,24 @@ class LTLfBackend:
     def __init__(self, contracts: list[Contract]) -> None:
         self._monitors = [_Monitor(contract) for contract in contracts]
 
-    def probe(self, valuation: Valuation, *, include_args_dependent: bool = True) -> list[Contract]:
-        """What-if: would this event violate any contract? Leaves state untouched."""
+    def probe(
+        self,
+        valuation: Valuation,
+        *,
+        include_args_dependent: bool = True,
+        masking_only: bool = False,
+    ) -> list[Contract]:
+        """What-if: would this event violate any contract? Leaves state untouched.
+
+        ``masking_only`` restricts the probe to contracts that participate in
+        tool masking (``Contract.masking``); soft-tier contracts still fire
+        at validate, where the violation reaches the model as feedback."""
         return [
             m.contract
             for m in self._monitors
-            if (include_args_dependent or not m.contract.args_dependent) and m.probe(valuation)
+            if (include_args_dependent or not m.contract.args_dependent)
+            and (not masking_only or m.contract.masking)
+            and m.probe(valuation)
         ]
 
     def step(self, valuation: Valuation) -> list[Contract]:

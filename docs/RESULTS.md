@@ -134,22 +134,74 @@ of TSR risk), hint is the fallback when tool schemas cannot be touched
 (validate remains the hard boundary; 0 committed violations in all
 settings).
 
-## Run-to-run variance (dangerous_goods, gpt-5-mini, 20 rows × 3 trials)
+## Run-to-run variance (gpt-5-mini)
 
-- **acorn**: ['100%', '100%', '100%'] — mean 100.0% ± 0.0pp
-- **base**: ['65%', '75%', '75%'] — mean 71.7% ± 5.8pp
+acorn, 3 independent full-set runs per domain:
+
+- **customer_service** (156 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
+- **patient_intake** (66 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
+- **warehouse_package_inspection** (150 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
+- **dangerous_goods** (20 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
+
+baseline (dangerous_goods, 20 rows × 3): 65% / 75% / 75% — 71.7% ± 5.8pp.
+Symbolic control eliminates cross-run sampling variance at the ceiling;
+baseline repeats retain ±5.8pp. Baseline single-run numbers for the other
+domains are in the main matrix (per the no-rerun-of-referenced-data
+policy, baselines were not repeated).
 
 ## τ²-bench retail (gpt-4.1-mini agent, gpt-4.1 user sim, 114 tasks × 4 trials)
 
-- **acorn arm** (contracts + obligations + mask): avg reward 0.567,
-  pass^1 0.550, pass^4 0.246; rewards are all-or-nothing (0/1); 13/456
-  sims lost to infrastructure errors (counted as failures); 0 committed
-  contract violations.
-- **official LLMAgent arm**: two batch attempts were invalidated by
-  sustained OpenAI 429 windows (431/456 and 144/456 infrastructure
-  errors — the arms shared the API key with concurrent SOP-Bench runs).
-  A clean rerun on a quiet lane is in flight; **no acorn-vs-official
-  comparison is claimed until it lands.**
+Final matched-condition comparison. Both arms clean (≤3% infrastructure
+errors, counted as failures). Full parity checklist applied to the acorn
+arm before the final run: identical system prompt (official
+`<instructions>` + `<policy>` template, imported), temperature 0.0,
+litellm-equivalent retries, faithful tool schemas and message-role
+rendering. Three earlier acorn runs under partial parity scored
+pass^1 0.550/0.561/0.555 — the final number is stable, not tuned.
+
+### Layer 1 — native pass^k
+
+| arm | avg reward | pass^1 | pass^2 | pass^3 | pass^4 |
+|---|---|---|---|---|---|
+| official LLMAgent | 0.656 | **0.636** | 0.478 | 0.382 | 0.316 |
+| acorn (contracts + obligations + mask) | 0.561 | 0.555 | 0.402 | 0.316 | 0.263 |
+
+The official agent leads native pass^1 by ~8pp.
+
+### Layer 3 — procedure compliance (offline audit of the same saved
+conversations; 53 honest contracts, evaluated condition-independently)
+
+| arm | sims firing ≥1 violation | blind-spot (τ²-pass ∧ violating) | proc-clean^4 | joint^4 (pass ∧ clean) |
+|---|---|---|---|---|
+| official LLMAgent | 62.7% | **61.0%** | 12.3% | 7.9% |
+| acorn | 26.8% | 23.3% | **64.9%** | **21.9%** |
+
+- **61% of the official agent's "successful" conversations violate
+  procedure** — native pass^k rewards non-compliant successes.
+- Under the joint success-and-compliance criterion acorn is **2.8×**
+  the official agent (21.9% vs 7.9%).
+- acorn's residual violations are **100% in the `transition` category**
+  — exactly the trace-mined conventions the two-tier design deliberately
+  demotes to feedback-only enforcement; hard categories (`output_spec`
+  etc.) are at **0.0%** vs official's 37.3%.
+- Reference anchors (same offline audit, tau2's published runs):
+  official gpt-4.1-mini scores joint^4 8.8%, gpt-4.1 28.9%,
+  claude-3-7-sonnet 0.0%.
+
+Framing: acorn trades ~8pp of native pass^1 for near-elimination of
+committed procedure violations and a 2.8× joint success-and-compliance
+rate — and the 61% blind-spot number is a critique of pass^k-only
+evaluation, independent of our system.
+
+### Baseline-parity checklist (methodology note)
+
+Confounds found and eliminated while matching the official arm, each
+worth carrying into any harness-vs-harness comparison: (1) system-prompt
+framing (bare policy text vs the official instruction wrapper measurably
+degrades the same model); (2) sampling temperature (unset = provider
+default 1.0 vs official 0.0 — depresses pass^k through cross-trial
+inconsistency); (3) retry policy under shared-key 429 windows; (4) tool
+schema and message-role fidelity through the adapter.
 
 _Estimated total model cost of all listed Amazon runs: ≈$65 (blended
 per-Mtok estimates; exact billing lags in Cost Explorer)._

@@ -123,7 +123,12 @@ class KYBPredicates(LocalPredicateEvaluator):
         return super().evaluate(predicate, context)
 
 
-def build_library() -> acorn.ContractLibrary:
+def build_library(flow_profile: str = "free") -> acorn.ContractLibrary:
+    """The contract library, minus the orderings internalized by
+    ``flow_profile`` (see the sweep block below). The default "free"
+    returns the COMPLETE set — used by the observe-mode auditor so
+    compliance accounting never depends on the enforcement medium."""
+    internal = _internalized(flow_profile)
     specs: list = [
         # Fact extraction from tool outputs.
         acorn.after("getBusinessProfile")
@@ -173,14 +178,20 @@ def build_library() -> acorn.ContractLibrary:
     # Each verification runs once.
     for tool in CHAIN:
         specs.append(acorn.action(tool).at_most(1))
-    # Genuine schema dependencies: each verifier consumes a fetcher's output.
-    specs.append(acorn.action("verifyBusinessRegistration").requires("profile_fetched"))
-    specs.append(acorn.action("verifyUBO").requires("ownership_fetched"))
-    specs.append(acorn.action("performSanctionsCheck").requires("ownership_fetched"))
-    specs.append(acorn.action("verifyBankAccount").requires("bank_data_fetched"))
-    # §5.6.1: the risk score incorporates all verification results.
-    specs.append(acorn.action("calculateRiskScore").requires("checks_done"))
-    specs.append(acorn.action("submit_result").requires("all_verified").at_most(1))
+    # Genuine schema dependencies: each verifier consumes a fetcher's
+    # output. Each ordering ships as a contract unless the flow profile
+    # internalizes it (enforced exactly once, in exactly one medium).
+    movable = {
+        "O1": acorn.action("verifyBusinessRegistration").requires("profile_fetched"),
+        "O2": acorn.action("verifyUBO").requires("ownership_fetched"),
+        "O3": acorn.action("performSanctionsCheck").requires("ownership_fetched"),
+        "O4": acorn.action("verifyBankAccount").requires("bank_data_fetched"),
+        # §5.6.1: the risk score incorporates all verification results.
+        "O5": acorn.action("calculateRiskScore").requires("checks_done"),
+        "O6": acorn.action("submit_result").requires("all_verified"),
+    }
+    specs.extend(spec for name, spec in movable.items() if name not in internal)
+    specs.append(acorn.action("submit_result").at_most(1))
     # §5.6.2 hard gate, args-dependent (validate-time): while any risk flag
     # is set, an "approved" verdict may never be submitted. Zero
     # counterexamples across the 90 labeled rows.
@@ -210,58 +221,114 @@ SUBMIT_SCHEMA = {
 }
 
 
-# Workflow<->agent sweep (paper analysis): how much of the procedure is
-# internalized as prescriptive flow states vs left to the (constant)
-# external contracts. Contracts never change across profiles — only the
-# per-step exposure structure does. Stage groups, in SOP order:
-_STAGES = [
-    ["getBusinessProfile"],
-    ["verifyBusinessRegistration"],
-    ["getOwnershipData"],
-    ["verifyUBO"],
-    ["performSanctionsCheck"],
-    ["getBankData", "verifyBankAccount"],
-    ["calculateRiskScore"],
-    ["submit_result"],
+# ---------------------------------------------------------------------------
+# Workflow<->agent sweep: enforcement-medium transfer.
+#
+# The library's six movable ordering/gating constraints (O1..O6 below) are
+# enforced EITHER externally (contract DFA: mask/validate prune violating
+# actions, everything else stays open) OR internally (the constraint is
+# removed from the library and realized by a flow-state boundary the model
+# walks through). Every constraint is enforced exactly once in every
+# profile. Fact extractors, at_most(1) safety nets and the args-dependent
+# risk gate are not orderings and stay external in all profiles; the
+# observe-mode auditor always carries the COMPLETE library, so compliance
+# accounting is medium-independent.
+#
+# Tool chain with the 5 cut points and the constraints each internalizes:
+#   [profile] |c1| [registration, ownership] |c2| [ubo, sanctions,
+#   bankData] |c3| [bankVerify] |c4| [risk] |c5| [submit]
+#   c1: O1 verifyBusinessRegistration requires profile_fetched
+#   c2: O2 verifyUBO requires ownership_fetched
+#       O3 performSanctionsCheck requires ownership_fetched
+#   c3: O4 verifyBankAccount requires bank_data_fetched
+#   c4: O5 calculateRiskScore requires checks_done
+#   c5: O6 submit_result requires all_verified
+# Profile xJ applies the first J cuts (x0 = FreeFlow/all-external ...
+# x5 = full pipeline/all-internal). Segment exit demands completion of
+# every member tool — the stage-machine semantics intrinsic to the
+# internalized medium (prescriptive), vs the external medium's pure
+# violation-pruning (restrictive).
+# ---------------------------------------------------------------------------
+
+_CHAIN_TOOLS = [
+    "getBusinessProfile", "verifyBusinessRegistration", "getOwnershipData",
+    "verifyUBO", "performSanctionsCheck", "getBankData", "verifyBankAccount",
+    "calculateRiskScore", "submit_result",
 ]
-_STAGE_FACTS = [
-    "profile_fetched", "registration_checked", "ownership_fetched",
-    "ubo_verified", "sanctions_screened", "bank_checked", "risk_scored",
-    "result_submitted",
-]
-# profile -> how the 7 chain stages merge into flow states (None = FreeFlow;
-# submit is always its own state, so states = len(spans) + 2 incl. done)
-FLOW_PROFILES = {
-    "free": None,
-    "k2": [(0, 6)],                                  # one verify superstate
-    "k4": [(0, 2), (3, 5), (6, 6)],                  # fetch / screen / risk
-    "k6": [(0, 0), (1, 1), (2, 3), (4, 4), (5, 5), (6, 6)],
-    "full": [(i, i) for i in range(7)],              # the 8-state pipeline
+_DONE_FACT = {
+    "getBusinessProfile": "profile_fetched",
+    "verifyBusinessRegistration": "registration_checked",
+    "getOwnershipData": "ownership_fetched",
+    "verifyUBO": "ubo_verified",
+    "performSanctionsCheck": "sanctions_screened",
+    "getBankData": "bank_data_fetched",
+    "verifyBankAccount": "bank_checked",
+    "calculateRiskScore": "risk_scored",
+    "submit_result": "result_submitted",
 }
+# cut -> (position in _CHAIN_TOOLS after which to cut, internalized O's)
+_CUTS = [(1, {"O1"}), (3, {"O2", "O3"}), (6, {"O4"}), (7, {"O5"}), (8, {"O6"})]
+# "pipeline" is NOT a sweep point: it is the headline configuration from
+# the main results table — the 8-singleton-state flow with ALL contracts
+# external (redundant prescriptive overlay). The sweep points x0..x5
+# enforce each constraint exactly once.
+FLOW_PROFILES = ("pipeline", "x0", "x1", "x2", "x3", "x4", "x5", "free", "full")
+
+
+def _canon(profile: str) -> int:
+    return {"free": 0, "full": 5}.get(profile, int(profile[1:]) if profile[0] == "x" else 5)
+
+
+def _internalized(profile: str) -> set[str]:
+    if profile == "pipeline":
+        return set()
+    out: set[str] = set()
+    for _, os_ in _CUTS[: _canon(profile)]:
+        out |= os_
+    return out
+
+
+def _pipeline_flow():
+    flow = acorn.GraphFlow(start="s0")
+    stages = [[t] for t in _CHAIN_TOOLS[:5]] + [
+        ["getBankData", "verifyBankAccount"], ["calculateRiskScore"], ["submit_result"],
+    ]
+    for i, seg in enumerate(stages):
+        nxt = f"s{i + 1}" if i + 1 < len(stages) else "done"
+        facts = [_DONE_FACT[t] for t in seg]
+        flow = flow.state(
+            f"s{i}",
+            tools=list(seg),
+            next=lambda ctx, fs=tuple(facts), n=nxt: n
+            if all(ctx.facts.get(f) is not None for f in fs)
+            else None,
+        )
+    return flow.state("done", tools=[], terminal=True)
 
 
 def _build_flow(profile: str):
-    spans = FLOW_PROFILES[profile]
-    if spans is None:
+    if profile == "pipeline":
+        return _pipeline_flow()
+    j = _canon(profile)
+    if j == 0:
         return None
+    positions = [0] + [pos for pos, _ in _CUTS[:j]] + [len(_CHAIN_TOOLS)]
+    positions = sorted(set(positions))
+    segments = [
+        _CHAIN_TOOLS[positions[i] : positions[i + 1]] for i in range(len(positions) - 1)
+    ]
     flow = acorn.GraphFlow(start="s0")
-    names = [f"s{i}" for i in range(len(spans))] + ["submit", "done"]
-    for i, (lo, hi) in enumerate(spans):
-        tools = [t for g in _STAGES[lo : hi + 1] for t in g]
-        done_fact = _STAGE_FACTS[hi]
+    for i, seg in enumerate(segments):
+        nxt = f"s{i + 1}" if i + 1 < len(segments) else "done"
+        facts = [_DONE_FACT[t] for t in seg]
         flow = flow.state(
-            names[i],
-            tools=tools,
-            next=lambda ctx, f=done_fact, nxt=names[i + 1]: nxt
-            if ctx.facts.truthy(f)
+            f"s{i}",
+            tools=list(seg),
+            next=lambda ctx, fs=tuple(facts), n=nxt: n
+            if all(ctx.facts.get(f) is not None for f in fs)
             else None,
         )
-    flow = flow.state(
-        "submit",
-        tools=["submit_result"],
-        next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
-    ).state("done", tools=[], terminal=True)
-    return flow
+    return flow.state("done", tools=[], terminal=True)
 
 
 def build_agent(
@@ -272,7 +339,7 @@ def build_agent(
     condition: str = "acorn",
     row: dict | None = None,
     mask_granularity: str = "step",
-    flow_profile: str = "full",
+    flow_profile: str = "pipeline",
 ) -> acorn.Agent:
     assert condition in CONDITIONS, condition
     assert flow_profile in FLOW_PROFILES, flow_profile
@@ -337,7 +404,7 @@ def build_agent(
         tools=registry,
         instructions=pack.sop_text,
         flow=flow,
-        contracts=build_library(),
+        contracts=build_library(flow_profile if condition in ("mask", "acorn") else "free"),
         predicate_evaluator=KYBPredicates(),
         control_mode={"passive": "passive", "mask": "mask", "acorn": "full"}[condition],
         mask_granularity=mask_granularity,
@@ -366,7 +433,7 @@ def run_row(
     condition: str = "acorn",
     probe_cache=None,
     mask_granularity: str = "step",
-    flow_profile: str = "full",
+    flow_profile: str = "pipeline",
 ):
     sink: dict = {}
     agent = build_agent(

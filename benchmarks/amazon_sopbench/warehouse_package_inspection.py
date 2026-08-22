@@ -196,7 +196,15 @@ class WHPredicates(LocalPredicateEvaluator):
         return super().evaluate(predicate, context)
 
 
-def build_library() -> acorn.ContractLibrary:
+def build_library(flow_profile: str = "free") -> acorn.ContractLibrary:
+    """The contract library, minus the gates internalized by
+    ``flow_profile`` (branch/naive internalize all seven movable gates).
+    Default "free" = the COMPLETE set, used by the observe-mode auditor."""
+    ext = flow_profile not in _INTERNALIZED
+
+    def gated(rule, fact):
+        return rule.requires(fact) if ext else rule
+
     specs = [
         acorn.action("validateBarcode").at_most(1),
         acorn.after("validateBarcode")
@@ -204,13 +212,13 @@ def build_library() -> acorn.ContractLibrary:
         .asserts("barcode_match", value=lambda r: str(r.output.get("barcode_match")) == "True"),
         # §5.1.1: on barcode mismatch every step below is skipped — the
         # classification tools require the (truthy) barcode_match fact.
-        acorn.action("calculateQuantityVariance").requires("barcode_match").at_most(1),
+        gated(acorn.action("calculateQuantityVariance"), "barcode_match").at_most(1),
         acorn.after("calculateQuantityVariance")
         .asserts("variance_done")
         .asserts("ordered_quantity", value=lambda r: int(float(r.output.get("ordered_quantity", 0))))
         .asserts("confirmed_quantity", value=lambda r: int(float(r.output.get("confirmed_quantity", 0))))
         .asserts("received_quantity", value=lambda r: int(float(r.output.get("received_quantity", 0)))),
-        acorn.action("verifyWarehouseLocation").requires("barcode_match").at_most(1),
+        gated(acorn.action("verifyWarehouseLocation"), "barcode_match").at_most(1),
         acorn.after("verifyWarehouseLocation")
         .asserts("location_checked")
         .asserts(
@@ -218,27 +226,27 @@ def build_library() -> acorn.ContractLibrary:
             value=lambda r: str(r.output.get("intended_warehouse_id", "")).strip().upper()
             != str(r.output.get("actual_warehouse_id", "")).strip().upper(),
         ),
-        acorn.action("assessPackageCondition").requires("barcode_match").at_most(1),
+        gated(acorn.action("assessPackageCondition"), "barcode_match").at_most(1),
         acorn.after("assessPackageCondition")
         .asserts("condition_checked")
         .asserts("package_condition", value=lambda r: str(r.output.get("package_condition", "")))
         .asserts("package_damaged", value=lambda r: r.output.get("package_condition") == "damaged"),
         # §5.3.1 + schema: chargeback consumes the classified problem list.
-        acorn.action("calculateChargeback").requires("classification_done").at_most(1),
+        gated(acorn.action("calculateChargeback"), "classification_done").at_most(1),
         acorn.after("calculateChargeback")
         .asserts("chargeback_done")
         .asserts("charge_back_amt", value=lambda r: r.output.get("charge_back_amt")),
         # §5.3.2 + schema: the status update consumes the problem list.
-        acorn.action("updateResolutionStatus").requires("classification_done").at_most(1),
+        gated(acorn.action("updateResolutionStatus"), "classification_done").at_most(1),
         acorn.after("updateResolutionStatus")
         .asserts("status_updated")
         .asserts("resolution_status", value=lambda r: r.output.get("resolution_status")),
         # §6 + schema: the report consumes problem_type, charge_amount and
         # resolution_status; on the Wrong Item branch it is the ONLY
         # remaining step (§5.1.1).
-        acorn.action("generateProblemReport").requires("report_inputs_ready").at_most(1),
+        gated(acorn.action("generateProblemReport"), "report_inputs_ready").at_most(1),
         acorn.after("generateProblemReport").asserts("report_generated"),
-        acorn.action("submit_result").requires("final_ready").at_most(1),
+        gated(acorn.action("submit_result"), "final_ready").at_most(1),
         acorn.after("submit_result").asserts("result_submitted"),
     ]
     return acorn.ContractLibrary("warehouse-package-inspection-v1", specs)
@@ -260,13 +268,19 @@ ALL_TOOLS = list(OUTPUT_COLUMNS)
 CLASSIFY = ["calculateQuantityVariance", "verifyWarehouseLocation", "assessPackageCondition"]
 RESOLVE = ["calculateChargeback", "updateResolutionStatus", "generateProblemReport"]
 
-# Workflow<->agent sweep profiles. Contracts are constant everywhere —
-# only the prescriptive exposure structure varies. ``branch`` internalizes
-# the §5.1.1 barcode branch; ``naive`` is the deliberately branch-blind
-# linear pipeline a workflow author without that insight would write (the
-# over-internalization arm: on Wrong-Item rows its states demand tools the
-# contracts forbid).
-FLOW_PROFILES = ("free", "flat", "coarse", "branch", "naive")
+# Workflow<->agent sweep: enforcement-medium transfer. The seven movable
+# constraints (three §5.1.1 barcode gates, two classification gates, the
+# report gate and the submit gate) are enforced EITHER externally
+# (contracts; profiles free/flat) OR internally (removed from the library,
+# realized by flow structure; profiles branch/naive). ``branch`` is the
+# correct branch-aware internalization of §5.1.1; ``naive`` is the
+# branch-blind linear pipeline a workflow author without that insight
+# would write — its classify stage demands the damage assessment the SOP
+# forbids on Wrong-Item rows, and with the gates internalized there is no
+# external contract left to catch it (the observe-mode auditor, which
+# always carries the complete library, does the accounting).
+FLOW_PROFILES = ("free", "flat", "branch", "naive")
+_INTERNALIZED = {"branch", "naive"}
 
 
 def _build_flow(profile: str):
@@ -280,25 +294,6 @@ def _build_flow(profile: str):
                 tools=[*ALL_TOOLS, "submit_result"],
                 next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
             ).state("done", tools=[], terminal=True)
-        )
-    if profile == "coarse":
-        return (
-            g.state(
-                "intake",
-                tools=["validateBarcode"],
-                next=lambda ctx: "process" if ctx.facts.get("barcode_checked") else None,
-            )
-            .state(
-                "process",
-                tools=[*CLASSIFY, *RESOLVE],
-                next=lambda ctx: "submit" if ctx.facts.get("report_generated") else None,
-            )
-            .state(
-                "submit",
-                tools=["submit_result"],
-                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
-            )
-            .state("done", tools=[], terminal=True)
         )
     if profile == "branch":
         return (
@@ -406,7 +401,7 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         tools=registry,
         instructions=pack.sop_text,
         flow=flow,
-        contracts=build_library(),
+        contracts=build_library(flow_profile if condition in ("mask", "acorn") else "free"),
         predicate_evaluator=WHPredicates(),
         control_mode={"passive": "passive", "mask": "mask", "acorn": "full"}[condition],
         mask_granularity=mask_granularity,

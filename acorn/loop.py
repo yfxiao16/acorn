@@ -299,6 +299,26 @@ def iterate(
             proposed = ToolCall(name=call.name, args=call.args, id=call.id)
             action = ProposedAction(call.name, dict(call.args or {}))
             tracer.record("action/proposed", step=step, tool=action.tool, args=action.args)
+            # Prescriptive stage boundary: when the flow scopes the current
+            # state to a tool subset, an out-of-stage proposal is invalid by
+            # the workflow medium's own semantics — enforced here so it does
+            # not depend on a redundant external contract existing.
+            stage_tools = flow.available_actions(tools.names())
+            if call.name not in stage_tools:
+                blocked += 1
+                frame_blocked.append(
+                    {"tool": action.tool, "reasons": ["outside current workflow stage"]}
+                )
+                tracer.record(
+                    "action/blocked", step=step, tool=action.tool,
+                    verdict="block", reasons=["workflow-stage boundary"],
+                )
+                flow.add_tool_result(
+                    proposed,
+                    json.dumps({"ok": False,
+                                "error": "This action is not available in the current workflow stage."}),
+                )
+                continue
             _t0 = time.perf_counter()
             verdict = controller.validate(action, call_state)
             t_ctrl += time.perf_counter() - _t0

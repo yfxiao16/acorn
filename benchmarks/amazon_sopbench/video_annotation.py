@@ -239,7 +239,20 @@ class VAPredicates(LocalPredicateEvaluator):
         return super().evaluate(predicate, context)
 
 
-def build_library() -> acorn.ContractLibrary:
+VA_FLOW_PROFILES = ("free", "phases", "pipeline")
+_VA_INTERNALIZED = {"phases", "pipeline"}
+# The 26 at_most(1) counting contracts are NOT movable: internalizing them
+# faithfully requires the product automaton over tool-usage subsets
+# (>=2^26 states) — unwritable as a workflow. They stay external in every
+# profile; only the 6-step ordering chain transfers.
+
+
+def build_library(flow_profile: str = "free") -> acorn.ContractLibrary:
+    ext = flow_profile not in _VA_INTERNALIZED
+
+    def _gate(rule, fact):
+        return rule.requires(fact) if ext else rule
+
     specs = [
         acorn.action("validateVideoFormat").at_most(1),
         acorn.after("validateVideoFormat")
@@ -247,34 +260,34 @@ def build_library() -> acorn.ContractLibrary:
         .asserts("video_ok", value=lambda r: video_ok(r.output))
         .asserts("video_path", value=lambda r: r.output.get("video_path")),
         # §7.2: LiDAR verification follows SUCCESSFUL video validation.
-        acorn.action("validateLidarData").requires("video_ok").at_most(1),
+        _gate(acorn.action("validateLidarData"), "video_ok").at_most(1),
         acorn.after("validateLidarData")
         .asserts("lidar_checked")
         .asserts("lidar_ok", value=lambda r: lidar_ok(r.output)),
         # §7.3: detection consumes the validated video (after LiDAR passes).
-        acorn.action("performObjectDetection").requires("lidar_ok").at_most(1),
+        _gate(acorn.action("performObjectDetection"), "lidar_ok").at_most(1),
         acorn.after("performObjectDetection")
         .asserts("detect_checked")
         .asserts("detect_ok", value=lambda r: detect_ok(r.output))
         .asserts("coco_json_path", value=lambda r: r.output.get("object_detection_output_path")),
         # §7.4: segmentation consumes predicted_object + detection output path.
-        acorn.action("executeSegmentation").requires("detect_ok").at_most(1),
+        _gate(acorn.action("executeSegmentation"), "detect_ok").at_most(1),
         acorn.after("executeSegmentation")
         .asserts("seg_checked")
         .asserts("seg_ok", value=lambda r: seg_ok(r.output))
         .asserts("segmentation_mask_path", value=lambda r: r.output.get("segmentation_output_path")),
         # §8.1: automated QC consumes predicted_iou + segmentation output path.
-        acorn.action("runAutomatedQC").requires("seg_ok").at_most(1),
+        _gate(acorn.action("runAutomatedQC"), "seg_ok").at_most(1),
         acorn.after("runAutomatedQC")
         .asserts("qc_checked")
         .asserts("qc_ok", value=lambda r: qc_ok(r.output)),
         # §8.2: human validation follows automated QC.
-        acorn.action("performHumanValidation").requires("qc_ok").at_most(1),
+        _gate(acorn.action("performHumanValidation"), "qc_ok").at_most(1),
         acorn.after("performHumanValidation")
         .asserts("human_checked")
         .asserts("human_ok", value=lambda r: human_ok(r.output))
         .asserts("inter_annotator_score", value=lambda r: r.output.get("inter_annotator_score")),
-        acorn.action("submit_result").requires("report_ready").at_most(1),
+        _gate(acorn.action("submit_result"), "report_ready").at_most(1),
         acorn.after("submit_result").asserts("result_submitted"),
     ]
     # Distractor tools: not part of the SOP pipeline; rate-limit to bound
@@ -299,8 +312,9 @@ SUBMIT_SCHEMA = {
 CONDITIONS = ("baseline", "passive", "mask", "acorn")
 
 
-def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step") -> acorn.Agent:
+def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row: dict | None = None, mask_granularity: str = "step", flow_profile: str = "phases") -> acorn.Agent:
     assert condition in CONDITIONS, condition
+    assert flow_profile in VA_FLOW_PROFILES, flow_profile
     registry = build_registry(pack, output_columns=OUTPUT_COLUMNS, row=row)
 
     def submit_result(**kwargs):
@@ -319,7 +333,31 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         return acorn.Agent(model, tools=registry, instructions=pack.sop_text, max_steps=16)
 
     flow = None
-    if condition in ("mask", "acorn"):
+    if condition in ("mask", "acorn") and flow_profile == "pipeline":
+        # Fine projection: 6 singleton states in chain order + submit.
+        chain = [
+            ("validateVideoFormat", "video_checked"), ("validateLidarData", "lidar_checked"),
+            ("performObjectDetection", "detect_checked"), ("executeSegmentation", "seg_checked"),
+            ("runAutomatedQC", "qc_checked"), ("performHumanValidation", "human_checked"),
+        ]
+        g = acorn.GraphFlow(start="p0")
+        for i, (tool, fact) in enumerate(chain):
+            nxt = f"p{i + 1}" if i + 1 < len(chain) else "submit"
+            g = g.state(
+                f"p{i}",
+                tools=[tool],
+                next=lambda ctx, f=fact, n=nxt: "submit"
+                if ready(ctx.facts)
+                else (n if ctx.facts.get(f) is not None else None),
+            )
+        flow = (
+            g.state(
+                "submit",
+                tools=["submit_result"],
+                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+            ).state("done", tools=[], terminal=True)
+        )
+    elif condition in ("mask", "acorn") and flow_profile == "phases":
         def _next(target: str, done_fact: str):
             def nxt(ctx):
                 if ready(ctx.facts):
@@ -358,7 +396,7 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         tools=registry,
         instructions=pack.sop_text,
         flow=flow,
-        contracts=build_library(),
+        contracts=build_library(flow_profile if condition in ("mask", "acorn") else "free"),
         predicate_evaluator=VAPredicates(),
         control_mode={"passive": "passive", "mask": "mask", "acorn": "full"}[condition],
         mask_granularity=mask_granularity,
@@ -377,9 +415,9 @@ def task_prompt(pack: Pack, row: dict) -> str:
     )
 
 
-def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step"):
+def run_row(model_factory, pack: Pack, row: dict, *, condition: str = "acorn", probe_cache=None, mask_granularity: str = "step", flow_profile: str = "phases"):
     sink: dict = {}
-    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity)
+    agent = build_agent(model_factory(), pack, sink, condition=condition, row=row, mask_granularity=mask_granularity, flow_profile=flow_profile)
     if probe_cache is not None and condition in ("mask", "acorn"):
         agent.probe_cache = probe_cache
     auditor = build_library().auditor(predicate_evaluator=VAPredicates())

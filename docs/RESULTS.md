@@ -252,3 +252,25 @@ schema and message-role fidelity through the adapter.
 
 _Estimated total model cost of all listed Amazon runs: ≈$65 (blended
 per-Mtok estimates; exact billing lags in Cost Explorer)._
+
+## Expressiveness census: what tool-list partitioning can and cannot say
+
+Across all 10 Amazon domain libraries (170 deterministic constraints),
+classified by what a workflow-graph medium (states + per-state tool
+lists, LangGraph-style) can express declaratively:
+
+| constraint class | count | share | partition-expressible? |
+|---|---|---|---|
+| ordering (A before B) | 54 | 32% | yes — state sequencing |
+| counting (at_most N) | 113 | 66% | only via product states (2^k blowup; video_annotation alone needs 2^27) |
+| argument-level (same tool, some argument values forbidden) | 1 (+3 in τ² grounded set) | ~1% | no — tool lists cannot see arguments |
+| liveness/obligations ("eventually X"; 10 derived in τ²) | — | — | no — hiding other tools cannot force an action |
+
+Only ~1/3 of real SOP constraints are declaratively expressible by
+tool-list partitioning. The rest must either explode the graph or sink
+into imperative node code — losing certificates (SAT/conflict checks),
+condition-independent auditability, portability, and composability.
+ACORN keeps all 170 as declarative, verifiable first-class objects at
+O(n) representation cost. (Practice anchor: published LangGraph
+tutorials and production case studies use 4–30 nodes — the faithful
+product machine for video_annotation alone would need ≥10^9 states.)

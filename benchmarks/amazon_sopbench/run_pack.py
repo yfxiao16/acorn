@@ -74,6 +74,10 @@ def main() -> None:
     ap.add_argument("--out", default=None, help="write per-row results JSON here")
     ap.add_argument("--mask-granularity", choices=["step", "phase", "hint"], default="step")
     ap.add_argument(
+        "--scaffold", choices=["none", "react"], default="none",
+        help="neural scaffold wrapper around the model (react = text-protocol ReAct)",
+    )
+    ap.add_argument(
         "--flow-profile",
         default=None,
         help="flow internalization profile for domains that support the "
@@ -101,8 +105,16 @@ def main() -> None:
     for i, row in enumerate(rows):
         try:
             extra = {"flow_profile": args.flow_profile} if args.flow_profile else {}
+            def _mk():
+                m = models.resolve(args.model)
+                if args.scaffold == "react":
+                    from acorn.models.react import ReActModel
+
+                    m = ReActModel(m)
+                return m
+
             submitted, result = domain.run_row(
-                lambda: models.resolve(args.model), pack, row, condition=args.condition,
+                _mk, pack, row, condition=args.condition,
                 probe_cache=probe_cache, mask_granularity=args.mask_granularity, **extra,
             )
         except Exception as exc:  # noqa: BLE001 — a row must never kill the run
@@ -160,6 +172,7 @@ def main() -> None:
         "model": args.model,
         "condition": args.condition,
         "mask_granularity": args.mask_granularity,
+        "scaffold": args.scaffold,
         "flow_profile": args.flow_profile,
         "freedom": round(sum(freedom_samples) / max(1, len(freedom_samples)), 2),
         "n": n,

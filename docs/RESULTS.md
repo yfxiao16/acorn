@@ -186,8 +186,19 @@ pass^1 0.550/0.561/0.555 — the final number is stable, not tuned.
 | arm | avg reward | pass^1 | pass^2 | pass^3 | pass^4 |
 |---|---|---|---|---|---|
 | official LLMAgent | 0.656 | **0.636** | 0.478 | 0.382 | 0.316 |
-| shell (our protocol, EMPTY contract library) | 0.626 | 0.625 | 0.491 | 0.419 | **0.377** |
-| acorn (contracts + obligations + mask) | 0.561 | 0.555 | 0.402 | 0.316 | 0.263 |
+| shell (our protocol, EMPTY contract library) | 0.626 | 0.625 | 0.491 | 0.419 | 0.377 |
+| **acorn, 17 grounded contracts** | 0.637 | **0.634** | 0.509 | 0.443 | **0.395** |
+| acorn, full 53 contracts | 0.561 | 0.555 | 0.402 | 0.316 | 0.263 |
+
+**Headline: enforcing the policy's actual rules is free.** The grounded
+arm ties official pass^1 (63.4 vs 63.6), posts the best pass^4 of any
+arm (39.5), and audits perfectly clean (joint^4 = its own pass^4 =
+39.5, 4.5× official's 8.8). The full-53 arm's −7.9pp is the price of
+enforcing mined pseudo-rules — contract quality, not enforcement, is
+the price driver. Attribution note: the shell also audits clean on the
+grounded ruler (official's grounded violations are protocol-family,
+which our agent interface prevents structurally); the contract layer
+upgrades that empirical cleanliness to a guarantee.
 
 Causal decomposition: shell ≈ official on pass^1 (−1.1pp, within noise;
 pass^4 actually HIGHER, 0.377 vs 0.316 — our protocol shell is more

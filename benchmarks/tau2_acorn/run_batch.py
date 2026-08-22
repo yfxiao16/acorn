@@ -41,7 +41,7 @@ _CONTROL_MODE = "full"
 _CACHE = None
 
 
-def _load_library(domain: str):
+def _load_library(domain: str, grounded_only: bool = False):
     import importlib.util
 
     from acorn import ContractLibrary
@@ -56,6 +56,13 @@ def _load_library(domain: str):
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     honest, _needs_ctx, _bad = mod.load_classified_contracts()
+    if grounded_only:
+        # Enforcement set = policy-text-grounded contracts only. The
+        # trace-mined categories are dropped entirely: a "convention"
+        # that 43.8% of the official agent's own PASSING traces break
+        # is not a rule (provenance-stratified audit, 2026-08-21).
+        MINED = ("transition_spec", "predicted_plan")
+        honest = [(c, m) for c, m in honest if not any(x in str(m) for x in MINED)]
     # Two-tier enforcement: trace-mined transition conventions (e.g.
     # "get_product_details must precede exchange") are not precise domain
     # rules — masking on them silently removes the *correct* write action
@@ -102,6 +109,12 @@ def main() -> None:
     ap.add_argument("--arm", choices=["acorn", "official"], required=True)
     ap.add_argument("--control-mode", default="full", choices=["full", "mask", "passive"])
     ap.add_argument(
+        "--grounded-only",
+        action="store_true",
+        help="enforce only policy-text-grounded contracts (drop the "
+        "trace-mined transition/predicted_plan categories entirely)",
+    )
+    ap.add_argument(
         "--shell",
         action="store_true",
         help="acorn arm with an EMPTY contract library: our agent protocol "
@@ -129,7 +142,7 @@ def main() -> None:
 
             _LIBRARY = ContractLibrary("empty-shell", [])
         else:
-            _LIBRARY = _load_library(args.domain)
+            _LIBRARY = _load_library(args.domain, grounded_only=args.grounded_only)
         registry.register_agent_factory(_acorn_factory, "acorn_agent")
         agent_name, llm_label = "acorn_agent", f"acorn-{args.agent_model}"
     else:

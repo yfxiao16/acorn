@@ -216,6 +216,25 @@ conversations; 53 honest contracts, evaluated condition-independently)
   official gpt-4.1-mini scores joint^4 8.8%, gpt-4.1 28.9%,
   claude-3-7-sonnet 0.0%.
 
+### Provenance-stratified audit (policy-grounded contracts only)
+
+The 53-contract set mixes 17 contracts written from the policy text with
+36 trace-mined "conventions" (transition_spec / predicted_plan). A mined
+pattern that fires on 43.8% of the OFFICIAL agent's own passing traces
+is not a rule (traces witness ∃; rules claim ∀). Restricting the audit
+to the 17 policy-grounded contracts — immune to the "your contracts are
+too tight" objection:
+
+| arm (17 grounded contracts) | violation rate | blind spot | clean^4 | joint^4 |
+|---|---|---|---|---|
+| official LLMAgent | 37.3% | 35.9% | 19.3% | 8.8% |
+| acorn | **0.0%** | **0.0%** | **100.0%** | **26.3%** |
+
+acorn is PERFECTLY compliant on policy-grounded rules (joint^4 = its own
+pass^4: every success is a compliant success), 3.0× the official agent.
+An acorn arm enforcing only the 17 grounded contracts is running to
+measure how much of the ~7pp enforcement price was mined-contract noise.
+
 Framing: acorn trades ~8pp of native pass^1 for near-elimination of
 committed procedure violations and a 2.8× joint success-and-compliance
 rate — and the 61% blind-spot number is a critique of pass^k-only

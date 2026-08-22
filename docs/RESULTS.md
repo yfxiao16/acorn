@@ -181,14 +181,20 @@ litellm-equivalent retries, faithful tool schemas and message-role
 rendering. Three earlier acorn runs under partial parity scored
 pass^1 0.550/0.561/0.555 — the final number is stable, not tuned.
 
-### Layer 1 — native pass^k
+### Layer 1 — native pass^k (with the decomposition arm)
 
 | arm | avg reward | pass^1 | pass^2 | pass^3 | pass^4 |
 |---|---|---|---|---|---|
 | official LLMAgent | 0.656 | **0.636** | 0.478 | 0.382 | 0.316 |
+| shell (our protocol, EMPTY contract library) | 0.626 | 0.625 | 0.491 | 0.419 | **0.377** |
 | acorn (contracts + obligations + mask) | 0.561 | 0.555 | 0.402 | 0.316 | 0.263 |
 
-The official agent leads native pass^1 by ~8pp.
+Causal decomposition: shell ≈ official on pass^1 (−1.1pp, within noise;
+pass^4 actually HIGHER, 0.377 vs 0.316 — our protocol shell is more
+consistent across trials than the litellm agent). The entire ~7pp
+official-vs-acorn gap is therefore the price of the control
+interventions under this 53-contract set, not harness infrastructure.
+What that price buys is the Layer-3 result below.
 
 ### Layer 3 — procedure compliance (offline audit of the same saved
 conversations; 53 honest contracts, evaluated condition-independently)

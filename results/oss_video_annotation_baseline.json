@@ -1,0 +1,3559 @@
+{
+  "summary": {
+    "pack": "video_annotation_sop",
+    "model": "bedrock:openai.gpt-oss-120b-1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 27.0,
+    "n": 125,
+    "TSR": 0.576,
+    "ECR": 0.984,
+    "avg_model_calls": 5.376,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.536,
+    "avg_committed_violations": 0.472,
+    "total_tokens": 4875602,
+    "cached_tokens": 0,
+    "avg_latency_s": 14.38,
+    "time_model_s": 1796.0,
+    "time_controller_s": 1.42,
+    "time_tools_s": 0.01,
+    "controller_share": 0.00079,
+    "decision_states": 672,
+    "unique_states": 65,
+    "state_reuse_rate": 0.9033,
+    "cache": null,
+    "wall_clock_s": 1798.0
+  },
+  "rows": [
+    {
+      "key": "vid_00178",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00178** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00178.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00178.mp4.binary\",\n  \"Inter annotator score\": 0.8660421015198164,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00065",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00065** failed validation due to improper camera positioning (expected a front\u2011camera view, but the video was captured from a passenger\u2011seat location). As a result, the annotation pipeline was halted.\n\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": null,\n  \"reason\": \"Camera position validation failed: expected front-camera positioning, but got passenger seat near driver.\"\n}\n</final_output>\n``"
+    },
+    {
+      "key": "vid_00183",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00183** could not be processed because it does not satisfy the SOP\u2019s environmental and positioning requirements (non\u2011urban scene, unsuitable weather, and non\u2011front\u2011facing camera). Consequently, no annotations were generated."
+    },
+    {
+      "key": "vid_00025",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00025.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00025.mp4.binary\",\n  \"Inter annotator score\": 0.970636910077414,\n  \"Reason\": null\n}\n</final_output>"
+    },
+    {
+      "key": "vid_00159",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00159** could not be processed because it does not meet the required specifications for autonomous\u2011vehicle annotation:\n\n- **Resolution**: 1024\u202f\u00d7\u202f800\u202fpx (minimum 1920\u202f\u00d7\u202f1080\u202fpx)  \n- **Frame rate**: 15.48\u202ffps (required 24\u202f\u2013\u202f60\u202ffps)  \n- **Bit depth**: 6\u2011bit (required 8\u2011 or 10\u2011bit)  \n- **Channel count**: 2 (minimum 3\u2011channel RGB)\n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: resolution 1024x800 below minimum 1920x1080, frame rate "
+    },
+    {
+      "key": "vid_00147",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00147** could not be processed because it fails the input\u2011validation criteria\u2014specifically, the recorded weather condition (\u201cobscured\u201d) does not satisfy the protocol\u2019s requirement for clear daylight illumination. Consequently, no annotation output was generated."
+    },
+    {
+      "key": "vid_00105",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00105** did not meet the mandatory validation criteria (incorrect codec, insufficient resolution, inadequate channel count, and unsuitable lighting conditions). Consequently, it cannot be processed through the annotation pipeline.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format 'avi' is not HEVC/H.264, resolution 1280x720 below required 1920x1080, channel count 2 below required 3 channels, and lighting conditions 'pitch black' not me"
+    },
+    {
+      "key": "vid_00059",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00059** could not be processed because it does not meet the required SOP condition of a front\u2011mounted camera. Consequently, no annotations were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position not front-mounted as required by SOP (found: camera beside HUD).\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00176",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00176** could not be processed because it does not meet the required environmental and positioning constraints of the SOP (the scene is not an urban setting, the camera is not front\u2011mounted, and the lighting conditions are not the specified daylight illumination). Consequently, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00194",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video\u202f**vid_00194** has successfully passed all validation, detection, segmentation, and quality\u2011control steps. The final annotation package is ready.\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00194.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00194.mp4.binary\",\n  \"Inter annotator score\": 0.9550146580542218,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00061",
+      "want": {
+        "final_status": false
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "vid_00071",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00071** has successfully passed all validation, detection, segmentation, automated quality\u2011control, and human\u2011in\u2011the\u2011loop checks.  \n\n**Final Output**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00071.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00071.binary\",\n  \"Inter annotator score\": 0.94,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00165",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00165** could not be annotated because the detected object type **\u201cbuildings\u201d** is not one of the permitted categories defined in the SOP (road lanes, pedestrians, vehicles, bicyclists, street markings). \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Predicted object type 'buildings' is not supported by the SOP; allowed types are road lanes, pedestrians, vehicles, bicyclists, street markings.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00044",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00044** could not be processed because it does not meet the required input\u2011validation criteria (the scene context must be *urban* and the camera must be a *front\u2011camera*). Hence, no annotations were generated."
+    },
+    {
+      "key": "vid_00131",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00131** has successfully passed through the entire annotation pipeline:\n\n- Video format, resolution, frame\u2011rate, bit depth, and channel count validated.  \n- LiDAR data synchronized and validated.  \n- Object detection run (buildings) with confidence\u202f0.93 and tracking enabled.  \n- Segmentation produced instance masks with predicted IoU\u202f0.90.  \n- Automated QC confirmed temporal consistency\u202f0.92 and spatial accuracy\u202f0.91.  \n- Human validation yielded an inter\u2011annotator agreement scor"
+    },
+    {
+      "key": "vid_00005",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00005** has successfully passed through the full annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame\u2011rate, bit\u2011depth, and channel count.  \n- **LiDAR validation** verified synchronized point\u2011cloud data, camera intrinsics, and transformation matrix availability.  \n- **Object detection** identified **traffic signs** with a confidence of **0.8643** and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of **0.8066*"
+    },
+    {
+      "key": "vid_00168",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00168** could not be processed because it does not meet the required validation criteria (the camera is not in the required front position and the scene context does not match the mandated urban daylight setting). Consequently, it was not annotated."
+    },
+    {
+      "key": "vid_00161",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00161** could not be processed because it does not meet the mandatory input specifications outlined in the SOP (incorrect format, insufficient resolution, low frame\u2011rate, inadequate bit\u2011depth, wrong channel count, unsuitable scene and weather conditions).  \n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format AVI is not HEVC/H.264; resolution 1280x800 below required 1920x1080; frame rate 14.5 fps below 24 fps; bit depth 6 belo"
+    },
+    {
+      "key": "vid_00166",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video could not be processed because it does not meet the required specifications for autonomous\u2011vehicle annotation.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format AVI not allowed (must be HEVC/H.264), resolution 1280x800 below minimum 1920x1080, frame rate 12.12 fps below 24 fps, bit depth 12 not allowed (must be 8 or 10), channel count 2 below required 3, scene type 'arcade' not urban, lighting 'moon out' not daylight, camera position 'side r"
+    },
+    {
+      "key": "vid_00028",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00028** could not be processed because it fails multiple mandatory validation checks (format, resolution, frame rate, channel count, lighting, camera position, scene context, and weather). Consequently, it was not annotated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format 'mov' not HEVC/H.264; resolution 1280x720 below 1920x1080; frame rate 16.0 fps below 24-60 fps; channel count 2 < required 3; lighting conditions 'starry' not dayli"
+    },
+    {
+      "key": "vid_00101",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00101** has successfully passed through the full annotation pipeline:\n\n- Video format and specifications validated.  \n- LiDAR data synchronized and verified.  \n- Object detection performed (pedestrians, confidence\u202f\u2248\u202f0.94, tracking enabled).  \n- Segmentation executed (instance masks, predicted\u202fIoU\u202f\u2248\u202f0.83).  \n- Automated QC met thresholds (temporal consistency\u202f\u2248\u202f0.87, spatial accuracy\u202f\u2248\u202f0.86).  \n- Human validation achieved an inter\u2011annotator score of **0.883** (\u2265\u202f0.75).  \n\n**Final "
+    },
+    {
+      "key": "vid_00150",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00150** could not be processed because it failed the required input validation checks.  \n\n**Validation failures**  \n- Video format is **RAW** (required: HEVC/H.264).  \n- Resolution **1280\u202f\u00d7\u202f800** (minimum required: 1920\u202f\u00d7\u202f1080).  \n- Frame rate **19.47\u202ffps** (minimum required: 24\u202ffps).  \n- Bit depth **6\u2011bit** (minimum required: 8\u2011bit).  \n- Channel count **2** (minimum required: 3).  \n\nSince the video does not meet the SOP specifications, no annotation, segmentation, or quality\u2011con"
+    },
+    {
+      "key": "vid_00021",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00021** successfully passed through the entire annotation pipeline:\n\n- **Video validation** \u2013 format, resolution, frame\u2011rate, bit\u2011depth, and channels meet SOP specs.  \n- **Weather check** \u2013 bright daylight confirmed.  \n- **LiDAR validation** \u2013 point cloud, timing, and camera\u2011intrinsics are valid.  \n- **Object detection** \u2013 pedestrians detected with confidence\u202f0.91, tracking enabled.  \n- **Segmentation** \u2013 instance masks generated, predicted IoU\u202f0.87 (\u2265\u202f0.75).  \n- **Automated QC**"
+    },
+    {
+      "key": "vid_00189",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00189** failed to meet the required scene\u2011context criteria (urban setting) and therefore was not annotated.\n\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Scene context 'riverfront' does not meet required urban setting constraint.\"\n}\n</final_output>"
+    },
+    {
+      "key": "vid_00111",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00111** could not be processed through the annotation pipeline because it does not meet the required environmental criteria. Specifically, the scene type is **riverfront**, which is not an urban setting, and the camera position is **camera beside HUD** rather than the required front\u2011camera location.\n\n**Result (XML format)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video fails environment validation: scene_type 'riverfront' is not urban and camera_position "
+    },
+    {
+      "key": "vid_00060",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00060** could not be processed because it does not meet the required specifications\u2014specifically, the camera position is **side left** instead of the mandated **front\u2011camera** position. Consequently, the annotation pipeline was halted.\n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position side left does not meet required front-camera positioning for annotation SOP.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00040",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00040** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n**Final output (XML format with embedded JSON)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00040.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00040.mp4.binary\",\n  \"Inter annotator score\": 0.834334690522351,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00031",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00031.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00011????\" \n}\n</final_output>"
+    },
+    {
+      "key": "vid_00010",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00010** could not be processed because it does not meet the required input validation criteria (the scene context is not urban, the camera is not front\u2011mounted, and the weather condition is not permitted)."
+    },
+    {
+      "key": "vid_00192",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00192** has successfully passed all validation, detection, segmentation, automated QC, and human\u2011validation steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00192.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00192.mp4.binary\",\n  \"Inter annotator score\": 0.948107412603338,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00139",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00139** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n**Final Output (XML format with embedded JSON):**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00139.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00139.mp4.binary\",\n  \"Inter annotator score\": 0.9137690659452476,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00019",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00019** has successfully passed through the entire annotation pipeline:\n\n- Video format, resolution, frame\u2011rate, bit\u2011depth, and channel count validated.  \n- LiDAR point\u2011cloud data synchronized and validated.  \n- Object detection performed (trees) with confidence\u202f0.89 and tracking enabled.  \n- Segmentation generated with predicted IoU\u202f0.85.  \n- Automated QC reported temporal consistency\u202f0.87 and spatial accuracy\u202f0.86.  \n- Human validation yielded an inter\u2011annotator score\u202f0.90 (\u2265\u202f0"
+    },
+    {
+      "key": "vid_00174",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00174** could not be processed because it did not meet the required validation criteria (resolution, frame\u2011rate, bit\u2011depth, channel count, scene context, weather, and camera positioning). Consequently, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00069",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00069** successfully passed all validation, detection, segmentation, automated quality checks, and human\u2011in\u2011the\u2011loop review steps.  \n\n**Final Output (XML format with embedded JSON):**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00069.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00069.mp4.binary\",\n  \"Inter annotator score\": 0.9176175779774975,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00133",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00133** could not be processed because it did not satisfy the required environmental conditions (the scene type is not urban and the weather condition does not meet the daylight illumination requirement). Hence, no annotations were generated."
+    },
+    {
+      "key": "vid_00163",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00163** could not be processed because it does not meet the required specifications for autonomous\u2011vehicle annotation (resolution, frame rate, bit depth, channel count, and codec compliance). Consequently, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00177",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00177** has successfully passed through the full annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame rate, bit depth, and channel count.  \n- **LiDAR data** was validated and synchronized.  \n- **Object detection** identified vehicles with a confidence of **0.87** and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of **0.973**.  \n- **Automated QC** gave a temporal consistency score of **0.855** and spatial ac"
+    },
+    {
+      "key": "vid_00115",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00115** could not be processed because it fails multiple mandatory validation criteria (format, resolution, channel count, scene context, lighting, and camera position). Consequently, no annotations were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format AVI not HEVC/H.264, resolution 1280x720 below required 1920x1080, only 2 color channels (requires >=3), scene type 'park and fly' not urban, weather 'flurries' and lighting '"
+    },
+    {
+      "key": "vid_00108",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00108** could not be processed because it does not meet the mandatory input specifications outlined in the SOP. Key validation failures include:\n\n- **Video format** is MOV, whereas only HEVC/H.264 are allowed.  \n- **Resolution** is 1280\u202f\u00d7\u202f720\u202fpx, below the required minimum of 1920\u202f\u00d7\u202f1080\u202fpx.  \n- **Frame rate** is 19\u202ffps, under the required 24\u202ffps minimum.  \n- **Channel count** is 2, while at least 3 color channels are required.  \n- **Camera position** is trunk instead of the mand"
+    },
+    {
+      "key": "vid_00141",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The annotation pipeline could not be completed because the video **vid_00145\u00a0\u2014\u00a0**\u00a0does **not** meet a critical SOP requirement: the camera is **not\u202ffront\u2011front\u2011facing** (the video was recorded\u00a0from a\u00a0passenger\u2011seat\u00a0near\u00a0the\u00a0driver).  \n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position is not front-facing as required by SOP (found passenger seat near driver).\"\n}\n</final_output>\n```\n\nNo further processing (LiDAR validation, detection, segmentation, or QC) wa"
+    },
+    {
+      "key": "vid_00140",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "vid_00120",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00120** cannot be processed because the required inputs (video file path, LiDAR data, and related metadata) were not supplied. Without these essential resources, the annotation pipeline\u2014covering validation, detection, segmentation, and quality checks\u2014cannot be executed.  \n\n**Result:**  \n- **Final Status:**\u202fFalse  \n- **Reason:**\u202fInsufficient input data (missing video_path, LiDAR data, and necessary metadata)."
+    },
+    {
+      "key": "vid_00081",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00081** successfully passed all validation, detection, segmentation, automated quality\u2011control, and human\u2011validation steps.\n\n**Result Summary (XML\u2011wrapped JSON)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00081.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00081.mp4.binary\",\n  \"Inter annotator score\": 0.90452595408092,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00162",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00162** did not pass the required validation checks (incorrect format, insufficient resolution, low frame\u2011rate, unsupported bit\u2011depth, and insufficient color channels).  \n\n**Result:**  \n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video format validation failed: format AVI not allowed (must be HEVC/H.264); resolution 1024x720 below required minimum 1920x1080; frame rate 18.57 fps below required 24 fps; bit depth 12 not allowed (must be 8 or 10); channel count 2 l"
+    },
+    {
+      "key": "vid_00092",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00092** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00092.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00092.mp4.binary\",\n  \"Inter annotator score\": 0.9165376406775828,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00180",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00180** could not be annotated because it does not meet the required environmental conditions \u2013 the recorded weather was \u201cshower,\u201d which violates the protocol\u2019s daylight\u2011illumination requirement.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video failed environmental validation: weather condition 'shower' does not meet daylight illumination requirement.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00157",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00157** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n**Final annotation result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00157.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00157.mp4.binary\",\n  \"Inter annotator score\": 0.8703831713041273,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00118",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "performObjectDetection requires lidar_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00118** has successfully passed through the entire annotation pipeline:\n\n- Video format, resolution, frame\u2011rate, bit\u2011depth, and channel count verified.  \n- Weather, scene context, and camera position validated.  \n- LiDAR data synchronized and validated.  \n- Object detection performed (street markings, confidence\u202f\u2248\u202f0.98, tracking enabled).  \n- Segmentation executed (instance masks, predicted IoU\u202f\u2248\u202f0.776, temporal smoothing enabled).  \n- Automated quality control passed (temporal c"
+    },
+    {
+      "key": "vid_00103",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00103** cannot be processed because essential input information (video file path, LiDAR data, and related metadata) was not supplied. Without these details, the system cannot perform format validation, object detection, segmentation, or quality\u2011control checks, so the annotation pipeline cannot be executed.\n\n**Result**\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Insufficient input data: video path and required LiDAR metadata were not provided, preventing validati"
+    },
+    {
+      "key": "vid_00188",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00188** did not meet the required specifications (incorrect format, insufficient resolution, low frame\u2011rate, unsupported bit depth, and insufficient color channels). Consequently, it could not be processed through the annotation pipeline.\n\n**Final Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format AVI not HEVC/H.264, resolution 1024x720 below required 1920x1080, frame rate 13.96 fps below 24 fps, bit depth 12 not allowed (must "
+    },
+    {
+      "key": "vid_00006",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00006** has successfully passed all validation, detection, segmentation, automated QC, and human\u2011validation steps.  \n\nIt meets the required quality thresholds (predicted\u202fIoU\u202f0.753\u202f>\u202f0.75, temporal consistency\u202f0.964\u202f>\u202f0.80, spatial accuracy\u202f0.886\u202f>\u202f0.85, inter\u2011annotator\u202f0.985\u202f>\u202f0.75) and is therefore fully annotated.\n\n**Final Output (XML wrapper with JSON payload)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00006.mp4.json\",\n  \"Segment"
+    },
+    {
+      "key": "vid_00123",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00123** has successfully passed through the entire annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame\u2011rate, bit\u2011depth, and channel count.  \n- **LiDAR data** was validated and synchronized.  \n- **Object detection** identified *trees* with confidence\u202f0.92 and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of\u202f0.89.  \n- **Automated QC** yielded a temporal consistency score of\u202f0.91 and spatial accuracy score of"
+    },
+    {
+      "key": "vid_00124",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00124** failed the required scene\u2011context validation (urban setting is required, but the video is recorded at a riverfront). Consequently, it cannot be processed through the annotation pipeline.\n\n**Result submitted:**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Scene context validation failed: expected urban setting, but video scene_type is riverfront.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00153",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00153** could not be processed because it fails multiple mandatory validation checks (format, resolution, frame rate, bit depth, channel count, and required scene/lighting conditions).  \n\n**Result:**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: unsupported format (AVI), insufficient resolution (1024x800 < 1920x1080), low frame rate (11.55 < 24 fps), unsupported bit depth (12), insufficient channel count (1 < 3), scene type and lighting"
+    },
+    {
+      "key": "vid_00155",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00155** has successfully passed all validation, detection, segmentation, and quality\u2011control steps, and human review confirmed high agreement.\n\n**Final Output (XML formatted as required)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00155.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00155.mp4.binary\",\n  \"Inter annotator score\": 0.9827181567467717,\n  \"Reason\": null\n}\n</final_output>\n```\n\nAll quality metrics exceed the SOP th"
+    },
+    {
+      "key": "vid_00193",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00193** could not be annotated because it does not satisfy the required environmental criteria (the weather condition \u201csmoky\u201d is not an acceptable daylight/clear condition)."
+    },
+    {
+      "key": "vid_00112",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00112** has successfully passed through the full annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame rate, bit depth, and channel count.  \n- **LiDAR data** was validated and synchronized with the video.  \n- **Object detection** identified vehicles with a confidence of **0.933** and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of **0.820**.  \n- **Automated QC** yielded a temporal consistency score of **0.9"
+    },
+    {
+      "key": "vid_00143",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00143** successfully passed all validation, detection, segmentation, and quality\u2011control steps. Human reviewers confirmed a high inter\u2011annotator agreement.\n\n**Final Output (wrapped in the required XML format)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00143.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00143.binary\",\n  \"Inter annotator score\": 0.93,\n  \"Reason\": null\n}\n</final_output>\n```\n\nAll quality metrics meet or exceed th"
+    },
+    {
+      "key": "vid_00089",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00089** has been successfully processed through the full annotation pipeline, meeting all required quality thresholds.\n\n**Result Summary (wrapped in XML as required):**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00089.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00089.mp4.binary\",\n  \"Inter annotator score\": 0.8340740662773075,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00055",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00055** could not be processed because it does not meet the SOP\u2019s input\u2011validation requirements (the scene context is not \u201curban\u201d and the weather condition is not an acceptable daylight condition). Consequently, no annotation outputs were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video failed validation: scene context 'riverfront' is not urban and weather 'flurries' is not acceptable daylight condition per SOP.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00171",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00171** has successfully passed through the full annotation pipeline:\n\n- **Video format & specifications** validated (H.264, 3840\u00d71080, 60\u202ffps, 8\u2011bit, 3\u2011channel).\n- **Weather conditions** acceptable (hazy).\n- **LiDAR data** synchronized and complete.\n- **Object detection** performed on \u201cbuildings\u201d with confidence\u202f0.986 and tracking enabled.\n- **Segmentation** generated with predicted IoU\u202f0.834.\n- **Automated QC** yielded temporal consistency\u202f0.977 and spatial accuracy\u202f0.892 (both"
+    },
+    {
+      "key": "vid_00119",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00119** successfully passed every stage of the annotation SOP:\n\n| Stage | Outcome |\n|-------|---------|\n| Video format validation | \u2705 HEVC, 3840\u00d72160, 60\u202ffps, 10\u2011bit, 4\u2011channel |\n| LiDAR data validation | \u2705 Synchronized, intrinsics & transform available |\n| Object detection | \u2705 Detected **railroad crossings** with 0.96 confidence, tracking enabled |\n| Segmentation | \u2705 Panoptic masks, predicted IoU\u202f=\u202f0.93 |\n| Automated QC | \u2705 Temporal consistency\u202f=\u202f0.95, spatial accuracy\u202f=\u202f0.94 |\n"
+    },
+    {
+      "key": "vid_00032",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00032** could not be processed because it does not meet the mandatory input specifications outlined in the SOP (incorrect codec, insufficient resolution, low frame\u2011rate, unsuitable scene and lighting conditions, and an invalid camera position). Consequently, the annotation pipeline was halted and no annotation files were produced."
+    },
+    {
+      "key": "vid_00142",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00142** has successfully passed all validation, detection, segmentation, automated quality control, and human\u2011in\u2011the\u2011loop checks.  \n\n**Final output (embedded in XML as required):**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00142.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00142.mp4.binary\",\n  \"Inter annotator score\": 0.9750883749337608,\n  \"Reason\": null\n}\n</final_output>\n```\n\nAll quality thresholds are met:\n\n- Predicted Io"
+    },
+    {
+      "key": "vid_00023",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00023** has successfully passed through the entire annotation pipeline, meeting all technical and quality criteria.  \n\n**Final Output (XML format with embedded JSON)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00023.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00023.indices\",\n  \"Inter annotator score\": 0.94,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00038",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00038** could not be processed because it did not meet the required validation criteria \u2013 specifically, the weather condition **\u201cobscured\u201d** fails the daylight illumination requirement. Consequently, the annotation pipeline was halted, and no annotation files were generated."
+    },
+    {
+      "key": "vid_00050",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00050** has successfully passed through the entire annotation pipeline:\n\n- **Video format and metadata** validated (H.264, 1920\u00d71080, 30\u202ffps, 8\u2011bit, 3\u2011channel, clear daylight, front\u2011camera).\n- **Weather conditions** confirmed as clear.\n- **LiDAR data** validated and synchronized.\n- **Object detection** performed for **bicyclists** (confidence\u202f0.88, tracking enabled) \u2192 results saved at `/data/videos/vid_00050.json`.\n- **Segmentation** executed (semantic, temporal smoothing) \u2192 mask"
+    },
+    {
+      "key": "vid_00156",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00156** could not be processed because it fails the mandatory input\u2011validation checks defined in the SOP (insufficient resolution, frame\u2011rate, bit\u2011depth, channel count, unsuitable scene, weather and lighting conditions, and incorrect camera position).  \n\n**Result:**  \n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format RAW, resolution 1280x720 below required 1920x1080, frame rate 18.35 below 24 fps, bit depth 6 below 8-bit, channel count "
+    },
+    {
+      "key": "vid_00080",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00080** could not be processed because it does not meet the mandatory validation criteria\u2014specifically, the camera position is not front\u2011facing as required by the SOP.\n\n**Result (XML wrapped JSON)**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: camera position 'camera beside HUD' is not front-facing as required by SOP.\"\n}\n</final_output>\n```\n\nNo further annotation artifacts (CoCo JSON, segmentation masks, or inter\u2011annotator scores) were"
+    },
+    {
+      "key": "vid_00041",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00041** could not be processed because its scene context (\u201criverfront\u201d) does not satisfy the SOP requirement for an urban setting. Consequently, no annotation outputs were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Scene context 'riverfront' does not meet required urban setting for annotation pipeline.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00154",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00154** could not be processed because it fails the required input\u2011validation criteria (insufficient resolution, frame\u2011rate, bit\u2011depth, and channel count). Consequently, no annotations were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: resolution 1024x800 below required 1920x1080, frame rate 12.04 fps below required 24\u201160 fps, bit depth 12 not allowed (must be 8 or 10), and channel count 1 below required minimum of 3 channels.\""
+    },
+    {
+      "key": "vid_00186",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00186** could not be processed because it fails multiple mandatory validation checks (format, resolution, frame\u2011rate, bit\u2011depth, channel count, scene context, and camera position). Therefore no annotation output was generated."
+    },
+    {
+      "key": "vid_00048",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The annotation pipeline could not be executed because the video\u202f**vid_00048** fails multiple mandatory validation checks (format, resolution, frame\u2011rate, channel count, scene context, lighting, and camera position). Consequently, no annotation files were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: format is MOV (required HEVC/H.264), resolution 1280x720 (minimum 1920x1080), frame rate 19.0 fps (required 24\u201160), only 2 color channels (minimum"
+    },
+    {
+      "key": "vid_00170",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00170** could not be processed because it does not meet the SOP\u2019s mandatory input specifications (insufficient resolution, frame\u2011rate, bit\u2011depth, channel count, scene context, weather and lighting conditions, and camera positioning). Consequently, no annotation outputs were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: resolution 1024x720 below required 1920x1080; frame rate 16.87 fps below required 24-60 fps; bit depth 12 not "
+    },
+    {
+      "key": "vid_00099",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00099** has successfully passed all validation, detection, segmentation, automated QC, and human\u2011validation steps.  \nAll quality thresholds were met:\n\n- Predicted IoU: **0.9787** (\u2265\u202f0.75)  \n- Temporal consistency: **0.923** (\u2265\u202f0.80)  \n- Spatial accuracy: **0.947** (\u2265\u202f0.85)  \n- Inter\u2011annotator score: **0.859** (\u2265\u202f0.75)\n\n**Final output (XML format with JSON payload):**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00099.mp4.json\",\n  \"Segment"
+    },
+    {
+      "key": "vid_00102",
+      "want": {
+        "final_status": true
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "To run the full SOP pipeline we need a few additional pieces of information that aren\u2019t included in the request:\n\n| Required input | Why it\u2019s needed | Example value |\n|----------------|----------------|---------------|\n| **Full path to the video file** (`video_path`) | Required for video validation, object\u2011detection, segmentation, and QC steps. | `\"/data/videos/vid_00102.mp4\"` |\n| **LiDAR point\u2011cloud file path** (`lidar_point_cloud_path`) | Required for the LiDAR\u2011validation step and for generati"
+    },
+    {
+      "key": "vid_00148",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00148** could not be processed because it does not meet the required SOP criteria \u2013 the camera is not positioned in the front\u2011facing location mandated for annotation. Consequently, the annotation pipeline was halted.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position not front-camera as required by SOP (position: camera beside HUD).\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00015",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00015** could not be processed because it did not meet the required validation criteria (the camera position and weather conditions are outside the allowed specifications)."
+    },
+    {
+      "key": "vid_00132",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00132** could not be processed because it does not meet the required SOP validation criteria \u2013 the camera is not front\u2011mounted. Consequently, no annotations were generated.\n\n**Result**\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: camera position is not front-mounted as required by SOP.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00158",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The annotation pipeline could not be executed because essential input data (e.g., video_path, LiDAR files, and related metadata) was not provided for **vid_00158**. Without these inputs, the system cannot perform validation, detection, segmentation, or quality\u2011control steps.  \n\n**Result submitted:**  \n- **final_status:** false  \n- **reason:** Insufficient input data: video_path and associated metadata not provided for validation and processing."
+    },
+    {
+      "key": "vid_00151",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00151** could not be processed because it was recorded under **blizzard** conditions, which violates the SOP\u2019s requirement for daylight, urban\u2011environment recordings.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Weather condition 'blizzard' does not meet required daylight urban environment criteria.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00029",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00029** successfully passed all validation, detection, segmentation, automated quality control, and human\u2011validation steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00029.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00029.mp4.binary\",\n  \"Inter annotator score\": 0.9014878094784902,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00051",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00051** has successfully passed all validation, object detection, LiDAR synchronization, segmentation, and automated quality\u2011control steps.  \n\n**Final output (wrapped in the required XML format):**  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00051.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00051.binary\",\n  \"Inter annotator score\": null,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00098",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00098** could not be processed because it did not meet the required validation criteria \u2013 specifically, the camera position is not a front\u2011mounted camera as mandated by the SOP.\n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video failed validation: camera position 'passenger seat near driver' does not meet front-camera requirement.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00011",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00011** could not be processed because it does not meet the validation requirements of the SOP (invalid weather condition \u201csleet\u201d and non\u2011front\u2011facing camera positioning). Therefore, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00068",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00068** could not be processed because it failed the mandatory input\u2011validation checks. Its format, resolution, frame rate, channel count and environmental conditions do not meet the SOP requirements for autonomous\u2011vehicle perception annotation. Consequently, no annotation output was generated."
+    },
+    {
+      "key": "vid_00083",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00083** has successfully passed through the entire annotation pipeline:\n\n- **Video validation** \u2013 format, resolution, frame\u2011rate, bit\u2011depth, and channel count conform to SOP.  \n- **LiDAR validation** \u2013 point\u2011cloud, timestamp offset, and transformation data are complete.  \n- **Object detection** \u2013 bicyclists detected with confidence\u202f0.91, tracking enabled.  \n- **Segmentation** \u2013 instance masks generated, predicted IoU\u202f0.88, temporal smoothing applied.  \n- **Automated QC** \u2013 spatia"
+    },
+    {
+      "key": "vid_00169",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00169** could not be processed because it does not meet the required SOP criteria (the camera position is not a front\u2011camera). Consequently, the annotation pipeline was halted.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position not front-camera as required; fails SOP validation.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00078",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "vid_00093",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00093** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00093.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00093.mp4.binary\",\n  \"Inter annotator score\": 0.9676340112386986,\n  \"Reason\": \"\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00114",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00114** successfully passed all stages of the SOP pipeline:\n\n- **Video format & metadata** validated (H.264, 1920\u00d71080, 45\u202ffps, 8\u2011bit, 4\u2011channel).\n- **LiDAR data** verified and synchronized (offset\u202f\u2248\u202f0.91\u202fs, intrinsics present).\n- **Object detection** completed for *traffic signs* with confidence\u202f\u2248\u202f0.9997 and tracking enabled.\n- **Segmentation** generated instance masks with predicted IoU\u202f\u2248\u202f0.811.\n- **Automated QC** yielded temporal consistency\u202f\u2248\u202f0.901 and spatial accuracy\u202f\u2248\u202f0.85"
+    },
+    {
+      "key": "vid_00082",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00082** has successfully passed through the full annotation pipeline:\n\n* Video format, resolution, frame\u2011rate, bit\u2011depth, and channel count validated.  \n* LiDAR data synchronized and validated.  \n* Object detection performed (vehicles) with confidence\u202f0.995.  \n* Segmentation executed, achieving predicted IoU\u202f0.931.  \n* Automated QC reported temporal consistency\u202f0.980 and spatial accuracy\u202f0.915.  \n* Human\u2011in\u2011the\u2011loop validation gave an inter\u2011annotator score\u202f0.856 (\u2265\u202f0.75 threshold"
+    },
+    {
+      "key": "vid_00185",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00185** was successfully processed through the full annotation pipeline:\n\n- Video format, resolution, frame\u2011rate, bit\u2011depth, and channel count all met SOP specifications.  \n- LiDAR data was validated and synchronized with the video.  \n- Object detection identified **curbs** with a confidence of **0.8954** and tracking enabled.  \n- Segmentation produced instance masks with a predicted IoU of **0.8936**.  \n- Automated QC reported a temporal consistency score of **0.9309** and spati"
+    },
+    {
+      "key": "vid_00001",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00001** could not be processed because essential inputs (video file path, LiDAR data, detection outputs, etc.) were missing, preventing the validation, detection, segmentation, and quality\u2011control steps required by the SOP. Consequently, no annotations were generated.\n\n**Result**\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Insufficient input data: video_path and associated metadata (LiDAR path, detection outputs) were not provided, preventing validation and proc"
+    },
+    {
+      "key": "vid_00129",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00129** has successfully passed through the full annotation pipeline:\n\n- Video format and parameters validated.  \n- LiDAR data synchronized and verified.  \n- Object detection performed (street markings, confidence\u202f0.95, tracking enabled).  \n- Segmentation generated (panoptic, predicted IoU\u202f0.92).  \n- Automated QC met spatial accuracy\u202f0.93 and temporal consistency\u202f0.94.  \n- Human review yielded an inter\u2011annotator score\u202f0.96.\n\n**Final result submitted.**"
+    },
+    {
+      "key": "vid_00064",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00164** could not be annotated because the detected object class \u201cbuildings\u201d does not meet the SOP\u2011specified allowed classes (road lanes, pedestrians, vehicles, bicyclists, or street markings). Consequently, the pipeline was halted and the final result was submitted with a failure status."
+    },
+    {
+      "key": "vid_00079",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I\u2019m ready to run the full annotation pipeline for **vid_00079**, but I need the required input files to proceed.\n\nPlease provide the following information:\n\n1. **Full path to the video file** (e.g., `/data/videos/vid_00079.mp4`).  \n2. If LiDAR data is part of the sequence, the **full path to the corresponding point\u2011cloud file** (e.g., `/data/lidar/vid_00079.pcd`).  \n3. Any additional context such as the expected **scene type** (urban, highway, etc.) or **weather conditions** if you\u2019d like those "
+    },
+    {
+      "key": "vid_00045",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00045** could not be processed because it did not meet the required validation criteria (camera position is not front\u2011camera and weather condition is not acceptable)."
+    },
+    {
+      "key": "vid_00053",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00053** has successfully passed through the entire annotation pipeline:\n\n- Video format and specs validated  \n- LiDAR data synchronized and verified  \n- Object detection performed (buildings, confidence\u202f0.91, tracking enabled)  \n- Segmentation generated (instance masks, predicted\u202fIoU\u202f0.88)  \n- Automated QC met thresholds (temporal consistency\u202f0.9, spatial accuracy\u202f0.89)  \n- Human validation confirmed high inter\u2011annotator agreement (0.92)\n\n**Final result submitted**."
+    },
+    {
+      "key": "vid_00030",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00030** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \nHuman reviewers confirmed a high inter\u2011annotator agreement.\n\n**Final Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00030.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00030.binary\",\n  \"Inter annotator score\": 0.9,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00179",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video\u202f**vid_00179** could not be annotated because it does not satisfy the SOP\u2019s environmental requirements \u2013 the recorded weather condition \u201cicy\u201d fails the required daylight illumination criteria. \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video failed environmental validation: weather condition 'icy' does not meet required daylight illumination criteria.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00104",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00104** successfully passed through the entire annotation pipeline:\n\n- **Video validation** confirmed correct format (H.264), resolution (1920\u202f\u00d7\u202f1080), frame rate (30\u202ffps), bit depth (8\u2011bit), and required channels (3).  \n- **LiDAR data** was synchronized (\u20110.3\u202fs offset) and all required metadata were present.  \n- **Object detection** identified *road lanes* with confidence **0.92** and tracking enabled.  \n- **Segmentation** produced semantic masks with a predicted IoU of **0.89**"
+    },
+    {
+      "key": "vid_00043",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The processing pipeline cannot be executed because essential inputs are missing. The SOP requires the video file path (and associated metadata such as resolution, frame\u2011rate, bit\u2011depth, and channel count) as well as any linked LiDAR point\u2011cloud data for synchronization and calibration steps. Since only the `video_id` (`vid_00043`) was provided, the system cannot validate the video format, run object detection, perform segmentation, or conduct quality\u2011control checks.\n\n**Result submitted:**\n\n- **f"
+    },
+    {
+      "key": "vid_00039",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00039** has successfully passed through the full annotation pipeline:\n\n- **Video validation** \u2013 format, resolution, frame\u2011rate, bit\u2011depth, channel count, scene, weather and lighting all compliant.  \n- **LiDAR validation** \u2013 point cloud present, timestamps synchronized, camera intrinsics and transform matrices available.  \n- **Object detection** \u2013 traffic signs detected with confidence\u202f0.86, tracking enabled.  \n- **Segmentation** \u2013 instance masks generated, predicted IoU\u202f0.92.  \n-"
+    },
+    {
+      "key": "vid_00042",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00042** has successfully passed through the entire annotation pipeline:\n\n- Video format, resolution, frame\u2011rate, bit\u2011depth, and channel count validated.  \n- LiDAR data synchronized and verified.  \n- Object detection performed on **vehicles** with confidence\u202f0.94 and tracking enabled.  \n- Segmentation generated with predicted IoU\u202f0.93.  \n- Automated QC reported temporal consistency\u202f0.996 and spatial accuracy\u202f0.888.  \n- Human validation achieved an inter\u2011annotator score\u202f0.787 (\u2265\u202f0."
+    },
+    {
+      "key": "vid_00160",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00160** could not be processed because it fails several mandatory validation checks (resolution, frame rate, bit depth, channel count, scene context, lighting, and camera position). Consequently, no annotation outputs were generated.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video validation failed: resolution 1280x800 below required minimum 1920x1080, frame rate 14.14 fps below required 24-60 fps, bit depth 6-bit below required 8/10-bit, channel count 2 insu"
+    },
+    {
+      "key": "vid_00152",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The annotation pipeline could not be executed because the video **vid_00152** does not meet the required input specifications.  \nSpecifically, the weather condition **\u201cblizzard\u201d** is outside the allowed daylight\u2011urban environment, and the camera is positioned on a **passenger\u2011seat mount** rather than the required front\u2011facing position. Consequently, the video is not eligible for processing under the SOP.\n\n**Result**\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video fails valid"
+    },
+    {
+      "key": "vid_00014",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00014** could not be annotated because it does not meet the required input specifications. The validation step detected that the video is encoded in **AVI** format rather than the required **HEVC/H.264**, and its resolution (**1280\u202f\u00d7\u202f720**) is below the minimum **1920\u202f\u00d7\u202f1080** required by the SOP. Consequently, the pipeline was halted before any further processing could occur."
+    },
+    {
+      "key": "vid_00109",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00109** could not be processed because it does not meet the required front\u2011camera positioning specified in the SOP.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position 'passenger seat near driver' does not meet front-camera requirement.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00125",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00125** could not be processed because it does not meet the required input\u2011validation criteria (the scene context, weather, and lighting conditions fall outside the SOP specifications). Consequently, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00035",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00035** could not be processed because it does not meet the environmental constraints required by the SOP (the recorded weather condition \u201cflurries\u201d is not allowed).  \n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Video fails environmental constraints: weather condition 'flurries' is not permitted (requires daylight urban conditions).\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00184",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00184** could not be processed because it does not meet the SOP\u2019s environmental constraints \u2013 the camera is not positioned at the front of the vehicle (required\u202ffront\u2011camera positioning). Consequently, the annotation pipeline was halted.\n\n**Result**\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Camera position not front; fails SOP environmental constraints (required front camera).\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00074",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00074** successfully passed every stage of the SOP pipeline:\n\n* Video format, resolution, frame\u2011rate and color specifications validated.  \n* LiDAR point\u2011cloud synchronized and verified.  \n* Object detection identified **railroad crossings** with confidence\u202f0.8947 and tracking enabled.  \n* Segmentation produced instance masks with predicted IoU\u202f0.9045.  \n* Automated QC reported temporal consistency\u202f0.9969 and spatial accuracy\u202f0.9528 (both above required thresholds).  \n* Human revi"
+    },
+    {
+      "key": "vid_00175",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00175** could not be processed because it fails the required input\u2011validation criteria (non\u2011urban scene, unsuitable weather/lighting, and incorrect camera position). Consequently, no annotation outputs were generated."
+    },
+    {
+      "key": "vid_00003",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00003** has successfully passed through the entire annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame\u2011rate, bit\u2011depth, and channel count.  \n- **LiDAR data** was validated and synchronized with the video.  \n- **Object detection** identified **vehicles** with a confidence of **0.936** and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of **0.876**.  \n- **Automated QC** returned a temporal consistency score o"
+    },
+    {
+      "key": "vid_00012",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00012** has successfully passed through the entire annotation pipeline:\n\n- **Video validation** confirmed correct format, resolution, frame rate, bit depth, and channel count.  \n- **LiDAR data** was validated and synchronized with the video.  \n- **Object detection** identified *street markings* with a confidence of **0.9796** and tracking enabled.  \n- **Segmentation** produced instance masks with a predicted IoU of **0.7985**.  \n- **Automated QC** yielded a temporal consistency s"
+    },
+    {
+      "key": "vid_00190",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"Final Status\": false,\n  \"CoCo JSON path\": null,\n  \"Segmentation mask path\": null,\n  \"Inter annotator score\": null,\n  **** **\n**"
+    },
+    {
+      "key": "vid_00034",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00034** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00034.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00034.mp4.binary\",\n  \"Inter annotator score\": 0.9413371495986196,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00090",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00090** could not be processed because the recorded weather condition (downpour) violates the SOP\u2019s required daylight illumination constraints. Consequently, the annotation pipeline was halted.\n\n```xml\n<final_output>\n{\n  \"Final Status\": false,\n  \"Reason\": \"Weather condition 'downpour' does not meet required daylight illumination constraints.\"\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00094",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00094** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00094.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00094.binary\",\n  \"Inter annotator score\": 0.94,\n  \"Reason\": null\n}\n</final_output>\n```"
+    },
+    {
+      "key": "vid_00100",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00100** could not be processed because it failed the mandatory validation checks:\n\n- **Scene type** is \u201cuniversity district\u201d \u2013 the SOP requires an **urban** setting.  \n- **Weather** is \u201cshower\u201d \u2013 the protocol mandates daylight illumination conditions.  \n- **Camera position** is \u201ccamera beside HUD\u201d \u2013 only a **front\u2011camera** configuration is accepted.\n\nAs these critical requirements are not met, the annotation pipeline cannot proceed.\n\n```xml\n<final_output>\n{\n  \"Final Status\": fals"
+    },
+    {
+      "key": "vid_00072",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00072** successfully passed all validation, detection, segmentation, and quality\u2011control steps.  \n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00072.mp4.json\",\n  \"Segmentation mask path\": \"/data/videos/vid_00072.mp4.binary\",\n  \"Inter annotator score\": 0.9851461917083522,\n  \"Reason\": null\n}\n</final_output>\n```\nAll required quality thresholds were met, and the annotation deliverables are ready for downstream training use."
+    },
+    {
+      "key": "vid_00070",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"Final Status\": false,\n  \"CoCo JSON path\": null,\n  \"Segmentation mask path\": null,\n  \"Inter annotator score\": null,\n  \"Reason\": \"Video validation failed: scene context 'freeway' does not meet required urban setting, and weather condition 'shower' is not permitted under SOP\u00a0->\u00a0environmental constraints.\"\n}\n</final_output>"
+    },
+    {
+      "key": "vid_00187",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON path\": \"/data/videos/vid_00144????\",\n  \"CoCO\u00a0\u00a0?? ???\u00a0\u00a0****??\u00a0\u00a0??\u00a0\u00a0**\u00a0\u00c2\u00a0\u00a0-Port\u00a0\u00a0**</\u2026\"\n}\n</final_output>"
+    },
+    {
+      "key": "vid_00018",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": null,\n  \"reason\": \"Insufficient input data: video_path, LiDAR data, and required metadata were not provided for video_id vid_00018, preventing completion of the annotation pipeline.\"\n}\n</final_output>"
+    }
+  ]
+}

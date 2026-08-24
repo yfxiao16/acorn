@@ -1,0 +1,2252 @@
+{
+  "summary": {
+    "pack": "patient_intake_sop",
+    "model": "bedrock:openai.gpt-oss-120b-1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 7.0,
+    "n": 66,
+    "TSR": 0.9696969696969697,
+    "ECR": 0.9696969696969697,
+    "avg_model_calls": 7.833333333333333,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.9696969696969697,
+    "avg_committed_violations": 0.015151515151515152,
+    "total_tokens": 1164342,
+    "cached_tokens": 0,
+    "avg_latency_s": 12.23,
+    "time_model_s": 806.6,
+    "time_controller_s": 0.411,
+    "time_tools_s": 0.01,
+    "controller_share": 0.00051,
+    "decision_states": 517,
+    "unique_states": 19,
+    "state_reuse_rate": 0.9632,
+    "cache": null,
+    "wall_clock_s": 813.3
+  },
+  "rows": [
+    {
+      "key": "P100012",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John Dove (ID: P100012)** has been successfully processed according to the SOP.\n\n**Verification Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | valid |\n| Prescription Benefit Validation | valid |\n| Pharmacy Network Check | yes |\n| Lifestyle Risk Level | low |\n| Overall Risk Level | low |\n| User Registration | success |\n\nAll checks passed and the patient has been registered in the system."
+    },
+    {
+      "key": "P100066",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane22 Dove (ID: P100066)** has been successfully processed according to the SOP.\n\n**Verification & Risk Assessment Summary**\n| Component | Result |\n|-----------|--------|\n| Insurance Validation | valid |\n| Prescription Insurance Validation | valid |\n| Pharmacy Network Verification | yes |\n| Lifestyle Risk Level | low |\n| Overall Risk Level | low |\n| Patient Registration | success |\n\nAll required checks have passed and the registration report has been submitted and recorded."
+    },
+    {
+      "key": "P100029",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications, risk assessments, and registration steps were executed. The final verification report has been submitted and recorded.\n\n**Verification Summary**\n- **Insurance Validation:** invalid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Check:** yes  \n- **Lifestyle Risk Level:** high  \n- **Overall Risk Level:** high  \n- **User Registration:** failure (due to invalid insurance)  \n\nThe record is"
+    },
+    {
+      "key": "P100070",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane Dove (ID: P100070)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | **valid** |\n| Prescription Insurance Validation | **valid** |\n| Lifestyle Risk Level | **low** |\n| Overall Risk Level | **low** |\n| Pharmacy Network Check | **yes** |\n| Patient Registration | **success** |\n\nAll required checks passed and the registration report has been submitted and recorded."
+    },
+    {
+      "key": "P100010",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP, and all required verifications and risk assessments have been completed successfully. The verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100068",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane24 Dove** (ID: P100068) has been successfully processed:\n\n- Insurance validation: **valid**\n- Prescription insurance validation: **valid**\n- Pharmacy network verification: **yes**\n- Lifestyle risk level: **low**\n- Overall risk level: **low**\n- Patient registration status: **success**\n\nAll verification results have been recorded in the final intake report."
+    },
+    {
+      "key": "P100006",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "All required verifications and risk assessments have been successfully completed, and the patient has been registered.\n\n**Verification Report (JSON)**  \n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100076",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane Dove (ID: P100076)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | valid |\n| Prescription Insurance Validation | valid |\n| Lifestyle Risk Level | low |\n| Overall Risk Level | low |\n| Pharmacy Network Check | yes |\n| User Registration | success |\n\nAll required checks have been completed and the registration report has been recorded."
+    },
+    {
+      "key": "P100041",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100046",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nAll required verifications and risk assessments were completed, and the patient **Jane Dove (ID: P100046)** has been registered in the system."
+    },
+    {
+      "key": "P100017",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed per the SOP. All required verifications and risk assessments were completed, the patient was registered, and the verification report has been submitted."
+    },
+    {
+      "key": "P100057",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were completed, the registration attempt was made, and the final verification report has been submitted.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe registration was not successf"
+    },
+    {
+      "key": "P100035",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully. All required verifications, risk assessments, and registration steps were completed per the SOP, and the final verification report has been recorded."
+    },
+    {
+      "key": "P100008",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n- **Lifestyle Risk Level:** high  \n- **Overall Risk Level:** medium  \n- **Insurance Validation:** invalid  \n- **Prescription Insurance Validation:** invalid  \n- **Pharmacy Network Check:** no (not verified)  \n- **User Registration:** failure  \n\nAll results have been recorded in the system."
+    },
+    {
+      "key": "P100056",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully according to the SOP.\n\n**Verification Report**\n\n| Item                               | Result |\n|------------------------------------|--------|\n| Insurance validation               | valid |\n| Prescription insurance validation  | valid |\n| Lifestyle risk level               | low |\n| Overall risk level                 | low |\n| Pharmacy network verification      | yes |\n| User registration status           | success |\n\nAll required checks passed"
+    },
+    {
+      "key": "P100063",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, and the final registration outcome has been recorded.\n\n**Verification Report (JSON)**  \n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe registration was not successful due to invalid prim"
+    },
+    {
+      "key": "P100020",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John20 Dove (ID: P100020)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n- **Insurance Validation:** valid  \n- **Prescription Benefits Validation:** valid  \n- **Pharmacy Network Verification:** yes (RiteAid)  \n- **Lifestyle Risk Level:** low  \n- **Overall Risk Level:** low  \n- **Patient Registration:** success  \n\nAll results have been recorded in the verification report."
+    },
+    {
+      "key": "P100074",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane30 Dove (ID: P100074)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | **valid** |\n| Prescription Benefits Validation | **valid** |\n| Pharmacy Network Verification | **yes** |\n| Lifestyle Risk Level | **low** |\n| Overall Risk Level | **low** |\n| Patient Registration | **success** |\n\nAll required checks passed and the registration record has been submitted and archived."
+    },
+    {
+      "key": "P100026",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed successfully according to the SOP.\n\n**Verification Report**\n\n| Item | Result |\n|------|--------|\n| Insurance Validation | valid |\n| Prescription Insurance Validation | valid |\n| Pharmacy Network Check | yes |\n| Lifestyle Risk Level | low |\n| Overall Risk Level | low |\n| User Registration | success |\n\nAll required verifications, risk assessments, and registration steps completed, and the final verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100067",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, the registration attempt was made, and the final verification report has been submitted.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"no\"\n}\n```\n\nThe patient **P100067** could "
+    },
+    {
+      "key": "P100014",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John14 Dove (ID: P100014)** has been successfully processed per the SOP.\n\n**Verification Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | **valid** |\n| Prescription Insurance Validation | **valid** |\n| Lifestyle Risk Level | **low** |\n| Overall Risk Level | **low** |\n| Pharmacy Network Check | **yes** |\n| Patient Registration | **success** |\n\nAll required checks passed, and the final verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100025",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP.  \n\n**Verification & Risk Assessment Summary**\n\n| Item | Result |\n|------|--------|\n| Insurance validation | **invalid** |\n| Prescription insurance validation | **invalid** |\n| Pharmacy network verification | **no** |\n| Lifestyle risk level | **high** |\n| Overall risk level | **high** |\n| Patient registration | **failure** |\n\nThe verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100004",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed per the SOP. All required verifications, risk assessments, and registration steps have been completed, and the final verification report has been submitted."
+    },
+    {
+      "key": "P100018",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100039",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed per the SOP. All required verifications, risk assessments, and registration steps were completed. The final verification report has been submitted and recorded.\n\n**Verification Summary**\n- **Insurance validation:** invalid  \n- **Prescription insurance validation:** valid  \n- **Pharmacy network verification:** yes  \n- **Lifestyle risk level:** high  \n- **Overall risk level:** high  \n- **User registration:** failure (due to invalid primary insurance)  \n\nThe re"
+    },
+    {
+      "key": "P100009",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"medium\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nAll required validations, risk assessments, and registration steps have been completed and the results have been recorded."
+    },
+    {
+      "key": "P100071",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane Dove (ID: P100071)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | **valid** |\n| Prescription Benefits Validation | **valid** |\n| Pharmacy Network Verification | **yes** |\n| Lifestyle Risk Level | **medium** |\n| Overall Risk Level | **high** |\n| Patient Registration | **success** |\n\nAll required checks passed and the final verification report has been submitted and recor"
+    },
+    {
+      "key": "P100007",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed successfully. All required verifications, risk assessments, and registration steps were completed per the SOP, and the verification report has been submitted.\n\n**Verification Summary**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Verification:** yes (Walgreens)  \n- **Lifestyle Risk Level:** medium  \n- **Overall Risk Level:** high  \n- **User Registration:** success  \n\nThe patient record is now a"
+    },
+    {
+      "key": "P100069",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed according to the SOP. All required verifications and risk assessments were executed, and the registration attempt was completed.\n\n**Verification Report (JSON):**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe registration failed due to invalid primary insurance validation"
+    },
+    {
+      "key": "P100037",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required checks were performed, risk assessments calculated, and the registration attempt completed.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"no\"\n}\n```\n\nThe final result has been submitted and recorded."
+    },
+    {
+      "key": "P100080",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed. All required verifications, risk assessments, and registration steps were completed per the SOP, and the final verification report has been recorded."
+    },
+    {
+      "key": "P100089",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed successfully according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100055",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake process has been completed according to the SOP.\n\n**Verification Report:**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"no\"\n}\n```\n\nThe report has been submitted and recorded successfully."
+    },
+    {
+      "key": "P100044",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John44 Dove (ID: P100044)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | **valid** |\n| Prescription Benefit Validation | **valid** |\n| Pharmacy Network Verification | **yes** |\n| Lifestyle Risk Level | **low** |\n| Overall Risk Level | **low** |\n| Patient Registration | **success** |\n\nThe verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100051",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required validations, risk assessments, registration, and reporting steps have been completed.\n\n**Verification Report (JSON)**  \n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe report has been submitted and recorded successfully."
+    },
+    {
+      "key": "P100047",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed successfully. All required verifications and risk assessments were completed, the patient was registered, and the verification report was submitted."
+    },
+    {
+      "key": "P100088",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed per the SOP. All required verifications and risk assessments were completed, the patient was registered, and the verification report has been submitted.\n\n**Verification Summary**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Check:** yes (Walgreens)  \n- **Lifestyle Risk Level:** low  \n- **Overall Risk Level:** low  \n- **User Registration:** success  \n\nThe report has been archived in com"
+    },
+    {
+      "key": "P100016",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John16 Dove (ID: P100016)** has been successfully processed. All required verifications and risk assessments were completed per the SOP, and the registration was completed successfully.\n\n**Verification Report Summary**\n- Insurance validation: **valid**\n- Prescription insurance validation: **valid**\n- Pharmacy network verification: **yes**\n- Lifestyle risk level: **low**\n- Overall risk level: **medium**\n- User registration status: **success**\n\nThe verification report has been su"
+    },
+    {
+      "key": "P100087",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, the patient registration was attempted, and the final verification report has been submitted.\n\n**Verification Report**\n- Insurance Validation: **invalid**\n- Lifestyle Risk Level: **high**\n- Prescription Insurance Validation: **valid**\n- Overall Risk Level: **high**\n- Pharmacy Network Check: **yes**\n- User Registration: **failure**\n\nThe results have been recorded in the syst"
+    },
+    {
+      "key": "P100028",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **John28 Dove (ID: P100028)** has been successfully processed and registered.\n\n**Verification Report (JSON):**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nAll required SOP steps\u2014including insurance validation, prescription benefit verification, lifestyle and overall risk assessments, pharmacy network v"
+    },
+    {
+      "key": "P100073",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications, risk assessments, and registration steps were executed. The final verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100042",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed per the SOP. All required verifications and risk assessments were completed, the patient was registered, and the verification report has been submitted."
+    },
+    {
+      "key": "P100059",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been successfully processed per the SOP.\n\n**Verification Report (submitted):**\n- Insurance validation: **valid**\n- Prescription insurance validation: **valid**\n- Pharmacy network verification: **yes**\n- Lifestyle risk level: **medium**\n- Overall risk level: **high**\n- Patient registration: **success**\n\nAll required checks passed and the patient record has been registered in the system."
+    },
+    {
+      "key": "P100049",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake was processed per the SOP. All required verifications and risk assessments were performed, and the final registration result was recorded.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"no\"\n}\n```"
+    },
+    {
+      "key": "P100079",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP.\n\n**Verification Report**  \n- Insurance Validation: **invalid**  \n- Prescription Insurance Validation: **invalid**  \n- Pharmacy Network Check: **no**  \n- Lifestyle Risk Level: **medium**  \n- Overall Risk Level: **high**  \n- User Registration: **failure**\n\nThe results have been submitted and recorded."
+    },
+    {
+      "key": "P100058",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been successfully processed according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nAll required validations, risk assessments, and registration steps have been completed, and the result has been recorded."
+    },
+    {
+      "key": "P100033",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed per the SOP. All required verifications and risk assessments were executed, and the registration attempt was completed.  \n\n**Verification Report (JSON)**  \n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe report has been submitted and recorded in the system."
+    },
+    {
+      "key": "P100085",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake process has been completed according to the SOP. All required verifications and risk assessments were performed, the registration attempt was made, and the final verification report has been submitted.\n\n**Verification Report Summary**\n- **Insurance Validation:** invalid  \n- **Prescription Insurance Validation:** invalid  \n- **Pharmacy Network Check:** no (not verified)  \n- **Lifestyle Risk Level:** medium  \n- **Overall Risk Level:** high  \n- **User Registration:** failure  \n\nT"
+    },
+    {
+      "key": "P100060",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 400: {\"message\":\"1 validation error detected: Value at 'messages.8.member.content.1.member.toolUse.name' failed to satisfy constraint: Member must satisfy regular expression pattern: [a-zA-Z0-9_-]+\"}"
+    },
+    {
+      "key": "P100064",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been successfully processed per the SOP.\n\n**Verification Report**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Check:** yes  \n- **Lifestyle Risk Level:** low  \n- **Overall Risk Level:** low  \n- **User Registration:** success  \n\nAll required checks passed and the patient **P100064** is now registered in the system."
+    },
+    {
+      "key": "P100077",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully according to the SOP.\n\n**Verification Report (JSON)**  \n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nAll required validations (insurance, prescription benefits, lifestyle risk, overall clinical risk, and pharmacy network) passed, and the patient **P100077 (Jane33 D"
+    },
+    {
+      "key": "P100038",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100030",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient has been successfully processed according to the SOP. All verifications and risk assessments passed, and the registration was completed.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100002",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed successfully according to the SOP. All required verifications, risk assessments, and registration steps were completed, and the final verification report has been submitted.\n\n**Verification Report Summary**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Check:** yes  \n- **Lifestyle Risk Level:** high  \n- **Overall Risk Level:** medium  \n- **User Registration:** success  \n\nThe data has been recorded a"
+    },
+    {
+      "key": "P100053",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane Dove (ID: P100053)** has been successfully processed per the SOP.\n\n**Verification & Risk Assessment Summary**\n| Item | Result |\n|------|--------|\n| Insurance Validation | valid |\n| Prescription Benefits Validation | valid |\n| Lifestyle Risk Level | medium |\n| Overall Risk Level | high |\n| Pharmacy Network Check | yes |\n| Patient Registration | success |\n\nAll required checks have been completed and the final verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100022",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed according to the SOP. All verifications and risk assessments passed, and the patient registration was completed.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"low\",\n  \"user_registration\": \"success\",\n  \"life_style_risk_level\": \"low\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100003",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, and the final verification report has been submitted.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"valid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe registration failed because the prescription insurance validatio"
+    },
+    {
+      "key": "P100024",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been successfully processed according to the SOP. All required verifications and risk assessments were completed, the patient was registered, and the verification report has been submitted.\n\n**Verification Report**\n- Insurance validation: valid  \n- Prescription insurance validation: valid  \n- Pharmacy network verification: yes  \n- Lifestyle risk level: low  \n- Overall risk level: low  \n- User registration: success  \n\nThe patient record is now active in the system."
+    },
+    {
+      "key": "P100084",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "All required verifications, risk assessments, and the patient registration have been completed successfully for **patient\u202fP100084 (Jane40 Dove)**. The verification report has been submitted and recorded."
+    },
+    {
+      "key": "P100075",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, and the registration outcome has been recorded.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```"
+    },
+    {
+      "key": "P100083",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Patient registration completed successfully.\n\n**Verification Report**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Check:** yes  \n- **Lifestyle Risk Level:** medium  \n- **Overall Risk Level:** high  \n- **User Registration Status:** success  \n\nAll required checks have passed and the patient (ID: P100083) is now registered in the system."
+    },
+    {
+      "key": "P100021",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, the patient registration attempt was made, and the final verification report has been submitted.\n\n**Verification Report Summary**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe registration "
+    },
+    {
+      "key": "P100061",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been processed according to the SOP. All required verifications and risk assessments were performed, and the registration outcome has been recorded.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"medium\",\n  \"prescription_insurance_validation\": \"invalid\",\n  \"pharmacy_check\": \"no\"\n}\n```"
+    },
+    {
+      "key": "P100072",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculateLifestyleRisk",
+            "contracts": [
+              "calculateLifestyleRisk at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculateLifestyleRisk at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The patient intake has been successfully processed per the SOP.\n\n**Verification Report**\n- **Insurance Validation:** valid  \n- **Prescription Insurance Validation:** valid  \n- **Pharmacy Network Verification:** yes  \n- **Lifestyle Risk Level:** low  \n- **Overall Risk Level:** low  \n- **User Registration:** success  \n\nAll required checks passed and the registration record has been saved."
+    },
+    {
+      "key": "P100015",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient intake has been processed according to the SOP.\n\n**Verification Report**\n```json\n{\n  \"insurance_validation\": \"invalid\",\n  \"overall_risk_level\": \"high\",\n  \"user_registration\": \"failure\",\n  \"life_style_risk_level\": \"high\",\n  \"prescription_insurance_validation\": \"valid\",\n  \"pharmacy_check\": \"yes\"\n}\n```\n\nThe report has been submitted and recorded."
+    },
+    {
+      "key": "P100052",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The new patient **Jane Dove (ID: P100052)** has been successfully processed:\n\n- **Insurance validation:** valid  \n- **Prescription benefits validation:** valid  \n- **Pharmacy network verification:** yes (Walgreens)  \n- **Lifestyle risk level:** low  \n- **Overall risk level:** low  \n- **Patient registration:** success  \n\nAll verification results have been recorded in the system as per the SOP."
+    }
+  ]
+}

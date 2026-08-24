@@ -1,0 +1,46 @@
+video_annotation acorn --flow-profile free
+video_annotation acorn --flow-profile phases
+video_annotation acorn --flow-profile pipeline
+dangerous_goods acorn
+dangerous_goods baseline
+customer_service acorn
+customer_service baseline
+patient_intake acorn
+patient_intake baseline
+know_your_business acorn
+know_your_business baseline
+aircraft_inspection acorn
+aircraft_inspection baseline
+warehouse_package_inspection acorn
+warehouse_package_inspection baseline
+email_intent acorn
+email_intent baseline
+content_flagging acorn
+content_flagging baseline
+video_annotation acorn
+video_annotation baseline
+video_classification acorn
+video_classification baseline
+dangerous_goods baseline --scaffold react
+customer_service baseline --scaffold react
+patient_intake baseline --scaffold react
+know_your_business baseline --scaffold react
+aircraft_inspection baseline --scaffold react
+warehouse_package_inspection baseline --scaffold react
+email_intent baseline --scaffold react
+content_flagging baseline --scaffold react
+video_annotation baseline --scaffold react
+video_classification baseline --scaffold react
+dangerous_goods acorn --scaffold react
+customer_service acorn --scaffold react
+patient_intake acorn --scaffold react
+know_your_business acorn --flow-profile x0
+know_your_business acorn --flow-profile x1
+know_your_business acorn --flow-profile x2
+know_your_business acorn --flow-profile x3
+know_your_business acorn --flow-profile x4
+know_your_business acorn --flow-profile x5
+warehouse_package_inspection acorn --flow-profile free
+warehouse_package_inspection acorn --flow-profile flat
+warehouse_package_inspection acorn --flow-profile branch
+warehouse_package_inspection acorn --flow-profile naive

@@ -1,0 +1,6498 @@
+{
+  "summary": {
+    "pack": "dangerous_goods_sop",
+    "model": "bedrock:us.meta.llama3-3-70b-instruct-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 5.0,
+    "n": 274,
+    "TSR": 0.0,
+    "ECR": 0.0036496350364963502,
+    "avg_model_calls": 4.930656934306569,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.9781021897810219,
+    "avg_committed_violations": 0.07664233576642336,
+    "total_tokens": 2743096,
+    "cached_tokens": 0,
+    "avg_latency_s": 36.98,
+    "time_model_s": 10131.6,
+    "time_controller_s": 0.767,
+    "time_tools_s": 0.02,
+    "controller_share": 8e-05,
+    "decision_states": 1351,
+    "unique_states": 11,
+    "state_reuse_rate": 0.9919,
+    "cache": null,
+    "wall_clock_s": 10132.9
+  },
+  "rows": [
+    {
+      "key": "P1_3191",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculate_sds_label_score",
+            "contracts": [
+              "calculate_sds_label_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_handling_score",
+            "contracts": [
+              "calculate_handling_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_transportation_score",
+            "contracts": [
+              "calculate_transportation_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_disposal_score",
+            "contracts": [
+              "calculate_disposal_score requires product_id_valid"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculate_sds_label_score requires product_id_valid",
+            "calculate_handling_score requires product_id_valid",
+            "calculate_transportation_score requires product_id_valid",
+            "calculate_disposal_score requires product_id_valid"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13307",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13166",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13264",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13174",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13041",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13184",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13048",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13238",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13371",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13432",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13342",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13173",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13194",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13271",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13436",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13249",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13404",
+      "want": {
+        "hazard_score": 18,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13314",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13273",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13193",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13043",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13183",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13109",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13274",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13042",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13328",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PA_13136",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculate_sds_label_score",
+            "contracts": [
+              "calculate_sds_label_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_handling_score",
+            "contracts": [
+              "calculate_handling_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_transportation_score",
+            "contracts": [
+              "calculate_transportation_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_disposal_score",
+            "contracts": [
+              "calculate_disposal_score requires product_id_valid"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculate_sds_label_score requires product_id_valid",
+            "calculate_handling_score requires product_id_valid",
+            "calculate_transportation_score requires product_id_valid",
+            "calculate_disposal_score requires product_id_valid"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13330",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13150",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13057",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13062",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13333",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13219",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13373",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13348",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13189",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13210",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13211",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13087",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13143",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13181",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13030",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13367",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13298",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13034",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13206",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13135",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13111",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13218",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13248",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13220",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13267",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13291",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13205",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13239",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13122",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13097",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13289",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13128",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13179",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13324",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13129",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13347",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13096",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13047",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13063",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13180",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13156",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13095",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13199",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13335",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13339",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13420",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13159",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13182",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13362",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13116",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13424",
+      "want": {
+        "hazard_score": 18,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13223",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13359",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13213",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13323",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13215",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13401",
+      "want": {
+        "hazard_score": 18,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13260",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13304",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13163",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13064",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13035",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13283",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13234",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13144",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13217",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13282",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13269",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13149",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13412",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13427",
+      "want": {
+        "hazard_score": 8,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13364",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13406",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13200",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13261",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13294",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13190",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13237",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13415",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13026",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13147",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13288",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13293",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13336",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13154",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13329",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13250",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13370",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13161",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13104",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13344",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13055",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13113",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13353",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13139",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13337",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13265",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13167",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13222",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13312",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13070",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13411",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13093",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13318",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13115",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13224",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13098",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13195",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13036",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "Product_14124",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculate_sds_label_score",
+            "contracts": [
+              "calculate_sds_label_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_handling_score",
+            "contracts": [
+              "calculate_handling_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_transportation_score",
+            "contracts": [
+              "calculate_transportation_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_disposal_score",
+            "contracts": [
+              "calculate_disposal_score requires product_id_valid"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculate_sds_label_score requires product_id_valid",
+            "calculate_handling_score requires product_id_valid",
+            "calculate_transportation_score requires product_id_valid",
+            "calculate_disposal_score requires product_id_valid"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13054",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13208",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13178",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13284",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13186",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13270",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13263",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires classification_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires classification_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "This JSON response indicates that the final hazard classification for the product P_13263 has been successfully submitted. The hazard score is 19 and the hazard class is D, indicating a high level of danger."
+    },
+    {
+      "key": "P_13165",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13368",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13079",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13320",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13125",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13338",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13216",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13244",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13157",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13067",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13119",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13332",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13246",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13170",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13050",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13433",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13175",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13290",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13354",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13028",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13300",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13402",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13132",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13268",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13417",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13255",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13209",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13130",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13257",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13089",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13073",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13058",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13313",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13240",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13375",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13053",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13334",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13272",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13306",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13198",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13361",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13172",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13090",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13169",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13162",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13032",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13092",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13038",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13192",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13066",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13410",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13345",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13258",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13325",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13366",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13280",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13247",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13254",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13343",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13408",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13295",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13431",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13409",
+      "want": {
+        "hazard_score": 4,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13315",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13241",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13197",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13069",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13259",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13230",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13305",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13137",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13081",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13025",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13075",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13110",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13245",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13060",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13309",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13121",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13080",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13310",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13285",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "Product_14123",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculate_sds_label_score",
+            "contracts": [
+              "calculate_sds_label_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_handling_score",
+            "contracts": [
+              "calculate_handling_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_transportation_score",
+            "contracts": [
+              "calculate_transportation_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_disposal_score",
+            "contracts": [
+              "calculate_disposal_score requires product_id_valid"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculate_sds_label_score requires product_id_valid",
+            "calculate_handling_score requires product_id_valid",
+            "calculate_transportation_score requires product_id_valid",
+            "calculate_disposal_score requires product_id_valid"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13365",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13118",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13319",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13204",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13434",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13168",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13356",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13426",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13369",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13287",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13082",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13078",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13212",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13229",
+      "want": {
+        "hazard_score": 7,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13438",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13225",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13207",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13086",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13074",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P__13279",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "calculate_sds_label_score",
+            "contracts": [
+              "calculate_sds_label_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_handling_score",
+            "contracts": [
+              "calculate_handling_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_transportation_score",
+            "contracts": [
+              "calculate_transportation_score requires product_id_valid"
+            ]
+          },
+          {
+            "tool": "calculate_disposal_score",
+            "contracts": [
+              "calculate_disposal_score requires product_id_valid"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "calculate_sds_label_score requires product_id_valid",
+            "calculate_handling_score requires product_id_valid",
+            "calculate_transportation_score requires product_id_valid",
+            "calculate_disposal_score requires product_id_valid"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13296",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13045",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13363",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13196",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13322",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13231",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13341",
+      "want": {
+        "hazard_score": 12,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13418",
+      "want": {
+        "hazard_score": 18,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13303",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13358",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13185",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13164",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13187",
+      "want": {
+        "hazard_score": 15,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13131",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13117",
+      "want": {
+        "hazard_score": 9,
+        "hazard_class": "Hazard Class B"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13405",
+      "want": {
+        "hazard_score": 6,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13256",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13155",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13440",
+      "want": {
+        "hazard_score": 0,
+        "hazard_class": "Unable to Decide"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13044",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13228",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13099",
+      "want": {
+        "hazard_score": 5,
+        "hazard_class": "Hazard Class A"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13138",
+      "want": {
+        "hazard_score": 19,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13316",
+      "want": {
+        "hazard_score": 20,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13423",
+      "want": {
+        "hazard_score": 16,
+        "hazard_class": "Hazard Class C"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P_13134",
+      "want": {
+        "hazard_score": 17,
+        "hazard_class": "Hazard Class D"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

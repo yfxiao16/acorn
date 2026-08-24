@@ -1,0 +1,4071 @@
+{
+  "summary": {
+    "pack": "aircraft_inspection_sop",
+    "model": "bedrock:openai.gpt-oss-120b-1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 2.5,
+    "n": 112,
+    "TSR": 0.8125,
+    "ECR": 1.0,
+    "avg_model_calls": 8.383928571428571,
+    "avg_symbolic_steps": 0.8125,
+    "symbolic_ratio": 0.0883495145631068,
+    "blocked_proposals": 7,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 2073984,
+    "cached_tokens": 0,
+    "avg_latency_s": 46.5,
+    "time_model_s": 5207.2,
+    "time_controller_s": 0.787,
+    "time_tools_s": 0.01,
+    "controller_share": 0.00015,
+    "decision_states": 1030,
+    "unique_states": 87,
+    "state_reuse_rate": 0.9155,
+    "cache": {
+      "hits": 8048,
+      "misses": 192,
+      "hit_rate": 0.9767,
+      "entries": 192
+    },
+    "wall_clock_s": 5208.5
+  },
+  "rows": [
+    {
+      "key": "a_00127",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00155",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{'aircraft_id': 'a_00155',\n 'aircraft_ready': 'TRUE',\n 'mechanical_inspection_result': 'success',\n 'electrical_inspection_result': 'success',\n 'component_incident_response': None,\n 'component_mismatch_response': None,\n 'cross_check_reporting_response': 'success'}\n</final_response>"
+    },
+    {
+      "key": "a_00265",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00208",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00209",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00209\",\n  \"aircraft_ready\": \"TRUE\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00139",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00133",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00204",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00256",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00260",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00198",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00232",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00219",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00228",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00189",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00123",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00123\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyShipment\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00245",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00190",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": ""
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": ""
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00151",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00163",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00167",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00183",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00246",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00147",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00148",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00146",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00217",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00162",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00218",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00240",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00170",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00220",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00236",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00156",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00261",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00261\",\n  \"aircraft_ready\": \"TRUE\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00224",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00185",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00207",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "",
+        "electrical_inspection_result": "",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": ""
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00207\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"VerifyMechanicalComponents\": \"success\",\n  \"VerifyElectricalSystems\": \"success\",\n  \"CrossCheckSpecifications\": \"success\",\n  \"component_incident_response\": null,\n  \"component_mismatch_response\": null\n}\n</final_response>"
+    },
+    {
+      "key": "a_00271",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00176",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00128",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00216",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00234",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00172",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00158",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00203",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{'aircraft_id': 'a_00203',\n 'aircraft_ready': 'TRUE',\n 'VerifyAircraftClearance': 'success',\n 'mechanical_inspection_result': 'success',\n 'electrical_inspection_result': 'success',\n 'cross_check_reporting_response': 'success',\n 'component_incident_response': None,\n 'component_mismatch_response': None}\n</final_response>"
+    },
+    {
+      "key": "a_00200",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00157",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{'aircraft_id': 'a_00157',\n 'aircraft_ready': 'TRUE',\n 'VerifyShipment': 'success',\n 'mechanical_inspection_result': 'success',\n 'electrical_inspection_result': 'success',\n 'component_incident_response': 'success',\n 'component_mismatch_response': 'success',\n 'cross_check_reporting_response': 'success'}\n</final_response>"
+    },
+    {
+      "key": "a_00237",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00237\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00130",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00166",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00193",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00221",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00243",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00206",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00257",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00258",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00212",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00131",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00136",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00242",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00248",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00126",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "success",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "success",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00140",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00161",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00161\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyShipment\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00195",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00195\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": null,\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00259",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00129",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00235",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "",
+        "electrical_inspection_result": "",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{'aircraft_id': 'a_00235',\n 'aircraft_ready': 'TRUE',\n 'VerifyAircraftClearance': 'success',\n 'VerifyMechanicalComponents': 'success',\n 'CrossCheckSpecifications': 'success',\n 'VerifyElectricalSystems': 'success',\n 'component_incident_response': 'success',\n 'component_mismatch_response': None,\n 'cross_check_reporting_response': 'success'}\n</final_response>"
+    },
+    {
+      "key": "a_00223",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{'aircraft_id': 'a_00223',\n 'aircraft_ready': 'TRUE',\n 'VerifyAircraftClearance': 'success',\n 'mechanical_inspection_result': 'success',\n 'electrical_inspection_result': 'success',\n 'component_incident_response': 'success',\n 'component_mismatch_response': None,\n 'cross_check_reporting_response': 'success'}\n</final_response>"
+    },
+    {
+      "key": "a_00125",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The pre\u2011flight inspection workflow has been fully executed using all applicable verification tools. No mechanical or electrical failures were identified, and the component serial numbers match, so no incident or mismatch reports were generated. The final Airworthiness Verification Report has been compiled and is provided below for audit purposes:\n\n```json\n{\n  \"aircraft_id\": \"a_00125\",\n  \"aircraft_ready\": \"TRUE\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"succ"
+    },
+    {
+      "key": "a_00186",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00177",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00177\",\n  \"aircraft_ready\": \"TRUE\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": null,\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00249",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00173",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00238",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00169",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00262",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00184",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00270",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00202",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00182",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00214",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00164",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00181",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00181\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyShipment\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00213",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00213\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00171",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00211",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00230",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00247",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00144",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00180",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00267",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00252",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00160",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00263",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00124",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00175",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00253",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00253\",\n  \"aircraft_ready\": \"TRUE\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": \"success\",\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00226",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00222",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00239",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00239\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyShipment\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"component_incident_response\": null,\n  \"component_mismatch_response\": null,\n  \"cross_check_reporting_response\": \"success\",\n  \"maintenance_record_id\": \"mr_010126\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00210",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00197",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "",
+        "electrical_inspection_result": "",
+        "component_incident_response": "",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00197\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"VerifyMechanicalComponents\": \"success\",\n  \"VerifyElectricalSystems\": \"success\",\n  \"CrossCheckSpecifications\": \"success\",\n  \"ReportComponentMismatch\": \"success\",\n  \"component_incident_response\": null,\n  \"component_mismatch_response\": \"success\",\n  \"cross_check_reporting_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00244",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00272",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00143",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "",
+        "electrical_inspection_result": "",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00143\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"VerifyMechanicalComponents\": \"success\",\n  \"VerifyElectricalSystems\": \"success\",\n  \"cross_check_reporting_response\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": \"success\"\n}\n</final_response>"
+    },
+    {
+      "key": "a_00194",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00229",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00137",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00215",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": ""
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": ""
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "a_00225",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n{\n  \"aircraft_id\": \"a_00225\",\n  \"aircraft_ready\": \"TRUE\",\n  \"VerifyAircraftClearance\": \"success\",\n  \"mechanical_inspection_result\": \"success\",\n  \"electrical_inspection_result\": \"success\",\n  \"cross_check_reporting_response\": \"success\",\n  \"component_incident_response\": \"success\",\n  \"component_mismatch_response\": \"success\"\n}\n</final_response>"
+    }
+  ]
+}

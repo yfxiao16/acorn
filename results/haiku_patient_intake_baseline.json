@@ -1,0 +1,2243 @@
+{
+  "summary": {
+    "pack": "patient_intake_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 7.0,
+    "n": 66,
+    "TSR": 0.9242424242424242,
+    "ECR": 0.9242424242424242,
+    "avg_model_calls": 4.7272727272727275,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 1443493,
+    "cached_tokens": 0,
+    "avg_latency_s": 29.98,
+    "time_model_s": 1978.5,
+    "time_controller_s": 0.384,
+    "time_tools_s": 0.01,
+    "controller_share": 0.00019,
+    "decision_states": 312,
+    "unique_states": 7,
+    "state_reuse_rate": 0.9776,
+    "cache": null,
+    "wall_clock_s": 1979.2
+  },
+  "rows": [
+    {
+      "key": "P100012",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John Dove (P100012)\n\n### Verification Results Summary:\n\n| Check | Status |\n|-------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Confirmed |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Details:\n- **Insurance Provider:** Aetna (Policy: INS567890)\n- **Coverage Status:** Act"
+    },
+    {
+      "key": "P100066",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100066)\n\n### Verification Results Summary:\n\n| Verification Type | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Clinical Risk** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Details:\n- **Insurance Provider:** Cigna (Private)\n- **Policy:** INS901678 | Gr"
+    },
+    {
+      "key": "P100029",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Summary - P100029\n\n**VERIFICATION REPORT**\n\n| Component | Status | Details |\n|-----------|--------|---------|\n| **Insurance Validation** | \u274c INVALID | Primary insurance verification failed |\n| **Prescription Insurance Validation** | \u2705 VALID | Humana prescription benefits verified |\n| **Pharmacy Check** | \u2705 YES | RiteAid pharmacy network verified |\n| **Lifestyle Risk Level** | \ud83d\udd34 HIGH | Current smoker + Moderate alcohol + No exercise |\n| **Overall Risk Level** | \ud83d\udd34 HIGH | Composit"
+    },
+    {
+      "key": "P100070",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane26 Dove (P100070)\n\n### Verification Results Summary:\n\n| Verification | Result |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes (Walgreens verified) |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Insurance:** Blue Cross Private coverage (Policy: INS345012, effectiv"
+    },
+    {
+      "key": "P100010",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John10 Dove (P100010)  \n**Date of Birth:** 2/14/1983\n\n### Verification Results Summary:\n\n| Component | Status |\n|-----------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens) |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Smoking Status:** F"
+    },
+    {
+      "key": "P100068",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient Information:**\n- Patient ID: P100068\n- Name: Jane24 Dove\n- Date of Birth: 12/7/88\n\n**Verification Results:**\n\n| Check | Status |\n|-------|--------|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes |\n| Lifestyle Risk Assessment | Low |\n| Overall Risk Level | Low |\n| Patient Registration | \u2713 Success |\n\n**Clinical Summary:**\n- **Smoking Status:** Never\n- **Alcohol Consumption"
+    },
+    {
+      "key": "P100006",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John6 Dove (P100006)\n\n### Verification Results Summary:\n\n| Verification | Result |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Processed Details:\n- **Insurance:** Humana (Policy: INS234567, Group: GRP678901)\n- **Coverage Start:** April "
+    },
+    {
+      "key": "P100076",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Summary - P100076\n\n\u2705 **Patient Registration Completed Successfully**\n\n**Patient Information:**\n- Name: Jane32 Dove\n- DOB: 11/25/95\n- Patient ID: P100076\n\n**Verification Results:**\n\n| Verification | Status |\n|---|---|\n| Insurance Validation | \u2705 Valid |\n| Prescription Insurance Validation | \u2705 Valid |\n| Pharmacy Network Check | \u2705 Yes |\n| Lifestyle Risk Level | \ud83d\udfe2 Low |\n| Overall Risk Level | \ud83d\udfe2 Low |\n| Patient Registration | \u2705 Success |\n\n**Insurance Details:**\n- Provider: Blue Cross"
+    },
+    {
+      "key": "P100041",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John41 Dove (P100041)\n\n### Verification Results:\n| Check | Status |\n|-------|--------|\n| Primary Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes |\n| Lifestyle Risk Assessment | Medium |\n| Overall Risk Level | High |\n| Patient Registration | \u2713 Success |\n\n### Summary:\nPatient P100041 has been successfully registered into the system. All required verifications have passed:\n"
+    },
+    {
+      "key": "P100046",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane2 Dove (P100046) | DOB: 2/10/1994\n\n### Verification Results:\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits** | \u2713 Valid |\n| **Pharmacy Network** | \u2713 Yes (Walgreens verified) |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Summary:\nPatient Jane2 Dove has been successfully registered in the system. All required verificat"
+    },
+    {
+      "key": "P100017",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John17 Dove (P100017)\n\n### Verification Results Summary:\n\n| Item | Status |\n|------|--------|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes |\n| Lifestyle Risk Level | Medium |\n| Overall Risk Level | High |\n| Patient Registration | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:**\n  - Smoking Status: Former (1 point)\n  - Alcohol Consumption: Mode"
+    },
+    {
+      "key": "P100057",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I'll process this new patient intake according to the SOP. Let me start by running the required verifications and risk assessments.\n\nFirst, I need to clarify one missing required parameter:\n- **exercise_frequency**: This is required for the lifestyle risk calculation. What is the patient's exercise frequency? (Options: \"None\", \"1-2 times\", \"3-4 times\", or \"5+ times\")\n\nOnce you provide this, I'll proceed with:\n1. Insurance validation\n2. Prescription benefits validation\n3. Lifestyle risk assessmen"
+    },
+    {
+      "key": "P100035",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John35 Dove (P100035)  \n**Date of Birth:** 8/17/1969\n\n### Verification Results:\n| Check | Status |\n|-------|--------|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes (RiteAid) |\n| Lifestyle Risk Assessment | Medium |\n| Overall Risk Level | High |\n| Patient Registration | \u2713 Success |\n\n### Summary:\nThe patient has been successfully registered into the system. All insuran"
+    },
+    {
+      "key": "P100008",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete\n\n**Patient:** John8 Dove (P100008)\n\n### Verification Results Summary:\n\n| Check | Result |\n|-------|--------|\n| **Insurance Validation** | \u274c Invalid |\n| **Prescription Insurance Validation** | \u274c Invalid |\n| **Pharmacy Network Verification** | \u274c No |\n| **Lifestyle Risk Level** | \ud83d\udd34 High |\n| **Overall Risk Level** | \ud83d\udfe1 Medium |\n| **Patient Registration Status** | \u274c **FAILURE** |\n\n### Key Findings:\n\n1. **Insurance Issues:** Both primary insurance (Aetna, policy IN"
+    },
+    {
+      "key": "P100056",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100056)\n\n### Verification Results Summary:\n| Verification | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Details:\n- **Insurance:** Aetna (Policy: INS901678, Group: GRP123456) - Active as of 4/1/2023"
+    },
+    {
+      "key": "P100063",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary - P100063 (Jane Dove)\n\n**Verification Results:**\n\n| Check | Status |\n|-------|--------|\n| **Insurance Validation** | \u274c INVALID |\n| **Prescription Insurance Validation** | \u2705 VALID |\n| **Pharmacy Network Verification** | \u2705 YES |\n| **Lifestyle Risk Level** | \ud83d\udd34 HIGH |\n| **Overall Risk Level** | \ud83d\udd34 HIGH |\n| **Patient Registration** | \u274c FAILURE |\n\n**Key Findings:**\n\n1. **Insurance Issue**: Primary insurance validation failed - this is the critical blocker for patien"
+    },
+    {
+      "key": "P100020",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John Dove (P100020)\n\n### Verification Results Summary:\n\n| Item | Status |\n|------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Insurance Provider:** United (Policy: INS345901, Group: GRP567890)\n- **Covera"
+    },
+    {
+      "key": "P100074",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100074)\n**Date of Birth:** 6/22/87\n\n### Verification Summary:\n\n| Item | Status |\n|------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (RiteAid) |\n| **Lifestyle Risk Assessment** | \u2713 Low |\n| **Overall Risk Level** | \u2713 Low |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:** Non-smoker"
+    },
+    {
+      "key": "P100026",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John26 Dove (P100026)\n\n### Verification Results:\n| Check | Status |\n|-------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Verified |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Summary:\nPatient P100026 has been successfully registered in the system. All required veri"
+    },
+    {
+      "key": "P100067",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary - P100067 (Jane Dove)\n\n**REGISTRATION STATUS: FAILED \u274c**\n\n### Verification Results:\n\n| Verification Type | Status | Details |\n|---|---|---|\n| **Insurance Validation** | \u274c INVALID | Medicare policy INS012789 failed validation |\n| **Prescription Insurance Validation** | \u274c INVALID | Prescription benefits could not be verified |\n| **Pharmacy Network Check** | \u274c NO | Walgreens location not verified in network |\n| **Lifestyle Risk Level** | \u26a0\ufe0f MEDIUM | Former smoke"
+    },
+    {
+      "key": "P100014",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John14 Dove (P100014)\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Primary Insurance:** United (Policy: INS789012) - Active coverage as of 4/15/23\n- **Prescr"
+    },
+    {
+      "key": "P100025",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary for John25 Dove (P100025)\n\n### Verification Results:\n\n**Insurance Validation:** \u274c **INVALID**\n- Primary insurance verification failed for Aetna policy INS890456\n\n**Prescription Insurance Validation:** \u274c **INVALID**\n- PBM verification failed for prescription benefits\n\n**Pharmacy Network Verification:** \u274c **NOT VERIFIED**\n- Walgreens at 61407 Fake Street, Nowhere, NY could not be verified in network\n\n**Risk Assessment:**\n- **Lifestyle Risk Level:** \ud83d\udd34 **HIGH**\n "
+    },
+    {
+      "key": "P100004",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient Summary:**\n- **Patient ID:** P100004\n- **Name:** John4 Dove\n- **DOB:** 11/30/1990\n\n### Verification Results:\n\n| Verification Type | Status |\n|---|---|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Check | \u2713 Yes |\n| Lifestyle Risk Level | Low |\n| Overall Risk Level | Low |\n| Patient Registration | \u2713 Success |\n\n### Details:\n- **Insurance:** Cigna (Policy: INS901234, Group: GRP567890)\n- **Cove"
+    },
+    {
+      "key": "P100018",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient Information:**\n- Patient ID: P100018\n- Name: John18 Dove\n- DOB: 5/7/93\n\n**Verification Results:**\n| Verification | Status |\n|---|---|\n| Primary Insurance Validation | \u2713 Valid |\n| Prescription Benefits Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes |\n| Lifestyle Risk Assessment | Low |\n| Overall Risk Level | Low |\n| Patient Registration | \u2713 Success |\n\n**Summary:**\nJohn18 Dove has been successfully registered as a new patient. All "
+    },
+    {
+      "key": "P100039",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete\n\n**Patient:** John39 Dove (P100039)\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Primary Insurance Validation** | \u274c INVALID |\n| **Prescription Insurance Validation** | \u2705 VALID |\n| **Pharmacy Network Check** | \u2705 YES |\n| **Lifestyle Risk Level** | \ud83d\udd34 HIGH |\n| **Overall Risk Level** | \ud83d\udd34 HIGH |\n| **Patient Registration** | \u274c FAILURE |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:** Current smoker, Heavy alcohol consumpti"
+    },
+    {
+      "key": "P100009",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John9 Dove (P100009)\n\n### Verification Results:\n- **Insurance Validation:** \u2713 Valid\n- **Prescription Insurance Validation:** \u2713 Valid\n- **Pharmacy Network Check:** \u2713 Yes (CVS Pharmacy verified)\n- **Lifestyle Risk Level:** Medium\n  - Smoking: Never\n  - Alcohol: Heavy\n  - Exercise: 5+ times/week\n- **Overall Risk Level:** Medium\n  - Clinical factors: GERD, prior appendectomy (2010)\n  - Combined with lifestyle factors\n\n### Registration Status:\n- *"
+    },
+    {
+      "key": "P100071",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane27 Dove (P100071)  \n**Date of Birth:** 7/14/1966\n\n### Verification Results Summary:\n\n| Verification | Result |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n\n**Lifestyle Risk:** Medium\n- Smoking Status: Fo"
+    },
+    {
+      "key": "P100007",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient Information:**\n- Patient ID: P100007\n- Name: John7 Dove\n- DOB: 9/3/55\n\n**Verification Results:**\n\n| Item | Status |\n|------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits** | \u2713 Valid |\n| **Pharmacy Network** | \u2713 Verified (Walgreens, 54606 Fake Street, Nowhere, NY) |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n**Clinical Summary:**\n- Chronic Conditio"
+    },
+    {
+      "key": "P100069",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I see that the primary insurance validation returned as **invalid**. However, let me proceed with the lifestyle risk assessment. Once you provide the exercise frequency, I can complete the risk calculations and attempt registration.\n\nFor now, could you please provide the **exercise_frequency** value (one of: \"None\", \"1-2 times\", \"3-4 times\", or \"5+ times\")?"
+    },
+    {
+      "key": "P100037",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete - **REGISTRATION FAILED**\n\n**Patient Information:**\n- **Patient ID:** P100037\n- **Name:** John37 Dove\n- **DOB:** 7/12/64\n\n### Verification Results Summary:\n\n| Verification Component | Status | Details |\n|---|---|---|\n| **Insurance Validation** | \u274c INVALID | Medicare policy verification failed |\n| **Prescription Insurance Validation** | \u274c INVALID | Prescription benefits could not be verified |\n| **Pharmacy Network Verification** | \u274c NO | Walgreens location no"
+    },
+    {
+      "key": "P100080",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete\n\n**Patient:** Jane36 Dove (P100080)\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2705 Valid |\n| **Prescription Insurance Validation** | \u2705 Valid |\n| **Pharmacy Network Check** | \u2705 Yes |\n| **Lifestyle Risk Assessment** | \u2705 Low |\n| **Overall Risk Level** | \u2705 Low |\n| **Patient Registration** | \u2705 Success |\n\n### Key Details:\n- **Insurance:** Aetna (Policy: INS345012, Group: GRP567890, Private coverage ef"
+    },
+    {
+      "key": "P100089",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100089)\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (RiteAid) |\n| **Lifestyle Risk Assessment** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Lifestyle Risk (Medium):** Former smoker with moderate alcohol con"
+    },
+    {
+      "key": "P100055",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete\n\n**Patient ID:** P100055 (Jane Dove)\n\n### Verification Results Summary\n\n| Check | Status | Details |\n|-------|--------|---------|\n| **Insurance Validation** | \u274c Invalid | Medicare policy validation failed |\n| **Prescription Insurance Validation** | \u274c Invalid | PBM verification failed |\n| **Pharmacy Network Verification** | \u274c No | Walgreens at 48857 Fake Street, Nowhere, NY not verified in network |\n| **Lifestyle Risk Level** | \u26a0\ufe0f Medium | Former smoker, occa"
+    },
+    {
+      "key": "P100044",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient: John44 Dove (P100044)**\n\n### Verification Results:\n\u2705 **Insurance Validation:** VALID\n- Provider: Aetna\n- Policy: INS789345\n- Group: GRP901234\n- Coverage Start: 4/1/23\n- Type: Private\n\n\u2705 **Prescription Insurance Validation:** VALID\n- Aetna prescription benefits confirmed\n\n\u2705 **Pharmacy Network Verification:** YES\n- Pharmacy: RiteAid\n- Address: 52634 Fake Street, Nowhere, NY\n- Phone: 555-999-1111\n\n\u2705 **Lifestyle Risk Assessment:** LOW\n- Smoking Status"
+    },
+    {
+      "key": "P100051",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary for Jane Dove (P100051)\n\n**REGISTRATION STATUS: \u274c FAILED**\n\n### Verification Results:\n\n| Verification | Status | Details |\n|---|---|---|\n| **Primary Insurance Validation** | \u274c INVALID | United policy INS456123 failed validation |\n| **Prescription Insurance Validation** | \u2713 VALID | Coverage verified under United plan |\n| **Pharmacy Network Check** | \u2713 YES | CVS Pharmacy verified in network |\n| **Lifestyle Risk Assessment** | \u26a0\ufe0f HIGH | Current smoker, heavy alc"
+    },
+    {
+      "key": "P100047",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100047)\n\n### Verification Results Summary:\n\n| Check | Result |\n|-------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Assessment** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:** Former smoker, moderate alcoho"
+    },
+    {
+      "key": "P100088",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane44 Dove (P100088)\n\n### Verification Results:\n\n| Verification Item | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens - 29074 Fake Street, Nowhere, NY) |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Summary:\n- **Lifestyle Risk Fac"
+    },
+    {
+      "key": "P100016",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John16 Dove (P100016)  \n**Date of Birth:** 1/15/1990\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens) |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Medium |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Smoking Status:** Never\n- *"
+    },
+    {
+      "key": "P100087",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 2,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I see that the primary insurance validation returned \"invalid\". However, I still need the exercise frequency to complete the lifestyle risk assessment. Please provide that information so I can:\n\n1. Calculate the lifestyle risk level\n2. Calculate the overall risk level\n3. Attempt patient registration\n4. Submit the final verification report\n\n**Current Status:**\n- \u2705 Primary Insurance Validation: **Invalid** (coverage may have issues)\n- \u2705 Prescription Insurance Validation: **Valid**\n- \u2705 Pharmacy Net"
+    },
+    {
+      "key": "P100028",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John28 Dove (P100028)\n\n**Summary of Verification Results:**\n\n| Verification | Result |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes (Walgreens verified) |\n| **Lifestyle Risk Assessment** | \u2713 Low |\n| **Overall Risk Level** | \u2713 Low |\n| **Patient Registration** | \u2713 Success |\n\n**Key Details:**\n- Insurance: Blue Cross (Policy: INS123678, Group: GRP345678) -"
+    },
+    {
+      "key": "P100073",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary for Jane29 Dove (P100073)\n\n**Registration Status: FAILED** \u274c\n\n### Verification Results:\n\n| Check | Status | Details |\n|-------|--------|---------|\n| **Insurance Validation** | \u274c Invalid | Medicare policy INS678345 failed validation |\n| **Prescription Benefits** | \u274c Invalid | Prescription coverage could not be verified |\n| **Pharmacy Network** | \u274c No | Walgreens at 3773 Fake Street, Nowhere, NY not verified in network |\n| **Lifestyle Risk Level** | Medium | Fo"
+    },
+    {
+      "key": "P100042",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John42 Dove (P100042)\n\n### Verification Summary:\n| Check | Result |\n|-------|--------|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes |\n| Lifestyle Risk Assessment | Low |\n| Overall Clinical Risk | Low |\n| Patient Registration | \u2713 Success |\n\n### Key Details:\n- **Insurance:** Cigna (Private) - Policy INS567123, Group GRP789012\n- **Coverage Start:** June 15, 2023\n- **Pr"
+    },
+    {
+      "key": "P100059",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100059)\n\n### Verification Results:\n| Item | Status |\n|------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Summary:\nPatient Jane Dove has been successfully processed and registered through the intake system. All req"
+    },
+    {
+      "key": "P100049",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient:** Jane5 Dove (P100049)  \n**DOB:** 4/30/1959\n\n### Verification Results\n\n| Verification Check | Result |\n|---|---|\n| **Insurance Validation** | \u274c Invalid |\n| **Prescription Insurance Validation** | \u274c Invalid |\n| **Pharmacy Network Check** | \u274c Not Verified |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u274c **FAILURE** |\n\n### Details\n\n**Risk Assessment:**\n- Lifestyle Risk: Medium (Former smoker, ex"
+    },
+    {
+      "key": "P100079",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient:** Jane Dove (P100079)  \n**DOB:** 4/17/1954\n\n### Verification Results:\n\n| Check | Result |\n|-------|--------|\n| **Insurance Validation** | \u274c Invalid |\n| **Prescription Insurance Validation** | \u274c Invalid |\n| **Pharmacy Network Verification** | \u274c No |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u274c FAILURE |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:** Former smoker, occasional alc"
+    },
+    {
+      "key": "P100058",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100058)\n\n### Verification Results Summary:\n\n| Component | Status |\n|-----------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits** | \u2713 Valid |\n| **Pharmacy Network** | \u2713 Verified (Walgreens) |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Smoking Status:** Never\n- **Alcohol Consumption:** None\n- **Exercis"
+    },
+    {
+      "key": "P100033",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient:** John33 Dove (P100033)\n\n### Verification Results:\n\n| Verification | Status | Details |\n|---|---|---|\n| **Primary Insurance Validation** | \u274c INVALID | United policy INS678123 failed validation |\n| **Prescription Insurance Validation** | \u2705 VALID | Prescription benefits verified |\n| **Pharmacy Network Check** | \u2705 YES | CVS Pharmacy verified in network |\n| **Lifestyle Risk Assessment** | \u26a0\ufe0f HIGH | Current smoker + Heavy alcohol + No exercise = High r"
+    },
+    {
+      "key": "P100085",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary - Patient ID: P100085 (Jane Dove)\n\n### Verification Results\n\n**Insurance Validation:** \u274c **INVALID**\n- Primary insurance verification failed for Medicare policy INS890567\n\n**Prescription Insurance Validation:** \u274c **INVALID**\n- Prescription benefit verification failed for Medicare policy INS890567\n\n**Pharmacy Network Verification:** \u274c **NO**\n- Walgreens location at 71790 Fake Street, Nowhere, NY failed network validation\n- Pharmacy is not in the network or add"
+    },
+    {
+      "key": "P100060",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100060)  \n**Date of Birth:** 4/18/1991\n\n### Verification Results:\n| Check | Status |\n|-------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Assessment** | \u2713 Low |\n| **Overall Risk Level** | \u2713 Low |\n| **Patient Registration** | \u2713 Success |\n\n### Summary:\nPatient Jane Dove has been successfully registered in the syst"
+    },
+    {
+      "key": "P100064",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100064)\n\n### Verification Results Summary:\n\n| Check | Status |\n|-------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens - 3141 Fake Street, Nowhere, NY) |\n| **Lifestyle Risk Assessment** | \u2713 Low |\n| **Overall Risk Level** | \u2713 Low |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Fa"
+    },
+    {
+      "key": "P100077",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100077)\n\n### Verification Results Summary:\n| Check | Status |\n|-------|--------|\n| Insurance Validation | \u2713 Valid |\n| Prescription Insurance Validation | \u2713 Valid |\n| Pharmacy Network Verification | \u2713 Yes (RiteAid) |\n| Lifestyle Risk Assessment | Medium |\n| Overall Risk Assessment | High |\n| Patient Registration | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Level:** Medium (Former smoker, Moderate alcohol consumpti"
+    },
+    {
+      "key": "P100038",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John38 Dove (P100038)  \n**Date of Birth:** 4/30/1987\n\n### Verification Results:\n\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Summary:\n- **Primary Insurance:** Aetna (Policy: INS123789, Group: GRP345678)\n"
+    },
+    {
+      "key": "P100030",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John30 Dove (P100030)\n\n### Verification Results Summary:\n\n| Verification | Result |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Details:\n- **Insurance:** Cigna (Private) - Coverage active since 6/15/2023\n- **Preferred Pharmacy:** CV"
+    },
+    {
+      "key": "P100002",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John Dove (P100002)  \n**Date of Birth:** 8/22/1995\n\n### Verification Results Summary:\n\n| Check | Result |\n|-------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens - 38406 Fake Street, Nowhere, NY) |\n| **Lifestyle Risk Assessment** | High (Current smoker, Moderate alcohol, 1-2x/week exercise) |\n| **Overall Risk Level** | Medium (High life"
+    },
+    {
+      "key": "P100053",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient: Jane Dove (P100053)**\n\n### Verification Results:\n\n| Verification | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Summary:\n- **Lifestyle Risk**: Medium (Former smoker, Moderate alcohol consumption, 1-2x we"
+    },
+    {
+      "key": "P100022",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John22 Dove (P100022)\n\n### Verification Summary:\n| Check | Result |\n|-------|--------|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens) |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Assessment Details:\n- **Insurance:** Blue Cross Private Coverage (Active since 5/1/2023)\n- **Lif"
+    },
+    {
+      "key": "P100003",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I'll process this new patient intake according to the SOP. Let me start by running the required verifications and risk assessments.\n\nFirst, I need to clarify one missing parameter: the **exercise_frequency** is blank. According to the SOP, I need this value to calculate lifestyle risk. Could you please provide the exercise frequency? The options are:\n- \"None\"\n- \"1-2 times\"\n- \"3-4 times\"\n- \"5+ times\"\n\nOnce you provide this, I'll proceed with:\n1. Insurance validation\n2. Prescription benefits valid"
+    },
+    {
+      "key": "P100024",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** John24 Dove (P100024)\n\n### Verification Results Summary:\n\n| Verification Check | Status |\n|---|---|\n| **Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Low |\n| **Overall Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Details:\n- **Insurance:** Cigna (Private) - Policy INS789345, Group GRP901234\n- **Coverage "
+    },
+    {
+      "key": "P100084",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100084)\n\n### Verification Results Summary:\n\n| Check | Status |\n|-------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (CVS Pharmacy) |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Clinical Risk Level** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Insurance:** Cigna (Private) - Active coverage "
+    },
+    {
+      "key": "P100075",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I'll process this new patient intake according to the SOP. Let me start by running the required verifications and risk assessments.\n\nFirst, I need to clarify one missing value:\n- **exercise_frequency**: You didn't specify this. Per the SOP, this is required for lifestyle risk evaluation. The valid options are: \"None\", \"1-2 times\", \"3-4 times\", or \"5+ times\". What is Jane Dove's exercise frequency?\n\nOnce you provide this, I'll proceed with:\n1. Insurance validation\n2. Prescription benefits validat"
+    },
+    {
+      "key": "P100083",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100083)\n\n### Verification Results Summary:\n\n| Verification | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes |\n| **Lifestyle Risk Level** | Medium |\n| **Overall Risk Level** | High |\n| **Patient Registration** | \u2713 Success |\n\n### Risk Assessment Details:\n- **Lifestyle Risk Factors:** Former smoker, moderate alcohol cons"
+    },
+    {
+      "key": "P100021",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient:** John21 Dove (P100021)\n\n### Verification Results:\n\n| Check | Status |\n|-------|--------|\n| **Insurance Validation** | \u274c Invalid |\n| **Prescription Insurance Validation** | \u2705 Valid |\n| **Pharmacy Network Verification** | \u2705 Yes |\n| **Lifestyle Risk Assessment** | \u26a0\ufe0f High |\n| **Overall Risk Level** | \u26a0\ufe0f High |\n| **Patient Registration** | \u274c Failed |\n\n### Risk Assessment Details:\n\n**Lifestyle Risk Factors:**\n- Smoking Status: Current\n- Alcohol Consum"
+    },
+    {
+      "key": "P100061",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete - P100061\n\n**Summary of Results:**\n\n| Verification Component | Status | Details |\n|------------------------|--------|---------|\n| **Insurance Validation** | \u274c INVALID | Primary insurance verification failed |\n| **Prescription Benefits** | \u274c INVALID | Prescription insurance validation failed |\n| **Pharmacy Verification** | \u274c NO | Preferred pharmacy network verification failed |\n| **Lifestyle Risk Level** | \u26a0\ufe0f MEDIUM | Former smoker, no alcohol use, exercises "
+    },
+    {
+      "key": "P100072",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100072)\n\n### Verification Results Summary:\n\n| Verification Type | Status |\n|---|---|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Insurance Validation** | \u2713 Valid |\n| **Pharmacy Network Check** | \u2713 Yes (CVS Pharmacy verified) |\n| **Lifestyle Risk Assessment** | \u2713 Low |\n| **Overall Risk Level** | \u2713 Low |\n| **Patient Registration** | \u2713 Success |\n\n### Key Findings:\n- **Insurance Coverage:** Cigna Private plan (INS5"
+    },
+    {
+      "key": "P100015",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Summary\n\n**Patient:** John15 Dove (P100015)\n\n### Verification Results:\n\n| Check | Result |\n|-------|--------|\n| **Insurance Validation** | \u274c Invalid |\n| **Prescription Insurance Validation** | \u2705 Valid |\n| **Pharmacy Network Verification** | \u2705 Yes (CVS Pharmacy verified) |\n| **Lifestyle Risk Assessment** | \ud83d\udd34 High |\n| **Overall Risk Level** | \ud83d\udd34 High |\n| **Patient Registration** | \u274c **FAILURE** |\n\n### Clinical Assessment:\n- **Lifestyle Risk Factors:** Current smoker wit"
+    },
+    {
+      "key": "P100052",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Patient Intake Processing Complete \u2713\n\n**Patient:** Jane Dove (P100052)\n\n### Verification Summary:\n| Check | Result |\n|-------|--------|\n| **Primary Insurance Validation** | \u2713 Valid |\n| **Prescription Benefits Validation** | \u2713 Valid |\n| **Pharmacy Network Verification** | \u2713 Yes (Walgreens) |\n| **Lifestyle Risk Assessment** | Low |\n| **Overall Risk Assessment** | Low |\n| **Patient Registration** | \u2713 Success |\n\n### Patient Profile:\n- **DOB:** 9/20/93\n- **Insurance:** Blue Cross (Private) - Polic"
+    }
+  ]
+}

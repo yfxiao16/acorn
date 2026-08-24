@@ -1,0 +1,2283 @@
+{
+  "summary": {
+    "pack": "patient_intake_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 1.99,
+    "n": 66,
+    "TSR": 1.0,
+    "ECR": 1.0,
+    "avg_model_calls": 3.0454545454545454,
+    "avg_symbolic_steps": 1.0,
+    "symbolic_ratio": 0.24719101123595505,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 610558,
+    "cached_tokens": 0,
+    "avg_latency_s": 17.31,
+    "time_model_s": 1142.3,
+    "time_controller_s": 0.31,
+    "time_tools_s": 0.01,
+    "controller_share": 0.00027,
+    "decision_states": 267,
+    "unique_states": 28,
+    "state_reuse_rate": 0.8951,
+    "cache": {
+      "hits": 1834,
+      "misses": 35,
+      "hit_rate": 0.9813,
+      "entries": 35
+    },
+    "wall_clock_s": 1196.5
+  },
+  "rows": [
+    {
+      "key": "P100012",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100066",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100029",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100070",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100010",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100068",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100006",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100076",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100041",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100046",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100017",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100057",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100035",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100008",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100056",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100063",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100020",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100074",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100026",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100067",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100014",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100025",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100004",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100018",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100039",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100009",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100071",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100007",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100069",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100037",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100080",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100089",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100055",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100044",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100051",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100047",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100088",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100016",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100087",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100028",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100073",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100042",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100059",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100049",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100079",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100058",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100033",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100085",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100060",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100064",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100077",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100038",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100030",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100002",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "medium",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100053",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100022",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100003",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100024",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100084",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100075",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100083",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100021",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100061",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "invalid",
+        "pharmacy_check": "no",
+        "life_style_risk_level": "medium",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100072",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100015",
+      "want": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "got": {
+        "insurance_validation": "invalid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "high",
+        "overall_risk_level": "high",
+        "user_registration": "failure"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "P100052",
+      "want": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "got": {
+        "insurance_validation": "valid",
+        "prescription_insurance_validation": "valid",
+        "pharmacy_check": "yes",
+        "life_style_risk_level": "low",
+        "overall_risk_level": "low",
+        "user_registration": "success"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

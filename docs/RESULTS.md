@@ -285,3 +285,56 @@ ACORN keeps all 170 as declarative, verifiable first-class objects at
 O(n) representation cost. (Practice anchor: published LangGraph
 tutorials and production case studies use 4–30 nodes — the faithful
 product machine for video_annotation alone would need ≥10^9 states.)
+
+## Workflow↔agent sweep (enforcement-medium transfer, claude-4.5-haiku)
+
+Each movable constraint enforced exactly once — either as external
+contract (restrictive: prune violations only) or internalized flow
+structure (prescriptive: stage-machine). Full-library observe auditor
+throughout (medium-independent accounting). freedom = mean exposed
+actions per neural decision.
+
+### KYB — linear regime (6 orderings, 5 cuts, 90 rows/profile)
+
+| profile | freedom | TSR | proc-clean | sym steps/row | latency |
+|---|---|---|---|---|---|
+| x0 (all-external) | 2.66 | 50.0% | 100% | 1.0 | 20.2s |
+| x1 | 2.32 | 51.1% | 100% | 2.1 | 18.2s |
+| x2 | 2.00 | 54.4% | 100% | 2.8 | 20.7s |
+| x3 | 1.99 | 52.2% | 100% | 3.3 | 18.2s |
+| x4 | 1.99 | 52.2% | 100% | 3.5 | 18.2s |
+| x5 (all-internal) | 2.00 | 54.4% | 100% | 3.5 | 18.0s |
+
+Quality flat within noise; compliance invariant; internalization buys
+modest efficiency (more singleton stages → more jumps). Media are
+interchangeable for simple sequential procedure.
+
+### WH — branching regime (150 rows/profile, clean reruns, 0 error rows)
+
+| profile | TSR | proc-clean | viol/row | Wrong-Item viol |
+|---|---|---|---|---|
+| free (all-external, no flow) | 94.0% | 100% | 0 | 0 |
+| flat (external + trivial shell) | 99.3% | 100% | 0 | 0 |
+| branch (correct internalization) | 100% | 100% | 0 | 0 |
+| naive (branch-blind internalization, no external net) | 100% | **64%** | **1.08** | **3.00** |
+
+naive's damage is invisible to outcome metrics (TSR 100% — the fact
+layer rescues outputs) and fully visible to the audit. free's 94% is
+completion discipline (prose instead of submit; fixable with an
+eventually-submit obligation).
+
+### VA — wide-tool regime (26 tools, 20 distractors, 125 rows/profile)
+
+| profile | freedom | TSR | proc-clean | calls/row | latency |
+|---|---|---|---|---|---|
+| free (all-external) | 10.02 | 86.4% | 99% | 11.75 | 70s |
+| phases (coarse internalization) | 1.58 | 100% | **88%** | 4.38 | 68s |
+| pipeline (full internalization) | 1.00 | 100% | 100% | 4.86 | 116s |
+
+Two mechanisms: (1) **contracts forbid the illegal; exposure removes
+the useless** — calling a distractor violates nothing, so external
+enforcement alone cannot fix distraction (11.75 calls/row, −13.6pp);
+attention needs prescriptive scoping. (2) Coarse internalization
+under-enforces: phases dropped the intra-stage orderings it claimed to
+internalize (2-tool stages don't order their members) — audit catches
+12% of rows; enforce-exactly-once bookkeeping must be exact.

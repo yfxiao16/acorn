@@ -1,0 +1,6519 @@
+{
+  "summary": {
+    "pack": "customer_service_sop",
+    "model": "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 1.32,
+    "n": 156,
+    "TSR": 0.9871794871794872,
+    "ECR": 0.9871794871794872,
+    "avg_model_calls": 5.153846153846154,
+    "avg_symbolic_steps": 0.9871794871794872,
+    "symbolic_ratio": 0.16075156576200417,
+    "blocked_proposals": 1,
+    "proc_clean_rate": 0.9871794871794872,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 2532366,
+    "cached_tokens": 0,
+    "avg_latency_s": 130.9,
+    "time_model_s": 20419.5,
+    "time_controller_s": 1.054,
+    "time_tools_s": 0.03,
+    "controller_share": 5e-05,
+    "decision_states": 958,
+    "unique_states": 515,
+    "state_reuse_rate": 0.4624,
+    "cache": {
+      "hits": 2781,
+      "misses": 55,
+      "hit_rate": 0.9806,
+      "entries": 55
+    },
+    "wall_clock_s": 26554.2
+  },
+  "rows": [
+    {
+      "key": "BCD-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "TUV-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-56802",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-90130",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-23457",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "WXY--12345",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-23456",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-90127",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-56801",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "NOP--67890",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "WXY-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX--67890",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ZAB-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "TUV-90126",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "EFG-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ-12355",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ZAB-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "UVW-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "LMN-23456",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-12357",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-34569",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-90140",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "CDE-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "MNO-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "EFG-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "NOP-12348",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ZAB-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-56791",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-56793",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "QRS-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-90141",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "CDE-56798",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-12352",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU--34584",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "WXY--34570",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL--23456",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-78901",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-12361",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-78901",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-90128",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "CDE-78901",
+      "ok": false,
+      "status": "error",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "key": "HIJ-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "UVW-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "EFG-78901",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-12351",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-12356",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-34581",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "EFG--34574",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "QRS-90131",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-12347",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ--12345",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-90137",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-56795",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "LMN-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "MNO--34578",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "NOP-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "NOP-90136",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "CDE-12349",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 500: {\"message\":\"The system encountered an unexpected error during processing. Try your request again.\"}"
+    },
+    {
+      "key": "GHI-78901",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "NOP-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "MNO-67891",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-56807",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "TUV-34575",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-56805",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "TUV-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "UVW-12359",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-56804",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "TUV-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-90142",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "DEF-56790",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "IJK-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "QRS--34580",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-90124",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-56800",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR--34582",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "QRS-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PQR-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-90134",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "MNO-12364",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-56799",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-45678",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-12345",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "STU-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "CDE-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "KLM-12353",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-12363",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "OPQ--67890",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "YZA-56796",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-12362",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "XYZ-98765",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "UVW-56794",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC-12346",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "ABC--34572",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "UVW--12345",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "FGH-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "LMN-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "MNO--12345",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "QRS-56789",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-34567",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "VWX--34586",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "GHI-12360",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "EFG--12345",
+      "want": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "got": {
+        "is_account_id_valid": false,
+        "is_authenticated": false,
+        "eligible_for_support": false,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "FAILED"
+      },
+      "ok": true,
+      "model_calls": 1,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "JKL-67890",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "WXY-90123",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "HIJ-89012",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": false,
+        "latency_issue": false,
+        "stability_issue": false,
+        "bandwidth_issue": false,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": false,
+        "final_resolution_status": "PENDING_ACTION"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "BCD-34579",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": false,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": true,
+        "escalation_required": false,
+        "final_resolution_status": "RESOLVED"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "RST-01234",
+      "want": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "got": {
+        "is_account_id_valid": true,
+        "is_authenticated": true,
+        "eligible_for_support": true,
+        "diagnostic_needed": true,
+        "latency_issue": true,
+        "stability_issue": true,
+        "bandwidth_issue": true,
+        "metrics_improved_post_troubleshooting": false,
+        "escalation_required": true,
+        "final_resolution_status": "ESCALATED"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

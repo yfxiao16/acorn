@@ -1,0 +1,6036 @@
+{
+  "summary": {
+    "pack": "video_classification_sop",
+    "model": "bedrock:openai.gpt-oss-120b-1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 26.0,
+    "n": 147,
+    "TSR": 0.4217687074829932,
+    "ECR": 0.9931972789115646,
+    "avg_model_calls": 7.197278911564626,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.12244897959183673,
+    "avg_committed_violations": 0.9591836734693877,
+    "total_tokens": 3170409,
+    "cached_tokens": 0,
+    "avg_latency_s": 32.47,
+    "time_model_s": 4770.2,
+    "time_controller_s": 2.559,
+    "time_tools_s": 0.02,
+    "controller_share": 0.00054,
+    "decision_states": 1058,
+    "unique_states": 218,
+    "state_reuse_rate": 0.794,
+    "cache": null,
+    "wall_clock_s": 4796.5
+  },
+  "rows": [
+    {
+      "key": "42",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "66",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "158",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "78",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "118",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "125",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "29",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "136",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "161",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "51",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "167",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "38",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00041\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"No policy violations detected; video meets all technical and content standards.\"\n}\n</final_output>"
+    },
+    {
+      "key": "31",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "96",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00103\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Detected bullying content with high confidence (0.88). Escalated for moderator review. Applied warning and age restriction.\"\n}\n</final_output>"
+    },
+    {
+      "key": "159",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00171** passed all validation checks, has no policy violations, and the uploader\u2019s history shows no red flags. No escalation or moderation actions are required.\n\n<final_output>\n{\n    \"video_id\": \"vid_00171\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video format valid (typo accounted), no explicit or hateful content, uploader history clean, no policy violations detected.\""
+    },
+    {
+      "key": "41",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "192",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "101",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "26",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00028\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"No policy violations detected after automated checks and reviewer assessment.\"\n}\n</final_output>"
+    },
+    {
+      "key": "171",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "195",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00209\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [\"Age Restrict\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Adult content detected via metadata tags; regional policy for RU requires age restriction rather than removal.\"\n}\n</final_output>"
+    },
+    {
+      "key": "183",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "2",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "46",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "104",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "145",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "138",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "36",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "187",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "22",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "128",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00138** was processed through the SOP\u2011defined moderation pipeline:\n\n1. **Video validation** \u2013 format, duration, resolution, etc. passed (typo in codec tolerated).  \n2. **Reviewer assignment** \u2013 reviewer `rev_138` (Arabic language, Saudi Arabia region).  \n3. **Initial review** \u2013 reviewer flagged **Hate Speech** with a confidence score of **0.94**.  \n4. **Uploader history check** \u2013 uploader has a prior ban, indicating higher risk.  \n5. **Escalation** \u2013 due to high\u2011confidence hate\u2011s"
+    },
+    {
+      "key": "90",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "33",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "11",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "126",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "156",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "6",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "27",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "109",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "4",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00005\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video meets all format, metadata, and content guidelines with no detected violations.\"\n}\n</final_output>"
+    },
+    {
+      "key": "32",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "194",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "142",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "98",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "141",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "10",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "62",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "100",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submitContentModeration",
+            "contracts": [
+              "submitContentModeration requires review_done"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submitContentModeration requires review_done",
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "143",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "0",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "176",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "150",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "70",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video was processed through the full moderation pipeline. No policy violations were detected, and the content is allowed without a content warning or age restriction.\n\n<final_output>\n{\n  \"video_id\": \"vid_00075\",\n  \"escalated\": false,\n  \"moderation_actions\": [],\n  \"age_rating\": \"\",\n  \"content_warning_applied\": false,\n  \"final_decision\": \"Allow\",\n  \"reason\": \"Video complies with all policies; no violations detected.\"\n}\n</final_output>"
+    },
+    {
+      "key": "111",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "64",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "44",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "127",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00137\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": null,\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"No policy violations detected; video format compliant; uploader history clean.\"\n}\n</final_output>"
+    },
+    {
+      "key": "28",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "40",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 400: {\"message\":\"1 validation error detected: Value at 'messages.10.member.content.1.member.toolUse.name' failed to satisfy constraint: Member must satisfy regular expression pattern: [a-zA-Z0-9_-]+\"}"
+    },
+    {
+      "key": "117",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "152",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "153",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "25",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "23",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "148",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "144",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "81",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "108",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "79",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00085\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"No policy violations detected after automated checks and reviewer assessment.\"\n}\n</final_output>"
+    },
+    {
+      "key": "84",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "39",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "61",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "120",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "123",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "86",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "77",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "191",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "165",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00177\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Warning\",\n    \"Reason\": \"Uploader has prior warnings and video tags include religious debate; no explicit or hateful content detected, but regional sensitivity (Egypt) and user history warrant a warning and content warning.\"\n}\n</final_output>"
+    },
+    {
+      "key": "47",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video **vid_00051** passed all technical validations, metadata checks, and content analyses (no explicit content, hate speech, or other policy violations were detected). No escalation was required.\n\n<final_output>\n{\n  \"video_id\": \"vid_00051\",\n  \"Escalated\": false,\n  \"Moderation_actions\": [],\n  \"Age Rating\": \"\",\n  \"Content_warning\": false,\n  \"Final Decision\": \"Allow\",\n  \"Reason\": \"No policy violations detected; video passes technical and content guidelines.\"\n}\n</final_output>"
+    },
+    {
+      "key": "94",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "181",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "43",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00047\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed format validation (typo in format tolerated), meets resolution and frame\u2011rate requirements, regional compliance for EG cleared, no explicit content, no hate speech, no copyright infringement, and uploader history shows no prior violations.\"\n}\n</final_output>"
+    },
+    {
+      "key": "135",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "3",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "105",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "53",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "133",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "177",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "154",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "182",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "49",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "80",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "34",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "7",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "110",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "91",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "83",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "173",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "178",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00191\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video format, resolution, and metadata are compliant; uploader has a clean history; no hate speech, explicit, or other policy violations detected.\"\n}\n</final_output>"
+    },
+    {
+      "key": "89",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "8",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "13",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "59",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "168",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video was processed through the validation, reviewer assignment, user history check, and explicit\u2011content detection steps. No policy violations were detected, the technical specifications meet platform requirements, and the content does not require a warning or any moderation action. The case did not meet escalation thresholds.\n\n**Final Content Review Package submitted:**\n- Content warning applied: **false**\n- Moderation actions: **none**\n- Final decision: **Allow**\n- Age rating: **none**\n- "
+    },
+    {
+      "key": "131",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00141\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"No policy violations detected; content is educational and complies with guidelines.\"\n}\n</final_output>"
+    },
+    {
+      "key": "17",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "72",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "172",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "assignReviewer",
+            "contracts": [
+              "assignReviewer requires video_checked"
+            ]
+          },
+          {
+            "tool": "assignReviewer",
+            "contracts": [
+              "assignReviewer at most 1 times"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 3,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "assignReviewer requires video_checked",
+            "assignReviewer at most 1 times",
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "134",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "164",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n  \"video_id\": \"vid_00176\",\n  \"Escalated\": false,\n  \"Moderation_actions\": [],\n  \"Age Rating\": \"\",\n  \"Content_warning\": false,\n  \"Final Decision\": \"Allow\",\n  \"Reason\": \"No violations detected; content complies with policies.\"\n}\n</final_output>"
+    },
+    {
+      "key": "180",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "63",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "54",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "107",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "50",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "193",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "58",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "48",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "88",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "21",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video has passed all validation checks, no policy violations were detected, and no escalation or moderation actions are required.\n\n**Result submitted:**  \n\n- **Content Warning Applied:**\u202fFalse  \n- **Moderation Actions:**\u202f[]  \n- **Reason:**\u202fEducational video with no policy violations. Format typo tolerated.  \n- **Final Decision:**\u202fAllow  \n- **Age Rating:**\u202f(none)  \n- **Escalated:**\u202fFalse"
+    },
+    {
+      "key": "57",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "160",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "189",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "129",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "37",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "157",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result at most 1 times"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready",
+            "submit_result at most 1 times"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The video passed all checks \u2013 format is valid, there is no hate\u2011speech, explicit or copyrighted material, no synthetic\u2011content concerns, and the uploader\u2019s history does not require special handling. No violations were found, so no escalation or moderation actions are needed.\n\n<final_output>\n{\n    \"video_id\": \"vid_00169\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video complies with all p"
+    },
+    {
+      "key": "185",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "1",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "52",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "149",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "130",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "151",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "103",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "99",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "116",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "87",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "74",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "121",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "196",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "20",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "188",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "71",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "106",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "14",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "remove"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "92",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "179",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "102",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [
+          "age restrict"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

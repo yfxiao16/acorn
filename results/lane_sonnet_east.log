@@ -2,3 +2,7 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
 === [sonnet@us-east-1] customer_service baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+=== [sonnet@us-east-1] patient_intake baseline  ===

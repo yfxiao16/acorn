@@ -6,3 +6,7 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.jso
 wrote /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
 === [sonnet@us-east-1] patient_intake baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+=== [sonnet@us-east-1] know_your_business baseline  ===

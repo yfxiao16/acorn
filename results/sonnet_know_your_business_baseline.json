@@ -1,0 +1,2212 @@
+{
+  "summary": {
+    "pack": "know_your_business_sop",
+    "model": "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 9.0,
+    "n": 90,
+    "TSR": 0.5555555555555556,
+    "ECR": 1.0,
+    "avg_model_calls": 6.522222222222222,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.9777777777777777,
+    "avg_committed_violations": 0.022222222222222223,
+    "total_tokens": 3125330,
+    "cached_tokens": 0,
+    "avg_latency_s": 185.99,
+    "time_model_s": 16737.9,
+    "time_controller_s": 0.839,
+    "time_tools_s": 0.02,
+    "controller_share": 5e-05,
+    "decision_states": 587,
+    "unique_states": 11,
+    "state_reuse_rate": 0.9813,
+    "cache": null,
+    "wall_clock_s": 16739.4
+  },
+  "rows": [
+    {
+      "key": "biz_098",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_098\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear sanctions/PEP screening, verified bank account, low risk profile with simple ownership structure.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_098**\n\nThe business entity \"Tech Solutions Group\" has been successfully verified and approved. All mandatory verification steps were completed:\n\n\u2713 Business profile validation - "
+    },
+    {
+      "key": "biz_028",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_028\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Tax ID format non-compliant: uses PAN667788 instead of required TIN format per SOP \u00a75.2.1\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_028**\n\n**Escalation Required:** The business has been escalated due to Tax ID format violation. Per SOP \u00a75.2.1, Tax IDs must be \"TIN followed by 6 digits only.\" The submitted Tax ID \"PAN667788\" uses \"PAN\" prefix instead of \"TIN,\" requiring immediate escal"
+    },
+    {
+      "key": "biz_122",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_122\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: expired license exceeding 42-day threshold, UBO V Petrov matched on sanctions list, both UBOs are PEPs, bank account flagged, shell company suspected in offshore jurisdiction (Cayman Islands)\"\n}\n</final_output>\n\n**Verification Complete**: The case has been escalated due to multiple high-risk factors that require senior review and Enhanced Due Diligence procedures. The sanc"
+    },
+    {
+      "key": "biz_070",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_070\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verifications passed: active registration, valid license, clear sanctions/PEP checks for all UBOs, verified bank account, simple ownership structure (no shell company indicators), and low risk score. No irregularities detected.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_070**\n\nThe verification has been successfully completed and the result has been submitted. Pacific Trade Solution"
+    },
+    {
+      "key": "biz_139",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_139\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical failures: 2 UBOs with sanctions matches, all 4 UBOs are PEPs, license expired 3+ years, inactive registration status, suspected shell company in offshore jurisdiction, flagged bank account, and business name/website mismatch indicating fraudulent submission.\"\n}\n</final_output>\n\n**Verification Complete**: This case has been escalated due to numerous severe compliance violations inc"
+    },
+    {
+      "key": "biz_038",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_038\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Tax ID TIN000000 contains all same digits (zeros), violating regulatory requirements per \u00a75.2.1. Immediate escalation required.\"\n}\n</final_output>\n\n**Verification Complete**: The KYB verification for biz_038 has been processed and submitted with an **ESCALATE** status. Despite all other verification checks passing (active registration, valid license, clean sanctions/PEP screening, verified bank acc"
+    },
+    {
+      "key": "biz_067",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_067\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO I Petrov matched on sanctions list and flagged as PEP. Bank account flagged. Shell company suspected in offshore jurisdiction (Cayman Islands) with 3 ownership layers.\"\n}\n</final_output>\n\n**KYB Verification Complete**\n\nThe verification for biz_067 has been completed and the case has been **escalated** due to multiple critical risk factors:\n\n1. **Sanctions Match:** UBO I Petrov has a confirmed m"
+    },
+    {
+      "key": "biz_149",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_149\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: business license expired >3 years (beyond 42-day threshold), registration status inactive, 2 UBOs matched sanctions lists, all 4 UBOs are PEPs, shell company suspected with 5 ownership layers, offshore jurisdiction, and flagged bank account.\"\n}\n</final_output>\n\n**Verification Complete**: This case has been escalated due to multiple high-risk factors including expired licen"
+    },
+    {
+      "key": "biz_012",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_012\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"CRITICAL: UBO sanctions match, both UBOs are PEPs, suspected shell company with 4 ownership layers, offshore jurisdiction (Cayman Islands), flagged bank account, and expired license. Requires enhanced due diligence.\"\n}\n</final_output>\n\n## Detailed Verification Report for biz_012:\n\n**Entity Information:**\n- Business Name: Ocean Finance Ltd\n- Registration: REG334455 (Active in Cayman Islands)\n- Tax I"
+    },
+    {
+      "key": "biz_042",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_042\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"CRITICAL: UBO S Ivanov has confirmed sanctions match and PEP status. Additional concerns: expired business license, shell company suspected (3 ownership layers), offshore jurisdiction (Cayman Islands), flagged bank account, and both UBOs are PEPs.\"\n}\n</final_output>\n\n**Verification Complete - Case Escalated**\n\nThis case presents multiple high-risk factors that require immediate escalation:\n\n1. **Pr"
+    },
+    {
+      "key": "biz_032",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_032\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Critical escalation required: UBO I Volkov sanctions match confirmed, both UBOs are PEPs, shell company suspected, offshore jurisdiction (Cayman Islands), flagged bank account, and expired business license. Multiple high-risk indicators present.\"\n}\n</final_output>\n\n**Summary:** This case presents multiple critical compliance risks requiring immediate escalation. The confirmed sanctions match for UB"
+    },
+    {
+      "key": "biz_087",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_087\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Critical violations: Expired license (>42 days), UBO V Petrov has sanctions match and PEP status, shell company suspected, bank account flagged, offshore jurisdiction with complex ownership structure.\"\n}\n</final_output>\n\n## KYB Verification Complete\n\n**Verdict: ESCALATE**\n\nThis case presents multiple critical red flags requiring immediate escalation:\n\n1. **Business License Expired** - License expir"
+    },
+    {
+      "key": "biz_035",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_035\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration, clear sanctions screening, verified bank account, simple ownership structure with no red flags identified.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_035 - APPROVED**\n\nThe business entity \"Northwest Commerce\" has successfully passed all verification requirements per the SOP. The entity demonstrates a clean compliance profile with acti"
+    },
+    {
+      "key": "biz_145",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_145\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear sanctions/PEP screening, verified bank account, simple ownership structure with no red flags.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_145 - West Coast Merchants**\n\nThe business has successfully completed all verification requirements:\n- \u2705 Business information validated with consistent identity fields\n- \u2705 Active re"
+    },
+    {
+      "key": "biz_107",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_107\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: license expired >42 days, UBO M Volkov has sanctions match and PEP status, bank account flagged, shell company suspected in offshore jurisdiction, mismatched website identity. Requires enhanced due diligence.\"\n}\n</final_output>\n\n**KYB Verification Complete - Case Escalated**\n\nThe verification has identified multiple high-risk factors requiring immediate escalation:\n- **Exp"
+    },
+    {
+      "key": "biz_007",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_007\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Sanctions match on UBO C Lee, PEP status on UBO A Wong, flagged bank verification, suspected shell company in offshore jurisdiction (Cayman Islands), and pending sanctions check on A Wong requiring dual verification per \u00a75.4.2\"\n}\n</final_output>\n\n## Detailed Verification Report:\n\n**Business Entity**: Island Ventures Co (biz_007)\n**Business Type**: Investment\n**Jurisdiction**: Cayman Islands (Offsho"
+    },
+    {
+      "key": "biz_114",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_114\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical risks: License expired since 2022 (>42 days), registration inactive, 2 UBOs sanctioned, all 3 UBOs are PEPs, shell company suspected, offshore jurisdiction (Bahamas), bank account flagged, and 4 ownership layers. Website/email missing proper formatting (possible typos: missing dots/slashes).\"\n}\n</final_output>\n\n## Detailed Verification Summary:\n\n**\u00a75.1.1 Initial Data Collection & "
+    },
+    {
+      "key": "biz_085",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_085\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: registration active, license valid until 2027, UBO structure clear (100% ownership by 2 individuals), no sanctions/PEP hits, bank account verified, risk score 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_085 - APPROVED**\n\nThe business entity \"West Coast Retail\" has successfully completed all verification requirements per the SOP. All documentation was c"
+    },
+    {
+      "key": "biz_049",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_049\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical failures: License expired >42 days (2023-03-31), inactive registration status, 2 UBOs with sanctions matches (M Black, A Gray), all 4 UBOs are PEPs, shell company suspected, offshore jurisdiction (Bahamas), and flagged bank account. Immediate Enhanced Due Diligence required.\"\n}\n</final_output>\n\n## KYB Verification Summary for biz_049 - Caribbean Finance Ltd\n\n**ESCALATION STATUS: E"
+    },
+    {
+      "key": "biz_062",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_062\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Critical escalation: Sanctions match on UBO (B Kuznetsov), both UBOs are PEPs, expired license, flagged bank account, suspected shell company in offshore jurisdiction (Cayman Islands) with 3 ownership layers.\"\n}\n</final_output>\n\n## KYB Verification Summary for biz_062\n\n**Entity**: Cayman Elite Group (Investment Company)\n\n**Critical Findings Requiring Escalation:**\n1. \u274c **Sanctions Match**: B Kuznet"
+    },
+    {
+      "key": "biz_044",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_044\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: inactive registration, expired license, 2 UBOs with sanctions matches, all 3 UBOs are PEPs, flagged bank account, and shell company indicators in offshore jurisdiction.\"\n}\n</final_output>\n\n**Verification Summary for biz_044 - Nassau Trust Corp:**\n\n**Documentation Assessment:**\n- Minor data entry errors noted (website \"wwwww\" and email \"www.admin@\") appear to be associate t"
+    },
+    {
+      "key": "biz_020",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_020\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration, license current, UBOs clear of sanctions/PEP, bank account verified, simple ownership structure, no high-risk indicators.\"\n}\n</final_output>\n\n## KYB Verification Completed for biz_020\n\n**Verdict: APPROVED**\n\n**Verification Summary:**\n- \u2705 Business profile complete and validated\n- \u2705 Tax ID format correct (TIN001122)\n- \u2705 Business registration active "
+    },
+    {
+      "key": "biz_083",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_083\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: registration active, license valid until 2026, UBO clear on sanctions/PEP screening, bank account verified, risk score 0, no irregularities detected.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_083**\n\nThe business entity \"Software Solutions Pro\" has successfully passed all verification requirements per the SOP:\n- \u2713 Complete and consistent business profile"
+    },
+    {
+      "key": "biz_043",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_043\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Tax ID format violation: 'WAS990011' does not conform to required 'TIN' + 6 digits format per \u00a75.2.1\"\n}\n</final_output>\n\n## KYB Verification Summary for biz_043 - Digital Frontiers\n\n**Verification Completed with ESCALATION Required**\n\n**Key Findings:**\n- \u2705 Business registration: Active and valid\n- \u2705 License status: Valid until 2026-03-31\n- \u2705 UBO verification: Single owner (M Wilson, 100%) - Clear s"
+    },
+    {
+      "key": "biz_143",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_143\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration, clear sanctions/PEP screening, verified bank account, simple ownership structure, and low risk score (0).\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_143**\n\nThe business entity \"Software Solutions Group\" has successfully passed all verification requirements per the SOP:\n- Documentation is complete and consistent with no irregularities\n"
+    },
+    {
+      "key": "biz_009",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_009\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Inactive registration status, expired license (>42 days), two UBOs with sanctions matches, three PEPs, suspected shell company with 5 ownership layers, offshore jurisdiction, and flagged bank account require immediate enhanced due diligence.\"\n}\n</final_output>\n\n**Verification Complete**: The case has been escalated due to multiple high-risk factors including inactive registration, expired license, "
+    },
+    {
+      "key": "biz_054",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_054\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration, license expired beyond 42-day threshold, 2 UBOs with sanctions matches, all 3 UBOs are PEPs, shell company suspected in offshore jurisdiction (Bahamas), and flagged bank account. Requires enhanced due diligence and senior review.\"\n}\n</final_output>\n\n**Verification Complete**: Case biz_054 has been escalated due to numerous high-risk indicators includ"
+    },
+    {
+      "key": "biz_090",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_090\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear UBO structure with no sanctions/PEP hits, verified bank account, low risk profile.\"\n}\n</final_output>\n\n## KYB Verification Complete\n\n**Business:** Pacific Trading Corp (biz_090)\n\n**Verification Results:**\n- \u2705 Business profile validated with no irregularities\n- \u2705 Active registration in Oregon (REG223344)\n- \u2705 Valid business license"
+    },
+    {
+      "key": "biz_084",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_084\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration, license expired >2 years (exceeds 42-day threshold), 2 UBOs matched sanctions lists, all 3 UBOs are PEPs, shell company suspected with offshore jurisdiction, bank flagged, invalid website (made-up data).\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_084**\n\nThis case has been escalated due to numerous severe compliance violations:\n- **Regist"
+    },
+    {
+      "key": "biz_104",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_104\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical failures: fraudulent website submission (www.com), inactive registration status, business license expired >1000 days (far exceeding 42-day threshold), 2 UBOs with sanctions matches, all 3 UBOs are PEPs, flagged bank account, and suspected shell company in offshore jurisdiction.\"\n}\n</final_output>\n\n**Verification Summary:**\n\nThis case presents numerous severe red flags that mandate"
+    },
+    {
+      "key": "biz_034",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_034\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration status, expired license (>42 days), two UBOs matched on sanctions lists, all three UBOs are PEPs, flagged bank account, suspected shell company in offshore jurisdiction with complex ownership structure.\"\n}\n</final_output>\n\n## KYB Verification Summary for biz_034 - Nassau Holdings\n\n**ESCALATION REQUIRED**\n\n### Critical Findings:\n1. **Registration Statu"
+    },
+    {
+      "key": "biz_024",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_024\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration, expired license (>42 days), 2 UBOs matched on sanctions, all 3 UBOs are PEPs, suspected shell company in offshore jurisdiction, flagged bank account, and malformed email address.\"\n}\n</final_output>\n\n**Verification Complete**: Case biz_024 has been escalated due to multiple high-risk factors including sanctions matches, PEP status across all UBOs, ina"
+    },
+    {
+      "key": "biz_120",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_120\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration, clear sanctions/PEP screening, verified bank account, simple ownership structure with no red flags.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_120 - Pacific Coast Group**\n\nThe business has successfully passed all verification requirements per the SOP:\n- \u2713 Complete and consistent business information\n- \u2713 Active registration with valid "
+    },
+    {
+      "key": "biz_127",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_127\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: license expired >42 days, UBO sanctions match (D Volkov), PEP identified, bank account flagged, suspected shell company, fraudulent website submission (worldismeme.com vs Cayman Asset Trust), and offshore jurisdiction.\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_127:**\n\n**Escalation Status:** ESCALATE\n\n**Key Findings:**\n\n1. **Fraudulent Identity Information**: T"
+    },
+    {
+      "key": "biz_010",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_010\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear UBO ownership structure (100% owned by 2 individuals), no sanctions/PEP matches, verified bank account, domestic jurisdiction, risk score 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_010**\n\nThe verification has been successfully completed and submitted. Local Retail Co has been **APPROVED** based on:\n\n1. Complete an"
+    },
+    {
+      "key": "biz_017",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_017\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO S Rodriguez matched on sanctions list; license expired >42 days; both UBOs are PEPs; bank account flagged; shell company suspected in offshore jurisdiction (Cayman Islands); 3 ownership layers; website mismatch raises authenticity concerns\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_017:**\n\nThis case requires immediate escalation due to multiple critical risk factors:\n\n- **CRITICAL**"
+    },
+    {
+      "key": "biz_105",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_105\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration, valid license, clear sanctions/PEP screening for all UBOs, verified bank account, simple ownership structure (1 layer), no offshore jurisdiction flags, and risk score 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_105**\n\nThe business \"West Coast Enterprises\" has successfully passed all required verification checks per the SOP. The ent"
+    },
+    {
+      "key": "biz_004",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_004\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: expired business license (>42 days), UBO sanctions match, PEP identified, shell company suspected, offshore jurisdiction, flagged bank account, and invalid contact information indicating potential fraud.\"\n}\n</final_output>\n\n**Verification Complete - ESCALATED**\n\nThis case presents multiple severe risk indicators requiring immediate escalation:\n\n1. **Contact Information Red"
+    },
+    {
+      "key": "biz_022",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_022\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO B Ivanov matched sanctions list and is PEP; license expired >42 days; bank account flagged; shell company suspected in offshore jurisdiction\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_022:**\n\n**ESCALATION REQUIRED** - This case presents multiple critical risk factors:\n\n- **Sanctions Match**: UBO B Ivanov (40% ownership) has a confirmed sanctions match\n- **PEP Status**: B Ivanov is a"
+    },
+    {
+      "key": "biz_048",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_048\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration, valid license, clear sanctions/PEP screening, verified bank account, simple ownership structure with no risk indicators.\"\n}\n</final_output>\n\n**KYB Verification Complete**\n\nThe business entity biz_048 (Tech Solutions Pro) has successfully passed all verification requirements per the SOP. The entity demonstrates:\n- Complete and consistent documenta"
+    },
+    {
+      "key": "biz_117",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_117\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: UBO sanctions match, PEP confirmed, license expired >42 days, shell company suspected, offshore jurisdiction, bank account flagged, incomplete website data suggests fabricated submission.\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_117:**\n\nThe verification has been completed and the case has been **ESCALATED** due to multiple serious compliance violations:\n\n- **"
+    },
+    {
+      "key": "biz_008",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_008\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: business registration active with valid license, single UBO cleared sanctions/PEP screening, bank account verified, no shell company indicators, risk score 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_008**\n\nThe business entity Digital Systems Inc has successfully passed all verification requirements per the SOP. The entity demonstrates:\n- Complete and "
+    },
+    {
+      "key": "biz_097",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_097\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Business license expired over 1 year ago (>42 days); UBO B Kuznetsov (45% owner) has sanctions match and PEP status; bank account flagged; shell company suspected in offshore jurisdiction with 3 ownership layers; suspicious email address.\"\n}\n</final_output>\n\n## KYB Verification Complete\n\n**Business ID:** biz_097 (Island Capital Corp)\n\n**Decision:** ESCALATE\n\n**Key Findings"
+    },
+    {
+      "key": "biz_132",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_132\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: expired license (>42 days), UBO sanctions match (A Petrov), both UBOs are PEPs, bank account flagged, suspected shell company in offshore jurisdiction, and suspicious website/email inconsistencies with business name.\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_132:**\n\n**Decision: ESCALATE**\n\n**Critical Risk Factors Identified:**\n1. **Expired Business License**: "
+    },
+    {
+      "key": "biz_119",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_119\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"License expired beyond 42 days (since 2022-01-31), registration inactive, 2 UBOs matched on sanctions lists (M Black, B Gray), all 4 UBOs are PEPs, shell company suspected with 5 ownership layers in offshore jurisdiction, bank account flagged.\"\n}\n</final_output>\n\n## KYB Verification Complete - ESCALATED\n\n**Business**: Paradise Trust Corp (biz_119)\n\n**Critical Issues Requiring Escalation:**\n1. \u2717 Bus"
+    },
+    {
+      "key": "biz_068",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_068\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear sanctions/PEP screening, verified bank account, simple ownership structure with no red flags.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_068 - Cloud Technologies**\n\nThe verification has been successfully completed and the case has been **APPROVED**. All required checks per the SOP were executed:\n\n\u2705 Business profile r"
+    },
+    {
+      "key": "biz_063",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_063\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: business registration active, license valid until 2026, TIN format correct, UBO clear from sanctions/PEP, bank account verified, low risk profile.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_063**\n\nThe verification has been successfully completed and the business has been **APPROVED**. All compliance checks passed:\n\n\u2713 Business registration verified as Act"
+    },
+    {
+      "key": "biz_100",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_100\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and licensing, clear sanctions/PEP screening for all UBOs, verified bank account, simple ownership structure (1 layer), no shell company indicators, risk score 0. No escalation triggers identified.\"\n}\n</final_output>\n\n## KYB Verification Complete for biz_100\n\n**Status: APPROVED**\n\nThe verification has been successfully completed for Pacific Merchan"
+    },
+    {
+      "key": "biz_058",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_058\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Tax ID format violation: contains special characters (TIN@#$%^&) instead of required TIN followed by 6 digits. Per SOP \u00a75.2.1, invalid Tax ID requires immediate escalation.\"\n}\n</final_output>\n\n**Verification Summary:**\nThe KYB verification for biz_058 has been completed and the case has been escalated. Despite positive results across most verification checks (active registration, valid license, cle"
+    },
+    {
+      "key": "biz_102",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_102\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: UBO I Petrov matched sanctions list, both UBOs are PEPs, license expired beyond 42 days, shell company suspected with offshore jurisdiction (Cayman Islands), and bank account flagged. Requires enhanced due diligence.\"\n}\n</final_output>\n\n## Detailed Verification Report for biz_102 - Cayman Trust Group\n\n**Documentation Completeness**: Partial - Address incomplete (only city "
+    },
+    {
+      "key": "biz_077",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_077\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Critical issues identified: UBO A Kuznetsov matched on sanctions list and is PEP; business license expired beyond 42 days (expired 2024-03-15); bank account flagged; shell company suspected in offshore jurisdiction (Cayman Islands) with 3 ownership layers.\"\n}\n</final_output>\n\n**Verification Summary for biz_077 - Grand Cayman Invest:**\n\n**Documentation Review (\u00a75.1.1):**\n- Minor data entry issue ide"
+    },
+    {
+      "key": "biz_147",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_147\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired >42 days (expired since 2023-01-15), UBO S Petrov matched on sanctions and identified as PEP, shell company suspected with 3 ownership layers in offshore jurisdiction, bank account flagged, and fabricated website/email domains indicating fraudulent submission.\"\n}\n</final_output>\n\n**Verification Summary:**\n\nThe KYB verification for Island Investment Group (b"
+    },
+    {
+      "key": "biz_099",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_099\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration status, license expired over 2 years (exceeds 42-day threshold), 2 UBOs matched on sanctions lists, all 4 UBOs are PEPs, flagged bank account, suspected shell company in offshore jurisdiction, and suspicious email suggesting fraudulent submission.\"\n}\n</final_output>\n\n**Summary:** This case has been escalated due to numerous severe compliance violation"
+    },
+    {
+      "key": "biz_118",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_118\",\n    \"escalation_status\": \"awaiting information\",\n    \"reason\": \"License expiry date (2027-06-30) and date of entry (2027-06-10) are future dates, indicating data integrity issue requiring verification and correction.\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_118:**\n\nThe verification has been completed with a status of **\"awaiting information\"** due to a critical data anomaly. While most verification checks passed successfully (sanctions"
+    },
+    {
+      "key": "biz_052",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_052\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Critical escalation: UBO A Volkov has confirmed sanctions match, license expired >42 days, both UBOs are PEPs, shell company suspected with offshore jurisdiction, bank account flagged\"\n}\n</final_output>\n\n**KYB Verification Complete - Case Escalated**\n\nThe verification for biz_052 (Cayman Ventures Ltd) has been completed and **escalated** due to multiple severe risk factors:\n\n- **Sanctions Match**: "
+    },
+    {
+      "key": "biz_073",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_073\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration, valid license, clear sanctions/PEP screening, verified bank account, simple ownership structure, low risk score.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_073**\n\nThe business \"Digital Solutions Pro\" has been successfully verified and **APPROVED**. All mandatory verification steps per the SOP were completed:\n\n\u2713 Business profile retri"
+    },
+    {
+      "key": "biz_060",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_060\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed. Valid registration, clear sanctions screening, verified bank account, simple ownership structure with no red flags. Risk score: 0.\"\n}\n</final_output>\n\n**KYB VERIFICATION COMPLETE**\n\nThe verification for Pacific Coast Retail (biz_060) has been successfully completed and **APPROVED**. The business entity meets all regulatory requirements with no concerns identified acr"
+    },
+    {
+      "key": "biz_110",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_110\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: business registration active, license valid, UBOs verified with clear sanctions/PEP status, bank account verified, no jurisdictional risks, risk score 0.\"\n}\n</final_output>\n\n## KYB Verification Complete\n\n**Business ID:** biz_110 - Pacific Trade Solutions\n\n**Verdict:** **APPROVED**\n\n**Summary:** The business entity has successfully passed all verification requirements"
+    },
+    {
+      "key": "biz_140",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_140\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: registration active, license valid, UBOs clear on sanctions/PEP screening, bank account verified, risk score 0, no red flags identified.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_140**\n\nThe verification process has been completed successfully. Pacific Coast Solutions is a legitimate retail business incorporated in Oregon with:\n- Active registration and "
+    },
+    {
+      "key": "biz_072",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_072\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Sanctions match on UBO M Volkov, both UBOs are PEPs, license expired >42 days, flagged bank account, and shell company suspected with offshore jurisdiction.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_072**\n\n**Summary of Findings:**\n\n**Critical Red Flags Requiring Escalation:**\n1. **Sanctions Match**: UBO M Volkov has matched sanctions status - immediate escalation required per \u00a75.4.1\n2"
+    },
+    {
+      "key": "biz_094",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_094\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired >42 days (since 2022-06-30), inactive registration status, 2 UBOs with sanctions matches, all 3 UBOs are PEPs, flagged bank account, suspected shell company in offshore jurisdiction. Immediate escalation required.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_094**\n\nThe verification has been completed and the case has been escalated due to numerou"
+    },
+    {
+      "key": "biz_040",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_040\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, transparent UBO structure (100% ownership accounted), clear sanctions/PEP screening, verified bank account, and risk score of 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_040 - Pacific Trade Group**\n\nThe verification has been successfully completed and the case has been **APPROVED**. All mandatory checks per the SOP were "
+    },
+    {
+      "key": "biz_142",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_142\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical violations: UBO sanctions match (V Ivanov), license expired 2+ years (exceeds 42-day limit), both UBOs are PEPs, fraudulent website/email (TheNitromeFan.com vs Cayman Elite Trust), shell company suspected, flagged bank account, offshore jurisdiction.\"\n}\n</final_output>\n\n**KYB Verification Complete - Case Escalated**\n\nThis business entity presents multiple severe compliance risks a"
+    },
+    {
+      "key": "biz_074",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_074\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired 2+ years (exceeds 42-day limit), Inactive registration, 2 UBOs with sanctions matches, all 3 UBOs are PEPs, shell company suspected, offshore jurisdiction, and flagged bank account.\"\n}\n</final_output>\n\n**Verification Summary for biz_074:**\n\nThis case requires immediate escalation due to numerous severe compliance and regulatory concerns that represent signi"
+    },
+    {
+      "key": "biz_079",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_079\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical violations: Inactive registration status, license expired since 2022 (exceeds 42-day threshold), two UBOs with confirmed sanctions matches (V Black, D Gray), all four UBOs are PEPs, shell company suspected with 5 ownership layers in offshore jurisdiction (Bahamas), and flagged bank account.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_079**\n\nThis case has been escalated"
+    },
+    {
+      "key": "biz_125",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_125\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and license, clear UBO structure, no sanctions/PEP hits, verified bank account, and low risk score (0).\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_125**\n\nThe verification process has been completed successfully. West Coast Trading Co has been **APPROVED** based on comprehensive verification across all required dimensions:\n\n- \u2705 Complete"
+    },
+    {
+      "key": "biz_047",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_047\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO V Petrov matched on sanctions list and confirmed PEP; bank account flagged; suspected shell company in offshore jurisdiction; business license expired; email domain mismatch with website.\"\n}\n</final_output>\n\n## Detailed Verification Summary:\n\n**ESCALATION REQUIRED** - This case presents multiple critical risk factors:\n\n1. **Sanctions Match (CRITICAL)**: UBO V Petrov has a confirmed match on san"
+    },
+    {
+      "key": "biz_037",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_037\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO D Kuznetsov matched on sanctions list and confirmed PEP; shell company suspected with offshore jurisdiction; flagged bank account; pending sanctions check on majority owner Y Tanaka\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_037**\n\nThis case has been escalated due to multiple critical compliance violations. The primary concern is the confirmed sanctions match and PEP status for UBO"
+    },
+    {
+      "key": "biz_134",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_134\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Business license expired over 3 years (>42 days), registration status inactive, two UBOs matched on sanctions lists, all three UBOs are PEPs, shell company suspected, offshore jurisdiction (Bahamas), bank account flagged, and website mismatch suggests fraudulent submission.\"\n}\n</final_output>\n\n**Verification Complete - ESCALATE**\n\nThis case has been escalated due to numero"
+    },
+    {
+      "key": "biz_002",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_002\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Business license expired beyond 42-day threshold; UBO (R Chen) has confirmed PEP status; sanctions check pending; bank account flagged; shell company suspected with 3 ownership layers in offshore jurisdiction (Cayman Islands).\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_002:**\n\n**Business Entity**: Global Trading LLC (Cayman Islands)\n\n**Verification Results**:\n-"
+    },
+    {
+      "key": "biz_065",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_065\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verifications passed: active registration, valid license, clear sanctions/PEP screening, verified bank account, simple ownership structure with no risk indicators.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_065**\n\nThe verification process has been successfully completed for West Coast Merchants. All required checks under the SOP have been performed:\n\n\u2705 Business profile retrieved an"
+    },
+    {
+      "key": "biz_027",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_027\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"UBO A Petrov matched on sanctions list, both UBOs are PEPs, shell company suspected in offshore jurisdiction (Cayman Islands), bank account flagged, and fabricated contact details (invalid website/email formats indicate made-up submission not typos).\"\n}\n</final_output>\n\n## Detailed Verification Report for biz_027:\n\n**Business Entity:** Island Trust Ltd\n\n**Documentation Completeness:** All required "
+    },
+    {
+      "key": "biz_003",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "no_approve_with_risk_flags"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "no_approve_with_risk_flags"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_003\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: business registration active, license valid until 2026, both UBOs cleared sanctions and PEP screening, bank account verified, no shell company indicators, low-risk jurisdiction, risk score 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_003**\n\nThe verification has been successfully completed and the business has been **APPROVED**. Tech Solutions Inc presen"
+    },
+    {
+      "key": "biz_029",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_029\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration, license expired >42 days, 2 UBOs with sanctions matches, 3 PEPs, suspected shell company in offshore jurisdiction, flagged bank account\"\n}\n</final_output>\n\n**Verification Complete**\n\nThe KYB verification for biz_029 has been processed and the case has been **escalated** due to numerous critical red flags:\n\n- **Sanctions Compliance Failure**: Two UBOs"
+    },
+    {
+      "key": "biz_129",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_129\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: business license expired over 1,100 days (exceeds 42-day threshold), 2 UBOs matched on sanctions lists, all 4 UBOs are PEPs, inactive registration status, suspected shell company, flagged bank account, and business profile shows made-up information (website memegod.com unrelated to Caribbean Finance Corp).\"\n}\n</final_output>\n\n## Verification Complete\n\n**Business ID**: biz_"
+    },
+    {
+      "key": "biz_124",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_124\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"CRITICAL: Business license expired for 3+ years, registration status inactive, 2 UBOs have sanctions matches, all 3 UBOs are PEPs, shell company suspected, offshore jurisdiction, flagged bank account, and suspicious business name/website mismatch.\"\n}\n</final_output>\n\n**Verification Complete - ESCALATION REQUIRED**\n\nThis case presents multiple critical red flags requiring immediate escalation:\n- **E"
+    },
+    {
+      "key": "biz_109",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_109\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired 2+ years (>42 days), registration inactive, 2 UBOs with sanctions matches, all 4 UBOs are PEPs, shell company suspected with 5 ownership layers, offshore jurisdiction (Bahamas), bank account flagged, incomplete business address, and unusual ownership structure. Immediate escalation required.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_109**\n\nThi"
+    },
+    {
+      "key": "biz_137",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_137\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired >42 days (since 2023-03-15); UBO sanctions match (M Kuznetsov) with PEP status; business name/website mismatch indicating fraudulent submission; shell company suspected in offshore jurisdiction; flagged bank account.\"\n}\n</final_output>\n\n**KYB Verification Complete - Case ESCALATED**\n\nThis case presents multiple severe red flags requiring immediate escalatio"
+    },
+    {
+      "key": "biz_093",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_093\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration, valid license, clear sanctions/PEP screening, verified bank account, simple ownership structure, low risk score (0).\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_093**\n\nThe business \"Digital Enterprises\" has been successfully verified and **approved**. All required verification steps were completed per the SOP:\n\n\u2705 Business profile retr"
+    },
+    {
+      "key": "biz_108",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_108\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration and tax ID, active license, clear sanctions/PEP screening, verified bank account, simple ownership structure with no red flags.\"\n}\n</final_output>\n\n## KYB Verification Summary for biz_108\n\n**Business Name**: Digital Frontiers Group\n\n**Verification Status**: \u2705 APPROVED\n\n**Key Findings**:\n- \u2705 Business registration: Active in Washington (USA)\n- \u2705 Tax "
+    },
+    {
+      "key": "biz_103",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_103\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: business registration active, license valid until 2027, UBO verified with clear sanctions/PEP screening, bank account verified, low risk score.\"\n}\n</final_output>\n\n**KYB Verification Summary for biz_103 - Cloud Systems Group**\n\n**Verification Results:**\n- \u2705 Business Profile: Complete and validated\n- \u2705 Business Registration: Active (REG112233)\n- \u2705 License Status: Vali"
+    },
+    {
+      "key": "biz_150",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_150\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed. Active registration, valid license through 2028, clear sanctions/PEP screening, verified bank account, simple ownership structure, and risk score of 0. No irregularities detected.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_150**\n\nThe business \"Pacific Trading Solutions\" has successfully passed all required verification steps per the SOP. The entity demon"
+    },
+    {
+      "key": "biz_025",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_025\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verifications passed: active registration, valid license, clean sanctions/PEP screening, verified bank account, simple ownership structure, risk score 0.\"\n}\n</final_output>\n\n## KYB Verification Complete for biz_025\n\n**Status: APPROVED**\n\nThe business entity \"West Coast Retail\" has successfully passed all required verification checks:\n- \u2713 Complete and accurate business information\n- \u2713 Active reg"
+    },
+    {
+      "key": "biz_075",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_075\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration, valid license, clear sanctions/PEP screening, verified bank account, transparent ownership structure (2 UBOs, 1 layer), and risk score of 0.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_075**\n\nThe verification has been successfully processed and the result has been submitted. Northwest Enterprises has been **APPROVED** based on:\n- Comp"
+    },
+    {
+      "key": "biz_089",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_089\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: License expired over 2 years (beyond 42-day threshold), inactive registration status, two UBOs with sanctions matches, all UBOs are PEPs, flagged bank account, suspected shell company in offshore jurisdiction\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_089**\n\n**Escalation Status:** ESCALATE\n\n**Primary Escalation Triggers:**\n1. Business license expired since 202"
+    },
+    {
+      "key": "biz_133",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_133\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Business registration date (2027-09-10) and license expiry date (2027-09-30) are impossible future dates, indicating potential fraudulent documentation or critical data error requiring manual review.\"\n}\n</final_output>\n\n**Verification Complete**\n\nThe KYB verification for biz_133 has been escalated due to a critical anomaly. While most verification checks passed (sanctions clear, PEP clear, bank ver"
+    },
+    {
+      "key": "biz_018",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "no_approve_with_risk_flags"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "no_approve_with_risk_flags"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_018\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: valid registration, license current, sanctions clear, UBO verified, bank account confirmed, simple ownership structure, no jurisdictional risks detected.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_018**\n\nThe business \"Cloud Systems Inc\" has been **APPROVED** after completing all required verification steps per the SOP. All documentation was complete, bus"
+    },
+    {
+      "key": "biz_115",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_115\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: registration active, license valid, UBOs clear on sanctions/PEP screening, bank account verified, no shell company indicators, risk score 0.\"\n}\n</final_output>\n\n## KYB Verification Complete\n\n**Business:** Northwest Trading Group (biz_115)\n\n**Verdict:** \u2705 **APPROVED**\n\n**Summary:** This business has successfully completed all verification requirements per the SOP. The"
+    },
+    {
+      "key": "biz_064",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_064\",\n    \"escalation_status\": \"escalate\",\n    \"reason\": \"Multiple critical issues: Inactive registration, license expired beyond 42 days, 2 UBOs with sanctions matches, all UBOs are PEPs, shell company suspected with 4 ownership layers, offshore jurisdiction, and flagged bank account.\"\n}\n</final_output>\n\n**Verification Summary:**\n\nThis case presents an extremely high-risk profile requiring immediate escalation. The combination of inactive registration st"
+    },
+    {
+      "key": "biz_128",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"business_id\": \"biz_128\",\n    \"escalation_status\": \"approved\",\n    \"reason\": \"All verification checks passed: active registration with valid license through 2027, clear sanctions/PEP screening, verified bank account, transparent single-owner structure, and risk score of 0. No red flags identified.\"\n}\n</final_output>\n\n**KYB Verification Complete for biz_128**\n\nThe business entity \"Digital Systems Group\" has successfully passed all required verification steps per the SOP. The "
+    }
+  ]
+}

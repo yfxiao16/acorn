@@ -1,0 +1,4114 @@
+{
+  "summary": {
+    "pack": "aircraft_inspection_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 8.0,
+    "n": 112,
+    "TSR": 0.875,
+    "ECR": 1.0,
+    "avg_model_calls": 5.017857142857143,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.9732142857142857,
+    "avg_committed_violations": 0.05357142857142857,
+    "total_tokens": 3009153,
+    "cached_tokens": 0,
+    "avg_latency_s": 110.91,
+    "time_model_s": 12421.0,
+    "time_controller_s": 0.67,
+    "time_tools_s": 0.02,
+    "controller_share": 5e-05,
+    "decision_states": 562,
+    "unique_states": 15,
+    "state_reuse_rate": 0.9733,
+    "cache": null,
+    "wall_clock_s": 12422.2
+  },
+  "rows": [
+    {
+      "key": "a_00127",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00127 | **Tail Number:** N12349 | **Maintenance Record ID:** mr_010014\n\n---\n\n### INSPECTION SUMMARY\n\n**Inspection Timestamp:** 2025-04-18T16:30:00Z  \n**Expected Departure Time:** 2025-04-18T17:30:00Z  \n**Inspection Location ID:** loc_00127\n\n---\n\n### ACTION RESULTS\n\n| Action | Status | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | \u2705 SUCCESS | Aircraft cleared for flight per AVM validation |\n| **Ver"
+    },
+    {
+      "key": "a_00155",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00155 | Tail Number: N12377 | Maintenance Record: mr_010042**\n**Inspection Timestamp: 2025-04-19T06:30:00Z | Expected Departure: 2025-04-19T07:30:00Z**\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success |\n| **CrossCheckSpecifications** | success |\n| **ReportComponentMismat"
+    },
+    {
+      "key": "a_00265",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "none",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "ReportCrossCheck",
+            "contracts": [
+              "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done",
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00265 | **Tail Number:** N12487 | **Maintenance Record ID:** mr_010152\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success |\n| **CrossCheckSpecifications** | success |\n| **ReportComponentIncident** | success |\n| **ReportCrossCheck** | success |\n| **submit_result** | record"
+    },
+    {
+      "key": "a_00208",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00208  \n**Tail Number:** N12430  \n**Maintenance Record ID:** mr_010095  \n**Inspection Location:** loc_00208  \n**Inspection Date/Time:** 2025-04-20 09:00:00Z  \n**Expected Departure:** 2025-04-20 10:00:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | PENDING |\n| **VerifyMechanicalComponents** | RETEST REQUIRED |\n| **VerifyElectricalSystems** | FAIL |\n| **ReportCo"
+    },
+    {
+      "key": "a_00209",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00209  \n**Tail Number:** N12431  \n**Maintenance Record ID:** mr_010096  \n**Inspection Location:** loc_00209  \n**Inspection Timestamp:** 2025-04-20T09:30:00Z  \n\n---\n\n## INSPECTION ACTIONS AND RESULTS\n\n**VerifyAircraftClearance:** success  \n**VerifyMechanicalComponents:** success  \n**VerifyElectricalSystems:** success  \n**CrossCheckSpecifications:** success  \n**ReportComponentIncident:** success  \n**ReportComponentMismatch:**"
+    },
+    {
+      "key": "a_00139",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00139 | **Tail Number:** N12361 | **Maintenance Record:** mr_010026\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-18T22:30:00Z  \n**Expected Departure:** 2025-04-18T23:30:00Z  \n**Inspection Location:** loc_00139\n\n---\n\n### VERIFICATION RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success"
+    },
+    {
+      "key": "a_00133",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\nAircraft ID: **a_00133**\nMaintenance Record ID: **mr_010020**\nInspection Timestamp: **2025-04-18T19:30:00Z**\nInspection Location: **loc_00133**\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 SUCCESS |\n| **VerifyMechanicalComponents** | \u2713 SUCCESS |\n| **VerifyElectricalSystems** | \u2713 SUCCESS |\n| **CrossCheckSpecifications** | \u2713 SUCCESS |\n| **ReportComponentIncident** | \u2713 SUCCESS"
+    },
+    {
+      "key": "a_00204",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID**: a_00204  \n**Tail Number**: N12426  \n**Maintenance Record ID**: mr_010091  \n**Inspection Time**: 2025-04-20T07:00:00Z  \n**Inspection Location**: loc_00204\n\n---\n\n### INSPECTION RESULTS - CRITICAL FAILURES DETECTED\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT READY for departure | FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection failed | FAILED |\n| **Ve"
+    },
+    {
+      "key": "a_00256",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n### Aircraft ID: a_00256 | Tail Number: N12478 | Maintenance Record: mr_010143\n\n---\n\n### INSPECTION SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u274c FAILED - Aircraft not cleared for departure |\n| **VerifyMechanicalComponents** | \u274c FAILED - Component inspection failed |\n| **VerifyElectricalSystems** | \u274c FAILED - Electrical systems failure |\n| **ReportComponentIncident** | \u274c FAILED - Component incident docume"
+    },
+    {
+      "key": "a_00260",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00260 | Tail Number: N12482 | Maintenance Record: mr_010147**\n**Inspection Location: loc_00260 | Inspection Time: 2025-04-21T11:00:00Z**\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft NOT Ready for Flight |\n| **VerifyMechanicalComponents** | FAILED - Mechanical inspection failed |\n| **VerifyElectricalSystems** | FAILED - Electrical inspection "
+    },
+    {
+      "key": "a_00198",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "fail",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00198  \n**Tail Number:** N12420  \n**Maintenance Record ID:** mr_010085  \n**Inspection Location:** loc_00198  \n**Inspection Timestamp:** 2025-04-20T04:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft Ready: FALSE | \u2717 FAILED |\n| **VerifyMechanicalComponents** | retest | \u26a0 CONDITIONAL |\n| **VerifyElectricalSystems** | fail | \u2717 "
+    },
+    {
+      "key": "a_00232",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00232 | **Tail Number:** N12454 | **Maintenance Record:** mr_010119\n\n---\n\n### INSPECTION SUMMARY\n\n**Overall Aircraft Readiness:** \u274c **FALSE** - Aircraft NOT cleared for departure\n\n---\n\n### ACTION RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT READY |\n| **VerifyMechanicalComponents** | FAIL |\n| **VerifyElectricalSystems** | RETEST REQUIRED |\n| **CrossCheckSpecifications** | FAI"
+    },
+    {
+      "key": "a_00219",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00219 | **Tail Number:** N12441 | **Maintenance Record ID:** mr_010106\n\n---\n\n### INSPECTION SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2705 SUCCESS - Aircraft cleared for departure; all FAA Part 121/135 compliance criteria met |\n| **VerifyMechanicalComponents** | \u2705 SUCCESS - Component cs_0144 verified; physical condition nominal; installation compliance validated |\n| **VerifyElectricalSys"
+    },
+    {
+      "key": "a_00228",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00228 | **Tail Number:** N12450 | **Maintenance Record:** mr_010115 | **Inspection Location:** loc_00228\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n**VerifyAircraftClearance:** Aircraft clearance validation FAILED - aircraft NOT ready for departure\n\n**VerifyMechanicalComponents:** Mechanical inspection result = RETEST REQUIRED\n- Component Serial Number (Expected): cs_0157\n- Component Weight: 87.9 lbs (Expected: 85 lbs) - **EXCEED"
+    },
+    {
+      "key": "a_00189",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00189  \n**Tail Number:** N12411  \n**Maintenance Record ID:** mr_010076  \n**Inspection Location:** loc_00189  \n**Inspection Timestamp:** 2025-04-19T23:30:00Z  \n**Expected Departure Time:** 2025-04-20T00:30:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success |\n| **CrossC"
+    },
+    {
+      "key": "a_00123",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00123  \n**Tail Number:** N12345  \n**Maintenance Record ID:** mr_010010  \n**Inspection Location:** loc_00123  \n**Actual Inspection Time:** 2025-04-18T14:30:00Z  \n**Expected Departure Time:** 2025-04-18T15:32:10Z\n\n---\n\n### INSPECTION RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success |\n| **CrossCheckSp"
+    },
+    {
+      "key": "a_00245",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n# AIRWORTHINESS VERIFICATION REPORT\n\n**Aircraft ID:** a_00245  \n**Tail Number:** N12467  \n**Maintenance Record ID:** mr_010132  \n**Inspection Location:** loc_00245  \n**Inspection Date/Time:** 2025-04-21T03:30:00Z  \n**Expected Departure Time:** 2025-04-21T04:30:00Z  \n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | SUCCESS |\n| **VerifyMechanicalComponents** | SUCCESS |\n| **VerifyElectricalSystems** | SUCCESS |\n| **Report"
+    },
+    {
+      "key": "a_00190",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": ""
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "completed"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00190 | **Tail Number:** N12412 | **Maintenance Record:** mr_010077\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-20T00:00:00Z  \n**Expected Departure:** 2025-04-20T01:00:00Z  \n**Inspection Location:** loc_00190\n\n---\n\n### VERIFICATION RESULTS\n\n**VerifyAircraftClearance:** FAILED - Aircraft not cleared for departure  \n**VerifyMechanicalComponents:** FAILED - Component inspection failed  \n**VerifyElectricalSystems"
+    },
+    {
+      "key": "a_00151",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00151 | **Tail Number:** N12373 | **Maintenance Record ID:** mr_010038\n\n---\n\n### PRE-FLIGHT INSPECTION RESULTS\n\n**Inspection Date/Time:** 2025-04-19T04:30:00Z  \n**Expected Departure Time:** 2025-04-19T05:30:00Z  \n**Inspection Location:** loc_00151\n\n---\n\n### INSPECTION ACTIONS AND RESULTS\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft identification and maintenance record"
+    },
+    {
+      "key": "a_00163",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00163 | Tail Number: N12385 | Maintenance Record ID: mr_010050**\n\n**INSPECTION SUMMARY - INSPECTION COMPLETED: 2025-04-19T10:30:00Z**\n\n---\n\n**AIRCRAFT CLEARANCE VERIFICATION**\n- VerifyAircraftClearance : success\n- Aircraft Ready for Flight : TRUE\n\n---\n\n**MECHANICAL COMPONENTS INSPECTION**\n- VerifyMechanicalComponents : success\n- Component Serial Number (cs_0060) : VERIFIED\n- Component Weight : 68.9 lbs (Expected: 69 lbs) - "
+    },
+    {
+      "key": "a_00167",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00167  \n**Tail Number:** N12389  \n**Maintenance Record ID:** mr_010054  \n**Inspection Location:** loc_00167  \n**Inspection Timestamp:** 2025-04-19T12:30:00Z  \n**Expected Departure Time:** 2025-04-19T13:30:00Z  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | success | \u2713 PASS |\n| **VerifyMechanicalComponents** | success | \u2713 PASS |\n| **VerifyElect"
+    },
+    {
+      "key": "a_00183",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00183 | Tail Number: N12405 | Maintenance Record: mr_010070**\n\n---\n\n**INSPECTION SUMMARY**\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | success |\n| VerifyMechanicalComponents | success |\n| VerifyElectricalSystems | success |\n| CrossCheckSpecifications | success |\n| ReportComponentIncident | success |\n| ReportComponentMismatch | success |\n| ReportCrossCheck | success |\n| submit_result | recorded |\n\n--"
+    },
+    {
+      "key": "a_00246",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00246 | **Tail Number:** N12468 | **Maintenance Record ID:** mr_010133\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-21T04:00:00Z  \n**Expected Departure Time:** 2025-04-21T05:00:00Z  \n**Inspection Location:** loc_00246\n\n---\n\n### VERIFICATION RESULTS\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft clearance validation returned False - aircraft n"
+    },
+    {
+      "key": "a_00147",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00147  \n**Tail Number:** N12369  \n**Maintenance Record ID:** mr_010034  \n**Inspection Location ID:** loc_00147  \n**Inspection Timestamp:** 2025-04-19T02:30:00Z  \n**Expected Departure Time:** 2025-04-19T03:30:00Z\n\n---\n\n### INSPECTION RESULTS\n\n**VerifyAircraftClearance:** SUCCESS\n- Aircraft identification validated against Airworthiness Validation Matrix (AVM)\n- Maintenance records cross-referenced with MRVS\n- Aircraft clear"
+    },
+    {
+      "key": "a_00148",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "pending"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00148 | **Tail Number:** N12370 | **Maintenance Record:** mr_010035 | **Inspection Time:** 2025-04-19T03:00:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| ACTION | RESULT |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft NOT cleared for departure |\n| **VerifyMechanicalComponents** | RETEST REQUIRED - Physical condition and weight issues detected |\n| **VerifyElectricalSystems** | FAILED - Critical battery st"
+    },
+    {
+      "key": "a_00146",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00146 | **Tail Number:** N12368 | **Maintenance Record:** mr_010033\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n**<VerifyAircraftClearance : FAILED - Aircraft Not Ready for Departure>**\n- Aircraft clearance status: **FALSE**\n- Scheduled departure time: 2025-04-19T03:00:00Z\n- Aircraft does not meet airworthiness requirements for flight\n\n**<VerifyMechanicalComponents : FAILED>**\n- Component Serial Number: cs_0034\n- Component Weigh"
+    },
+    {
+      "key": "a_00217",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00217 | **Tail Number:** N12439 | **Maintenance Record ID:** mr_010104\n\n---\n\n## INSPECTION EXECUTION SUMMARY\n\n**Inspection Date/Time:** 2025-04-20T13:30:00Z  \n**Expected Departure Time:** 2025-04-20T14:30:00Z  \n**Inspection Location:** loc_00217\n\n---\n\n## ACTION RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 success |\n| **VerifyMechanicalComponents** | \u2713 success |\n| **VerifyElectricalSyste"
+    },
+    {
+      "key": "a_00162",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00162 | **Tail Number:** N12384 | **Maintenance Record ID:** mr_010049 | **Inspection Time:** 2025-04-19T10:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft not cleared for flight | \u274c NOT READY |\n| **VerifyMechanicalComponents** | Mechanical inspection failed | \u274c FAIL |\n| **VerifyElectricalSystems** | Electrical systems require r"
+    },
+    {
+      "key": "a_00218",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n**AIRWORTHINESS VERIFICATION REPORT**\nAircraft ID: a_00218 | Tail Number: N12440 | Maintenance Record: mr_010105\nInspection Date: 2025-04-20T14:00:00Z | Expected Departure: 2025-04-20T15:00:00Z\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | FAILED - Aircraft Not Ready |\n| VerifyMechanicalComponents | RETEST REQUIRED |\n| VerifyElectricalSystems | FAILED |\n| ReportComponentIncident | FAILED - Incident Logged |\n| ReportCom"
+    },
+    {
+      "key": "a_00240",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00240  \n**Tail Number:** N12462  \n**Maintenance Record ID:** mr_010127  \n**Inspection Location ID:** loc_00240  \n**Inspection Date/Time:** 2025-04-21T01:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft Not Ready for Flight | FAIL |\n| **VerifyMechanicalComponents** | Mechanical Inspection Failed | FAIL |\n| **VerifyElectricalSystem"
+    },
+    {
+      "key": "a_00170",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n\n**Aircraft ID:** a_00170  \n**Tail Number:** N12392  \n**Maintenance Record ID:** mr_010057  \n**Inspection Location ID:** loc_00170  \n**Inspection Timestamp:** 2025-04-19T14:00:00Z  \n**Expected Departure Time:** 2025-04-19T15:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft not cleared for flight |\n| **VerifyMechanicalComponents** | FAILED - Component inspec"
+    },
+    {
+      "key": "a_00220",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n### Aircraft ID: a_00220 | Tail Number: N12442 | Maintenance Record: mr_010107\n\n---\n\n### INSPECTION SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT READY for departure | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection FAILED | \u274c FAILED |\n| **VerifyElectricalSystems** | Electrical inspection FAILED | \u274c FAILED |\n| **ReportComponentIncident** | Component inciden"
+    },
+    {
+      "key": "a_00236",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00236  \n**Inspection Date/Time:** 2025-04-20T23:00:00Z  \n**Maintenance Record ID:** mr_010123\n\n---\n\n### INSPECTION ACTION RESULTS\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft not cleared for departure | FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection failure detected | FAILED |\n| **VerifyElectricalSystems** | Electrical systems authentication failed |"
+    },
+    {
+      "key": "a_00156",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00156 | Tail Number: N12378 | Maintenance Record ID: mr_010043**\n\n---\n\n**INSPECTION SUMMARY:**\n\n**VerifyAircraftClearance : FAILED**\n- Aircraft Status: NOT READY FOR DEPARTURE\n- Reason: Aircraft clearance verification did not meet requirements for scheduled departure 2025-04-19T08:00:00Z\n\n**VerifyMechanicalComponents : FAILED**\n- Component Serial Number: cs_0049\n- Installed Component Serial Number: cs_0050 (MISMATCH DETECTED"
+    },
+    {
+      "key": "a_00261",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00261 | **Tail Number:** N12483 | **Maintenance Record:** mr_010148 | **Inspection Location:** loc_00261\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-21T11:30:00Z  \n**Expected Departure Time:** 2025-04-21T12:30:00Z  \n**Overall Aircraft Status:** \u2705 **AIRWORTHY - CLEARED FOR FLIGHT**\n\n---\n\n### DETAILED ACTION RESULTS\n\n**1. VerifyAircraftClearance:** `success`\n   - Aircraft identification validated against A"
+    },
+    {
+      "key": "a_00224",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID: a_00224 | Tail Number: N12446 | Maintenance Record: mr_010111**\n**Inspection Time: 2025-04-20T17:00:00Z | Expected Departure: 2025-04-20T18:00:00Z**\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** : **FAILED** - Aircraft not cleared for flight |\n| **VerifyMechanicalComponents** : **FAILED** - Component inspection failed |\n| **VerifyElectricalSystems** : **FAILED** - Ele"
+    },
+    {
+      "key": "a_00185",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00185 | **Tail Number:** N12407 | **Maintenance Record:** mr_010072\n\n---\n\n### INSPECTION ACTIONS & RESULTS:\n\n**VerifyAircraftClearance:** Success - Aircraft clearance validated against Airworthiness Validation Matrix (AVM)\n\n**VerifyMechanicalComponents:** Success - Component serial number cs_0093 validated; weight 77.9 lbs within CTT tolerance (\u00b12%); physical condition: no damage; installation time compliance verified\n\n**V"
+    },
+    {
+      "key": "a_00207",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n\n**Aircraft ID:** a_00207  \n**Tail Number:** N12429  \n**Maintenance Record ID:** mr_010094  \n**Inspection Time:** 2025-04-20T08:30:00Z  \n**Expected Departure Time:** 2025-04-20T09:30:00Z  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | success | \u2713 Aircraft identified and cleared for flight |\n| **VerifyMechanicalComponents** | success | \u2713 Component cs_0126 verifi"
+    },
+    {
+      "key": "a_00271",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "none",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "ReportCrossCheck",
+            "contracts": [
+              "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done",
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00271 | **Tail Number:** N12493 | **Maintenance Record ID:** mr_010158\n\n### INSPECTION SUMMARY\n**Inspection Conducted:** 2025-04-21T16:30:00Z  \n**Scheduled Departure:** 2025-04-21T17:30:00Z  \n**Inspection Location:** loc_00271\n\n---\n\n### ACTION RESULTS\n\n**VerifyAircraftClearance:** success  \n- Aircraft identification validated against AVM\n- Maintenance records cross-referenced with MRVS\n- Aircraft clearance status: APP"
+    },
+    {
+      "key": "a_00176",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00176  \n**Tail Number:** N12398  \n**Maintenance Record ID:** mr_010063  \n**Inspection Location ID:** loc_00176  \n**Inspection Time:** 2025-04-19T17:00:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft not ready for departure |\n| **VerifyMechanicalComponents** | FAILED - Component verification failed |\n| **VerifyElectricalSystems** | FAILED - Ele"
+    },
+    {
+      "key": "a_00128",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00128  \n**Tail Number:** N12350  \n**Maintenance Record ID:** mr_010015  \n**Inspection Date/Time:** 2025-04-18T17:00:00Z  \n**Inspection Location:** loc_00128\n\n---\n\n### INSPECTION RESULTS - ACTION SUMMARY\n\n**VerifyAircraftClearance:** Failed - Aircraft Not Ready  \nAircraft clearance validation against Airworthiness Validation Matrix (AVM) indicates aircraft is NOT cleared for departure at scheduled time 2025-04-18T18:00:00Z."
+    },
+    {
+      "key": "a_00216",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\nAircraft ID: a_00216 | Tail Number: N12438 | Maintenance Record: mr_010103\n\n## INSPECTION SUMMARY\n**Status: AIRCRAFT NOT AIRWORTHY - FLIGHT PROHIBITED**\n\n---\n\n## DETAILED ACTION RESULTS\n\n### Aircraft Clearance Verification\n**VerifyAircraftClearance: FAILED**\n- Aircraft ID: a_00216\n- Tail Number: N12438\n- Maintenance Record ID: mr_010103\n- Expected Departure: 2025-04-20T14:00:00Z\n- **Result: Aircraft NOT cleared for flight**\n\n### Mechanical In"
+    },
+    {
+      "key": "a_00234",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00234  \n**Maintenance Record ID:** mr_010121  \n**Inspection Timestamp:** 2025-04-20T22:00:00Z  \n**Inspection Location:** loc_00234\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| VerifyAircraftClearance | Aircraft NOT READY for departure | FAILED |\n| VerifyMechanicalComponents | Mechanical inspection failed | FAILED |\n| VerifyElectricalSystems | Electrical inspection failed |"
+    },
+    {
+      "key": "a_00172",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00172 | **Tail Number:** N12394 | **Maintenance Record ID:** mr_010059\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft not ready for departure |\n| **VerifyMechanicalComponents** | FAILED - Mechanical component inspection failed |\n| **VerifyElectricalSystems** | RETEST REQUIRED - Electrical systems require retesting |\n| **ReportComponentMismatch*"
+    },
+    {
+      "key": "a_00158",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00158  \n**Tail Number:** N12380  \n**Maintenance Record ID:** mr_010045  \n**Expected Departure Time:** 2025-04-19T09:00:00Z  \n**Actual Inspection Time:** 2025-04-19T08:00:00Z  \n**Inspection Location:** loc_00158  \n\n---\n\n### INSPECTION RESULTS\n\n**VerifyAircraftClearance : AIRCRAFT NOT CLEARED FOR FLIGHT**\n- Aircraft clearance validation failed against Airworthiness Validation Matrix (AVM)\n\n**VerifyMechanicalComponents : RETE"
+    },
+    {
+      "key": "a_00203",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00203 | **Tail Number:** N12425 | **Maintenance Record ID:** mr_010090\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-20T06:30:00Z  \n**Expected Departure Time:** 2025-04-20T07:30:00Z  \n**Inspection Location ID:** loc_00203  \n**Overall Aircraft Status:** AIRWORTHY - CLEARED FOR DEPARTURE\n\n---\n\n### ACTION RESULTS\n\n<action: VerifyAircraftClearance : **SUCCESS**>\n- Aircraft identification validated against Airw"
+    },
+    {
+      "key": "a_00200",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00200 | **Tail Number:** N12422 | **Maintenance Record:** mr_010087\n\n---\n\n## INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-20T05:00:00Z  \n**Expected Departure:** 2025-04-20T06:00:00Z  \n**Inspection Location:** loc_00200\n\n---\n\n## ACTION RESULTS\n\n**VerifyAircraftClearance:** FAILED - Aircraft not cleared for flight\n\n**VerifyMechanicalComponents:** FAILED - Component inspection failed\n- Component Serial Number (Expected"
+    },
+    {
+      "key": "a_00157",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00157  \n**Tail Number:** N12379  \n**Maintenance Record ID:** mr_010044  \n**Inspection Date/Time:** 2025-04-19T07:30:00Z  \n**Expected Departure Time:** 2025-04-19T08:30:00Z  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 SUCCESS |\n| **VerifyMechanicalComponents** | \u2713 SUCCESS |\n| **VerifyElectricalSystems** | \u2713 SUCCESS |\n| **CrossCheckSpecifications** | \u2713 SUCC"
+    },
+    {
+      "key": "a_00237",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00237 | Tail Number: N12459 | Maintenance Record: mr_010124**\n**Inspection Date/Time: 2025-04-20T23:30:00Z**\n\n---\n\n**VERIFICATION ACTIONS & RESULTS:**\n\n<VerifyAircraftClearance : success>\n- Aircraft identification and maintenance record validation completed\n- Aircraft Status: CLEARED FOR DEPARTURE\n\n<VerifyMechanicalComponents : success>\n- Component Serial: cs_0171\n- Component Weight: 71.1 lbs (Expected: 71 lbs)\n- Physical C"
+    },
+    {
+      "key": "a_00130",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00130  \n**Tail Number:** N12352  \n**Maintenance Record ID:** mr_010017  \n**Inspection Date/Time:** 2025-04-18T18:00:00Z  \n**Expected Departure:** 2025-04-18T19:00:00Z  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft Not Ready for Flight | \u2717 FAILED |\n| **VerifyMechanicalComponents** | Mechanical Systems Failed Inspection | \u2717 FAILED |\n|"
+    },
+    {
+      "key": "a_00166",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00166 | **Tail Number:** N12388 | **Maintenance Record:** mr_010053  \n**Inspection Time:** 2025-04-19T12:00:00Z | **Expected Departure:** 2025-04-19T13:00:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | FALSE | Aircraft NOT cleared for flight |\n| **VerifyMechanicalComponents** | fail | Mechanical inspection FAILED |\n| **VerifyElectricalSystem"
+    },
+    {
+      "key": "a_00193",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00193\n**Tail Number:** N12415\n**Maintenance Record ID:** mr_010080\n**Inspection Location:** loc_00193\n**Inspection Timestamp:** 2025-04-20T01:30:00Z\n**Expected Departure Time:** 2025-04-20T02:30:00Z\n\n---\n\n### INSPECTION RESULTS\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | success |\n| VerifyMechanicalComponents | success |\n| VerifyElectricalSystems | success |\n| CrossCheckSpecifications | success |\n|"
+    },
+    {
+      "key": "a_00221",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00221  \n**Tail Number:** N12443  \n**Maintenance Record ID:** mr_010108  \n**Inspection Location:** loc_00221  \n**Inspection Time:** 2025-04-20T15:30:00Z\n\n---\n\n### VERIFICATION ACTIONS - RESULTS SUMMARY:\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | SUCCESS |\n| **VerifyMechanicalComponents** | SUCCESS |\n| **VerifyElectricalSystems** | SUCCESS |\n| **CrossCheckSpecifications** | SUCCESS |\n| **ReportC"
+    },
+    {
+      "key": "a_00243",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00243 | Tail Number: N12465**\n**Maintenance Record ID: mr_010130**\n**Inspection Location: loc_00243 | Actual Inspection Time: 2025-04-21T02:30:00Z**\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n<VerifyAircraftClearance : success>\nAircraft identification validated against AVM. Aircraft status: Ready for flight operations.\n\n<VerifyMechanicalComponents : success>\nComponent serial number cs_0180 verified. Physical condition: no damage"
+    },
+    {
+      "key": "a_00206",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00206 | **Tail Number:** N12428 | **Maintenance Record:** mr_010093\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Date/Time:** 2025-04-20T08:00:00Z\n**Expected Departure Time:** 2025-04-20T09:00:00Z\n**Inspection Location:** loc_00206\n\n---\n\n### VERIFICATION ACTIONS & RESULTS\n\n**VerifyAircraftClearance:** FAILED - Aircraft not cleared for departure\n- Aircraft Ready Status: FALSE\n- Airworthiness Validation Matrix (AVM) check compl"
+    },
+    {
+      "key": "a_00257",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00257 | Tail Number: N12479**\n**Maintenance Record ID: mr_010144**\n**Inspection Timestamp: 2025-04-21T09:30:00Z**\n**Inspection Location: loc_00257**\n\n---\n\n**INSPECTION RESULTS:**\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | success |\n| VerifyMechanicalComponents | success |\n| VerifyElectricalSystems | success |\n| CrossCheckSpecifications | success |\n| ReportComponentIncident | success |\n| ReportCompo"
+    },
+    {
+      "key": "a_00258",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00258 | **Tail Number:** N12480 | **Maintenance Record ID:** mr_010145\n\n### INSPECTION SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FALSE | Aircraft clearance validation against AVM failed |\n| **VerifyMechanicalComponents** | RETEST | Component inspection requires retesting - severe corrosion detected |\n| **VerifyElectricalSystems** | FAIL | Electrical systems au"
+    },
+    {
+      "key": "a_00212",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00212 | **Tail Number:** N12434 | **Maintenance Record ID:** mr_010099  \n**Inspection Timestamp:** 2025-04-20T11:00:00Z | **Inspection Location:** loc_00212\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft_ready: FALSE - Aircraft clearance validation against AVM failed |\n| **VerifyMechanicalComponents** | FAILED | Mechanical "
+    },
+    {
+      "key": "a_00131",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00131 | **Tail Number:** N12353 | **Maintenance Record ID:** mr_010018\n\n---\n\n### INSPECTION ACTIONS AND RESULTS:\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft clearance verified against AVM and MRVS | \u2705 SUCCESS |\n| **VerifyMechanicalComponents** | Mechanical components verified - Serial: cs_0012, Weight: 82.1 lbs, Condition: no damage, Installation: compliant | \u2705 SUCCES"
+    },
+    {
+      "key": "a_00136",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00136 | Tail Number: N12358 | Maintenance Record ID: mr_010023**\n**Inspection Timestamp: 2025-04-18T21:00:00Z | Scheduled Departure: 2025-04-18T22:00:00Z**\n\n---\n\n**INSPECTION STATUS SUMMARY:**\n\n<VerifyAircraftClearance : FAILED - Aircraft Not Cleared for Departure>\n- Aircraft Status: NOT READY\n- Maintenance Record Validation: Failed\n\n<VerifyMechanicalComponents : FAILED>\n- Component Serial Number: cs_0019\n- Component Weight:"
+    },
+    {
+      "key": "a_00242",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00242 | **Tail Number:** N12464 | **Maintenance Record ID:** mr_010129  \n**Inspection Location:** loc_00242 | **Inspection Time:** 2025-04-21T02:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n**AIRCRAFT CLEARANCE STATUS:**\n- VerifyAircraftClearance: **FALSE** - Aircraft NOT cleared for departure\n\n**MECHANICAL INSPECTION:**\n- VerifyMechanicalComponents: **FAIL**\n- Reason: Component weight variance (72.4 lbs vs 70 lbs expected"
+    },
+    {
+      "key": "a_00248",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00248 | **Tail Number:** N12470  \n**Maintenance Record ID:** mr_010135  \n**Inspection Location ID:** loc_00248  \n**Inspection Timestamp:** 2025-04-21T05:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft NOT ready for flight operations |\n| **VerifyMechanicalComponents** | RETEST REQUIRED | Component inspection requires r"
+    },
+    {
+      "key": "a_00126",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "success",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "success",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n\nAircraft ID: a_00126\nTail Number: N12348\nMaintenance Record ID: mr_010013\nInspection Location ID: loc_00126\nInspection Timestamp: 2025-04-18T16:00:00Z\nExpected Departure: 2025-04-18T17:00:00Z\n\n---\n\n**INSPECTION RESULTS SUMMARY**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft NOT Ready for Flight |\n| **VerifyMechanicalComponents** | FAILED - Component inspection failed |\n| **VerifyElectricalSystem"
+    },
+    {
+      "key": "a_00140",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00140 | Tail Number: N12362 | Maintenance Record: mr_010027**\n\n---\n\n**INSPECTION SUMMARY**\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT READY for departure | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection failure | \u274c FAILED |\n| **VerifyElectricalSystems** | Electrical systems inspection failure | \u274c FAILED |\n| **CrossCheckSpecifications** | Weigh"
+    },
+    {
+      "key": "a_00161",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID**: a_00161 | **Tail Number**: N12383 | **Inspection Timestamp**: 2025-04-19T09:30:00Z | **Maintenance Record ID**: mr_010048\n\n---\n\n## VERIFICATION ACTIONS & RESULTS\n\n| Action | Status | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | \u2705 SUCCESS | Aircraft airworthiness validated against AVM. Aircraft cleared for flight. |\n| **VerifyMechanicalComponents** | \u2705 SUCCESS | Component cs_0057 validated: Weight 83"
+    },
+    {
+      "key": "a_00195",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID: a_00195 | Tail Number: N12417 | Maintenance Record: mr_010082**\n\n---\n\n### INSPECTION ACTIONS AND RESULTS:\n\n**Action: VerifyAircraftClearance**\n- Result: SUCCESS\n- Aircraft Status: TRUE (Cleared for Flight)\n- Departure Time: 2025-04-20T03:30:00Z\n\n**Action: VerifyMechanicalComponents**\n- Result: SUCCESS\n- Component Serial Number: cs_0108\n- Component Weight: 78.4 lbs (Expected: 78 lbs, Variance: +0.51% - Within CTT)\n- Physical Co"
+    },
+    {
+      "key": "a_00259",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00259 | **Tail Number:** N12481 | **Maintenance Record ID:** mr_010146\n\n---\n\n### INSPECTION SUMMARY - ALL SYSTEMS VERIFIED AND CLEARED FOR FLIGHT\n\n---\n\n### VERIFICATION ACTIONS & RESULTS\n\n**VerifyAircraftClearance:** SUCCESS\n- Aircraft identification validated against AVM\n- Maintenance record cross-referenced with MRVS\n- Flight clearance status: APPROVED\n\n**VerifyMechanicalComponents:** SUCCESS\n- Component serial number (c"
+    },
+    {
+      "key": "a_00129",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00129 | **Tail Number:** N12351 | **Maintenance Record:** mr_010016\n**Inspection Time:** 2025-04-18T17:30:00Z | **Expected Departure:** 2025-04-18T18:30:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | success |\n| VerifyMechanicalComponents | success |\n| VerifyElectricalSystems | success |\n| CrossCheckSpecifications | success |\n| ReportComponentMismatch | success"
+    },
+    {
+      "key": "a_00235",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00235 | **Tail Number:** N12457 | **Maintenance Record:** mr_010122\n\n### INSPECTION SUMMARY - ALL SYSTEMS PASS \u2713\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | success | Aircraft cleared for flight \u2713 |\n| **VerifyMechanicalComponents** | success | All mechanical systems compliant \u2713 |\n| **VerifyElectricalSystems** | success | All electrical systems operational \u2713 |\n| **CrossChe"
+    },
+    {
+      "key": "a_00223",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00223 | Tail Number: N12445**\n**Maintenance Record ID: mr_010110**\n**Inspection Date/Time: 2025-04-20T16:30:00Z**\n\n---\n\n**INSPECTION STATUS SUMMARY**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 Success - Aircraft clearance validated |\n| **VerifyMechanicalComponents** | \u2713 Success - All mechanical components verified |\n| **VerifyElectricalSystems** | \u2713 Success - All electrical systems authentica"
+    },
+    {
+      "key": "a_00125",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00125 | **Tail Number:** N12347 | **Maintenance Record:** mr_010012\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-18T15:30:00Z  \n**Expected Departure:** 2025-04-18T16:30:00Z  \n**Inspection Location:** loc_00125\n\n---\n\n### ACTION RESULTS\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft clearance validation: **APPROVED** | \u2713 SUCCESS |\n| **VerifyMechanicalComp"
+    },
+    {
+      "key": "a_00186",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n### Aircraft ID: a_00186 | Tail Number: N12408 | Maintenance Record: mr_010073\n\n---\n\n### INSPECTION SUMMARY\n\n**Pre-Flight Airworthiness Status: \u274c AIRCRAFT NOT READY FOR FLIGHT**\n\n---\n\n### DETAILED ACTION RESULTS\n\n#### 1. VerifyAircraftClearance\n**Status: FAILED**\n- Aircraft clearance validation against Airworthiness Validation Matrix (AVM) completed\n- **Result**: Aircraft not cleared for departure at scheduled time 2025-04-19T23:00:00Z\n- Cri"
+    },
+    {
+      "key": "a_00177",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00177 | **Tail Number:** N12399 | **Maintenance Record:** mr_010064\n\n---\n\n### INSPECTION SUMMARY\n\n**VerifyAircraftClearance:** success\n- Aircraft identification validated against AVM\n- Maintenance record cross-referenced with MRVS\n- Aircraft cleared for departure at 2025-04-19T18:30:00Z\n\n**VerifyMechanicalComponents:** success\n- Component serial number: cs_0081 validated via SNVA\n- Component weight: 70.9 lbs (expected: 71 "
+    },
+    {
+      "key": "a_00249",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00249  \n**Tail Number:** N12471  \n**Maintenance Record ID:** mr_010136  \n**Inspection Time:** 2025-04-21T05:30:00Z  \n**Inspection Location:** loc_00249\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | SUCCESS |\n| VerifyMechanicalComponents | SUCCESS |\n| VerifyElectricalSystems | SUCCESS |\n| CrossCheckSpecifications | SUCCESS |\n| ReportComponentIncident | SUCCESS |\n| Re"
+    },
+    {
+      "key": "a_00173",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00173  \n**Tail Number:** N12395  \n**Maintenance Record ID:** mr_010060  \n**Inspection Location ID:** loc_00173  \n**Inspection Timestamp:** 2025-04-19T15:30:00Z  \n**Expected Departure:** 2025-04-19T16:30:00Z\n\n---\n\n## INSPECTION RESULTS - ACTION STATUS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2705 success |\n| **VerifyMechanicalComponents** | \u2705 success |\n| **VerifyElectricalSystems** | \u2705 su"
+    },
+    {
+      "key": "a_00238",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "retest",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00238 | **Tail Number:** N12460 | **Inspection Location:** loc_00238\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft_ready: FALSE - Aircraft clearance validation failed against Airworthiness Validation Matrix |\n| **VerifyMechanicalComponents** | RETEST REQUIRED | Mechanical inspection result indicates required retest - Sever"
+    },
+    {
+      "key": "a_00169",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00169 | **Tail Number:** N12391 | **Maintenance Record ID:** mr_010056\n\n---\n\n### INSPECTION SUMMARY\n**Inspection Location:** loc_00169 | **Inspection Time:** 2025-04-19T13:30:00Z | **Expected Departure:** 2025-04-19T14:30:00Z\n\n---\n\n### VERIFICATION RESULTS\n\n<action: VerifyAircraftClearance>result: SUCCESS</action>\n\n<action: VerifyMechanicalComponents>result: SUCCESS</action>\n\n<action: VerifyElectricalSystems>result: SUCCES"
+    },
+    {
+      "key": "a_00262",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n# AIRWORTHINESS VERIFICATION REPORT\n## Aircraft ID: a_00262 | Tail Number: N12484 | Maintenance Record: mr_010149\n\n### INSPECTION SUMMARY\n**Aircraft Airworthiness Status:** NOT READY FOR FLIGHT \u274c\n\n### DETAILED ACTION RESULTS\n\n**1. VerifyAircraftClearance:** FAILED\n- Aircraft clearance validation against Airworthiness Validation Matrix (AVM) returned negative clearance status\n- Expected departure time: 2025-04-21T13:00:00Z\n- Aircraft not cleared for departure\n\n**2. VerifyMechanic"
+    },
+    {
+      "key": "a_00184",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00184 | **Tail Number:** N12406 | **Inspection Time:** 2025-04-19T21:00:00Z\n\n---\n\n### INSPECTION STATUS: **FAILED - AIRCRAFT NOT AIRWORTHY**\n\n---\n\n### DETAILED ACTION RESULTS:\n\n**VerifyAircraftClearance:** FAILED\n- Aircraft clearance check against Airworthiness Validation Matrix (AVM): Not approved for flight\n- Maintenance record reconciliation incomplete\n\n**VerifyMechanicalComponents:** FAILED\n- Component serial number: c"
+    },
+    {
+      "key": "a_00270",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00270 | **Tail Number:** N12492 | **Maintenance Record:** mr_010157\n**Inspection Date/Time:** 2025-04-21T16:00:00Z | **Inspection Location:** loc_00270\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| VerifyAircraftClearance | Aircraft not cleared for departure | \u274c FAIL |\n| VerifyMechanicalComponents | Mechanical inspection failed | \u274c FAIL |\n| VerifyElectricalSystems | Electri"
+    },
+    {
+      "key": "a_00202",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00202  \n**Tail Number:** N12424  \n**Maintenance Record ID:** mr_010089  \n**Inspection Location:** loc_00202  \n**Inspection Timestamp:** 2025-04-20T06:00:00Z  \n**Expected Departure Time:** 2025-04-20T07:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft clearance not approved for flight |\n| **VerifyMechanicalComponents** "
+    },
+    {
+      "key": "a_00182",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID:** a_00182 | **Tail Number:** N12404 | **Maintenance Record ID:** mr_010069\n\n---\n\n**INSPECTION SUMMARY - AIRCRAFT NOT AIRWORTHY**\n\n**Status:** \u274c AIRCRAFT NOT READY FOR FLIGHT\n\n---\n\n**DETAILED ACTION RESULTS:**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | Failed - Aircraft not cleared for departure |\n| **VerifyMechanicalComponents** | Failed - Component integrity issues detected |\n| **VerifyElectrica"
+    },
+    {
+      "key": "a_00214",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00214  \n**Tail Number:** N12436  \n**Maintenance Record ID:** mr_010101  \n**Inspection Date/Time:** 2025-04-20T12:00:00Z  \n**Inspection Location:** loc_00214  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT READY for flight | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection | \u274c FAILED |\n| **VerifyElectricalSystem"
+    },
+    {
+      "key": "a_00164",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00164 | Tail Number: N12386 | Maintenance Record: mr_010051**\n**Inspection Time: 2025-04-19T11:00:00Z | Scheduled Departure: 2025-04-19T12:00:00Z**\n\n---\n\n**INSPECTION SUMMARY RESULTS:**\n\n**VerifyAircraftClearance: FAILED** - Aircraft clearance status does not meet airworthiness requirements for departure\n\n**VerifyMechanicalComponents: FAILED** - Mechanical component inspection identified critical discrepancies\n  - Component"
+    },
+    {
+      "key": "a_00181",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "none",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "ReportCrossCheck",
+            "contracts": [
+              "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done"
+            ]
+          },
+          {
+            "tool": "submit_result",
+            "contracts": [
+              "submit_result requires report_ready"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "ReportCrossCheck requires component_incident_response_done, component_mismatch_response_done",
+            "submit_result requires report_ready"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n\n**Aircraft ID:** a_00181  \n**Tail Number:** N12403  \n**Maintenance Record ID:** mr_010068  \n**Inspection Location:** loc_00181  \n**Inspection Time:** 2025-04-19T19:30:00Z  \n**Scheduled Departure:** 2025-04-19T20:30:00Z\n\n---\n\n**INSPECTION RESULTS SUMMARY:**\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** : SUCCESS |\n| **VerifyMechanicalComponents** : SUCCESS |\n| **VerifyElectricalSystems** : SUCCESS |\n| **CrossCheckSp"
+    },
+    {
+      "key": "a_00213",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00213 | **Tail Number:** N12435 | **Maintenance Record ID:** mr_010100\n\n---\n\n### INSPECTION EXECUTION SUMMARY\n\n**Status:** \u2705 ALL VERIFICATIONS PASSED - AIRCRAFT AIRWORTHY\n\n---\n\n### ACTION RESULTS\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | \u2705 success | Aircraft cleared for flight operations |\n| **VerifyMechanicalComponents** | \u2705 success | Component cs_0135: No damage observed"
+    },
+    {
+      "key": "a_00171",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00171  \n**Tail Number:** N12393  \n**Maintenance Record ID:** mr_010058  \n**Inspection Location ID:** loc_00171  \n**Inspection Timestamp:** 2025-04-19T14:30:00Z  \n**Expected Departure Time:** 2025-04-19T15:30:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** : success |\n| **VerifyMechanicalComponents** : success |\n| **VerifyElectricalSystems** : success |\n| **Cro"
+    },
+    {
+      "key": "a_00211",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00211 | **Tail Number:** N12433 | **Maintenance Record:** mr_010098\n**Inspection Date/Time:** 2025-04-20T10:30:00Z | **Inspection Location:** loc_00211\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Status | Result |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | \u2713 PASS | Aircraft identification validated against AVM; maintenance records verified in MRVS; clearance granted |\n| **VerifyMechanicalComponents**"
+    },
+    {
+      "key": "a_00230",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00230  \n**Tail Number:** N12452  \n**Maintenance Record ID:** mr_010117  \n**Inspection Location ID:** loc_00230  \n**Inspection Timestamp:** 2025-04-20T20:00:00Z  \n\n---\n\n### INSPECTION RESULTS - CRITICAL DEFICIENCIES IDENTIFIED\n\n**VerifyAircraftClearance:** FAILED - Aircraft not cleared for flight operations\n\n**VerifyMechanicalComponents:** FAILED\n- Critical issues detected:\n  - Component weight: 93.8 lbs (Expected: 90 lbs) "
+    },
+    {
+      "key": "a_00247",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00247 | **Tail Number:** N12469 | **Maintenance Record ID:** mr_010134\n\n---\n\n### INSPECTION SUMMARY\n\n**Inspection Date/Time:** 2025-04-21 at 04:30:00Z  \n**Scheduled Departure:** 2025-04-21 at 05:30:00Z  \n**Inspection Location:** loc_00247  \n\n---\n\n### ACTION RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2705 SUCCESS |\n| **VerifyMechanicalComponents** | \u2705 SUCCESS |\n| **VerifyElectricalSystems*"
+    },
+    {
+      "key": "a_00144",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00144 | **Tail Number:** N12366 | **Maintenance Record ID:** mr_010031\n\n---\n\n### INSPECTION SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft NOT ready for departure | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection failed | \u274c FAILED |\n| **VerifyElectricalSystems** | Electrical inspection failed | \u274c FAILED |\n| **ReportComponentIncident** | Compon"
+    },
+    {
+      "key": "a_00180",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "component_mismatch_detected",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00180 | **Tail Number:** N12402 | **Maintenance Record ID:** mr_010067\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n**Aircraft Clearance Status:** FALSE - NOT AIRWORTHY\n\n---\n\n### DETAILED ACTION REPORTING\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft not cleared for departure | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical inspection failure - severe corrosion detec"
+    },
+    {
+      "key": "a_00267",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00267 | **Tail Number:** N12489 | **Maintenance Record ID:** mr_010154\n\n---\n\n## INSPECTION SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 success |\n| **VerifyMechanicalComponents** | \u2713 success |\n| **VerifyElectricalSystems** | \u2713 success |\n| **CrossCheckSpecifications** | \u2713 success |\n| **ReportComponentIncident** | \u2713 success |\n| **ReportComponentMismatch** | \u2713 success |\n| **ReportCrossChec"
+    },
+    {
+      "key": "a_00252",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00252 | **Tail Number:** N12474 | **Maintenance Record:** mr_010139\n\n---\n\n### INSPECTION SUMMARY - **AIRCRAFT NOT AIRWORTHY**\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft clearance validation FAILED | \u2717 NOT READY |\n| **VerifyMechanicalComponents** | Mechanical inspection FAILED | \u2717 FAIL |\n| **VerifyElectricalSystems** | Electrical systems require RETEST | \u26a0 RETEST REQUI"
+    },
+    {
+      "key": "a_00160",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00160  \n**Tail Number:** N12382  \n**Maintenance Record ID:** mr_010047  \n**Inspection Date/Time:** 2025-04-19T09:00:00Z  \n**Inspection Location:** loc_00160  \n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | **FAILED** - Aircraft not ready for departure |\n| **VerifyMechanicalComponents** | **FAIL** - Component inspection failed |\n| **VerifyElectricalSystems** | *"
+    },
+    {
+      "key": "a_00263",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00263  \n**Tail Number:** N12485  \n**Maintenance Record ID:** mr_010150  \n**Inspection Date/Time:** 2025-04-21T12:30:00Z  \n**Inspection Location:** loc_00263\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | SUCCESS | Aircraft cleared for departure |\n| **VerifyMechanicalComponents** | SUCCESS | Component inspection passed all tolerance thresholds "
+    },
+    {
+      "key": "a_00124",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00124 | **Tail Number:** N12346 | **Maintenance Record:** mr_010011\n\n---\n\n### INSPECTION SUMMARY\n\n**Aircraft Clearance Status:** \u274c **NOT AIRWORTHY**\n\n---\n\n### DETAILED ACTION RESULTS\n\n**VerifyAircraftClearance:** FAILED - Aircraft not cleared for departure\n\n**VerifyMechanicalComponents:** FAILED - Component inspection did not meet specifications\n\n**VerifyElectricalSystems:** SUCCESS - All electrical systems verified and op"
+    },
+    {
+      "key": "a_00175",
+      "want": {
+        "aircraft_ready": "",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00175 | Tail Number: N12397 | Maintenance Record: mr_010062**\n\n---\n\n**INSPECTION SUMMARY**\n\nAll pre-flight airworthiness verification procedures have been successfully completed in accordance with FAA Part 121/135 regulations and EASA certification requirements.\n\n---\n\n**DETAILED ACTION RESULTS**\n\n**Action: VerifyAircraftClearance**\n<Result: SUCCESS>\n- Aircraft Identification: a_00175\n- Tail Number Validation: N12397 - CONFI"
+    },
+    {
+      "key": "a_00253",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00253 | **Tail Number:** N12475 | **Maintenance Record ID:** mr_010140\n\n### INSPECTION SUMMARY\n**Inspection Timestamp:** 2025-04-21T07:30:00Z  \n**Expected Departure Time:** 2025-04-21T08:30:00Z  \n**Inspection Location:** loc_00253\n\n---\n\n### INSPECTION RESULTS\n\n| Action | Status | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | \u2713 SUCCESS | Aircraft clearance validated against AVM; FAA Part 121/135 co"
+    },
+    {
+      "key": "a_00226",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n### Aircraft ID: a_00226 | Tail Number: N12448 | Maintenance Record: mr_010113\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| VerifyAircraftClearance | FALSE - Aircraft NOT cleared for departure | \u274c FAILED |\n| VerifyMechanicalComponents | Mechanical inspection failed | \u274c FAILED |\n| VerifyElectricalSystems | Electrical inspection failed | \u274c FAILED |\n| ReportComponentIncident | Component incid"
+    },
+    {
+      "key": "a_00222",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "---\n\n<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00222 | **Tail Number:** N12444 | **Maintenance Record:** mr_010109\n\n### INSPECTION SUMMARY\n\n| Action | Result | Details |\n|--------|--------|---------|\n| **VerifyAircraftClearance** | FAILED | Aircraft clearance status: Not Ready for departure |\n| **VerifyMechanicalComponents** | FAILED | Component cs_0148 failed mechanical inspection verification |\n| **VerifyElectricalSystems** | RETEST REQUIRED | Battery status (lo"
+    },
+    {
+      "key": "a_00239",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00239 | Tail Number: N12461 | Maintenance Record: mr_010126**\n\n---\n\n**INSPECTION SUMMARY - ALL SYSTEMS GO FOR FLIGHT**\n\n| Action | Result | Status |\n|--------|--------|--------|\n| VerifyAircraftClearance | TRUE | \u2713 SUCCESS |\n| VerifyMechanicalComponents | success | \u2713 SUCCESS |\n| VerifyElectricalSystems | success | \u2713 SUCCESS |\n| CrossCheckSpecifications | success | \u2713 SUCCESS |\n| ReportComponentIncident | success | \u2713 SUCCESS "
+    },
+    {
+      "key": "a_00210",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT - AIRCRAFT ID: a_00210\n\n**INSPECTION COMPLETED: 2025-04-20T10:00:00Z**\n**MAINTENANCE RECORD ID: mr_010097**\n\n---\n\n### INSPECTION RESULTS SUMMARY:\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | FAILED - Aircraft NOT cleared for departure |\n| **VerifyMechanicalComponents** | FAILED |\n| **VerifyElectricalSystems** | FAILED |\n| **CrossCheckSpecifications** | FAILED |\n| **ReportComponentIncident** | FAILED |\n| **ReportCo"
+    },
+    {
+      "key": "a_00197",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00197  \n**Tail Number:** N12419  \n**Maintenance Record ID:** mr_010084  \n**Inspection Location:** loc_00197  \n**Inspection Time:** 2025-04-20T03:30:00Z  \n**Expected Departure Time:** 2025-04-20T04:30:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft clearance validated against AVM and MRVS | **SUCCESS** |\n| **VerifyMechanicalComponents"
+    },
+    {
+      "key": "a_00244",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00244 | **Tail Number:** N12466 | **Maintenance Record ID:** mr_010131\n\n---\n\n## INSPECTION SUMMARY\n\n**Overall Aircraft Status:** NOT READY FOR FLIGHT \u274c\n\n**Expected Departure Time:** 2025-04-21T04:00:00Z  \n**Actual Inspection Time:** 2025-04-21T03:00:00Z\n\n---\n\n## DETAILED ACTION RESULTS\n\n**VerifyAircraftClearance:** FAILED - Aircraft clearance validation against Airworthiness Validation Matrix (AVM) unsuccessful\n\n**VerifyMec"
+    },
+    {
+      "key": "a_00272",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "retest",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID**: a_00272  \n**Tail Number**: N12494  \n**Maintenance Record ID**: mr_010159  \n**Inspection Location**: loc_00272  \n**Inspection Timestamp**: 2025-04-21T17:00:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result | Status |\n|--------|--------|--------|\n| **VerifyAircraftClearance** | Aircraft Not Ready for Flight | \u274c FAILED |\n| **VerifyMechanicalComponents** | Mechanical Inspection | \u274c FAILED |\n| **VerifyElectricalSystems*"
+    },
+    {
+      "key": "a_00143",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID:** a_00143 | **Tail Number:** N12365 | **Maintenance Record ID:** mr_010030\n\n**INSPECTION SUMMARY**\n\n| Action | Result |\n|--------|--------|\n| VerifyAircraftClearance | success |\n| VerifyMechanicalComponents | success |\n| VerifyElectricalSystems | success |\n| CrossCheckSpecifications | success |\n| ReportComponentIncident | success |\n| ReportComponentMismatch | success |\n| ReportCrossCheck | success |\n| submit_result | success "
+    },
+    {
+      "key": "a_00194",
+      "want": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "got": {
+        "aircraft_ready": "false",
+        "mechanical_inspection_result": "fail",
+        "electrical_inspection_result": "fail",
+        "component_incident_response": "failed",
+        "component_mismatch_response": "failed",
+        "cross_check_response": "failed",
+        "cross_check_reporting_response": "failed"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\n**Aircraft ID: a_00194**\n**Tail Number: N12416**\n**Maintenance Record ID: mr_010081**\n**Inspection Date/Time: 2025-04-20T02:00:00Z**\n\n---\n\n**INSPECTION ACTIONS AND RESULTS:**\n\n<VerifyAircraftClearance : FAILED>\n- Aircraft NOT cleared for flight\n- AVM validation indicates maintenance discrepancies requiring resolution\n\n<VerifyMechanicalComponents : FAILED>\n- Component Serial Number (Expected): cs_0106\n- Component Serial Number (Installed): c"
+    },
+    {
+      "key": "a_00229",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n**AIRWORTHINESS VERIFICATION REPORT**\nAircraft ID: a_00229\nTail Number: N12451\nMaintenance Record ID: mr_010116\nInspection Location: loc_00229\nInspection Timestamp: 2025-04-20T19:30:00Z\n\n---\n\n**VERIFICATION ACTIONS - STATUS SUMMARY:**\n\n<VerifyAircraftClearance : success>\n- Aircraft Identification Validation: PASSED\n- AVM Cross-Reference: Valid\n- Maintenance Record Verification: Valid (mr_010116)\n- Departure Time Validation: 2025-04-20T20:30:00Z - Compliant\n\n<VerifyMechanicalCom"
+    },
+    {
+      "key": "a_00137",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00137 | **Tail Number:** N12359 | **Maintenance Record ID:** mr_010024\n**Inspection Location:** loc_00137 | **Inspection Time:** 2025-04-18T21:30:00Z\n**Expected Departure Time:** 2025-04-18T22:30:00Z\n\n---\n\n### INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | success |\n| **VerifyMechanicalComponents** | success |\n| **VerifyElectricalSystems** | success |\n| **CrossCheckSpeci"
+    },
+    {
+      "key": "a_00215",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "",
+        "component_mismatch_response": "success",
+        "cross_check_response": "",
+        "cross_check_reporting_response": ""
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": false,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n## AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00215 | **Tail Number:** N12437 | **Maintenance Record:** mr_010102\n\n### INSPECTION SUMMARY\n**Inspection Date/Time:** 2025-04-20T12:30:00Z  \n**Expected Departure Time:** 2025-04-20T13:30:00Z  \n**Inspection Location:** loc_00215\n\n---\n\n### VERIFICATION ACTIONS & RESULTS\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 SUCCESS |\n| **VerifyMechanicalComponents** | \u2713 SUCCESS |\n| **VerifyElectricalSyste"
+    },
+    {
+      "key": "a_00225",
+      "want": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "got": {
+        "aircraft_ready": "true",
+        "mechanical_inspection_result": "success",
+        "electrical_inspection_result": "success",
+        "component_incident_response": "success",
+        "component_mismatch_response": "success",
+        "cross_check_response": "success",
+        "cross_check_reporting_response": "success"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_response>\n\n# AIRWORTHINESS VERIFICATION REPORT\n**Aircraft ID:** a_00225  \n**Tail Number:** N12447  \n**Maintenance Record ID:** mr_010112  \n**Inspection Location:** loc_00225  \n**Inspection Time:** 2025-04-20T17:30:00Z  \n**Expected Departure Time:** 2025-04-20T18:30:00Z\n\n---\n\n## INSPECTION RESULTS SUMMARY\n\n| Action | Result |\n|--------|--------|\n| **VerifyAircraftClearance** | \u2713 SUCCESS |\n| **VerifyMechanicalComponents** | \u2713 SUCCESS |\n| **VerifyElectricalSystems** | \u2713 SUCCESS |\n| **CrossCh"
+    }
+  ]
+}

@@ -1,0 +1,4743 @@
+{
+  "summary": {
+    "pack": "content_flagging_sop",
+    "model": "bedrock:us.meta.llama3-3-70b-instruct-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 1.5,
+    "n": 168,
+    "TSR": 1.0,
+    "ECR": 1.0,
+    "avg_model_calls": 4.0,
+    "avg_symbolic_steps": 1.0,
+    "symbolic_ratio": 0.2,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 1269275,
+    "cached_tokens": 0,
+    "avg_latency_s": 30.04,
+    "time_model_s": 5045.8,
+    "time_controller_s": 0.623,
+    "time_tools_s": 0.03,
+    "controller_share": 0.00012,
+    "decision_states": 840,
+    "unique_states": 303,
+    "state_reuse_rate": 0.6393,
+    "cache": {
+      "hits": 4175,
+      "misses": 25,
+      "hit_rate": 0.994,
+      "entries": 25
+    },
+    "wall_clock_s": 5047.0
+  },
+  "rows": [
+    {
+      "key": "C123456908",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456972",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456983",
+      "want": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456799",
+      "want": {
+        "user_trust_score": 80,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 80,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456858",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456818",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456808",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456897",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456855",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456862",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456794",
+      "want": {
+        "user_trust_score": 75,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 75,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456845",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456901",
+      "want": {
+        "user_trust_score": 56,
+        "content_severity_index": 84,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 56,
+        "content_severity_index": 84,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456926",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456924",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456854",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456929",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456979",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457012",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456820",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456801",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 55,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 55,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456824",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456817",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456831",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456914",
+      "want": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456902",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456942",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456840",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456970",
+      "want": {
+        "user_trust_score": 21,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 21,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456969",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456865",
+      "want": {
+        "user_trust_score": 52,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 52,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456830",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456884",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456927",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456867",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456945",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456815",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456994",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456978",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456915",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456789",
+      "want": {
+        "user_trust_score": 35,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 35,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456791",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456866",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456835",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456889",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456898",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456925",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456951",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456879",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456874",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456948",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456939",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456887",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456825",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456921",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456850",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456811",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456936",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456947",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456822",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456800",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457008",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456966",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456795",
+      "want": {
+        "user_trust_score": 90,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 90,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456816",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456928",
+      "want": {
+        "user_trust_score": 56,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 56,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457004",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 69,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 69,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457005",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456943",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456793",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456911",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456821",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456950",
+      "want": {
+        "user_trust_score": 73,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 73,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456851",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456917",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457001",
+      "want": {
+        "user_trust_score": 31,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 31,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456959",
+      "want": {
+        "user_trust_score": 71,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 71,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456859",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456962",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456853",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456833",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456935",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456829",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456912",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456812",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456957",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456953",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456870",
+      "want": {
+        "user_trust_score": 68,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 68,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456828",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457007",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456836",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456883",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456960",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 23,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 23,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456832",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456934",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 89,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 89,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456944",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456792",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456894",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456842",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456922",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456992",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456975",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456997",
+      "want": {
+        "user_trust_score": 21,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 21,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456838",
+      "want": {
+        "user_trust_score": 12,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 12,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456869",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456823",
+      "want": {
+        "user_trust_score": 62,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 62,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456796",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456899",
+      "want": {
+        "user_trust_score": 12,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 12,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456880",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456872",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456988",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456993",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456878",
+      "want": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456797",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456802",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456848",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456981",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456920",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 74,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 74,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456806",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456955",
+      "want": {
+        "user_trust_score": 53,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 53,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456861",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456985",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456923",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456974",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456995",
+      "want": {
+        "user_trust_score": 71,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 71,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456852",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456843",
+      "want": {
+        "user_trust_score": 75,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 75,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456896",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456839",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456963",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457010",
+      "want": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456986",
+      "want": {
+        "user_trust_score": 73,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 73,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456958",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456847",
+      "want": {
+        "user_trust_score": 68,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 68,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456837",
+      "want": {
+        "user_trust_score": 62,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 62,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456877",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456810",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456846",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456949",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457006",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456976",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 43,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 43,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456980",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456918",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456826",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456946",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457000",
+      "want": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456790",
+      "want": {
+        "user_trust_score": 45,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 45,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456841",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 85,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 85,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456938",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456919",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456940",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456892",
+      "want": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456888",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456905",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 64,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 64,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456876",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456991",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456863",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456999",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456910",
+      "want": {
+        "user_trust_score": 52,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 52,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123457013",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456809",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456977",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456860",
+      "want": {
+        "user_trust_score": 76,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 76,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456895",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456803",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456881",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456968",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "C123456891",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

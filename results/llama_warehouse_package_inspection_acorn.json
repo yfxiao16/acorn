@@ -1,0 +1,5137 @@
+{
+  "summary": {
+    "pack": "warehouse_package_inspection_sop",
+    "model": "bedrock:us.meta.llama3-3-70b-instruct-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 1.55,
+    "n": 150,
+    "TSR": 1.0,
+    "ECR": 1.0,
+    "avg_model_calls": 5.873333333333333,
+    "avg_symbolic_steps": 1.0,
+    "symbolic_ratio": 0.1454898157129001,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 1484784,
+    "cached_tokens": 0,
+    "avg_latency_s": 44.11,
+    "time_model_s": 6615.9,
+    "time_controller_s": 1.28,
+    "time_tools_s": 0.03,
+    "controller_share": 0.00019,
+    "decision_states": 1031,
+    "unique_states": 458,
+    "state_reuse_rate": 0.5558,
+    "cache": {
+      "hits": 8136,
+      "misses": 112,
+      "hit_rate": 0.9864,
+      "entries": 112
+    },
+    "wall_clock_s": 6618.1
+  },
+  "rows": [
+    {
+      "key": "PO987654435",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654494",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654326",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654447",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 380.25,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 380.25,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654438",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654394",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2749.75,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2749.75,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654461",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654419",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 639.94,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 639.94,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654493",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 5840.87,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 5840.87,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654417",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654490",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -95.15,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -95.15,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654418",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654352",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 15376.38,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 15376.38,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654333",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3898.76,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3898.76,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654356",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654440",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654363",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 9574.9,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 9574.9,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654510",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654411",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -542.82,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -542.82,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654457",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654372",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -870.91,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -870.91,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654448",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8941.05,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8941.05,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654483",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654362",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654439",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654434",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -683.21,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -683.21,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654347",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654460",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654421",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654432",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654323",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 628.37,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 628.37,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654398",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654367",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2467.16,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2467.16,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654508",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654512",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2892.92,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2892.92,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654406",
+      "want": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -60.67,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -60.67,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654482",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654357",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654511",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654382",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654343",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654462",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654422",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 11097.72,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 11097.72,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654354",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654332",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3906.04,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3906.04,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654515",
+      "want": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 168.1,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 168.1,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654480",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654327",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3366.11,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3366.11,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654348",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3979.17,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3979.17,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654441",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654325",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4641.5,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4641.5,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654353",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654463",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654466",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654430",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 362.84,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 362.84,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654465",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654331",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8024.68,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8024.68,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654383",
+      "want": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -730.56,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -730.56,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654433",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654467",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7896.05,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7896.05,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654487",
+      "want": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 954.76,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 954.76,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654321",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654519",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654474",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654391",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654444",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654385",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 741.17,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 741.17,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654365",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 6443.37,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 6443.37,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654484",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 10776.76,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 10776.76,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654349",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 1608.16,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 1608.16,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654361",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654429",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654476",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654477",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654346",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7823.69,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7823.69,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654344",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654505",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654468",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -623.36,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -623.36,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654402",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 754.87,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 754.87,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654360",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654489",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654368",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 9586.49,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 9586.49,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654415",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654475",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654364",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 869.05,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 869.05,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654459",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7913.49,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7913.49,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654324",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4723.09,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4723.09,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654426",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654374",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 336.92,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 336.92,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654454",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654501",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654499",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654506",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654370",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2001.49,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2001.49,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654401",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654355",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654328",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654431",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3521.83,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3521.83,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654412",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654404",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654497",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654502",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654410",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654329",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 10262.72,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 10262.72,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654334",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2163.29,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2163.29,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654380",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 793.33,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 793.33,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654492",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 11.95,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 11.95,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654452",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654338",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 5227.03,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 5227.03,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654393",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654496",
+      "want": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -250.98,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -250.98,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654455",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654488",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654504",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8324.35,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8324.35,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654384",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654375",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654428",
+      "want": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -882.21,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -882.21,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654371",
+      "want": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 6152.06,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Cancelled Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 6152.06,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654517",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654379",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654369",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3468.45,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3468.45,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654409",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654342",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2786.3,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 2786.3,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654378",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -97.43,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -97.43,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654481",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654513",
+      "want": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -414.14,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Overage Quantity",
+          "Severe Unmatched Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": -414.14,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654450",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654358",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7946.45,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 7946.45,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654478",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654514",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654322",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3212.06,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity",
+          "Vendor Damaged"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 3212.06,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654373",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654470",
+      "want": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 759.91,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 759.91,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654451",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654472",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654424",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Resolved",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654420",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654437",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654408",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 260.76,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 260.76,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654395",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654442",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654520",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 813.63,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 813.63,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654341",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8532.8,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 8532.8,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654509",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654392",
+      "want": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654427",
+      "want": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": 0.0,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654335",
+      "want": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4823.69,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Vendor Damaged",
+          "Wrong Warehouse"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 4823.69,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654413",
+      "want": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 190.79,
+        "barcode_match": true
+      },
+      "got": {
+        "problem_type": [
+          "Severe Unmatched Quantity",
+          "Underage Quantity"
+        ],
+        "resolution_status": "Processing",
+        "charge_back_amt": 190.79,
+        "barcode_match": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654500",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "PO987654423",
+      "want": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "got": {
+        "problem_type": [
+          "Wrong Item"
+        ],
+        "resolution_status": "Returned to Vendor",
+        "charge_back_amt": null,
+        "barcode_match": false
+      },
+      "ok": true,
+      "model_calls": 2,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

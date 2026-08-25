@@ -21,19 +21,6 @@ video_annotation acorn
 video_annotation baseline
 video_classification acorn
 video_classification baseline
-dangerous_goods baseline --scaffold react
-customer_service baseline --scaffold react
-patient_intake baseline --scaffold react
-know_your_business baseline --scaffold react
-aircraft_inspection baseline --scaffold react
-warehouse_package_inspection baseline --scaffold react
-email_intent baseline --scaffold react
-content_flagging baseline --scaffold react
-video_annotation baseline --scaffold react
-video_classification baseline --scaffold react
-dangerous_goods acorn --scaffold react
-customer_service acorn --scaffold react
-patient_intake acorn --scaffold react
 know_your_business acorn --flow-profile x0
 know_your_business acorn --flow-profile x1
 know_your_business acorn --flow-profile x2

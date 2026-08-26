@@ -19,3 +19,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_email_intent_baseline_scaf
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_content_flagging_baseline_scaf_react.json
 === [haiku@us-west-2] video_annotation baseline --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_baseline_scaf_react.json
+=== [haiku@us-west-2] video_classification baseline --scaffold react ===

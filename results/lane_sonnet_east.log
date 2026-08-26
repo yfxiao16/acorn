@@ -15,3 +15,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseli
 === [sonnet@us-east-1] aircraft_inspection acorn  ===
 === [sonnet@us-east-1] aircraft_inspection baseline  ===
 === [sonnet@us-east-1] warehouse_package_inspection acorn  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+=== [sonnet@us-east-1] warehouse_package_inspection baseline  ===

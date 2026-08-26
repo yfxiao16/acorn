@@ -1,2 +1,6 @@
 === [haiku@us-west-2] dangerous_goods baseline --scaffold react ===
 === [haiku@us-west-2] customer_service baseline --scaffold react ===
+=== [haiku@us-west-2] patient_intake baseline --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_patient_intake_baseline_scaf_react.json
+=== [haiku@us-west-2] know_your_business baseline --scaffold react ===

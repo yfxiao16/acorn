@@ -22,3 +22,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_content_flagging_baseline_
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_baseline_scaf_react.json
 === [haiku@us-west-2] video_classification baseline --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_classification_baseline_scaf_react.json
+=== [haiku@us-west-2] dangerous_goods acorn --scaffold react ===

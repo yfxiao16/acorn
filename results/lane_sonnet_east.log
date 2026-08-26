@@ -24,3 +24,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspect
 }
 wrote /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
 === [sonnet@us-east-1] email_intent baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+=== [sonnet@us-east-1] content_flagging acorn  ===

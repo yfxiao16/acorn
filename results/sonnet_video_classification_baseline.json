@@ -1,0 +1,4684 @@
+{
+  "summary": {
+    "pack": "video_classification_sop",
+    "model": "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 26.0,
+    "n": 147,
+    "TSR": 0.4897959183673469,
+    "ECR": 0.9115646258503401,
+    "avg_model_calls": 8.625850340136054,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.8299319727891157,
+    "avg_committed_violations": 0.08163265306122448,
+    "total_tokens": 8403816,
+    "cached_tokens": 0,
+    "avg_latency_s": 128.64,
+    "time_model_s": 18905.8,
+    "time_controller_s": 4.024,
+    "time_tools_s": 0.06,
+    "controller_share": 0.00021,
+    "decision_states": 1268,
+    "unique_states": 367,
+    "state_reuse_rate": 0.7106,
+    "cache": null,
+    "wall_clock_s": 23716.9
+  },
+  "rows": [
+    {
+      "key": "42",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00045\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications compliant (720p resolution, 30fps). Uploader has clean educational history. Spanish-language craft tutorial with appropriate metadata tags. No explicit content, hate speech, copyright violations, spam, or policy violations d"
+    },
+    {
+      "key": "66",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00071\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (HEVC format, 1920x1080 resolution, 30fps). Initial reviewer rev_071 found no policy violations (empty detected_categories and confidence_scores). Automated scans detected no explicit content, copyright issues, spam, or synt"
+    },
+    {
+      "key": "158",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00170\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video vid_00170 was escalated to moderator review after initial reviewer rev_170 detected nudity with moderate confidence (0.52). The moderate confidence score suggests borderline content that required expert judgment. Given the music/dance cont"
+    },
+    {
+      "key": "78",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package - COMPLETED\n\n<final_output>\n{\n    \"video_id\": \"vid_00084\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video contains graphic footage of a vehicular accident with visible injuries and emergency medical response activities. Reviewer detected Violence category with 85% confidence. Moderator confirmed the footage shows a real traffic "
+    },
+    {
+      "key": "118",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00127\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00127 successfully passed all validation stages. Technical specifications confirmed: 4K resolution MP4 format with 30-minute duration. Initial reviewer rev_127 (qualified for Chinese language content in Singapore region) conducted full-length review and found zero violation "
+    },
+    {
+      "key": "125",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00134\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video removed for severe policy violations. Content displays 15+ instances of online harassment and bullying with visible personal information (usernames, profile pictures). Despite comedy/vlog categorization, the video shows hostile direct messages, derogatory language, an"
+    },
+    {
+      "key": "29",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00032\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks including format compliance (MP4, 2560x1440, 60fps), technical quality assessment, metadata validation, and content review. Human reviewer rev_032 found no policy violations. Automated systems detected no explicit content, copyright issues"
+    },
+    {
+      "key": "136",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00146\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video removed due to hate speech violation (91% confidence) detected in religious debate content. The uploader has escalated content history indicating repeat violations. Moderator review confirmed heated exchanges discussing religious discr"
+    },
+    {
+      "key": "161",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00173\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\", \"Age Restrict\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video contains surveillance footage of physical violence within a news broadcast context. The reviewer detected Violence with 0.86 confidence. Moderator confirmed approximately 45 seconds of confrontation with visible impacts, though the news station applied some blurr"
+    },
+    {
+      "key": "51",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00055\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00055 passed all validation and content review stages. Technical validation confirmed MP4 format compliance with high-quality specifications (2560x1440 resolution, 60fps). The uploader (user_155) has a clean history as a content creator. Initial reviewer rev_055 found no policy violations wi"
+    },
+    {
+      "key": "167",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00179\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video vid_00179 contains explicit nudity detected with 0.97 confidence by reviewer rev_179. The content violates platform policies on nudity and explicit content. Metadata tags 'adult' and 'entertainment' confirm the nature of the content. The high confidence score (0.97) an"
+    },
+    {
+      "key": "38",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00041\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"13+\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video was escalated due to initial reviewer detecting potential nudity with 58% confidence. However, moderator review yielded empty notes indicating no actionable policy violations were confirmed upon expert examination. Technical validation passed all requirements (1080p, MP4, 29.97fps). Automated "
+    },
+    {
+      "key": "31",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00034\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video fails to meet minimum technical specifications required by the platform. Resolution of 320x290 is significantly below the mandatory 720p (1280x720) minimum standard per SOP 5.1.1. While the content itself contains no policy violations (reviewer rev_034 found no objectionable content in detected"
+    },
+    {
+      "key": "96",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00103\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"The video contains content related to bullying and online harassment. While presented in a vlog/comedy format, the creator trivializes serious incidents of harassment by using sarcastic tones and laughing animations. The video also dis"
+    },
+    {
+      "key": "159",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00171\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation and review stages. Initial reviewer (rev_171) detected no policy violations (empty detected_categories and confidence_scores). All automated checks passed including explicit content detection, audio analysis, copyright scan, spam detection, synthetic content detection, and "
+    },
+    {
+      "key": "41",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00044\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains multiple severe policy violations including confirmed nudity (people removing clothing), illegal activities (excessive alcohol consumption and related behavior), explicit language throughout, and inappropriate physical contact. The initial reviewer "
+    },
+    {
+      "key": "192",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\n<final_output>\n{\n    \"video_id\": \"vid_00206\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00206 successfully passed all stages of the moderation pipeline. Technical validation confirmed H.264 format compliance with 4K resolution (3840x2160) at 60fps. Uploader user_306 has clean history with no previous violations. Initial reviewer rev_206 conducted full-length review "
+    },
+    {
+      "key": "101",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00109\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video depicts severe bullying and harassment of minors with high confidence detection (0.93). Moderator review confirmed 8 minutes of continuous harassment including physical aggression (pushing), verbal abuse (name-calling), theft of personal belongings, and documen"
+    },
+    {
+      "key": "26",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00028\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\", \"Age Restrict\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video content contains bullying behavior detected by the reviewer with moderate confidence (0.62). While the confidence score indicates some uncertainty, bullying represents a serious violation of platform community guidelines. As this is a first-time "
+    },
+    {
+      "key": "171",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00184\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"The video contains serious policy violations including bullying and harassment of minors (ages 11-14) in a school environment. The moderator's detailed review confirmed multiple instances of targeted harassment including following students, making mocking comments ab"
+    },
+    {
+      "key": "195",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00209\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with 97% confidence by initial reviewer (rev_209). Content was escalated to moderator (mod_115) due to severe policy violation. The video is tagged with 'adult' and 'entertainment' metadata, confirmin"
+    },
+    {
+      "key": "183",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00197\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video successfully passed all validation stages. Technical specifications meet platform requirements (H.264 format, 2560x1440 resolution, 60fps). Uploader (user_297) has clean history as content creator. All automated content analysis tools (explicit content detection, audio analysis, copyright scan, "
+    },
+    {
+      "key": "2",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00003\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation stages. Technical specifications met platform requirements (HEVC format, 4K resolution at 24fps). Uploader user_103 has clean history as content creator. All automated scans (explicit content, copyright, spam, synthetic content detection) returned no"
+    },
+    {
+      "key": "46",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00050\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\", \"Age Restrict\"],\n    \"Age_Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Age Restrict\",\n    \"Reason\": \"Initial reviewer detected potential Nudity with 48% confidence (below certainty threshold) in a music/dance video from first-time uploader. Case was escalated to moderator per ETM protocol due to serious category flag. Moderator review "
+    },
+    {
+      "key": "104",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00112\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe policy violations including depiction of illegal drug use (illicit substance consumption) with 0.96 confidence and explicit nudity/intimate behavior with 0.91 confidence. The moderator confirmed multiple insta"
+    },
+    {
+      "key": "145",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00156\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation and content review checks. The 4K educational history video from a first-time uploader (user_256) meets all technical specifications (MP4 format, 3840x2160 resolution, 29.97 fps). Initial reviewer rev_156 found no policy violations. All automated sys"
+    },
+    {
+      "key": "138",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00148\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video vid_00148 contains explicit nudity detected with 98% confidence by reviewer rev_148. The uploader (user_248) has previous warnings on record and used metadata tags 'adult' and 'entertainment' indicating awareness of content nature. This constitutes a critica"
+    },
+    {
+      "key": "36",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00039\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical and content validation checks. Format validation confirmed HEVC codec at 2560x1440 resolution meeting platform standards. Initial reviewer rev_039 conducted full review with no violations detected (empty detected_categories). Automated systems confirmed no explicit content, "
+    },
+    {
+      "key": "187",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00201\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation and review stages. Technical specifications compliant (MP4 format, 1280x720 resolution, 29.97 fps). Uploader has clean history as content creator. Human reviewer (rev_201) detected no violation categories with empty confidence scores. All automated checks p"
+    },
+    {
+      "key": "22",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00024\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age_Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with 0.98 confidence by reviewer rev_024. The content was escalated to moderator mod_012 due to severe policy violation. Metadata tags ('adult', 'entertainment') corroborate the content findings. Despite uploader's his"
+    },
+    {
+      "key": "128",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00138\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe hate speech violations with repeated discriminatory remarks targeting ethnic and religious groups, delivered with inflammatory language and derogatory terms throughout a 15-minute segment. The reviewer detected hate speech with 94% confidence. M"
+    },
+    {
+      "key": "90",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00097\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video vid_00097 is being removed due to severe policy violations. The content depicts illegal activities including explicit drug use (smoking illicit substances, ingesting pills, visible drug paraphernalia) with very high confidence (0.94),"
+    },
+    {
+      "key": "33",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00036\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications meet platform requirements (H.264 format, 4K resolution 3840x2160, 29.97 fps). Initial reviewer detected no violation categories with empty confidence scores. All automated content analysis checks (explicit content, audio an"
+    },
+    {
+      "key": "11",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00012\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity (detected with 0.99 confidence by reviewer rev_012), which constitutes a severe violation of platform content policies. The uploader (user_112) has a documented history of multiple violations, indicating a pattern of non-compli"
+    },
+    {
+      "key": "126",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00135\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed technical validation (H.264, 1920x1080, 29.97fps). Initial reviewer detected 'Nudity' category with moderate confidence score (0.53), triggering escalation protocol per SOP 5.5. Upon moderator expert review, no actionable violations were documented (empty moderator notes). All automated "
+    },
+    {
+      "key": "156",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00168\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe hate speech violations targeting minority communities. The reviewer detected hate speech with 0.91 confidence. Moderator confirmed the video features inflammatory language, derogatory terms, misleading stereotypes delivered in an aggressive tone"
+    },
+    {
+      "key": "6",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00007\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video depicts clear bullying behavior involving the deliberate harassment and intimidation of minors. At timestamp 00:04:20, the content shows teenagers verbally taunting and intimidating younger children (ages 11-13) in"
+    },
+    {
+      "key": "27",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00029\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation and content review stages. Initial reviewer rev_029 found no policy violations (empty detected_categories and confidence_scores). All automated checks including explicit content detection, audio analysis, copyright scanning, spam detection, and regional compliance verificat"
+    },
+    {
+      "key": "109",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00117\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\", \"Remove\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"The video contains hate speech targeting religious communities with high confidence (0.89) as detected by the initial reviewer. The moderator's detailed review confirmed inflammatory language, dismissive treatment of religious groups, and increasingly confrontational"
+    },
+    {
+      "key": "4",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00005\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video flagged for nudity content with confidence score of 0.65 by reviewer rev_005. Case escalated to moderation due to sensitive content category and regional compliance requirements (India). Given the music/dance context and moderate "
+    },
+    {
+      "key": "32",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00035\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains multiple clear instances of illegal drug use and drug paraphernalia visible at timestamps 0:45, 1:20, and 2:15. The reviewer detected 'Illegal activities' with 0.95 confidence, confirmed by moderator detailed review showing approximately 8-10 adults a"
+    },
+    {
+      "key": "194",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package Submitted Successfully\n\n<final_output>\n{\n    \"video_id\": \"vid_00208\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (MP4 format, 1920x1080 resolution, 30fps). Uploader user_308 has clean history with infrequent uploads and no red flags. All automated scans including explicit content detection, audio analysis, copyri"
+    },
+    {
+      "key": "142",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00153\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains high-confidence misinformation (0.92 confidence score) presenting political conspiracy theories through manipulated and out-of-context footage. The content uses edited news clips, digitally altered footage, and dramatic presentation techniques to establish false"
+    },
+    {
+      "key": "98",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00105\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with 0.97 confidence by reviewer rev_105. This constitutes a severe policy violation. Additionally, the uploader (user_205) has been previously banned, indicating a pattern of violations. The"
+    },
+    {
+      "key": "141",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00152\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Initial reviewer (rev_152) conducted full-length review and found no policy violations (empty detected_categories and confidence_scores). Automated systems confirmed no explicit content, copyright issues, spam, hate speech, or inappropriate ads. Tec"
+    },
+    {
+      "key": "10",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00011\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains explicit hate speech targeting ethnic minority groups with derogatory statements, inflammatory rhetoric, and calls to action that could incite harm. The moderator's detailed review (mod_005) confirms: (1) Aggressive tone a"
+    },
+    {
+      "key": "62",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00067\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications compliant (HEVC format, 3840x2160 resolution, 29.97 fps). Human reviewer (rev_067) detected no policy violations. All automated content scans (explicit content, copyright, spam, synthetic content) returned negative results. "
+    },
+    {
+      "key": "100",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00108\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains six distinct instances of hate speech occurring at timestamps 2:13, 4:47, 6:30, 8:15, 9:45, and 11:20. Multiple derogatory terms and slurs are directed at specific ethnic and religious groups during a political debate. Reviewer detected hate speech with 0.95 c"
+    },
+    {
+      "key": "143",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## <final_output>\n```json\n{\n    \"video_id\": \"vid_00154\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"This video contains severe policy violations including targeted harassment, doxxing (sharing personal information), privacy violations (sharing private messages without consent), and active incitement to participate in cyberbullying. Despite being tagged as 'comedy' "
+    },
+    {
+      "key": "0",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00001\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00001 passed all validation and review stages. Technical specifications meet platform requirements (MP4 format, 1920x1080 resolution, 30fps). The uploader (user_101) has a clean history with normal upload patterns. Initial reviewer (rev_001) conducted full content review and detected no poli"
+    },
+    {
+      "key": "176",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00189\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation requirements (H.264 format, 2560x1440 resolution, 29.97fps). Initial content review by qualified Hindi-language reviewer (rev_189) identified zero violation categories with no confidence scores for objectionable content. All automated content analysis systems (exp"
+    },
+    {
+      "key": "150",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00161\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00161 passed all technical and content validation checks. Format is HEVC with 1080p resolution (compliant). Uploader user_261 has clean history with regional focus. Content is a French-language tutorial about crafts intended for Belgian region. Initial reviewer rev_161 detected no policy vio"
+    },
+    {
+      "key": "70",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00075\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00075 passed all validation and content review stages. Technical specifications are compliant (MP4 format, 3840x2160 resolution, 29.97fps). Initial reviewer rev_075 detected no content violations (empty detected_categories and confidence_scores). Uploader user_175 is a first"
+    },
+    {
+      "key": "111",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00119\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with very high confidence (0.98) by reviewer rev_119. This constitutes a severe violation of platform content policies. The metadata tags ('adult', 'entertainment') corroborate the nature of the content. Case was escalated to moderator"
+    },
+    {
+      "key": "64",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00069\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age_Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Age Restrict\",\n    \"Reason\": \"Content review detected Nudity with a confidence score of 0.52. While the confidence level is moderate, the serious nature of this content category (Nudity) in a video tagged as music and dance necessitated escalation to a moderation ex"
+    },
+    {
+      "key": "44",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00048\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains deliberate misinformation with high confidence score (0.95). Moderator identified multiple serious violations: manipulated scientific data and graphs, doctored research papers, altered satellite imagery, out-of-context s"
+    },
+    {
+      "key": "127",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00137\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation and content review stages. Technical specifications are compliant (MP4, 2560x1440, 60fps). Initial reviewer rev_137 detected no policy violations (empty detected_categories and confidence_scores). All automated checks passed: no explicit content, audio compliant, copyright "
+    },
+    {
+      "key": "28",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00030\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains serious misinformation violations including multiple conspiracy theories about election fraud and government cover-ups, manipulated or out-of-context media (altered photographs, selectively edited interview clips), and unveri"
+    },
+    {
+      "key": "40",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00043\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (MP4 format, 4K resolution at 60fps). Uploader user_143 has clean history with frequent uploads. Initial reviewer rev_043 detected no content violations (empty detected_categories and confidence_scores). All automated content checks (explicit content, copyr"
+    },
+    {
+      "key": "117",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00126\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video was escalated due to high-confidence detection of serious policy violations. The initial reviewer identified Nudity (0.95 confidence) and Illegal activities (0.93 confidence). The moderator's detailed review confirmed explicit sexual behavior, nudity, su"
+    },
+    {
+      "key": "152",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00163\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains sustained bullying and harassment of a specific individual, with 8+ minutes of derogatory comments targeting their appearance, voice, and content. The creator encourages viewers to engage in coordinated harassment by leaving negative comments on th"
+    },
+    {
+      "key": "153",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00164\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validations (720p resolution, valid MP4 format, acceptable streaming quality) and content review checks. The assigned reviewer (rev_164) found no policy violations, with empty detected_categories and confidence_scores arrays. No explicit content, copyright v"
+    },
+    {
+      "key": "25",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00027\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains graphic documentation of actual criminal activity including physical assault and robbery. The reviewer identified Violence (0.94 confidence) and Illegal activities (0.91 confidence). The moderator's detailed review confir"
+    },
+    {
+      "key": "23",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete \u2713\n\n<final_output>\n{\n    \"video_id\": \"vid_00025\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains a 45-second segment at timestamp 01:15:00 where a debate participant engages in hate speech targeting ethnic minorities with discriminatory language and specific slurs during a political debate about immigration policy. The speaker u"
+    },
+    {
+      "key": "148",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00159\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00159 successfully passed all validation and moderation checks. Technical specifications are compliant (HEVC format, 2560x1440 resolution, 29.97fps). The uploader (user_259) has a clean history with no previous violations. Initial reviewer (rev_159) conducted full content review and detected"
+    },
+    {
+      "key": "144",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00155\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video passed all technical validations (H.264 format, 2560x1440 resolution) and uploader has clean history. However, human reviewer (rev_155) detected nudity with moderate confidence score of 0.55. Given the serious nature of this categ"
+    },
+    {
+      "key": "81",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00087\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains extensive hate speech violations targeting ethnic minorities and religious groups. The initial reviewer detected hate speech with a 0.92 confidence score. Upon escalation, the moderator confirmed repeated inflammatory language and discriminatory remarks thr"
+    },
+    {
+      "key": "108",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00116\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00116 successfully passed all stages of the content moderation pipeline. Initial human review by rev_116 detected no policy violations (empty detected_categories and confidence_scores). Comprehensive automated checks including explicit content detection, audio analysis, copyright scanning, s"
+    },
+    {
+      "key": "79",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00085\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video was escalated to moderation due to detection of potential nudity content with moderate confidence score (0.55). While technical validation passed (H.264 format, 2560x1440 resolution, 60fps) and uploader history is clean (content creator), the human reviewer ident"
+    },
+    {
+      "key": "84",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00090\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation requirements (MP4 format, 3840x2160 resolution, 29.97 fps). Uploader (user_190) has clean history with regional focus. All automated scans (explicit content, audio, copyright, synthetic content, spam) returned negative for violations. Metad"
+    },
+    {
+      "key": "39",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00042\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains severe and repeated hate speech violations. The initial reviewer detected hate speech with a confidence score of 0.93. The moderator's detailed analysis confirmed that throughout the 15-minute political debate, one speaker repeatedly makes discr"
+    },
+    {
+      "key": "61",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00066\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe bullying and harassment of minors (ages 11-14) disguised as 'pranks.' The content shows multiple instances of individuals targeting children with unwanted interactions, invading personal space, startling them, following them when they attempt t"
+    },
+    {
+      "key": "120",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00129\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains severe hate speech violations with high confidence (0.92). Moderator review confirmed inflammatory rhetoric, repeated use of derogatory terms, and hostile generalizations targeting specific religious communities. The content "
+    },
+    {
+      "key": "123",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00132\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00132 passed all technical validation checks including format compliance (h.264), resolution requirements (1920x1080), and streaming quality metrics. Automated content analysis detected no explicit content, copyright violations, spam, or synthetic content concerns. Regional compliance for Tu"
+    },
+    {
+      "key": "86",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00093\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains misinformation and conspiracy theories with manipulated political footage and deceptive editing techniques. The moderator confirmed that the content presents conspiracy theories through edited news footage, manipulated clips of politic"
+    },
+    {
+      "key": "77",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00083\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video contains serious health misinformation with high confidence (0.95). Moderator review confirmed the content features an individual presenting as a medical expert making unsubstantiated claims about conventional medicine being harmful while promoting alternative "
+    },
+    {
+      "key": "191",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00205\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\", \"Strike Issued\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Warning\",\n    \"Reason\": \"Video contains misinformation flagged with high confidence (0.92) by reviewer rev_205. The content presents interconnected conspiracy theories using edited political footage taken out of context, with dramatic production techniques to suggest alternative meanings. The uplo"
+    },
+    {
+      "key": "165",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00177\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video vid_00177 has been removed due to hate speech violation detected with high confidence (0.9) by reviewer rev_177 and confirmed by moderator mod_097. The content depicts a heated religious debate that crossed into hate speech territory with inflammatory statem"
+    },
+    {
+      "key": "47",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00051\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00051 passes all validation and content review requirements. Technical specifications are compliant (H.264 format, 3840x2160 resolution). Initial reviewer rev_051 detected no policy violations. Comprehensive automated content analysis confirmed no e"
+    },
+    {
+      "key": "94",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete \u2705\n\n<final_output>\n{\n    \"video_id\": \"vid_00101\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications are compliant (MP4, 1920x1080, 60fps). Content is a cooking tutorial in Chinese language for Hong Kong region. Initial reviewer (rev_101) detected no policy violations. Automated scans confirmed no explicit content,"
+    },
+    {
+      "key": "181",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00194\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00194 passed all validation and moderation checks. Technical specifications meet platform requirements (mp4 format, 1280x720 resolution, 29.97fps). Uploader history shows regional focus with no violations. Initial reviewer (rev_194) conducted full review a"
+    },
+    {
+      "key": "43",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00047\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video successfully passed all validation and moderation checks. Initial human review by rev_047 detected no policy violations (empty detected_categories and confidence_scores). All automated scans (explicit content, audio analysis, copyright, spam, synthetic content, regional complian"
+    },
+    {
+      "key": "135",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00145\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications are compliant (H.264, 2560x1440 resolution at 60fps). Human reviewer (rev_145) conducted full content review and detected no policy violations. All automated scans (explicit content, copyright, spam, hate speech, regional compliance for TR r"
+    },
+    {
+      "key": "3",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00004\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video fails to meet technical specifications required in section 5.1.1 of the SOP. Resolution is 200x350, which is significantly below the required minimum of 720p (1280x720). Additionally, the format is RAW rather than the required MP4 with HEVC/H.264 codec. While content review revealed no policy v"
+    },
+    {
+      "key": "105",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00113\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video contains documentary-style footage of a traffic accident scene with emergency response vehicles and personnel. Initial reviewer detected Violence category with high confidence (0.87), triggering escalation protocol. Moderator review confirmed the content shows da"
+    },
+    {
+      "key": "53",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00057\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video is a French cooking tutorial that passed all validation checks. Technical specifications are compliant (MP4, 1920x1080, 29.97fps). Initial reviewer rev_057 found no violations (empty detected_categories and confidence_scores). All automated scans including explicit content detection, audio analy"
+    },
+    {
+      "key": "133",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00143\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"This video contains legitimate news/journalistic content covering a violent incident in Austria. The content passed all technical validations (MP4, 1920x1080, 30fps). Initial review by rev_143 detected Violence with 85% confidence, triggering escalation to moderator mo"
+    },
+    {
+      "key": "177",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00190\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains sustained hate speech targeting religious communities with high confidence (0.94). The moderator confirmed 15-20 minutes of inflammatory rhetoric, derogatory terms, and mocking language targeting specific religious groups in a debate setting. This cons"
+    },
+    {
+      "key": "154",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00165\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with 98% confidence by reviewer rev_165, which constitutes a critical platform policy violation. The uploader (user_265) has a history of being banned once, and the video is tagged with 'adult' and 'entertai"
+    },
+    {
+      "key": "182",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00195\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity detected with 0.98 confidence by reviewer rev_195. The content violates platform policies on explicit content. Metadata tags 'adult' and 'entertainment' corroborate the nudity detection. Case was escalated to mo"
+    },
+    {
+      "key": "49",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00053\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video fails to meet minimum technical specifications required by the Video Validation Protocol (VVP). Resolution is 128x72, which is significantly below the mandatory 720p minimum requirement specified in SOP section 5.1.1. Additionally, the format field is empty, indicating potential format validati"
+    },
+    {
+      "key": "80",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 7,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00086\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00086 successfully passed all validation stages. Technical validation confirmed HEVC format compliance with 1920x1080 resolution at 30fps, meeting platform requirements. Human reviewer (rev_086) conducted full-length content review and detected no policy violations (empty detected_categories"
+    },
+    {
+      "key": "34",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00037\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains severe policy violations including targeted bullying (confidence: 0.91), harassment, privacy violations, and doxxing. The moderator's detailed review revealed that the content features repeated instances of targeted harassment, unauthorized sharing"
+    },
+    {
+      "key": "7",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00008\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00008 successfully passed all stages of the moderation pipeline. Technical validation confirmed compliant format (h264, 3840x2160 resolution at 60fps). Uploader user_108 has clean history with regional focus. Initial reviewer rev_008 conducted full-length review and f"
+    },
+    {
+      "key": "110",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00118\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation stages successfully. Technical specifications meet platform requirements (4K resolution, proper MP4 format, 30fps). Initial human review by qualified Russian-language reviewer (rev_118) detected no policy violations. Comprehensive automated content analysis found no explici"
+    },
+    {
+      "key": "91",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00098\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"The video contains news footage showing a violent altercation with graphic elements including visible injuries and blood on victims and ground. While the content has legitimate journalistic value (news broadcast with reporter commentary, emergency responders present, s"
+    },
+    {
+      "key": "83",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00089\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains explicit nudity content (detected with 98% confidence by reviewer rev_089). The content is tagged as 'adult' and 'entertainment' and originates from an automated upload account (user_189). The detection of nudity constitutes a severe violation of platform comm"
+    },
+    {
+      "key": "173",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00186\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (MP4 format, 3840x2160 resolution, proper frame rate). Initial reviewer detected no content violations. All automated scans (explicit content, hate speech, spam, copyright, regional compliance) returned clean results. Uploader is a r"
+    },
+    {
+      "key": "178",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00191\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (H.264 format, 1920x1080 resolution, 60fps). Initial reviewer found no policy violations (empty detected_categories and confidence_scores). All automated content analysis tools (explicit content detection, audio analysis, co"
+    },
+    {
+      "key": "89",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00096\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications are compliant (MP4 format, 3840x2160 resolution at 29.97fps). Initial reviewer found no content violations. Automated checks for explicit content, copyright, spam, and regional compliance all passed. User has clean upload hi"
+    },
+    {
+      "key": "8",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package Submitted Successfully\n\n<final_output>\n{\n  \"video_id\": \"vid_00009\",\n  \"Escalated\": true,\n  \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n  \"Age_Rating\": \"\",\n  \"Content_warning\": false,\n  \"Final_Decision\": \"Remove\",\n  \"Reason\": \"Video contains explicit depictions of illegal drug use and substance abuse throughout its 12-minute duration. The moderator confirmed multiple instances of illegal substance consumption, visible drug paraphernalia, and preparation"
+    },
+    {
+      "key": "13",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00014\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00014 successfully passed all validation and moderation checks. Technical validation confirmed MP4 format with 1920x1080 resolution meeting platform standards. The uploader (user_114) is a legitimate news channel with clean history. Human reviewer rev_014 conducted full content review and fo"
+    },
+    {
+      "key": "59",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00064\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical and content validations. Educational history content in Korean with 720p resolution, 30-minute duration, clean uploader history, and appropriate metadata tags. No policy violations detected by automated systems (explicit content, copyright, spam, synthetic content all clear)"
+    },
+    {
+      "key": "168",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00180\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video content violates platform policies on bullying and harassment. Despite being framed as comedy/vlog content, the video displays actual cyberbullying behavior through screenshots of hostile messages and aggressive online interactions with visible (though partially censo"
+    },
+    {
+      "key": "131",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00141\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation requirements (H.264 format, 3840x2160 resolution exceeds 720p minimum, 60fps frame rate). Uploader history shows frequent uploads with no red flags. All automated content analysis systems (explicit content detection, audio analysis"
+    },
+    {
+      "key": "17",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00019\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains serious policy violations including targeted harassment, bullying, and privacy violations. The content displays personal information (usernames, social media profiles) while making mocking comments about individuals' appearances and behaviors. The creator encoura"
+    },
+    {
+      "key": "72",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00078\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains systematic hate speech and religious discrimination with confidence score of 0.91. Moderator review confirmed multiple segments with derogatory remarks targeting specific religious communities, mockery of religious practices, inflammatory language, sw"
+    },
+    {
+      "key": "172",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00185\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video vid_00185 was escalated for expert moderation review due to detection of Nudity content with moderate confidence (54%). Technical validation passed all requirements (HEVC format, 1920x1080 resolution, 360s duration). Initial reviewer rev_185 identified potential "
+    },
+    {
+      "key": "134",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00144\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age_Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Age Restrict\",\n    \"Reason\": \"Video vid_00144 was escalated to moderation expert due to detection of Nudity content with 51% confidence score. While the confidence is moderate, the sensitive nature of the detected category (Nudity) requires expert review and appropriate protective measures. Technic"
+    },
+    {
+      "key": "164",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00176\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00176 successfully passed all validation and moderation checks. Technical specifications are fully compliant (H.264 format, 1920x1080 resolution at 60fps). Initial reviewer rev_176 conducted comprehensive review with no policy violations detected (empty detected_categ"
+    },
+    {
+      "key": "180",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00193\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Warning\", \"Remove\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"The video contains bullying and harassment content detected with 87% confidence by the initial reviewer. The moderator's detailed review confirms the presence of derogatory remarks, personal attacks, and inflammatory language presente"
+    },
+    {
+      "key": "63",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00068\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"The video contains news footage depicting violence including physical assault with visible injuries (confidence score 0.87). While the content has legitimate journalistic value with proper editorial context, viewer discretion warnings, and partial blurring applied by t"
+    },
+    {
+      "key": "54",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00058\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains high-confidence misinformation (confidence score: 0.93) confirmed by moderator review. Content features manipulated photographs, selectively edited news footage taken out of context, and unverified conspiracy theories presented as fact without credible"
+    },
+    {
+      "key": "107",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "50",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00054\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"The video contains graphic violence in the form of an extreme sports injury with visible bone displacement and medical trauma. The reviewer detected violence with 82% confidence, and the moderator confirmed that at 0:45 the video shows a severe leg injury with clearly "
+    },
+    {
+      "key": "193",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "58",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "48",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00052\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"The video contains severe policy violations including documented illegal activities (drug paraphernalia and substance consumption with 97% confidence) and explicit nudity (94% confidence). The moderator review confirmed multiple ind"
+    },
+    {
+      "key": "88",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "21",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete \u2713\n\n<final_output>\n{\n    \"video_id\": \"vid_00023\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications meet platform requirements (MP4 format, 2560x1440 resolution exceeds 720p minimum). Automated content analysis detected no violations including explicit content, copyright issues, spam, or regional compliance concer"
+    },
+    {
+      "key": "57",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete \u2713\n\n<final_output>\n{\n    \"video_id\": \"vid_00062\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical and content validation checks. Format validated as MP4 with 2560x1440 resolution at 60fps (exceeds minimum 720p requirement). Human reviewer (rev_062) detected no policy violations with empty detected_categories and confidence_scores arrays. Automat"
+    },
+    {
+      "key": "160",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00172\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe policy violations including illegal activities (recreational substance use visible at high confidence 0.94) and explicit content/nudity (confidence 0.92). Moderator confirmed multiple instances of substance use, explicit behavior, and intimat"
+    },
+    {
+      "key": "189",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Content Review Package Successfully Submitted\n\n<final_output>\n{\n    \"video_id\": \"vid_00203\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Age Restrict\",\n    \"Reason\": \"Video contains legitimate news footage of a crime incident with surveillance camera footage showing physical violence, visible blood, and physical assault lasting approximately 45 seconds. While the content demonstrates"
+    },
+    {
+      "key": "129",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "37",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "157",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "185",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00199\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Strike Issued\", \"Remove\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"The video contains clear instances of bullying and harassment disguised as a 'prank.' The moderator identified 3-4 minutes of continuous harassment where perpetrators target an individual who shows visible signs of distress and repeatedly attem"
+    },
+    {
+      "key": "1",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00002\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Age Restrict\", \"Warning\"],\n    \"Age_Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Age Restrict\",\n    \"Reason\": \"The video contains graphic real-world violence from a protest/riot situation showing a protester sustaining a visible head injury with blood at timestamp 1:15. While the content appears to have documentary/journalistic value documenting civil unrest and the uploader ha"
+    },
+    {
+      "key": "52",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "149",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "130",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00140\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video content depicts illegal activities (consumption of illicit substances with 0.96 confidence) and explicit nudity (0.92 confidence) in a nightclub setting. The moderator confirmed multiple instances of substance use, revealing attire, and intimate activities t"
+    },
+    {
+      "key": "151",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "103",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00111\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00111 passed all validation and review stages successfully. Technical validation confirmed proper format (720p, MP4, 29.97fps). The uploader is a first-time user with clean history. Initial reviewer rev_111 conducted full content review and found no violations (empty detected_categories and "
+    },
+    {
+      "key": "99",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00107\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications compliant (H.264 format, 2560x1440 resolution, 60fps). Human reviewer (rev_107) detected no violation categories. All automated content analysis systems (explicit content detection, audio analysis, copyright scan, hate speech detection, spam"
+    },
+    {
+      "key": "116",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00125\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video successfully passed all validation and content review stages. Technical specifications meet platform requirements (MP4 format, 1280x720 resolution, 30fps). Human reviewer (rev_125) detected no policy violations. Automated systems found no explicit content, copyright issues, spam, or regional com"
+    },
+    {
+      "key": "87",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00094\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\", \"Warning\"],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"The video contains clear bullying and harassment content that violates platform policies. Moderator review (mod_050) confirmed that the video shows an individual being persistently followed and harassed by three people over 5 minutes in a shopping mall, despite repea"
+    },
+    {
+      "key": "74",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00080\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age_Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final_Decision\": \"Remove\",\n    \"Reason\": \"Video fails to meet minimum technical specifications outlined in SOP section 5.1.1 (VVP). Resolution is 128x20, which is significantly below the required minimum of 720p. While content review revealed no policy violations (empty detected_categories and confidence_scores from reviewer rev_080), and th"
+    },
+    {
+      "key": "121",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "196",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "20",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n<final_output>\n{\n    \"video_id\": \"vid_00022\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications meet platform requirements (1920x1080 resolution, 30fps frame rate). Human reviewer (rev_022) found no content violations with empty detected_categories and confidence_scores arrays. All automated checks passed including exp"
+    },
+    {
+      "key": "188",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Content Review Package\n\n<final_output>\n{\n    \"video_id\": \"vid_00202\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Remove\", \"Strike Issued\"],\n    \"Age Rating\": \"18+\",\n    \"Content_warning\": true,\n    \"Final Decision\": \"Remove\",\n    \"Reason\": \"Video contains severe policy violations including illegal activities (recreational drug use with visible paraphernalia) and nudity/explicit content. Reviewer detected these categories with very high confidence scores (Illegal activities: 96%,"
+    },
+    {
+      "key": "71",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00077\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video vid_00077 passed all validation stages. Technical specifications are compliant (H.264 format, 2560x1440 resolution at 60fps). Uploader user_177 has a clean history with educational focus. Initial reviewer rev_077 conducted full content review and found no policy violations (empty detected_catego"
+    },
+    {
+      "key": "106",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00114\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all validation checks. Technical specifications compliant (H.264, 2560x1440, 29.97fps). Human reviewer (rev_114) found no policy violations with empty detected_categories and confidence_scores. Automated scans showed no explicit content, copyright issues, spam, or regional compliance viol"
+    },
+    {
+      "key": "14",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00015\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validation checks (AV1 format, 1080p resolution, 30fps) and content moderation reviews. The initial reviewer (rev_015) found no policy violations with empty detected_categories and confidence_scores. All automated content analysis systems (explicit content detection, audio a"
+    },
+    {
+      "key": "92",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Moderation Complete\n\n<final_output>\n{\n    \"video_id\": \"vid_00099\",\n    \"Escalated\": false,\n    \"Moderation_actions\": [],\n    \"Age Rating\": \"\",\n    \"Content_warning\": false,\n    \"Final Decision\": \"Allow\",\n    \"Reason\": \"Video passed all technical validations (H.264 format, 2560x1440 resolution) and content review stages. Initial reviewer rev_099 found no violations (empty detected_categories and confidence_scores). All automated checks passed: no explicit content, copyright issues, spam, or po"
+    },
+    {
+      "key": "179",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "102",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "implementModeration",
+            "contracts": [
+              "implementModeration requires moderator_assigned"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "implementModeration requires moderator_assigned"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "<final_output>\n{\n    \"video_id\": \"vid_00110\",\n    \"Escalated\": true,\n    \"Moderation_actions\": [\"Warning\", \"Age Restrict\"],\n    \"Age_Rating\": \"13+\",\n    \"Content_warning\": true,\n    \"Final_Decision\": \"Age Restrict\",\n    \"Reason\": \"Video flagged for potential nudity by initial reviewer (rev_110) with moderate confidence (0.54). Case escalated to moderator (mod_110) who provided empty notes, suggesting no severe violations found. Given the context of a music performance video and first-time upload"
+    }
+  ]
+}

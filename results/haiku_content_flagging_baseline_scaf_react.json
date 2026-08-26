@@ -1,0 +1,4738 @@
+{
+  "summary": {
+    "pack": "content_flagging_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "react",
+    "flow_profile": null,
+    "freedom": 5.0,
+    "n": 168,
+    "TSR": 0.9821428571428571,
+    "ECR": 1.0,
+    "avg_model_calls": 5.910714285714286,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 2367998,
+    "cached_tokens": 0,
+    "avg_latency_s": 35.41,
+    "time_model_s": 5947.3,
+    "time_controller_s": 0.791,
+    "time_tools_s": 0.02,
+    "controller_share": 0.00013,
+    "decision_states": 993,
+    "unique_states": 7,
+    "state_reuse_rate": 0.993,
+    "cache": null,
+    "wall_clock_s": 5948.6
+  },
+  "rows": [
+    {
+      "key": "C123456908",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344574 has been banned based on comprehensive analysis: User Trust Score (14/100), Content Severity Index (86/100), Bot Probability Index (0.9/1.0). The high bot probability combined with severe content violations and poor user history triggered the user_banned disposition per SOP decision thresholds. All scoring metrics and audit trail have been recorded in the system."
+    },
+    {
+      "key": "C123456972",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456972) has been evaluated and determined to be **ALLOWED**. The user (u12344638) demonstrates high trustworthiness with an 87/100 trust score, low bot probability (0.1), and the content severity index of 33 does not warrant enforcement action. The decision has been recorded in the system."
+    },
+    {
+      "key": "C123456983",
+      "want": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456983) from user u12344649 has been evaluated and **REMOVED** from the platform. The user exhibits strong indicators of bot-like behavior (BPI: 0.9), an extremely poor trust profile (UTC: 29), and the content presents high violation severity (CSI: 76) for spam with bot_activity components. The removal decision aligns with SOP section 5.4.2 thresholds (60 < final_score \u2264 80 = removed)."
+    },
+    {
+      "key": "C123456799",
+      "want": {
+        "user_trust_score": 80,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 80,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Decision package submitted:\n- **User Trust Score**: 80/100\n- **Content Severity Index**: 35/100\n- **Final Disposition**: Warning\n- **Bot Probability**: 0.1 (legitimate user)\n\nThe flagged content has been assigned a warning disposition, reflecting the balance between the user's strong trust profile and the moderate content severity concerns."
+    },
+    {
+      "key": "C123456858",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456858) has been evaluated and assigned a **WARNING** disposition. The user (u12344524) is highly trustworthy (UTC: 82) with consistent device behavior and substantial legitimate posting history. The content severity is moderate (CSI: 42) with moderate-confidence violations in misinformation and copyright. No bot activity detected (BPI: 0.1). The warning action is appropriate to address the content issues while maintaining the user relationship given their strong trust p"
+    },
+    {
+      "key": "C123456818",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**\nThe flagged content (C123456818) has been evaluated and assigned a **WARNING** disposition. This decision reflects a high-trust user with a generally clean history posting content with moderate violation indicators. The content should be flagged to the user for potential revision rather than removed or resulting in account suspension."
+    },
+    {
+      "key": "C123456808",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456808) has been evaluated and the user (u12344474) has been permanently banned due to severe hate speech and violence violations combined with an extremely poor trust profile (25/100) and high historical flagging rate (75%). The content severity index of 95/100 and cumulative risk factors clearly justify the user_banned disposition."
+    },
+    {
+      "key": "C123456897",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456897) has been evaluated and **ALLOWED**. The user (u12344563) demonstrates strong legitimacy with a trust score of 95, the content severity is low at 24, and bot probability is negligible at 0.1. The violation confidences were insufficient to justify removal despite the initial flags. The decision has been recorded in the system."
+    },
+    {
+      "key": "C123456855",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456855 has been evaluated and **ALLOWED**. The user (u12344521) demonstrates high trustworthiness (UTC: 88), legitimate behavior patterns (BPI: 0.1), and the flagged content presents low severity concerns (CSI: 32). The violations detected (copyright and spam) have insufficient confidence levels to warrant action against this established, low-risk user."
+    },
+    {
+      "key": "C123456862",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456862 has been evaluated and the user account u12344528 has been **banned** due to severe violations (hate speech and violence with high confidence), extremely low user trust score (22/100), high bot probability (0.9), and a concerning history of 15 flagged posts out of 18 total posts. The decision package has been submitted and recorded."
+    },
+    {
+      "key": "C123456794",
+      "want": {
+        "user_trust_score": 75,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 75,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456794) has been evaluated and the final decision package has been submitted with a **WARNING** disposition. The user (u12344460) will receive notification of the violation while retaining account access, reflecting their moderate trust score despite the severity of the harassment and discrimination violations detected."
+    },
+    {
+      "key": "C123456845",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. The flagged content (C123456845) from user u12344511 has been processed through the comprehensive SOP pipeline and **user_banned** status has been applied. The decision package has been successfully submitted with user_trust_score: 18, content_severity_index: 88, and final_decision: user_banned. This action reflects the high-risk profile combining bot-like behavior, severe content violations (misinformation + bot_activity), and a history of problematic pos"
+    },
+    {
+      "key": "C123456901",
+      "want": {
+        "user_trust_score": 56,
+        "content_severity_index": 84,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 56,
+        "content_severity_index": 84,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456901) has been evaluated and the final decision is **REMOVED**. The comprehensive assessment determined:\n- User Trust Score: 56/100 (moderate risk due to high flagged post ratio)\n- Content Severity Index: 84/100 (serious violations: discrimination + hate_speech)\n- Bot Probability Index: 0.5 (moderate, normal device consistency)\n- Final Action: **Content Removed** - The combination of high content severity and violation confidence scores warranted removal despite modera"
+    },
+    {
+      "key": "C123456926",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456926) has been evaluated per SOP and the user (u12344592) has been **banned**. The decision package has been submitted with:\n- User Trust Score: 15 (very low)\n- Content Severity Index: 87 (very high)\n- Final Decision: user_banned\n\nThis action is justified by strong bot probability indicators, severe content violations, and a highly suspicious historical pattern of flagged posts."
+    },
+    {
+      "key": "C123456924",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456924 has been evaluated and the final decision is **ALLOWED**. Decision package submitted with user_trust_score: 95, content_severity_index: 22, and final_decision: allowed."
+    },
+    {
+      "key": "C123456854",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344520 has been **banned** due to high-risk bot activity combined with severe content violations (bot_activity + misinformation). Decision rationale: User Trust Score of 15 (indicating 83% historical flagging rate), Content Severity Index of 86 (high-confidence dual violations), and Bot Probability Index of 0.9 (strong bot indicators with 5 captcha failures). The comprehensive scoring pipeline has determined this account poses significant platform risk and wa"
+    },
+    {
+      "key": "C123456929",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456929) from user u12344595 has been successfully evaluated and **REMOVED** from the platform. The decision package has been submitted with:\n- **User Trust Score**: 30/100 (critically low)\n- **Content Severity Index**: 77/100 (high severity)\n- **Final Decision**: removed\n\nThis user exhibits strong indicators of bot-driven spam activity with an 86% historical flag rate, warranting swift content removal action."
+    },
+    {
+      "key": "C123456979",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344645 has been **banned** based on critical violations. The flagged content (C123456979) containing hate speech (91% confidence) and violence (86% confidence) combined with the user's extremely poor trust profile (20/100) and systematic violation pattern (11 of 13 posts flagged) resulted in the user_banned disposition per SOP requirements."
+    },
+    {
+      "key": "C123457012",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123457012 has been evaluated and assigned a **WARNING** disposition. The user (u12344678) demonstrates high trustworthiness (UTC: 83) with legitimate posting history and no bot indicators (BPI: 0.1). The flagged content presents moderate severity concerns (CSI: 41) related to misinformation and copyright issues, warranting a warning rather than removal or user ban. The content remains accessible while the user is notified of the policy violation."
+    },
+    {
+      "key": "C123456820",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete for C123456820. Final decision: **WARNING**. User trust score: 65/100, Content severity index: 68/100. The flagged content containing discrimination and hate speech has triggered a warning disposition for user u12344486. Decision package submitted and recorded."
+    },
+    {
+      "key": "C123456801",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 55,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 55,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. **Final Decision: WARNING** - User u12344467 has been issued a warning for content C123456801 containing adult content with secondary copyright violations. User Trust Score: 70/100, Content Severity Index: 55/100, Bot Probability: 0.3 (low). The decision reflects moderate violation severity balanced against the user's generally positive posting history and authentic device behavior."
+    },
+    {
+      "key": "C123456824",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Decision: **ALLOWED**. User trust score: 88/100, Content severity index: 32/100, Bot probability: 0.1. The content has been submitted to the system for approval."
+    },
+    {
+      "key": "C123456817",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456817 has been evaluated and the user (u12344483) has been **banned** based on critical violations including hate speech, apparent bot activity, extremely low user trust score (18/100), and a severe pattern of flagged content. The decision package has been successfully submitted to the system."
+    },
+    {
+      "key": "C123456831",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Evaluation Complete**\n\n**Decision Package Summary:**\n- **Content ID:** C123456831\n- **User ID:** u12344497\n- **Flag ID:** f1277\n\n**Scoring Results:**\n- **Bot Probability Index (BPI):** 0.1 (Very low - user is legitimate)\n- **Device Consistency Score:** 1.0 (Perfect consistency - desktop/Windows/Chrome)\n- **User Trust Score (UTC):** 85/100 (High trust - 420 previous posts, only 5 flagged, consistent device usage)\n- **Content Severity Index (CSI):** 42/100 (Moderate concern - "
+    },
+    {
+      "key": "C123456914",
+      "want": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456914) has been evaluated and processed with a **WARNING** disposition. The decision package has been submitted with user trust score of 74 and content severity index of 68, reflecting moderate violations by a relatively trustworthy user."
+    },
+    {
+      "key": "C123456902",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "** \nThe flagged content (C123456902) has been successfully evaluated and **REMOVED** from the platform. The user (u12344568) exhibits strong indicators of automated/bot activity with a 90% bot probability index, an extremely low trust score of 32 due to 80% of their posts being flagged, and the current content demonstrates high severity (78/100) with confirmed spam and bot activity violations. The decision package has been recorded in the system for audit and enforcement purposes."
+    },
+    {
+      "key": "C123456942",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456942 has been evaluated and the final decision is **ALLOWED**. The user (u12344608) demonstrates high trustworthiness with an excellent posting history, minimal flag rate, and legitimate device behavior. The flagged content shows low violation confidence scores (27% for adult content, 22% for spam), resulting in a low content severity index of 24. All factors support allowing this content to remain on the platform."
+    },
+    {
+      "key": "C123456840",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456840 has been evaluated and classified with a **WARNING** disposition. The decision package has been recorded in the system with user_trust_score: 88, content_severity_index: 36, and final_decision: warning."
+    },
+    {
+      "key": "C123456970",
+      "want": {
+        "user_trust_score": 21,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 21,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456970 from user u12344636 has been evaluated and the account has been **BANNED**. The user exhibited multiple risk indicators including high bot probability (0.9), critical content severity for hate speech and violence (CSI: 93), and severely compromised trust score (UTC: 21) with 83% of historical posts flagged for violations. The moderation decision has been recorded in the system."
+    },
+    {
+      "key": "C123456969",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. The flagged content (C123456969) has been evaluated per the SOP moderation pipeline and the final decision is **ALLOWED**. The decision package has been submitted with: User Trust Score: 95, Content Severity Index: 22, Final Decision: allowed."
+    },
+    {
+      "key": "C123456865",
+      "want": {
+        "user_trust_score": 52,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 52,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456865) has been successfully evaluated and **removed** from the platform. The decision package shows:\n- **User Trust Score**: 52/100 (below average due to high flagged post ratio)\n- **Content Severity Index**: 78/100 (high severity - discrimination and hate speech violations detected)\n- **Bot Probability Index**: 0.7 (moderate bot risk)\n- **Final Disposition**: REMOVED\n- **Status**: Decision recorded in system"
+    },
+    {
+      "key": "C123456830",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456830) has been evaluated and **REMOVED** from the platform. The decision was based on: high content severity (CSI: 78) for discrimination and hate speech violations, moderate user trust score (UTC: 65), low bot probability (BPI: 0.4), and the user's historical pattern of 15 flagged posts among 190 total posts. The final decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456884",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**\nThe flagged content (C123456884) from user u12344550 has been **REMOVED** from the platform. The decision was based on a comprehensive risk assessment indicating:\n- Strong bot activity indicators (BPI: 0.9)\n- Poor user trust history (UTC: 30) with 22 flagged posts out of 28 total\n- Significant content violation severity (CSI: 75) for spam with bot activity\n- The combination of these factors met the threshold for content removal per SOP section 5.4.2\n\nThe decision package has been recorded in "
+    },
+    {
+      "key": "C123456927",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456927) has been evaluated and **allowed**. The user demonstrates high trustworthiness with an established posting history and minimal flag rate, while the content violations show low confidence levels and minimal severity. The decision has been recorded in the moderation system."
+    },
+    {
+      "key": "C123456867",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344533 has been **banned** due to posting severe content (violence and self-harm violations with 95-90% confidence) combined with extremely low user trust metrics (score: 15), high bot probability (0.9), and a history of flagged posts (10 of 12 posts flagged). The content (C123456867) has been removed and the user account has been suspended per SOP section 5.4.2 decision thresholds."
+    },
+    {
+      "key": "C123456945",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456945 has been evaluated and cleared for publication. The flagged content from user u12344611 receives an \"allowed\" disposition with a user trust score of 87/100 and content severity index of 33/100. The low violation confidence scores combined with the user's strong historical reputation and device consistency patterns support removing the content restrictions. The decision has been recorded in the system."
+    },
+    {
+      "key": "C123456815",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 35,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456815 has been evaluated and assigned a **WARNING** disposition. The user u12344481 demonstrates high trustworthiness (score: 86) with strong posting history and low flag rates. The flagged content shows low severity (score: 35) with weak confidence in both copyright and harassment violations. A warning is appropriate to alert the user while maintaining the relationship with this generally good-standing account."
+    },
+    {
+      "key": "C123456994",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456994) has been evaluated and assigned a **WARNING** disposition. The user (u12344660) demonstrates strong trustworthiness (83/100) with minimal bot indicators (0.1 BPI), while the content shows moderate violation severity (42/100). The warning action balances the content concern with the user's established credibility and clean account history."
+    },
+    {
+      "key": "C123456978",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456978) has been evaluated and **ALLOWED**. The user (u12344644) demonstrates high trustworthiness (94/100) with extensive legitimate posting history and minimal prior infractions. The flagged content presents low severity concerns (24/100) with weak violation confidence scores for both primary and secondary violations. No bot indicators were detected. The content does not warrant removal, warning, or user banning."
+    },
+    {
+      "key": "C123456915",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456915 has been evaluated and the final decision package submitted successfully. The content has been marked as **ALLOWED** based on: user trust score of 96, content severity index of 22, and bot probability index of 0.1. The user demonstrates strong platform behavior with 800 previous posts and minimal flagging history, while the flagged content shows only weak violation signals (25% and 20% confidence respectively)."
+    },
+    {
+      "key": "C123456789",
+      "want": {
+        "user_trust_score": 35,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 35,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456789 flagged by user u12344455 has been evaluated and **REMOVED** from the platform. The evaluation determined: User Trust Score of 35 (low-risk user), Content Severity Index of 80 (high severity), and Bot Probability Index of 0.9 (high bot likelihood). The combination of high spam/bot_activity violation confidence scores (85% and 75% respectively), suspicious bot behavior patterns (4 captcha attempts), and the user's historical flagging record (12 flagged posts out of 150) resulte"
+    },
+    {
+      "key": "C123456791",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456791 has been evaluated and assigned a **WARNING** disposition. The decision package (user_trust_score: 85, content_severity_index: 40, final_decision: warning) has been successfully recorded in the moderation system."
+    },
+    {
+      "key": "C123456866",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456866 has been successfully evaluated and **removed** from the platform. The evaluation identified a likely bot account (BPI: 0.9) with very low user trust (UTC: 28) posting severe spam content (CSI: 82). The final decision package has been submitted and recorded."
+    },
+    {
+      "key": "C123456835",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344501 has been **banned** due to high-risk bot activity combined with hate speech violations. The decision package with all scoring metrics has been submitted and recorded in the moderation system."
+    },
+    {
+      "key": "C123456889",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. **Final Decision: USER_BANNED**\n\n**Summary:**\n- User Trust Score: 22/100 (Critical Risk)\n- Content Severity Index: 90/100 (Critical Violation)\n- Bot Probability Index: 0.9 (High Bot Activity Detected)\n- Disposition: User account banned due to combination of hate speech and violence violations, extremely poor historical behavior (86% flagged post rate), and suspected automated/bot activity"
+    },
+    {
+      "key": "C123456898",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344564 has been **banned** for flagged content C123456898 due to extremely high content severity (92/100 - hate speech and violence) combined with very low user trust score (20/100) and high bot probability (0.9). The decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456925",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456925) from user u12344591 has been processed and the user has been **banned** from the platform. The decision package has been recorded with:\n- **User Trust Score: 22/100** (critically low)\n- **Content Severity Index: 91/100** (extremely severe)\n- **Final Decision: user_banned**\n\nThe user demonstrated bot-like behavior, extremely poor posting history with 86% flagged content rate, and posted content containing both hate speech and violence violations at high confidence"
+    },
+    {
+      "key": "C123456951",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456951) has been evaluated and determined to be **ALLOWED**. The user demonstrates high trustworthiness with extensive posting history, minimal previous flags, and consistent device behavior. The flagged content presents low severity concerns with only marginal confidence scores for potential violations. No moderation action is warranted."
+    },
+    {
+      "key": "C123456879",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456879) has been evaluated and **ALLOWED**. The user (u12344545) demonstrates strong trust metrics (94/100) with extensive legitimate posting history, minimal flag history, and consistent device behavior. The content severity is low (28/100) with marginal confidence scores for both primary and secondary violations. No bot activity detected. The content moderation decision has been recorded in the system."
+    },
+    {
+      "key": "C123456874",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456874 has been **REMOVED** from the platform. The flagged content containing discrimination and hate speech violations (combined severity index of 76) was determined to violate platform policies. User u12344540 maintains a trust score of 55 and will be notified of the content removal action."
+    },
+    {
+      "key": "C123456948",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344614 has been **banned** for posting violent and self-harm content (CSI: 95/100). The user demonstrated severe policy violation patterns (8 of 9 posts flagged), bot-like behavior (BPI: 0.9), and critically low trustworthiness (UTC: 14/100). The content (C123456948) and user account have been removed from the platform."
+    },
+    {
+      "key": "C123456939",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344605 has been **banned** due to severe violation severity (CSI: 94) combined with critically low trust metrics (UTC: 15) and high bot probability (BPI: 0.9). The content (C123456939) contained multiple serious violations (violence and self-harm) with high confidence scores. The user's history shows 7 flagged posts out of 8 total, indicating a pattern of policy violations. Decision has been recorded in the system."
+    },
+    {
+      "key": "C123456887",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 70,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete for flagged content C123456887. **Final Disposition: WARNING**\n\n**Scoring Summary:**\n- User Trust Score: 70/100\n- Content Severity Index: 70/100\n- Bot Probability Index: 0.4 (low risk)\n- Device Consistency Score: 1.0 (highly consistent)\n\n**Violations Identified:**\n- Primary: Harassment (70% confidence)\n- Secondary: Discrimination (66% confidence)\n\n**Action**: User has been issued a warning for the violating content while maintaining account status. Historic"
+    },
+    {
+      "key": "C123456825",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456825) has been evaluated and the user (u12344491) has been **banned** from the platform. \n\n**Decision Summary:**\n- **User Trust Score**: 25/100 (critically low - 82% of user's posts have been flagged)\n- **Content Severity Index**: 96/100 (extremely high - dual violations: hate_speech at 96% confidence and violence at 92% confidence)\n- **Bot Probability**: 0.9 (high likelihood of automated/bot behavior based on suspicious captcha patterns)\n- **Final Disposition**: user_"
+    },
+    {
+      "key": "C123456921",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456921 from user u12344587 has been evaluated and **user_banned** decision has been implemented. The user exhibited bot-like behavior (BPI: 0.9), extremely low trust score (14/100) due to 89% historical flagged posts, and posted highly severe content combining violence and self-harm violations (CSI: 96/100). This disposition has been recorded in the moderation system."
+    },
+    {
+      "key": "C123456850",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456850) has been evaluated and **REMOVED** from the platform. The decision was driven by a high Content Severity Index (78) indicating strong evidence of spam and bot activity violations, combined with a moderate User Trust Score (55) reflecting the user's history of flagged content. The system has recorded this decision with complete audit trail documentation."
+    },
+    {
+      "key": "C123456811",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456811) has been evaluated and **removed** from the platform. The decision package has been submitted with the following metrics:\n- User Trust Score: 55\n- Content Severity Index: 75\n- Final Decision: Removed\n- Bot Probability Index: 0.5 (moderate, not primary factor)\n\nThe content containing discrimination and hate speech violations has been removed due to high severity violation scores despite the user's moderate trust rating."
+    },
+    {
+      "key": "C123456936",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "** Content flagged as C123456936 has been evaluated and determined to be ALLOWED. The user u12344602 demonstrates high trustworthiness (score: 86) with extensive posting history and minimal violations. While copyright and harassment violations were flagged with low confidence levels (37% and 32% respectively), the resulting content severity index of 34 does not warrant removal or user sanctions. No action is required against this content or user."
+    },
+    {
+      "key": "C123456947",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456947) has been **REMOVED** from the platform. The evaluation revealed concerning patterns: the user (u12344613) exhibits strong bot-like behavior (BPI: 0.9 with 4 captcha failures), extremely low trustworthiness (UTC: 30) with 25 flagged posts out of 31 total, and the content itself carries high severity (CSI: 76) with confirmed spam and bot activity violations. The decision package has been recorded in the system for audit and historical tracking purposes."
+    },
+    {
+      "key": "C123456822",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content from user u12344488 (content_id: C123456822) has been evaluated and the final decision is **user_banned**. The user exhibits strong indicators of bot activity with high confidence (BPI: 0.9), extremely low trust score (15), and severe content violations (CSI: 88). The decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456800",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456800) from user u12344466 has been evaluated and the user account has been **banned**. The content contained high-confidence hate speech (90%) and harassment (85%) violations, combined with a critically low user trust score (25) and suspicious bot-like behavior patterns. The decision package has been submitted to the system for immediate enforcement."
+    },
+    {
+      "key": "C123457008",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123457008 has been evaluated and **ALLOWED**. User trust score: 88/100, Content severity index: 32/100, Bot probability: 0.1. The flagged content does not warrant removal, user ban, or warning based on the comprehensive SOP evaluation framework."
+    },
+    {
+      "key": "C123456966",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 96,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344632 has been **banned** for content_id C123456966. Final metrics: User Trust Score = 14, Content Severity Index = 96, Bot Probability Index = 0.9. The combination of extremely low user trust, critical content severity involving violence and self-harm violations with high confidence scores, suspicious bot behavior, and a severe historical pattern of flagged content (87.5% of posts) resulted in the user_banned disposition."
+    },
+    {
+      "key": "C123456795",
+      "want": {
+        "user_trust_score": 90,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 90,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456795 has been evaluated and the final decision package has been submitted:\n- **User Trust Score**: 90/100 (High confidence in user legitimacy)\n- **Content Severity Index**: 30/100 (Low violation severity)\n- **Final Decision**: ALLOWED (Content remains on platform)\n\nThe evaluation is complete and recorded in the system."
+    },
+    {
+      "key": "C123456816",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456816 has been **REMOVED** from the platform. The decision is based on high content severity (CSI: 78), low user trust score (UTC: 32), and elevated bot probability (BPI: 0.9). The user u12344482 demonstrates concerning behavioral patterns with 25 flagged posts out of 35 total posts and bot-like activity indicators. The content violates spam and discrimination policies with high confidence levels (78% and 72% respectively). This decision package has been submitted and recorded for h"
+    },
+    {
+      "key": "C123456928",
+      "want": {
+        "user_trust_score": 56,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 56,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Thought: The content moderation evaluation has been completed successfully through the entire scoring pipeline. Here's a summary of the evaluation:\n\n1. **Bot Probability Index (BPI)**: 0.5\n   - User had is_possible_bot score of 0.5 with 2 captcha attempts\n   - Device consistency score of 1.0 (excellent consistency)\n   - Indicates moderate bot probability, not a strong bot signal\n\n2. **User Trust Score (UTC)**: 56\n   - 155 previous posts (moderate history)\n   - 22 flagged posts (concerning rate o"
+    },
+    {
+      "key": "C123457004",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 69,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 69,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123457004 has been evaluated and flagged content decision is **WARNING**. The user (u12344670) demonstrates reasonable trustworthiness (72/100 trust score) with legitimate device patterns. The content severity index of 69 indicates moderate-to-serious violations (harassment with secondary discrimination concerns). The warning disposition is appropriate given the balanced risk profile - the user is not exhibiting bot-like behavior and has a generally acceptable history, but the content v"
+    },
+    {
+      "key": "C123457005",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 24,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123457005) has been evaluated and the final decision is **ALLOWED**. The user (u12344671) demonstrates strong legitimate behavior patterns with a trust score of 95/100, while the flagged content has very low violation confidence scores (27% for adult_content, 22% for spam), resulting in a content severity index of only 24/100. This combination indicates the flag is likely a false positive, and the content should not be removed or the user warned or banned."
+    },
+    {
+      "key": "C123456943",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344609 has been **banned** for content_id C123456943. The user exhibited severe violations (hate speech + violence with 90% and 85% confidence respectively), combined with extremely low trust metrics (UTC: 22), high bot probability (BPI: 0.9), and a problematic history of 13 flagged posts out of 16 total. Decision package recorded with user_trust_score: 22, content_severity_index: 90, final_decision: user_banned."
+    },
+    {
+      "key": "C123456793",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Thought: The content moderation evaluation has been completed successfully through the entire scoring pipeline as specified in the SOP.\n\n**Summary of Evaluation Results:**\n\n1. **Bot Probability Index (BPI): 0.9** - The user exhibits strong bot-like behavior with is_possible_bot score of 0.9 and 5 captcha attempts, triggering the elevated BPI threshold.\n\n2. **User Trust Score (UTC): 20** - Critically low trust coefficient driven by:\n   - High bot probability index (0.9)\n   - High ratio of flagged"
+    },
+    {
+      "key": "C123456911",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456911) has been evaluated and **REMOVED** per the content moderation SOP. The decision is based on a comprehensive assessment showing high bot probability (0.9), very low user trust score (30), and elevated content severity (76). The user account exhibits patterns consistent with automated spam activity and warrants continued monitoring."
+    },
+    {
+      "key": "C123456821",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456821 has been evaluated and ALLOWED. The user u12344487 demonstrates high trustworthiness (score: 95) with excellent posting history (750 posts, only 2 flagged). The flagged content presents low severity (score: 25) with below-threshold violation confidences for both adult content (28%) and spam (22%). The user shows no bot characteristics (BPI: 0.1) and perfect device consistency. This combination of factors supports the allowed disposition."
+    },
+    {
+      "key": "C123456950",
+      "want": {
+        "user_trust_score": 73,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 73,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation completed. Final disposition: **WARNING**. User trust score: 73/100, Content severity index: 68/100, Bot probability: 0.3. The flagged content (C123456950) from user u12344616 has been assessed as harassment with discrimination elements and warrants a warning action while maintaining the user account in good standing."
+    },
+    {
+      "key": "C123456851",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456851 has been evaluated and **allowed**. The flagged content from user u12344517 was determined to be permissible based on: high user trust score (94), low content severity index (26), negligible bot probability (0.1), and strong historical user behavior. The violation confidence scores for both primary and secondary violations were too low to warrant removal or sanctions."
+    },
+    {
+      "key": "C123456917",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344583 has been **BANNED** due to high bot probability (0.9), critically low trust score (16), and severe content violations (CSI: 85). The account demonstrates characteristic bot behavior patterns with excessive captcha failures and a violation rate of 86% (6 flagged of 7 posts). This action has been recorded in the system."
+    },
+    {
+      "key": "C123457001",
+      "want": {
+        "user_trust_score": 31,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 31,
+        "content_severity_index": 77,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Decision package submitted:\n- **User Trust Score: 31/100** (Very Low - high violation ratio, bot indicators)\n- **Content Severity Index: 77/100** (High - spam with bot activity)\n- **Final Decision: REMOVED** (Content removed from platform)\n- **Bot Probability Index: 0.9** (High likelihood of automated behavior)\n\nThe content has been successfully removed and the decision recorded in the moderation system."
+    },
+    {
+      "key": "C123456959",
+      "want": {
+        "user_trust_score": 71,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 71,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456959 has been evaluated and assigned a **WARNING** disposition. The user (u12344625) has a trust score of 71, the flagged content has a severity index of 67, and the bot probability index is 0.4 (low bot likelihood). The warning reflects the moderate-to-high severity of harassment and discrimination violations while accounting for the user's reasonable trust profile and engagement history."
+    },
+    {
+      "key": "C123456859",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. **Decision: REMOVED**\n- User Trust Score: 30/100 (Very Low)\n- Content Severity Index: 75/100 (High)\n- Bot Probability Index: 0.9 (Highly Suspicious)\n- Final Disposition: Content removed and recorded in system audit trail"
+    },
+    {
+      "key": "C123456962",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344628 has been **banned** from the platform. The decision was based on: extremely low user trust score (15/100) driven by high violation rate (6 of 7 posts flagged), strong bot probability indicators (0.9 BPI with 5 captcha failures), and high content severity (86/100) from confirmed bot_activity and misinformation violations. The decision package has been recorded in the system."
+    },
+    {
+      "key": "C123456853",
+      "want": {
+        "user_trust_score": 25,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 25,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**CONTENT MODERATION DECISION SUMMARY**\n\n- **Content ID**: C123456853\n- **User ID**: u12344519\n- **Final Disposition**: USER_BANNED\n- **User Trust Score**: 25/100 (Very Low)\n- **Content Severity Index**: 94/100 (Critical)\n- **Bot Probability Index**: 0.9 (High)\n\n**Justification**: The user demonstrates severe policy violations (hate speech + violence, combined confidence 92%), extremely low trustworthiness (75% of previous posts flagged), high bot probability suggesting automated abuse, and geog"
+    },
+    {
+      "key": "C123456833",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344499 has been **banned** for flagged content C123456833 containing self-harm and violence violations. User Trust Score: 15/100, Content Severity Index: 92/100, Bot Probability Index: 0.9. Decision recorded in system."
+    },
+    {
+      "key": "C123456935",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456935) from user u12344601 has been evaluated and the final disposition is **USER_BANNED**. The comprehensive scoring package indicates this account exhibits strong bot activity patterns with severe misinformation violations, combined with a poor historical behavior record (85.7% of posts flagged). The decision has been recorded in the system and the user account has been banned."
+    },
+    {
+      "key": "C123456829",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344495 has been **BANNED** from the platform based on high bot probability (0.9), severe content violations (CSI: 86), and critically low user trust score (18). The decision package has been successfully recorded in the system."
+    },
+    {
+      "key": "C123456912",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. **User u12344578 has been banned** due to a combination of critical factors: extremely low trust score (15), severe content violations (94 severity index), likely bot behavior (0.9 BPI), and a 87.5% flagged content ratio. Content C123456912 has been removed from the platform."
+    },
+    {
+      "key": "C123456812",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 28,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456812) has been evaluated and **ALLOWED**. The user (u12344478) demonstrates high trustworthiness with a UTC of 92, the content severity is low at 28/100, and bot probability is negligible at 0.1. The combination of a reputable user profile, low violation confidence scores, and minimal historical violations supports the decision to allow this content."
+    },
+    {
+      "key": "C123456957",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Decision - FINAL REPORT**\n\n| Metric | Value | Status |\n|--------|-------|--------|\n| Content ID | C123456957 | \u2014 |\n| User ID | u12344623 | \u2014 |\n| Bot Probability Index | 0.9 | HIGH RISK |\n| User Trust Score | 16/100 | CRITICAL |\n| Content Severity Index | 93/100 | CRITICAL |\n| **Final Decision** | **user_banned** | **ENFORCED** |\n\n**Rationale**: The user exhibits bot-like behavior (0.9 BPI), extremely low trust score (16), and posted severely violating content (93 CSI) combin"
+    },
+    {
+      "key": "C123456953",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456953) from user u12344619 has been evaluated through the complete SOP moderation pipeline with the following results:\n\n**FINAL DECISION: USER_BANNED**\n\n**Decision Package Summary:**\n- **User Trust Score (UTC):** 15/100 - Critically low (5 of 6 historical posts flagged = 83% violation rate)\n- **Bot Probability Index (BPI):** 0.9 - Very High (is_possible_bot=0.95, Captcha_tries=5)\n- **Content Severity Index (CSI):** 85/100 - High Severity (Primary: bot_activity 87%, Seco"
+    },
+    {
+      "key": "C123456870",
+      "want": {
+        "user_trust_score": 68,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 68,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456870 has been evaluated and **REMOVED**. The user (u12344536) is a legitimate user with moderate trust (score: 68), but the flagged content exhibits high severity harassment and discrimination (score: 72), warranting removal while preserving the user's account. The decision has been recorded in the system with full audit trail documentation."
+    },
+    {
+      "key": "C123456828",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**\n\nThe flagged content (C123456828) has been evaluated and **ALLOWED**. The decision is based on a highly trustworthy user (UTC: 92), low content severity concerns (CSI: 30), and legitimate user behavior indicators (BPI: 0.1). The violation confidences for both copyright and harassment are relatively low, and the user's strong posting history with minimal prior flags supports permitting this content. The decision package has been submitted to the system for recording."
+    },
+    {
+      "key": "C123457007",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content has been evaluated per the SOP content moderation framework. User u12344673 has been **banned** based on a comprehensive risk assessment showing critically low trust (16/100), high content severity (87/100), and strong bot activity indicators (0.9 BPI). The user's pattern of 6 flagged posts out of 7 total submissions combined with bot-like captcha behavior and misinformation violations warranted the most severe disposition under the decision matrix."
+    },
+    {
+      "key": "C123456836",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456836) has been evaluated and **ALLOWED**. The decision package has been submitted with:\n- User Trust Score: 92/100 (highly trustworthy user)\n- Content Severity Index: 30/100 (low severity concerns)\n- Final Decision: ALLOWED\n- Bot Probability Index: 0.1 (legitimate user, not a bot)\n\nThe user demonstrates strong legitimate engagement history with minimal prior flags, consistent device usage, and the flagged content shows low confidence violations, supporting the allowanc"
+    },
+    {
+      "key": "C123456883",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456883) has been evaluated and **REMOVED** from the platform. The decision was driven by high content severity (CSI: 80) stemming from confirmed discrimination and hate speech violations, despite the user's moderate trust score (UTC: 58). The audit trail has been recorded in the system with all supporting metrics for future reference."
+    },
+    {
+      "key": "C123456960",
+      "want": {
+        "user_trust_score": 94,
+        "content_severity_index": 23,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 94,
+        "content_severity_index": 23,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Evaluation Complete**\n\n**Flagged Content**: C123456960\n- **User Trust Score**: 94/100 (High trust - established user with 770 posts, minimal flag history, consistent device behavior, non-bot)\n- **Content Severity Index**: 23/100 (Low severity - low confidence scores for both adult_content and spam violations)\n- **Bot Probability Index**: 0.1 (Clear human user, no bot indicators)\n- **Final Decision**: **ALLOWED**\n\n**Rationale**: The high user trust coefficient combined with l"
+    },
+    {
+      "key": "C123456832",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Flagged content C123456832 has been **REMOVED** based on comprehensive risk assessment. User u12344498 demonstrates bot-like behavior (BPI: 0.9), extremely low trust score (UTC: 32), and the content exhibits high severity violations (CSI: 82) combining spam and misinformation. The user's 80% flagged post ratio combined with failed captcha attempts and violation patterns warranted content removal per SOP section 5.4.2 threshold criteria."
+    },
+    {
+      "key": "C123456934",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 89,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 89,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344600 has been **banned** based on:\n- Bot Probability Index: 0.9 (high bot likelihood)\n- User Trust Score: 20 (very low trust)\n- Content Severity Index: 89 (critical violations)\n- Violations: hate_speech (89% confidence) + violence (84% confidence)\n- Historical Pattern: 12 flagged posts out of 15 total (80% violation rate)\n\nThe user_banned action has been implemented and recorded in the system per SOP section 5.4.2."
+    },
+    {
+      "key": "C123456944",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344610 has been successfully banned based on high bot probability (0.9), critically low user trust score (16/100), severe content violations (CSI: 88/100), and concerning behavioral patterns. The decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456792",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 25,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456792) has been evaluated and **ALLOWED**. Decision package submitted with user_trust_score: 95, content_severity_index: 25, final_decision: allowed."
+    },
+    {
+      "key": "C123456894",
+      "want": {
+        "user_trust_score": 14,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 14,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Evaluation Complete**\n\n- **Content ID:** C123456894\n- **User ID:** u12344560\n- **Bot Probability Index:** 0.9 (High - likely automated)\n- **User Trust Score:** 14 (Critical)\n- **Content Severity Index:** 93 (Critical - violence + self_harm)\n- **Final Decision:** USER_BANNED\n\nThe flagged content has been assessed as requiring the most severe action. The user demonstrates characteristics of bot-like behavior, has an extremely poor trust profile (8 out of 9 posts flagged), and "
+    },
+    {
+      "key": "C123456842",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344508 has been **BANNED** due to critical combination of factors: extremely low user trust score (15), severe content violations (violence + self_harm at 95-90% confidence), high bot probability (0.9), and excessive historical flagging (8 of 10 posts flagged). The decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456922",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344588 has received a warning for flagged content C123456922 based on moderate severity misinformation/copyright concerns, balanced against their high trust score and legitimate user behavior patterns."
+    },
+    {
+      "key": "C123456992",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456992) has been evaluated and **REMOVED** from the platform. The user (u12344658) exhibits high bot probability (0.9), extremely low trust score (30), and the content has high severity (75) due to spam and bot activity violations. The comprehensive scoring indicates this is likely coordinated spam activity from a bot-operated account, warranting content removal."
+    },
+    {
+      "key": "C123456975",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456975) has been evaluated and processed per SOP guidelines. The user (u12344641) has been **banned** due to critical risk factors including a dangerously low trust score (15), severe content violations (violence and self-harm at 94-89% confidence), and high bot probability (0.9). The decision package has been submitted to the system with all scoring metrics recorded for audit trail purposes."
+    },
+    {
+      "key": "C123456997",
+      "want": {
+        "user_trust_score": 21,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 21,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation completed. **Decision: USER BANNED** for content_id C123456997 due to severe hate speech and violence violations combined with extremely low user trust score and bot detection indicators. User u12344663 has been flagged for platform removal."
+    },
+    {
+      "key": "C123456838",
+      "want": {
+        "user_trust_score": 12,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 12,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456838) from user u12344504 has been **BANNED** with the following decision package:\n- User Trust Score: 12/100 (Very Low)\n- Content Severity Index: 90/100 (Critical)\n- Bot Probability Index: 0.9 (Very High)\n- Final Disposition: **user_banned**\n\nThe user exhibited strong bot-like behavior combined with high-severity violations (bot activity and harassment). The decision has been recorded in the system and user account u12344504 has been suspended from the platform."
+    },
+    {
+      "key": "C123456869",
+      "want": {
+        "user_trust_score": 95,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 95,
+        "content_severity_index": 26,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456869) has been evaluated and **ALLOWED**. The highly trustworthy user (UTC: 95) combined with low content severity (CSI: 26) and minimal bot risk (BPI: 0.1) resulted in approval of the content. The violation confidence scores (28% primary, 24% secondary) were insufficient to warrant removal or warning."
+    },
+    {
+      "key": "C123456823",
+      "want": {
+        "user_trust_score": 62,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 62,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456823 has been evaluated and **REMOVED** from the platform. The evaluation determined: User Trust Score of 62, Content Severity Index of 72, and Bot Probability Index of 0.5. The removal action was triggered due to high-severity violations (harassment and discrimination) despite moderate user trust metrics. The result has been recorded in the moderation system."
+    },
+    {
+      "key": "C123456796",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456796) from user u12344462 has been evaluated and the account has been **banned**. The decision was based on a comprehensive assessment showing strong evidence of bot activity combined with spam behavior, extremely low user trust metrics, and a concerning historical pattern of flagged content. The decision package has been submitted to the system for execution."
+    },
+    {
+      "key": "C123456899",
+      "want": {
+        "user_trust_score": 12,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 12,
+        "content_severity_index": 88,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**CONTENT MODERATION DECISION PACKAGE**\n\n| Metric | Value | Status |\n|--------|-------|--------|\n| **Content ID** | C123456899 | \u2713 |\n| **User ID** | u12344565 | \u2713 |\n| **Bot Probability Index** | 0.9 | Critical |\n| **User Trust Score** | 12 | Critical |\n| **Content Severity Index** | 88 | Critical |\n| **Final Disposition** | **USER_BANNED** | Enforced |\n\n**Rationale:** User exhibits strong bot-like behavior patterns (high BPI, excessive captcha failures), critically poor trust profile (80% flagge"
+    },
+    {
+      "key": "C123456880",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 94,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456880) has been evaluated and the user (u12344546) has been **banned** from the platform. The decision package has been submitted with user_trust_score: 20, content_severity_index: 94, and final_decision: user_banned. This action is justified given the severe hate speech and violence violations combined with the user's extremely poor historical record and suspicious bot-like behavior patterns."
+    },
+    {
+      "key": "C123456872",
+      "want": {
+        "user_trust_score": 18,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 18,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456872) from user u12344538 has been evaluated and the user has been **BANNED** from the platform. The decision was based on critical risk factors including a Bot Probability Index of 0.9, exceptionally low User Trust Score of 18, and high Content Severity Index of 85. The user's posting history shows 83% of posts (5 out of 6) have been flagged, combined with bot-like behavioral patterns including excessive captcha attempts, indicating coordinated or automated violation "
+    },
+    {
+      "key": "C123456988",
+      "want": {
+        "user_trust_score": 22,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 22,
+        "content_severity_index": 92,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content has been evaluated per SOP procedures. User u12344654 has been **banned** due to critical combination of factors: severely violating content (hate speech + violence at 92 CSI), extremely low trust score (22/100) from 86% flagged post ratio, high bot probability (0.9), and pattern of policy violations. The decision has been recorded in the system."
+    },
+    {
+      "key": "C123456993",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 93,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Decision Summary for C123456993**\n\n- **User Trust Score**: 16/100 (Critical Risk)\n- **Content Severity Index**: 93/100 (Critical Violation)\n- **Bot Probability Index**: 0.9 (Highly Suspicious)\n- **Final Disposition**: **USER_BANNED**\n\n**Justification**: The flagged content contains severe violence and self-harm violations (combined confidence: 90.5%), posted by a highly suspicious user account exhibiting bot-like behavior (5 captcha failures, high bot probability), with a se"
+    },
+    {
+      "key": "C123456878",
+      "want": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 74,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456878 has been evaluated and assigned a **WARNING** disposition. The user (u12344544) will receive a warning for the flagged harassment and discrimination content while maintaining account standing. User trust score: 74/100, Content severity index: 68/100, Bot probability: 0.3 (low risk). Decision recorded successfully."
+    },
+    {
+      "key": "C123456797",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456797 has been **REMOVED** from the platform. The evaluation determined a content severity index of 75 (indicating serious violations for self_harm and violence), with a user trust score of 65. The flagged user has a reasonable posting history but elevated flag history, combined with serious violation confidence levels (75% primary, 70% secondary), warranting content removal without user ban. The final decision package has been submitted and recorded."
+    },
+    {
+      "key": "C123456802",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456802 has been evaluated and **REMOVED** from the platform. The evaluation revealed a high-risk user profile (UTC: 30) with very strong bot probability indicators (BPI: 0.9), combined with severe content violations (CSI: 80) consisting of misinformation paired with bot activity. The decision was submitted and recorded successfully."
+    },
+    {
+      "key": "C123456848",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. The flagged content (C123456848) from user u12344514 has been classified for a **WARNING** action. The user demonstrates high trustworthiness (UTC: 85) with consistent, legitimate behavior patterns, while the content presents moderate severity concerns (CSI: 40) with borderline misinformation and copyright violations. This balanced assessment supports a corrective warning rather than removal or suspension."
+    },
+    {
+      "key": "C123456981",
+      "want": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 88,
+        "content_severity_index": 32,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete for flagged content C123456981. \n\n**Decision Summary:**\n- **Final Disposition**: ALLOWED\n- **User Trust Score**: 88/100 (High - Trusted User)\n- **Content Severity Index**: 32/100 (Low)\n- **Bot Probability Index**: 0.1 (Legitimate User)\n\n**Rationale**: User u12344647 demonstrates strong platform credibility with 565 previous posts and minimal violation history (4 flagged posts). The flagged content shows low confidence levels for both copyright (35%) and harassment (30"
+    },
+    {
+      "key": "C123456920",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 74,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 74,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456920 has been **REMOVED** based on comprehensive moderation analysis. The flagged content from user u12344586 exhibited high bot probability (0.9), critically low user trust score (28), and elevated content severity index (74) due to spam and bot activity violations. The user's posting history shows an 81% flagged rate, confirming systematic policy violations. The content has been removed and the user account flagged for further review."
+    },
+    {
+      "key": "C123456806",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456806) has been evaluated and assigned a **WARNING** disposition. The user (u12344472) demonstrates reasonable trustworthiness with a score of 72, but the content exhibits clear violations (harassment and discrimination with combined severity of 65). The warning action allows for user correction while acknowledging the violation without removing content or banning the user account."
+    },
+    {
+      "key": "C123456955",
+      "want": {
+        "user_trust_score": 53,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 53,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Decision Complete**\n\n- **Content ID**: C123456955\n- **User ID**: u12344621\n- **Final Disposition**: REMOVED\n- **User Trust Score**: 53/100 (Moderate)\n- **Content Severity Index**: 81/100 (High)\n- **Bot Probability Index**: 0.7 (Moderate Risk)\n- **Primary Violation**: Discrimination (confidence: 81%)\n- **Secondary Violation**: Hate Speech (confidence: 76%)\n\nThe flagged content has been removed from the platform due to high severity violations (discrimination and hate speech) "
+    },
+    {
+      "key": "C123456861",
+      "want": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 92,
+        "content_severity_index": 30,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456861) has been evaluated and determined to be **ALLOWED**. The trustworthy user with an excellent posting history (650 posts, only 3 flags) combined with low severity violation confidence scores (32% and 28%) resulted in an \"allowed\" disposition. The decision package has been submitted and recorded in the content moderation system."
+    },
+    {
+      "key": "C123456985",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456985) has been evaluated and assigned a **WARNING** disposition. The user (u12344651) demonstrates high trustworthiness with a UTC of 85, backed by strong posting history and device consistency. While the content presents moderate severity concerns (CSI: 41) regarding potential misinformation and copyright issues, the user's overall reliability and low violation history justify a warning rather than removal or account suspension. The decision package has been submitted"
+    },
+    {
+      "key": "C123456923",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Flagged content C123456923 has been assessed and classified as requiring a **WARNING** disposition. The decision package has been submitted to the system with user_trust_score of 70, content_severity_index of 66, and final_decision of warning. User u12344589 will receive notification of policy violation while retaining platform access."
+    },
+    {
+      "key": "C123456974",
+      "want": {
+        "user_trust_score": 30,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 30,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456974 has been successfully evaluated and **removed** per SOP guidelines. The decision package has been submitted with user trust score of 30, content severity index of 78, and final disposition of \"removed\". The content moderation decision is now recorded in the system."
+    },
+    {
+      "key": "C123456995",
+      "want": {
+        "user_trust_score": 71,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 71,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456995) has been evaluated and a **WARNING** disposition has been issued. The user demonstrates generally trustworthy behavior (UTC: 71/100) despite the moderate-to-high content severity score (CSI: 68/100) for harassment and discrimination violations. The system has recorded this decision with a comprehensive audit trail including bot probability analysis, geographic risk assessment, and device consistency validation."
+    },
+    {
+      "key": "C123456852",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456852) from user u12344518 has been evaluated and assigned a **WARNING** disposition. The user trust score is 70, content severity index is 68, and bot probability is 0.4. The decision has been recorded in the system. The warning reflects the moderate severity of the harassment and discrimination violations while acknowledging the user's moderate trust standing with their posting history."
+    },
+    {
+      "key": "C123456843",
+      "want": {
+        "user_trust_score": 75,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 75,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456843 has been evaluated and a **WARNING** disposition has been applied to user u12344509. The decision package with user_trust_score of 75, content_severity_index of 65, and final_decision of \"warning\" has been recorded in the system."
+    },
+    {
+      "key": "C123456896",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456896 has been evaluated and assigned a **WARNING** disposition. The flagged harassment and discrimination content warrants user notification and corrective messaging, while the user's moderate trust score (72) and low bot probability (0.3) indicate this is an established human user who should be given an opportunity to correct their behavior rather than immediate removal or banning."
+    },
+    {
+      "key": "C123456839",
+      "want": {
+        "user_trust_score": 65,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 65,
+        "content_severity_index": 72,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456839) has been successfully evaluated and **removed** from the platform. The content contained discrimination and hate speech violations with combined confidence levels indicating significant policy violations. The user (u12344505) demonstrated legitimate behavior patterns with a trust score of 65, so no account action was taken. The decision package has been recorded in the system with comprehensive audit trail."
+    },
+    {
+      "key": "C123456963",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456963 has been evaluated and **ALLOWED** to remain on the platform. Final scoring: User Trust Score = 86, Content Severity Index = 34, Bot Probability Index = 0.1. The user demonstrates strong legitimacy with minimal violation history and high device consistency, while the flagged content has relatively low confidence violation scores that do not warrant removal or user sanctions."
+    },
+    {
+      "key": "C123457010",
+      "want": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 29,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123457010) has been evaluated per SOP and **REMOVED** from the platform. The decision was based on a comprehensive assessment showing high bot activity probability, extremely low user trust coefficient, and high content severity index. The user demonstrates patterns consistent with automated spam generation, with 81% of their posts being flagged. The decision package has been submitted and recorded in the system."
+    },
+    {
+      "key": "C123456986",
+      "want": {
+        "user_trust_score": 73,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 73,
+        "content_severity_index": 67,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. The flagged content (C123456986) has been assessed and assigned a **WARNING** disposition based on the comprehensive scoring pipeline. The user demonstrates legitimate behavior patterns with a trust score of 73, while the content severity index of 67 reflects moderate harassment and discrimination violations. The warning action allows the user an opportunity to modify behavior while maintaining their account in good standing."
+    },
+    {
+      "key": "C123456958",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Final Decision: **WARNING**. The flagged content (C123456958) from user u12344624 will receive a warning action. The user demonstrates high trustworthiness (UTC: 84) with minimal bot indicators (BPI: 0.1), while the content shows moderate severity concerns (CSI: 42) with low-to-moderate violation confidence scores. This balanced assessment supports a warning disposition rather than content removal or account suspension."
+    },
+    {
+      "key": "C123456847",
+      "want": {
+        "user_trust_score": 68,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 68,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456847) has been evaluated and the decision package has been submitted. **Final Decision: REMOVED**. The content violates platform policies regarding discrimination and harassment with high confidence levels, and has been removed from the platform. The user's trust score of 68 and the severe nature of the violations (CSI: 75) resulted in content removal as the appropriate enforcement action."
+    },
+    {
+      "key": "C123456837",
+      "want": {
+        "user_trust_score": 62,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 62,
+        "content_severity_index": 76,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456837) has been evaluated and **REMOVED** from the platform. The decision package has been recorded with the following metrics:\n- User Trust Score: 62/100\n- Content Severity Index: 76/100\n- Bot Probability Index: 0.5\n- Final Disposition: **REMOVED**\n\nThe content violated misinformation and violence policies with high confidence scores, warranting removal despite the user having a moderate trust profile."
+    },
+    {
+      "key": "C123456877",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 78,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content has been successfully evaluated and removed per SOP protocols. The decision package has been submitted with: user_trust_score=32, content_severity_index=78, and final_decision=removed."
+    },
+    {
+      "key": "C123456810",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344476 has been **banned** for content_id C123456810. Final scores: User Trust Score = 15/100, Content Severity Index = 90/100, Bot Probability Index = 0.9. Decision recorded in system."
+    },
+    {
+      "key": "C123456846",
+      "want": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 32,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "** The flagged content (C123456846) has been evaluated and the final decision is **REMOVED**. The decision package has been submitted with the following metrics:\n- User Trust Score: 32/100\n- Content Severity Index: 82/100\n- Final Decision: removed\n\nThe content meets criteria for removal due to the combination of serious violations (hate speech and violence), low user trustworthiness, and elevated bot probability indicators."
+    },
+    {
+      "key": "C123456949",
+      "want": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 83,
+        "content_severity_index": 41,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Content ID C123456949 has been assigned a **WARNING** disposition with user trust score of 83 and content severity index of 41. The decision has been recorded in the system."
+    },
+    {
+      "key": "C123457006",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 91,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344672 has been **banned** due to critical severity hate speech and violence violations (CSI: 91), extremely low trust score (UTC: 20), high bot probability (BPI: 0.9), and abusive posting history (11 of 13 posts flagged). Decision recorded in system."
+    },
+    {
+      "key": "C123456976",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 43,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 71,
+        "content_severity_index": 44,
+        "final_decision": "allowed"
+      },
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "** \n\nThe flagged content (C123456976) has been evaluated through the complete SOP moderation pipeline with the following results:\n\n**Decision: ALLOWED**\n\n**Scoring Summary:**\n- **Bot Probability Index (BPI):** 0.1 (Low - Legitimate User)\n- **User Trust Score (UTC):** 71 (Moderately Positive)\n- **Content Severity Index (CSI):** 44 (Moderate/Borderline)\n- **Final Decision Score:** Below warning threshold\n\n**Rationale:**\nThe user demonstrates legitimate behavior patterns with 435 previous posts, on"
+    },
+    {
+      "key": "C123456980",
+      "want": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 16,
+        "content_severity_index": 87,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation completed. User u12344646 has been **BANNED** due to combined indicators of bot activity, high violation severity (87/100), extremely low user trust score (16/100), and persistent flagged content pattern. The decision is based on the systematic evaluation framework outlined in the SOP, with all scoring metrics indicating high-confidence violation requiring account removal."
+    },
+    {
+      "key": "C123456918",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 36,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete for flagged content C123456918. Final disposition: **WARNING**. The content has been evaluated and recorded with a user trust score of 85 (high confidence in user legitimacy) and content severity index of 36 (low violation severity). The user will receive a warning notification regarding the flagged content."
+    },
+    {
+      "key": "C123456826",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456826 has been evaluated and **REMOVED** from the platform. Final metrics: User Trust Score = 58, Content Severity Index = 75, Bot Probability Index = 0.7. The content violated misinformation policies with high confidence (75%) and exhibited secondary bot activity indicators. The decision has been recorded in the moderation system."
+    },
+    {
+      "key": "C123456946",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456946) has been successfully evaluated and **removed** from the platform. The decision package shows: User Trust Score: 58, Content Severity Index: 82, and Final Decision: removed. The content's high severity due to discrimination and hate speech violations justified removal despite the user having a moderate trust profile."
+    },
+    {
+      "key": "C123457000",
+      "want": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. The flagged content (C123457000) has been **REMOVED** based on comprehensive scoring analysis showing high content severity (CSI: 82) with confirmed discrimination and hate speech violations, combined with moderate user trust concerns (UTC: 54) and elevated bot probability (BPI: 0.7). The decision has been recorded in the system."
+    },
+    {
+      "key": "C123456790",
+      "want": {
+        "user_trust_score": 45,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 45,
+        "content_severity_index": 90,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content evaluation is complete. User u12344456 has been **banned** from the platform due to posting severely violative hate speech and discriminatory content (CSI: 90). The user's account history shows a consistent pattern of flagged posts, and the current content represents a clear violation requiring permanent account suspension. The decision package has been submitted to the moderation system."
+    },
+    {
+      "key": "C123456841",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 85,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 85,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456841) has been evaluated and **REMOVED** from the platform. The user (u12344507) exhibits suspicious bot-like behavior (BPI: 0.9), extremely low trust score (28/100), and the content contains high-severity violations (CSI: 85/100) combining spam and misinformation. The user's pattern of 25 flagged posts out of 30 total posts, combined with 4 captcha failures and high bot probability, supports the removal decision. All scoring metrics and the final disposition have been"
+    },
+    {
+      "key": "C123456938",
+      "want": {
+        "user_trust_score": 28,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 28,
+        "content_severity_index": 75,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content flagged as C123456938 has been evaluated and **REMOVED** from the platform. The comprehensive moderation decision was driven by a very low user trust score (28/100) combined with high bot probability (0.9), substantial content severity (75/100), and the user's concerning history with 26 flagged posts out of 34 total posts. The content violates spam policies with secondary bot activity indicators, warranting immediate removal."
+    },
+    {
+      "key": "C123456919",
+      "want": {
+        "user_trust_score": 55,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 55,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Decision Complete**\n\n- **Content ID**: C123456919\n- **User ID**: u12344585\n- **User Trust Score**: 55/100 (moderate risk)\n- **Content Severity Index**: 82/100 (high severity)\n- **Bot Probability Index**: 0.5 (moderate bot risk)\n- **Final Decision**: **REMOVED**\n\n**Rationale**: The flagged content contains confirmed discrimination and hate speech violations with high confidence scores (82% and 78% respectively). Although the user has a moderate trust profile with substantial "
+    },
+    {
+      "key": "C123456940",
+      "want": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 85,
+        "content_severity_index": 40,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation for C123456940 completed. Decision: **WARNING**. The flagged content has been assessed as moderately problematic (CSI: 40) with low-to-moderate violation confidence scores. The user demonstrates strong historical reliability (UTC: 85) with legitimate device patterns (BPI: 0.1). A warning is the appropriate proportional response, alerting the user while preserving their account standing given their positive contribution history."
+    },
+    {
+      "key": "C123456892",
+      "want": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 54,
+        "content_severity_index": 82,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**\nThe flagged content has been evaluated through the complete SOP moderation pipeline and **removed** from the platform. The decision was driven by high content severity index (82) indicating clear discrimination and hate speech violations, combined with a moderately concerning user trust profile (54) showing elevated flagging rates. The decision package has been successfully recorded in the system with all scoring metrics and audit trails preserved."
+    },
+    {
+      "key": "C123456888",
+      "want": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 96,
+        "content_severity_index": 22,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Decision Summary for C123456888**\n\n**Scoring Pipeline Results:**\n\n1. **Bot Probability Index (BPI):** 0.1\n   - User demonstrates low bot probability with no captcha failures\n   - Device consistency score: 1.0 (perfect consistency)\n   - Assessment: Legitimate human user\n\n2. **User Trust Score (UTC):** 96/100\n   - 750 previous posts (extensive platform history - positive indicator)\n   - Only 2 flagged posts (minimal violation history - positive indicator)\n   - Geographic locat"
+    },
+    {
+      "key": "C123456905",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 64,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 64,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Flagged content (C123456905) has been assessed and a **WARNING** disposition has been recorded. User trust score: 70, Content severity index: 64. The decision package has been submitted to the system for implementation."
+    },
+    {
+      "key": "C123456876",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. The flagged content (C123456876) from user u12344542 has been assigned a **WARNING** disposition. The user demonstrates high trustworthiness (score: 82) with consistent, legitimate behavior patterns and low bot probability (0.1). While the content contains misinformation and copyright concerns (severity index: 42), the moderate violation confidence levels and strong user history support an educational warning rather than content removal or user suspension. The decisi"
+    },
+    {
+      "key": "C123456991",
+      "want": {
+        "user_trust_score": 58,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 58,
+        "content_severity_index": 81,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456991 has been evaluated and **REMOVED** from the platform based on high severity discrimination and hate speech violations (CSI: 81), combined with a concerning user trust profile (UTC: 58) and prior violation history (24 flagged posts)."
+    },
+    {
+      "key": "C123456863",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 85,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. User u12344529 has been **banned** based on high bot probability (0.9), critically low trust score (15/100), and severe content violations (CSI: 85/100). The account demonstrated systematic bot-like behavior with 75% of posts flagged, combined with high-confidence bot activity and misinformation violations."
+    },
+    {
+      "key": "C123456999",
+      "want": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 87,
+        "content_severity_index": 33,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. Content C123456999 from user u12344665 has been classified as **ALLOWED** with a user trust score of 87/100 and content severity index of 33/100. The flagged content does not warrant removal or user restrictions based on the comprehensive moderation analysis."
+    },
+    {
+      "key": "C123456910",
+      "want": {
+        "user_trust_score": 52,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "got": {
+        "user_trust_score": 52,
+        "content_severity_index": 80,
+        "final_decision": "removed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456910 has been evaluated and the decision package has been submitted. **Final Disposition: REMOVED**. The flagged content containing discrimination and hate speech violations has been removed from the platform due to high content severity (CSI: 80) and the combination of moderate user trust metrics and bot detection indicators."
+    },
+    {
+      "key": "C123457013",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete. Decision package submitted:\n- **User Trust Score**: 70/100\n- **Content Severity Index**: 68/100\n- **Final Decision**: Warning\n- **Rationale**: Flagged content contains harassment and discrimination violations with moderate confidence levels from a legitimate user with good historical posting volume but elevated flag ratio. Warning disposition enables corrective feedback while maintaining platform safety."
+    },
+    {
+      "key": "C123456809",
+      "want": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 82,
+        "content_severity_index": 42,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. Content ID C123456809 has been assessed and assigned a **WARNING** disposition. The user (u12344475) demonstrates high trustworthiness (UTC: 82) with consistent device usage and a strong posting history. The flagged content has moderate severity (CSI: 42) with misinformation and copyright concerns at moderate confidence levels (45% and 40% respectively). The bot probability is negligible (BPI: 0.1). Given these factors, a warning has been issued to the user rather th"
+    },
+    {
+      "key": "C123456977",
+      "want": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 70,
+        "content_severity_index": 66,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content moderation evaluation complete for flagged content C123456977. The final decision is **WARNING** based on:\n- User Trust Score: 70/100 (moderate trust)\n- Content Severity Index: 66/100 (moderate-to-high severity)\n- Bot Probability Index: 0.4 (low bot risk)\n- Primary Violation: Harassment (66% confidence)\n- Secondary Violation: Discrimination (61% confidence)\n\nThe warning has been recorded in the system and the user will be notified to modify their behavior."
+    },
+    {
+      "key": "C123456860",
+      "want": {
+        "user_trust_score": 76,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 76,
+        "content_severity_index": 65,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Evaluation Complete - C123456860**\n\n**Scoring Summary:**\n- **Bot Probability Index (BPI):** 0.3 (Low risk - user is not a bot)\n- **Device Consistency Score:** 1.0 (Perfect consistency - trusted device pattern)\n- **User Trust Score (UTC):** 76/100 (Moderately high trust)\n  - Strong history: 280 previous posts with good device consistency\n  - Minor concern: 10 flagged posts in history\n  - Geographic location: Belgium (50.8503, 4.3517) - low risk region\n  \n- **Content Severity "
+    },
+    {
+      "key": "C123456895",
+      "want": {
+        "user_trust_score": 84,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 84,
+        "content_severity_index": 44,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456895 has been evaluated and assigned a **WARNING** disposition. The user (u12344561) demonstrates high trustworthiness (UTC: 84) with strong posting history and minimal previous flags. The content severity is moderate (CSI: 44) due to misinformation and copyright concerns at moderate confidence levels. With negligible bot probability (BPI: 0.1) and consistent device patterns, the warning action is appropriate\u2014informing the user of policy violations without content removal or accoun"
+    },
+    {
+      "key": "C123456803",
+      "want": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 20,
+        "content_severity_index": 95,
+        "final_decision": "user_banned"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content evaluation complete. User u12344469 has been **banned** for posting content (C123456803) containing violence and self-harm violations with 92% and 88% confidence respectively. The user exhibited bot-like behavior (BPI: 0.9, 5 captcha attempts) combined with a very low trust score (20/100) and high historical flagging rate (10 of 15 posts flagged). This severe combination warranted the user_banned disposition per SOP section 5.4.2 decision matrix thresholds."
+    },
+    {
+      "key": "C123456881",
+      "want": {
+        "user_trust_score": 15,
+        "content_severity_index": 86,
+        "final_decision": "user_banned"
+      },
+      "got": {
+        "user_trust_score": 15,
+        "content_severity_index": 84,
+        "final_decision": "user_banned"
+      },
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "**Content Moderation Evaluation Complete**\n\n**Evaluation Results:**\n- **Bot Probability Index (BPI)**: 0.9 - Strong indicators of bot activity (is_possible_bot: 0.95, Captcha_tries: 5)\n- **Content Severity Index (CSI)**: 84/100 - Severe violations (Primary: bot_activity at 86% confidence, Secondary: misinformation at 82% confidence)\n- **User Trust Score (UTC)**: 15/100 - Critically low (85.7% of posts flagged, high bot probability, geographic risk from Rome coordinates)\n- **Final Decision**: **U"
+    },
+    {
+      "key": "C123456968",
+      "want": {
+        "user_trust_score": 72,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "got": {
+        "user_trust_score": 72,
+        "content_severity_index": 68,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Content C123456968 has been evaluated and assigned a **WARNING** disposition. The user (u12344634) will receive a warning for the flagged harassment and discrimination content while maintaining platform access pending behavioral improvement. All scoring metrics (User Trust Score: 72, Content Severity Index: 68, Bot Probability Index: 0.3) and the decision have been recorded in the system."
+    },
+    {
+      "key": "C123456891",
+      "want": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "got": {
+        "user_trust_score": 86,
+        "content_severity_index": 34,
+        "final_decision": "allowed"
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "The flagged content (C123456891) has been evaluated and **ALLOWED**. The user (u12344557) demonstrates high trustworthiness (86/100) with legitimate behavioral patterns, strong posting history, and low flagging rate. The content violations have low confidence scores (copyright: 36%, harassment: 32%), resulting in a low severity index (34/100). The decision package has been submitted to the system."
+    }
+  ]
+}

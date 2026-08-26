@@ -18,3 +18,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseli
 }
 wrote /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
 === [sonnet@us-east-1] warehouse_package_inspection baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+=== [sonnet@us-east-1] email_intent acorn  ===

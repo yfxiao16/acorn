@@ -13,3 +13,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_aircraft_inspection_baseli
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_warehouse_package_inspection_baseline_scaf_react.json
 === [haiku@us-west-2] email_intent baseline --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_email_intent_baseline_scaf_react.json
+=== [haiku@us-west-2] content_flagging baseline --scaffold react ===

@@ -28,3 +28,9 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_classification_basel
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_dangerous_goods_acorn_scaf_react.json
 === [haiku@us-west-2] customer_service acorn --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_customer_service_acorn_scaf_react.json
+=== [haiku@us-west-2] patient_intake acorn --scaffold react ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_patient_intake_acorn_scaf_react.json
+LANE_haiku_DONE

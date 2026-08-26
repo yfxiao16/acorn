@@ -1,6 +1,3 @@
-video_annotation acorn --flow-profile free
-video_annotation acorn --flow-profile phases
-video_annotation acorn --flow-profile pipeline
 dangerous_goods acorn
 dangerous_goods baseline
 customer_service acorn
@@ -21,13 +18,3 @@ video_annotation acorn
 video_annotation baseline
 video_classification acorn
 video_classification baseline
-know_your_business acorn --flow-profile x0
-know_your_business acorn --flow-profile x1
-know_your_business acorn --flow-profile x2
-know_your_business acorn --flow-profile x3
-know_your_business acorn --flow-profile x4
-know_your_business acorn --flow-profile x5
-warehouse_package_inspection acorn --flow-profile free
-warehouse_package_inspection acorn --flow-profile flat
-warehouse_package_inspection acorn --flow-profile branch
-warehouse_package_inspection acorn --flow-profile naive

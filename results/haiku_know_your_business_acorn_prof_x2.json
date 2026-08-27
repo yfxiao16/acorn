@@ -1,0 +1,2199 @@
+{
+  "summary": {
+    "pack": "know_your_business_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": "x2",
+    "freedom": 1.99,
+    "n": 90,
+    "TSR": 0.4666666666666667,
+    "ECR": 1.0,
+    "avg_model_calls": 3.4,
+    "avg_symbolic_steps": 2.811111111111111,
+    "symbolic_ratio": 0.4525939177101968,
+    "blocked_proposals": 3,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 1269697,
+    "cached_tokens": 0,
+    "avg_latency_s": 67.35,
+    "time_model_s": 6061.3,
+    "time_controller_s": 0.568,
+    "time_tools_s": 0.01,
+    "controller_share": 9e-05,
+    "decision_states": 559,
+    "unique_states": 430,
+    "state_reuse_rate": 0.2308,
+    "cache": {
+      "hits": 2443,
+      "misses": 101,
+      "hit_rate": 0.9603,
+      "entries": 101
+    },
+    "wall_clock_s": 6062.6
+  },
+  "rows": [
+    {
+      "key": "biz_098",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_028",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_122",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_070",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_139",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_038",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_067",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_149",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_012",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_042",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_032",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_087",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_035",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_145",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_107",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_007",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_114",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_085",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_049",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_062",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_044",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_020",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_083",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_043",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_143",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_009",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_054",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_090",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_084",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_104",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_034",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_024",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_120",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_127",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_010",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_017",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_105",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_004",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_022",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_048",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_117",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_008",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_097",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_132",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_119",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_068",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_063",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_100",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_058",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_102",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_077",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_147",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_099",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_118",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_052",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_073",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_060",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_110",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_140",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_072",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_094",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_040",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_142",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_074",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_079",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_125",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_047",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_037",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_134",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_002",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_065",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_027",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_003",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_029",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_129",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_124",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_109",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_137",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_093",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_108",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "awaiting information"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_103",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_150",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_025",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_075",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_089",
+      "want": {
+        "escalation_status": "awaiting information"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_133",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "approved"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_018",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 3,
+      "blocked": 1,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_115",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_064",
+      "want": {
+        "escalation_status": "escalate"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 3,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    },
+    {
+      "key": "biz_128",
+      "want": {
+        "escalation_status": "approved"
+      },
+      "got": {
+        "escalation_status": "escalate"
+      },
+      "ok": false,
+      "model_calls": 4,
+      "symbolic_steps": 2,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": ""
+    }
+  ]
+}

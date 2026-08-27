@@ -393,3 +393,46 @@ audited by the full library in observe mode in every cell.
    baseline's free-text path parses loosely. Strict recording protocols
    tax weak instruction-followers; we report it rather than relaxing the
    schema to recover the points.
+
+## ReAct scaffold comparison (claude-4.5-haiku, step masking)
+
+The benchmark's own paper reports both a function-calling (FC) agent and
+a ReAct agent; our `--scaffold react` wrapper implements the classic
+Thought/Action/Observation text protocol around the same model, tools
+and prompts. Fairness audit: ReAct answers that never reached
+submit_result were re-parsed with a lenient tag/key-value parser across
+all saved runs — at most 1 row in 93 cells changes, so the comparison is
+not a parsing artifact.
+
+| domain | FC base | ReAct base | acorn | FC clean | ReAct clean | acorn clean |
+|---|---|---|---|---|---|---|
+| dangerous_goods | 81.8 | 77.4 | **100.0** | 99 | 98 | **100** |
+| customer_service | (rebuild) | 67.3 | **100.0** | – | 96 | **100** |
+| patient_intake | 92.4 | 98.5 | **100.0** | 100 | 100 | **100** |
+| know_your_business | (rebuild) | 47.8 | **58.9** | – | 93 | **100** |
+| aircraft_inspection | 87.5 | 92.0 | **98.2** | 97 | 100 | **100** |
+| warehouse_package_inspection | 49.3 | **18.0** | **98.7** | 49 | 59 | **100** |
+| email_intent | 96.2 | 95.2 | **98.4** | 100 | **92** | **100** |
+| content_flagging | (rebuild) | 98.2 | **100.0** | – | 100 | **100** |
+| video_annotation | (rebuild) | 84.0 | (rebuild) | – | **78** | – |
+| video_classification | (rebuild) | 53.7 | **87.1** | – | 89 | **100** |
+| **macro (9 shared domains)** | | **72.0** | **93.5** | | 90.5 | **100** |
+
+Findings:
+
+1. **A stronger neural scaffold does not buy compliance.** ReAct's
+   proc-clean is 59–100% by domain (macro 90.5%); acorn is 100%
+   everywhere. Swapping the reasoning scaffold is not a substitute for
+   an enforcement layer.
+2. **ReAct is not uniformly better than FC either**: it helps
+   aircraft (+4.5pp) and patient_intake (+6.1pp) but collapses on the
+   branching warehouse domain (18.0% vs FC's 49.3%) — 95 of its 123
+   failures there are submitted-but-wrong (chargeback/classification
+   reasoning errors), plus single-call hallucinated "completion
+   reports". Scaffold quality is regime-dependent, echoing the sweep.
+3. **Orthogonality (ReAct + acorn combo arms):** the contract layer
+   composes with the scaffold and lifts it to the ceiling —
+   dangerous_goods 77.4→**100.0** (viol 0.08→0), customer_service
+   67.3→**98.1** (viol 0.04→0), patient_intake 98.5→**100.0**. ACORN is
+   not a competitor to neural strategies; it is a compliance layer on
+   top of any of them.

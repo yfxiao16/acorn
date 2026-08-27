@@ -15,3 +15,9 @@ wrote /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.js
 wrote /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
 === [sonnet@us-west-2] email_intent baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+=== [sonnet@us-west-2] aircraft_inspection baseline  ===

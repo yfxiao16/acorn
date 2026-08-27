@@ -11,3 +11,7 @@ wrote /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline
 }
 wrote /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json
 === [sonnet@us-west-2] content_flagging baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+=== [sonnet@us-west-2] email_intent baseline  ===

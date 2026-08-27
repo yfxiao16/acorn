@@ -1,0 +1,784 @@
+{
+  "summary": {
+    "pack": "video_annotation_sop",
+    "model": "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 0.0,
+    "n": 125,
+    "TSR": 0.0,
+    "ECR": 0.0,
+    "avg_model_calls": 0.0,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 0,
+    "cached_tokens": 0,
+    "avg_latency_s": 0.0,
+    "time_model_s": 0.0,
+    "time_controller_s": 0.0,
+    "time_tools_s": 0.0,
+    "controller_share": 0.0,
+    "decision_states": 0,
+    "unique_states": 0,
+    "state_reuse_rate": 1.0,
+    "cache": null,
+    "wall_clock_s": 10795.5
+  },
+  "rows": [
+    {
+      "key": "vid_00178",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00065",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00183",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00025",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00159",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00147",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00105",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00059",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00176",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00194",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00061",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00071",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00165",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00044",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00131",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00005",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00168",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00161",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00166",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00028",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00101",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00150",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00021",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00189",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00111",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00060",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00040",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00031",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00010",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00192",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00139",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00019",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00174",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00069",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00133",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00163",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00177",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00115",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00108",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00141",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00140",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00120",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00081",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00162",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00092",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00180",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00157",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00118",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00103",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00188",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00006",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00123",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00124",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00153",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00155",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00193",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00112",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00143",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00089",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00055",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00171",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00119",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00032",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00142",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00023",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00038",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00050",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00156",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00080",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00041",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00154",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00186",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00048",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00170",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00099",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00102",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00148",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00015",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00132",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00158",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00151",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00029",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00051",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00098",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00011",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00068",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00083",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00169",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00078",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00093",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00114",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00082",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00185",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00001",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00129",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00064",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00079",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00045",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00053",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00030",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00179",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00104",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00043",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00039",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00042",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00160",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00152",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00014",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00109",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00125",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00035",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00184",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00074",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00175",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00003",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00012",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00190",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00034",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00090",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00094",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00100",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00072",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00070",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00187",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    },
+    {
+      "key": "vid_00018",
+      "ok": false,
+      "status": "error",
+      "error": "Bedrock HTTP 429: {\"message\":\"Too many tokens per day, please wait before trying again.\"}"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+customer_service baseline
+know_your_business baseline
+content_flagging baseline
+video_annotation acorn
+video_annotation baseline
+video_classification baseline

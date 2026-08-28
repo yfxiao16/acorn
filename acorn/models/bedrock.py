@@ -41,6 +41,13 @@ def _signing_key(secret: str, date_stamp: str, region: str) -> bytes:
     return _hmac(k, "aws4_request")
 
 
+def _nonempty(text) -> str:
+    """Converse rejects empty text blocks ("text content blocks must be
+    non-empty"); an empty turn is still a turn, so represent it explicitly."""
+    text = "" if text is None else str(text)
+    return text if text.strip() else "(empty)"
+
+
 class BedrockModel(Model):
     def __init__(
         self,
@@ -66,7 +73,7 @@ class BedrockModel(Model):
         for msg in messages:
             role = msg["role"]
             if role == "user":
-                out.append({"role": "user", "content": [{"text": msg["content"]}]})
+                out.append({"role": "user", "content": [{"text": _nonempty(msg["content"])}]})
             elif role == "assistant":
                 blocks: list[dict] = []
                 if msg.get("content"):
@@ -75,12 +82,12 @@ class BedrockModel(Model):
                     blocks.append(
                         {"toolUse": {"toolUseId": c["id"], "name": c["name"], "input": c["args"]}}
                     )
-                out.append({"role": "assistant", "content": blocks or [{"text": ""}]})
+                out.append({"role": "assistant", "content": blocks or [{"text": _nonempty("")}]})
             elif role == "tool":
                 block = {
                     "toolResult": {
                         "toolUseId": msg["tool_call_id"],
-                        "content": [{"text": msg["content"]}],
+                        "content": [{"text": _nonempty(msg["content"])}],
                     }
                 }
                 if out and out[-1]["role"] == "user" and "toolResult" in out[-1]["content"][0]:

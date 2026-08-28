@@ -350,13 +350,13 @@ audited by the full library in observe mode in every cell.
 | customer_service | oss | 156 | 69.9% | **92.9%** | 69% | **100%** | 7.18 | 6.05 |
 | patient_intake | oss | 66 | 97.0% | **100.0%** | 97% | **100%** | 7.83 | 6.02 |
 | know_your_business | oss | 90 | 56.7% | **56.7%** | 20% | **100%** | 8.64 | 1.00 |
-| aircraft_inspection | oss | 112 | 29.5% | **81.2%** | 25% | **100%** | 6.07 | 8.38 |
+| aircraft_inspection | oss | 112 | 30.4% | **81.2%** | 25% | **100%** | 6.29 | 8.38 |
 | warehouse_package_inspection | oss | 150 | 40.0% | **96.0%** | 11% | **99%** | 4.67 | 6.59 |
 | email_intent | oss | 186 | 95.7% | **98.4%** | 77% | **100%** | 4.02 | 2.13 |
 | content_flagging | oss | 168 | 95.8% | **98.2%** | 93% | **100%** | 5.92 | 4.64 |
 | video_annotation | oss | 125 | 57.6% | **84.0%** | 54% | **98%** | 5.38 | 4.97 |
 | video_classification | oss | 147 | 42.2% | **89.1%** | 12% | **100%** | 7.20 | 4.27 |
-| **macro (gpt-oss-120b)** | | | **65.8%** | **89.7%** | | | | |
+| **macro (gpt-oss-120b)** | | | **65.9%** | **89.7%** | | | | |
 | dangerous_goods | llama | 274 | 0.0% | **100.0%** | 98% | **100%** | 4.93 | 3.93 |
 | customer_service | llama | 156 | 20.5% | **86.5%** | 29% | **100%** | 8.54 | 7.48 |
 | patient_intake | llama | 66 | 77.3% | **100.0%** | 50% | **100%** | 5.00 | 6.03 |
@@ -395,7 +395,7 @@ acorn macro 89.7–94.5% for every family against baselines of 44–75%.
 ### What the complete columns add
 
 1. **Uplift scales inversely with base capability, ceiling is shared.**
-   Llama +46.3pp (44.3→90.6), gpt-oss +23.9pp (65.8→89.7), gpt-5-mini
+   Llama +46.3pp (44.3→90.6), gpt-oss +23.8pp (65.9→89.7), gpt-5-mini
    +23.1pp (71.4→94.5). The acorn macro sits in 89.7–94.5% for every
    family despite baselines spanning 44–71%.
 2. **Baseline compliance collapses for weaker models — and the harness

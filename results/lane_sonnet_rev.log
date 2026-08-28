@@ -21,3 +21,4 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
 === [sonnet@us-west-2] aircraft_inspection baseline  ===
+=== [sonnet@us-west-2] aircraft_inspection acorn  ===

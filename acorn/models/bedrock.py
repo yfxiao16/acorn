@@ -19,6 +19,7 @@ import datetime
 import hashlib
 import hmac
 import json
+import re
 import os
 import time
 import urllib.error
@@ -39,6 +40,14 @@ def _signing_key(secret: str, date_stamp: str, region: str) -> bytes:
     k = _hmac(k, region)
     k = _hmac(k, _SERVICE)
     return _hmac(k, "aws4_request")
+
+
+_ID_RE = re.compile(r"[^a-zA-Z0-9_-]")
+
+
+def _safe_id(value) -> str:
+    v = _ID_RE.sub("_", str(value or ""))
+    return v or "_"
 
 
 def _nonempty(text) -> str:
@@ -79,14 +88,18 @@ class BedrockModel(Model):
                 if msg.get("content"):
                     blocks.append({"text": msg["content"]})
                 for c in msg.get("tool_calls", []):
+                    # Converse validates toolUse.name/toolUseId against
+                    # [a-zA-Z0-9_-]+ even in HISTORY; a hallucinated name the
+                    # loop already rejected must not 400 every later turn.
                     blocks.append(
-                        {"toolUse": {"toolUseId": c["id"], "name": c["name"], "input": c["args"]}}
+                        {"toolUse": {"toolUseId": _safe_id(c["id"]), "name": _safe_id(c["name"]),
+                                     "input": c["args"]}}
                     )
                 out.append({"role": "assistant", "content": blocks or [{"text": _nonempty("")}]})
             elif role == "tool":
                 block = {
                     "toolResult": {
-                        "toolUseId": msg["tool_call_id"],
+                        "toolUseId": _safe_id(msg["tool_call_id"]),
                         "content": [{"text": _nonempty(msg["content"])}],
                     }
                 }

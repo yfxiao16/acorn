@@ -32,3 +32,18 @@ def test_bedrock_never_emits_empty_text_blocks():
                 assert block["text"].strip(), block
             if "toolResult" in block:
                 assert all(c["text"].strip() for c in block["toolResult"]["content"])
+
+
+def test_bedrock_sanitizes_tool_names_in_history():
+    from acorn.models.bedrock import BedrockModel
+
+    msgs = [
+        {"role": "assistant", "content": None,
+         "tool_calls": [{"id": "call 1", "name": "functions.get_order()", "args": {}}]},
+        {"role": "tool", "tool_call_id": "call 1", "content": "x"},
+    ]
+    out = BedrockModel._to_messages(msgs)
+    tu = out[0]["content"][0]["toolUse"]
+    import re
+    assert re.fullmatch(r"[a-zA-Z0-9_-]+", tu["name"]) and re.fullmatch(r"[a-zA-Z0-9_-]+", tu["toolUseId"])
+    assert out[1]["content"][0]["toolResult"]["toolUseId"] == tu["toolUseId"]

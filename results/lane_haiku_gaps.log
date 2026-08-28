@@ -14,3 +14,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_acorn.jso
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_baseline.json
 === [haiku@us-west-2] video_classification baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_classification_baseline.json
+LANE_haiku_DONE

@@ -159,6 +159,13 @@ def main() -> None:
                 "status": result.status,
                 "audit": result.audit,
                 "final_text": (result.final_text or "")[:500],
+                # compact forensic trace: tool sequence with error/block marks
+                "trace": [
+                    (f"{r['tool']}" + ("!" if r["kind"] == "tool/result" and not r.get("ok") else ""))
+                    if r["kind"] == "tool/result" else f"BLOCKED:{r.get('tool')}"
+                    for r in result.tracer.records
+                    if r["kind"] in ("tool/result", "action/blocked")
+                ][:40],
             }
         )
         print(

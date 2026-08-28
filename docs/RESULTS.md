@@ -369,6 +369,29 @@ audited by the full library in observe mode in every cell.
 | video_classification | llama | 147 | 10.2% | **86.4%** | 0% | **100%** | 2.00 | 5.31 |
 | **macro (llama-3.3-70b)** | | | **44.3%** | **90.6%** | | | | |
 
+### claude-4.5-haiku column (complete, 20/20 — the model used for every sweep experiment)
+
+| dangerous_goods | claude-4.5-haiku | 274 | 81.8% | **100.0%** | 99% | **100%** | 2.99 | 0.98 |
+| customer_service | claude-4.5-haiku | 156 | 51.3% | **100.0%** | 62% | **100%** | 7.94 | 5.18 |
+| patient_intake | claude-4.5-haiku | 66 | 92.4% | **100.0%** | 100% | **100%** | 4.73 | 3.05 |
+| know_your_business | claude-4.5-haiku | 90 | 50.0% | **58.9%** | 94% | **100%** | 4.61 | 1.03 |
+| aircraft_inspection | claude-4.5-haiku | 112 | 87.5% | **98.2%** | 97% | **100%** | 5.02 | 3.64 |
+| warehouse_package_inspection | claude-4.5-haiku | 150 | 49.3% | **98.7%** | 49% | **100%** | 4.62 | 3.48 |
+| email_intent | claude-4.5-haiku | 186 | 96.2% | **98.4%** | 100% | **100%** | 3.03 | 1.01 |
+| content_flagging | claude-4.5-haiku | 168 | 100.0% | **100.0%** | 100% | **100%** | 5.14 | 3.01 |
+| video_annotation | claude-4.5-haiku | 125 | 84.0% | **100.0%** | 74% | **86%** | 9.60 | 4.34 |
+| video_classification | claude-4.5-haiku | 147 | 55.8% | **87.1%** | 50% | **100%** | 7.71 | 6.34 |
+| **macro (claude-4.5-haiku, 10/10 domains)** | | | **74.8%** | **94.1%** | | | | |
+
+Haiku macro: **74.8% → 94.1%** (+19.3pp). Baseline proc-clean collapses on
+the same domains as for the other families (warehouse 49%, video_classification
+50%, customer_service 62%) and acorn restores 100% on all but video_annotation
+(86% — the wide-tool domain where the step mask still lets a few
+out-of-stage calls through before the fact layer catches up; TSR is 100%).
+video_classification acorn carries a 9/147 max_steps cluster (6%; below the
+damage threshold, reported as-is). Four complete columns now agree:
+acorn macro 89.7–94.5% for every family against baselines of 44–75%.
+
 ### What the complete columns add
 
 1. **Uplift scales inversely with base capability, ceiling is shared.**

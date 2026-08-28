@@ -1,0 +1,3468 @@
+{
+  "summary": {
+    "pack": "video_annotation_sop",
+    "model": "bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "condition": "baseline",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 27.0,
+    "n": 125,
+    "TSR": 0.84,
+    "ECR": 0.976,
+    "avg_model_calls": 9.6,
+    "avg_symbolic_steps": 0.0,
+    "symbolic_ratio": 0.0,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 0.736,
+    "avg_committed_violations": 0.448,
+    "total_tokens": 15001227,
+    "cached_tokens": 0,
+    "avg_latency_s": 81.26,
+    "time_model_s": 10153.1,
+    "time_controller_s": 4.162,
+    "time_tools_s": 0.04,
+    "controller_share": 0.00041,
+    "decision_states": 1200,
+    "unique_states": 564,
+    "state_reuse_rate": 0.53,
+    "cache": null,
+    "wall_clock_s": 27069.5
+  },
+  "rows": [
+    {
+      "key": "vid_00178",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 15,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00178 through the complete annotation pipeline according to the SOP. Here's a summary of the results:\n\n## Processing Summary for vid_00178\n\n**Final Status: \u2705 ANNOTATED SUCCESSFULLY**\n\n### Video Specifications:\n- **Format**: H.264 (MP4 container)\n- **Resolution**: 3840 \u00d7 2160 (4K)\n- **Frame Rate**: 30 fps\n- **Bit Depth**: 8-bit\n- **Channels**: 3 (RGB)\n\n### Scene Context:\n- **Location**: Union Station\n- **Weather**: Gloomy\n- **Lighting**: Golden Hou"
+    },
+    {
+      "key": "vid_00065",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00065 Successfully Annotated\n\nI have successfully processed video **vid_00065** through the complete annotation SOP pipeline. Here's a summary of the processing workflow:\n\n### **Processing Summary:**\n\n**1. Input Validation Phase:**\n- \u2705 Video Format Validated (HEVC, 1920x2160, 45 FPS, 8-bit, 4 channels)\n- \u2705 LiDAR Data Validated (/data/lidar/vid_00065.pcd)\n- \u2705 Weather Conditions Verified (Flurries)\n- \u2705 Scene Context Validated (Union Station)\n- \u2705 Camera Intrinsics"
+    },
+    {
+      "key": "vid_00183",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Here is the comprehensive summary of the video annotation pipeline execution for **vid_00183**:\n\n## \ud83d\udcca Annotation Pipeline Summary\n\n### \u2705 **Pipeline Execution Status: SUCCESSFUL**\n\n#### **Phase 1: Input Validation**\n- \u2705 Video Format Validation: PASSED\n  - Format: HEVC (H.265)\n  - Resolution: 1920x1080 pixels\n  - Frame Rate: 45 fps\n  - Bit Depth: 8-bit\n  - Channel Count: 4 channels (RGBA)\n  - Scene Context: Crowded high-rise district (Urban)\n  - Weather: Flurries\n  - Lighting: Golden Hour"
+    },
+    {
+      "key": "vid_00025",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00025 has been successfully processed through the complete annotation pipeline. Here's a summary of the results:\n\n## Video Annotation Processing Summary\n\n**Video ID:** vid_00025\n\n### Pipeline Processing Status: \u2705 COMPLETED\n\n#### Input Validation Phase:\n- **Video Format:** H.264 compliant \u2713\n- **Resolution:** 3840x2160 (4K) \u2713\n- **Frame Rate:** 45 fps \u2713\n- **Bit Depth:** 10-bit \u2713\n- **Channel Count:** 3 (RGB) \u2713\n- **Scene Context:** Dense street (Urban) \u2713\n- **Weather Conditions:** H"
+    },
+    {
+      "key": "vid_00159",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nVideo **vid_00159** has been rejected from the annotation pipeline due to **failure to meet critical input specifications**. The video has 6 major specification violations across resolution, frame rate, bit depth, color channels, lighting conditions, and camera positioning that prevent it from being processed according to the Autonomous Vehicle Video Annotation SOP.\n\n**Final Status**: \u274c Not Annotated\n**Reason**: Multiple critical SOP compliance failures"
+    },
+    {
+      "key": "vid_00147",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video has been successfully processed through the complete annotation SOP pipeline. Here's the final output in XML format:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00147.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00147.mp4.binary\",\n  \"inter_annotator_score\": 0.8722905449066112\n}\n</final_output>\n```\n\n## Summary of Processing Pipeline:\n\n\u2705 **Video Format Validation**: HEVC format, 1920x2160 resolution, 45.0 fps, 8-bit, 4 chann"
+    },
+    {
+      "key": "vid_00105",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video Rejected\n\n**Video ID:** vid_00105  \n**Final Status:** \u274c NOT ANNOTATED\n\n### Summary:\nVideo vid_00105 has been **rejected at the input validation stage** (Section 5.1 of SOP). The video fails 7 critical input specifications and does not meet the minimum requirements for annotation pipeline processing:\n\n1. \u274c **Format Incompatibility** - AVI format; requires HEVC/H.264\n2. \u274c **Resolution Below Minimum** - 1280x720; requires minimum 1920x1080  \n3. \u274c **Insufficient Color "
+    },
+    {
+      "key": "vid_00059",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nSuccessfully processed video `vid_00059` through the complete annotation SOP pipeline. Here's the final output:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00059.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00059.mp4.binary\",\n  \"inter_annotator_score\": 0.7861192119731972,\n  \"reason\": null\n}\n</final_output>\n```\n\n### Processing Summary:\n\n**\u2705 All Pipeline Stages Completed Successfully:**\n\n1. **Video Format Validation**: \u2713 HEVC 1920x"
+    },
+    {
+      "key": "vid_00176",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete: Video vid_00176\n\nSuccessfully processed through the complete annotation SOP pipeline. Here's the summary:\n\n### Pipeline Execution Summary:\n\n**1. Input Validation \u2713**\n- Video Format: HEVC, 3840x1080 @ 60fps, 8-bit, 4-channel\n- Scene Context: Riverfront (urban environment)\n- Weather: Hazy sunshine\n- Camera Intrinsics: Available\n- LiDAR Data: Validated with time offset: -0.203s (within tolerance)\n\n**2. Sensor Calibration & Synchronization \u2713**\n- Camera Sensors: Calibrated (pa"
+    },
+    {
+      "key": "vid_00194",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been completed successfully. Here's a summary of the processing results:\n\n## Video Annotation Summary - vid_00194\n\n### **Final Status: \u2705 SUCCESSFULLY ANNOTATED**\n\n### Processing Pipeline Results:\n\n1. **Input Validation** \u2705\n   - Format: HEVC\n   - Resolution: 3840x2160 (4K)\n   - Frame Rate: 60 fps\n   - Bit Depth: 8-bit\n   - Color Channels: 3 (RGB)\n   - Scene: Bus terminal\n   - Weather: Gray (clear lighting)\n\n2. **Sensor Calibration & Synchronization** \u2705\n "
+    },
+    {
+      "key": "vid_00061",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00061 through the complete annotation SOP pipeline. Here's a summary of the workflow execution:\n\n## Annotation Pipeline Summary for vid_00061\n\n### \u2705 **Stage 1: Input Validation**\n- **Video Format Validation**: PASSED\n  - Format: HEVC\n  - Resolution: 1920x1080\n  - Frame Rate: 24.0 fps\n  - Bit Depth: 8-bit\n  - Channels: 3 (RGB)\n- **Scene Context**: Loading dock (urban environment)\n- **Weather Conditions**: Bright/Clear\n- **Camera Intrinsics**: Avail"
+    },
+    {
+      "key": "vid_00071",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Excellent! Video vid_00071 has been successfully processed through the complete annotation SOP pipeline. Here's a comprehensive summary:\n\n## Processing Summary for vid_00071\n\n### \u2705 All Validation Steps Completed Successfully\n\n**1. Video Format Validation:**\n- Format: HEVC\n- Resolution: 1920x1080 \u2713\n- Frame Rate: 24.0 fps \u2713\n- Bit Depth: 8-bit \u2713\n- Channels: 3 (RGB) \u2713\n- Scene Type: Downtown Square (Urban) \u2713\n- Weather: Golden Hour \u2713\n- Lighting: Visible Horizon \u2713\n\n**2. Camera Calibration:**\n- Camera P"
+    },
+    {
+      "key": "vid_00165",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## \u2705 Video Annotation Processing Complete\n\n**Final Output (XML Format):**\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00165.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00165.mp4.binary\",\n  \"inter_annotator_score\": 0.9755912087100574,\n  \"processing_summary\": {\n    \"video_id\": \"vid_00165\",\n    \"video_path\": \"/data/videos/vid_00165.mp4\",\n    \"detected_object\": \"buildings\",\n    \"spatial_accuracy_score\": 0.866675922647572,\n    \"temporal_consiste"
+    },
+    {
+      "key": "vid_00044",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the processing results:\n\n## Video Annotation Processing Summary - vid_00044\n\n### Pipeline Steps Completed:\n\n1. **Video Format Validation** \u2713\n   - Format: H.264\n   - Resolution: 1920x1080\n   - Frame Rate: 30.0 fps\n   - Bit Depth: 8-bit\n   - Channels: 3 (RGB)\n\n2. **Environmental Validation** \u2713\n   - Scene Type: Interstate\n   - Weather: Clear sky\n   - Lighting: Golden Hour\n   - Camera"
+    },
+    {
+      "key": "vid_00131",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing completed successfully. Here is the comprehensive summary:\n\n## Video Annotation Processing Summary - vid_00131\n\n### Processing Pipeline Results:\n\n**\u2713 Input Validation Phase**\n- Video Format: HEVC, 1920x1080, 24.0 fps, 8-bit depth\n- Color Channels: 3 (RGB)\n- Scene Context: Car park (urban setting)\n- Weather: Golden hour (clear lighting)\n- Camera Intrinsics: Available \u2713\n\n**\u2713 LiDAR Integration Phase**\n- Point Cloud Path: /data/lidar/vid_00131.pcd\n- Time Offset: "
+    },
+    {
+      "key": "vid_00005",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing is complete. Here's the summary:\n\n## Annotation Pipeline Summary for vid_00005\n\n### \u2705 Processing Complete\n\n**Final Status:** ANNOTATED (true)\n\n### Key Metrics:\n- **Spatial Accuracy Score:** 0.8838 (\u2713 Passes 0.85 threshold)\n- **Temporal Consistency Score:** 0.9516 (\u2713 Passes 0.80 threshold)\n- **Inter-Annotator Score:** 0.8455 (\u2713 Passes 0.75 threshold)\n- **Predicted IoU:** 0.8066 (\u2713 Passes 0.75 threshold)\n\n### Output Artifacts:\n- **COCO JSON Annotations:** `/dat"
+    },
+    {
+      "key": "vid_00168",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation successfully completed. Here's the comprehensive summary:\n\n## Annotation Pipeline Results for vid_00168\n\n### Pipeline Execution Summary:\n\n**\u2713 Validation Phase - PASSED**\n- Video Format Validation: H.264 format, 1920x2160 resolution, 45 fps, 10-bit depth, 3 channels\n- Scene Context: Crowded high-rise district (Urban)\n- Weather Conditions: Muted lighting with Golden Hour illumination\n- LiDAR Data Validation: Point cloud synchronized with 0.354s offset (within \u00b11.0s tolera"
+    },
+    {
+      "key": "vid_00161",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## **FINAL ANNOTATION RESULT FOR vid_00161**\n\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": null,\n  \"reason\": \"Video fails multiple critical SOP input specifications (Section 4.1): Video codec is AVI (requires HEVC/H.264); Resolution 1280x800 below minimum 1920x1080; Frame rate 14.5 fps below minimum 24.0 fps; Bit depth 6-bit below minimum 8-bit; Color channels 2 below minimum 3; Scene type car park does no"
+    },
+    {
+      "key": "vid_00166",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Result for vid_00166\n\n**Final Status:** \u274c **NOT ANNOTATED**\n\n**Reason:** Video vid_00166 failed comprehensive input validation against SOP requirements (Sections 4.1 and 5.1):\n\n1. **Format Compliance:** AVI format does not meet HEVC/H.264 requirement\n2. **Spatial Resolution:** 1280x800 pixels below minimum 1920x1080 requirement\n3. **Temporal Resolution:** 12.12 fps below minimum 24.0 fps requirement\n4. **Color Channels:** 2 channels below minimum 3 channel requirement\n5. **Scene Co"
+    },
+    {
+      "key": "vid_00028",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nVideo **vid_00028** has been processed through the comprehensive annotation SOP pipeline with the following result:\n\n### **FINAL STATUS: NOT ANNOTATED \u2717**\n\n### **Compliance Failures:**\n\n**Video Format Violations (Section 4.1):**\n- Resolution: 1280x720 (required: \u22651920x1080)\n- Frame Rate: 16.0 fps (required: 24.0-60.0 fps)\n- Channel Count: 2 channels (required: minimum 3 for RGB)\n- Format: MOV (required: HEVC/H.264)\n\n**Environmental Violations (Section 5.1):**\n- Camera Position: Drive"
+    },
+    {
+      "key": "vid_00101",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video has been successfully processed through the annotation SOP. Here's a summary of the complete workflow:\n\n## Video Annotation SOP Completion Report - vid_00101\n\n### Input Validation \u2713\n- **Video Format**: HEVC (H.265)\n- **Resolution**: 3840x2160 (4K)\n- **Frame Rate**: 60.0 fps \u2713\n- **Bit Depth**: 8-bit \u2713\n- **Channels**: 3 (RGB) \u2713\n- **Scene Type**: University district \u2713\n- **Weather**: Bright \u2713\n- **Camera Position**: Dash (Front) \u2713\n\n### LiDAR Data Validation \u2713\n- **Point Cloud Path**"
+    },
+    {
+      "key": "vid_00150",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00150\n\n**Final Status**: \u274c **NOT ANNOTATED**\n\n**Reason for Rejection**:\nThe video failed comprehensive input validation according to SOP Section 5.1. Multiple critical compliance violations were identified:\n\n### Video Format Violations:\n1. **Codec Format**: RAW (Non-compliant) - Required: HEVC/H.264\n2. **Resolution**: 1280\u00d7800 (Non-compliant) - Required: \u22651920\u00d71080\n3. **Frame Rate**: 19.47 fps (Non-compliant) - Required: 24.0-60.0 fps\n4. **Bit Depth**: 6-bit (Non-co"
+    },
+    {
+      "key": "vid_00021",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00021 has been successfully processed through the complete annotation SOP pipeline. Here's the summary:\n\n## Processing Summary for vid_00021\n\n**Video Format Validation:**\n- \u2705 Format: HEVC\n- \u2705 Resolution: 1920x1080\n- \u2705 Frame Rate: 24.0 fps\n- \u2705 Bit Depth: 8-bit\n- \u2705 Channels: 3 (RGB)\n- \u2705 Scene Type: Crowded high-rise district (urban)\n- \u2705 Weather: Bright/sunny conditions\n- \u2705 Camera Position: Front/Driver seat\n\n**Sensor & Data Validation:**\n- \u2705 Camera intrinsics available\n- \u2705 Camer"
+    },
+    {
+      "key": "vid_00189",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Successfully completed the annotation workflow for video vid_00189. Here's the summary:\n\n## Video Annotation Processing Summary for vid_00189\n\n### \u2705 Processing Complete - Successfully Annotated\n\n**Video Specifications:**\n- Format: H.264 MP4\n- Resolution: 1920x1080 @ 60.0 fps\n- Bit Depth: 8-bit\n- Channels: 4 (RGBA)\n- Scene Type: Riverfront\n- Lighting: Golden Hour (Shaded)\n- Camera Position: Dashboard\n\n**Object Detection Results:**\n- Detected Object: **Traffic Signs**\n- Confidence Thresho"
+    },
+    {
+      "key": "vid_00111",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been successfully completed. Here's the comprehensive summary:\n\n## Video Annotation SOP Pipeline - Final Report for vid_00111\n\n### Input Validation Results \u2713\n- **Video Format**: HEVC compliant\n- **Resolution**: 3840\u00d72160 (4K) - Exceeds minimum requirements\n- **Frame Rate**: 45.0 fps - Within acceptable range (24-60 fps)\n- **Bit Depth**: 10-bit - Meets specification\n- **Color Channels**: 3 (RGB) - Meets requirement\n- **Scene Context**: Riverfront environ"
+    },
+    {
+      "key": "vid_00060",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 2,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00060\n\n**\u2713 ANNOTATION SUCCESSFULLY COMPLETED**\n\n### Pipeline Execution Overview:\n\n1. **Input Validation** \u2713\n   - Video Format: H.264 (1920x1080 @ 30fps, 8-bit, 3 channels)\n   - Scene Context: Urban (University District)\n   - Weather Conditions: Drizzle (acceptable daylight)\n\n2. **Camera Calibration** \u2713\n   - Camera Intrinsics: Available\n   - Camera Position: Side Left\n   - Calibration Status: Complete\n\n3. **LiDAR Integration** \u2713\n   - Point Cloud Path: /data/lidar/vid"
+    },
+    {
+      "key": "vid_00040",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been completed successfully. Here's a summary of the processing:\n\n## Video Annotation Processing Summary for vid_00040\n\n### \u2713 Input Validation Phase\n- **Video Format**: HEVC, 1920x1080, 60 FPS, 8-bit, 3 channels \u2713\n- **Scene Context**: Dense street (urban) \u2713\n- **Weather Conditions**: Drizzle \u2713\n- **Camera Intrinsics**: Available \u2713\n- **Camera Position**: Dash (front-mounted) \u2713\n\n### \u2713 Sensor Integration Phase\n- **Camera Calibration**: Completed \u2713\n- **Camera"
+    },
+    {
+      "key": "vid_00031",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00031 Successfully Annotated\n\n### Final Output Summary:\n\n```xml\n<final_output>\n{\n  \"Final Status\": true,\n  \"CoCo JSON Path\": \"/data/videos/vid_00031.mp4.json\",\n  \"Segmentation Mask Path\": \"/data/videos/vid_00031.mp4.binary\",\n  \"Inter Annotator Score\": 0.9683965380383024,\n  \"Reason\": \"Successfully processed through complete annotation SOP pipeline\"\n}\n</final_output>\n```\n\n### Processing Pipeline Summary:\n\n**Stage 1 - Input Validation:** \u2705\n- Video Format: HEVC, 38"
+    },
+    {
+      "key": "vid_00010",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Processing Complete - Video vid_00010\n\nI have successfully processed video **vid_00010** through the comprehensive annotation SOP pipeline. Here is the final summary:\n\n### **Final Output Summary**\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00010.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00010.binary\",\n  \"inter_annotator_score\": 0.93,\n  \"reason\": null\n}\n</final_output>\n```\n\n### **Processing Pipeline Completed**\n\n\u2705 **Stage 1 - In"
+    },
+    {
+      "key": "vid_00192",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00192\n\n**Final Status: \u2705 SUCCESSFULLY ANNOTATED**\n\n### Pipeline Execution Results:\n\n**1. Video Format Validation** \u2713\n- Format: H.264\n- Resolution: 1920\u00d71080\n- Frame Rate: 45.0 fps\n- Bit Depth: 10-bit\n- Channels: 3 (RGB)\n- Scene: Crowded high-rise district\n- Weather: Muted\n- Lighting: Visible horizon\n\n**2. LiDAR Data Validation** \u2713\n- Point Cloud: `/data/lidar/vid_00192.pcd`\n- Time Offset: 0.747 seconds (within \u00b11.0s tolerance)\n- Object Distance: 131.81 meters\n- Camer"
+    },
+    {
+      "key": "vid_00139",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00139\n\n**Status: \u2705 SUCCESSFULLY ANNOTATED**\n\nI have successfully processed video **vid_00139** through the complete annotation SOP pipeline. Here's the comprehensive summary:\n\n### Pipeline Execution Results:\n\n**1. Input Validation \u2705**\n- Video Format: HEVC, 3840x1080 resolution, 60.0 fps, 10-bit, 4-channel\n- Scene Context: Union Station (Urban)\n- Weather: Clear Sky (Golden Hour lighting)\n- Camera Position: Front-mounted\n\n**2. Camera Calibration & Technical Specificat"
+    },
+    {
+      "key": "vid_00019",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video **vid_00019** through the complete annotation SOP pipeline. Here's a summary of the processing results:\n\n## Processing Summary\n\n### \u2705 Video Format Validation\n- **Video Path**: `/data/videos/vid_00019.mp4`\n- **Format**: HEVC\n- **Resolution**: 3840x2160 (4K)\n- **Frame Rate**: 60 FPS\n- **Bit Depth**: 10-bit\n- **Channels**: 4 (RGBA)\n- **Scene Type**: Urban cityscape\n- **Weather**: Hazy sunshine\n\n### \u2705 LiDAR Integration\n- **Point Cloud Path**: `/data/lidar"
+    },
+    {
+      "key": "vid_00174",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 5,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": null,\n  \"reason\": \"Video vid_00174 failed to meet SOP requirements across multiple critical dimensions: (1) Input specifications failed - resolution 1024x720 below minimum 1920x1080, frame rate 14.47 fps below minimum 24.0 fps, only 2 color channels instead of required minimum 3; (2) Environmental requirements not met - riverfront scene instead "
+    },
+    {
+      "key": "vid_00069",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been completed successfully. Here's the summary:\n\n## Video Annotation Pipeline Summary - vid_00069\n\n### \u2705 Processing Completed Successfully\n\n**Input Validation:**\n- Video Format: HEVC, 1920x1080 @ 60fps, 8-bit, 3 channels\n- Scene Context: Urban (downtown square)\n- Weather Conditions: Bright/Sunny\n- Camera Position: Front-mounted\n- LiDAR Data: Available and synchronized (time offset: \u00b10.99s)\n- Camera Intrinsics: Available\n\n**Processing Steps Completed:**"
+    },
+    {
+      "key": "vid_00133",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00133 through the complete annotation SOP pipeline. Here's the summary:\n\n## Processing Summary for vid_00133\n\n### \u2705 Pipeline Execution Completed\n\n**Input Validation:**\n- Video Format: HEVC, 1920x1080@30fps, 10-bit, 3 channels \u2713\n- Camera Intrinsics: Available \u2713\n- LiDAR Data: Synchronized (time_offset: 0.1s \u2192 0.0s after sync) \u2713\n- Camera Stability: Verified \u2713\n- Scene Context: Riverfront (urban setting) \u2713\n- Weather: Gloomy conditions (daylight) \u2713\n\n**P"
+    },
+    {
+      "key": "vid_00163",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 5,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": 0.66,\n  \"reason\": \"Video vid_00163 fails to meet SOP requirements in multiple critical areas: (1) Input specifications - sub-minimum resolution (1024x720 vs 1920x1080), frame rate (18.67 fps vs 24.0-60.0 fps), bit depth (6-bit vs 8/10-bit), channels (1 vs 3+), camera position (trunk vs front), and lighting (Twilight vs daylight); (2) LiDAR valid"
+    },
+    {
+      "key": "vid_00177",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Summary for vid_00177\n\nSuccessfully completed the comprehensive annotation SOP pipeline! Here's the summary:\n\n### **Video Format Validation** \u2713\n- **Video ID:** vid_00177\n- **Format:** HEVC\n- **Resolution:** 3840\u00d71080 pixels\n- **Frame Rate:** 30.0 fps\n- **Bit Depth:** 8-bit\n- **Channels:** 3 (RGB)\n- **Scene Type:** Cityscape\n- **Weather:** Shaded\n- **Lighting:** Visible horizon\n- **Camera Position:** Dashboard\n\n### **LiDAR Data Validation** \u2713\n- **Point Cloud Path:** /data/l"
+    },
+    {
+      "key": "vid_00115",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete\n\n**Final Output:**\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": null,\n  \"reason\": \"Video vid_00115 fails mandatory input specification validation: (1) Video format is AVI instead of required HEVC/H.264; (2) Resolution 1280x720 below minimum requirement of 1920x1080; (3) Channel count 2 below minimum requirement of 3; (4) Lighting conditions are pitch black instead of required dayligh"
+    },
+    {
+      "key": "vid_00108",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\n**Video: vid_00108 - ANNOTATION NOT COMPLETED**\n\n**Final Status:** FALSE\n\n**Reason:** The video fails multiple critical input validation requirements specified in the SOP:\n\n1. **Format Violation:** MOV format (requires HEVC/H.264)\n2. **Resolution Violation:** 1280x720 (requires minimum 1920x1080)\n3. **Frame Rate Violation:** 19.0 fps (requires 24.0-60.0 fps)\n4. **Channel Count Violation:** 2 channels (requires minimum 3)\n5. **Camera Intrinsics:** NOT AVAILABLE (mandatory per Section "
+    },
+    {
+      "key": "vid_00141",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete\n\nI have successfully processed video **vid_00141** through the comprehensive annotation SOP. Here is the final summary:\n\n### **Processing Pipeline Summary:**\n\n1. **Input Validation** \u2713\n   - Video Format: HEVC, 1920\u00d71080, 60.0 fps, 8-bit, 3-channel\n   - Scene Type: Bus terminal (valid)\n   - Weather: Bright (compliant)\n   - Camera Position: Passenger seat near driver\n\n2. **LiDAR Data Integration** \u2713\n   - Point Cloud: `/data/lidar/vid_00141.pcd`\n   - Time Offset: 0.863 second"
+    },
+    {
+      "key": "vid_00140",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Processing Complete\n\nSuccessfully processed video `vid_00140` through the complete annotation SOP pipeline. Here's a summary:\n\n### Processing Pipeline Results:\n\n**\u2705 Input Validation Phase:**\n- Video Format: HEVC compliant\n- Resolution: 1920x2160 (exceeds minimum 1920x1080)\n- Frame Rate: 45.0 fps (within 24-60 range)\n- Bit Depth: 8-bit\n- Color Channels: 3 (RGB)\n- Scene Type: Crowded high-rise district\n- Weather: Shower\n- Lighting: Golden Hour\n- Camera Position: Dash\n\n**\u2705 LiDAR"
+    },
+    {
+      "key": "vid_00120",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline has been completed successfully for video vid_00120. Here's the summary:\n\n## Annotation Pipeline Summary for vid_00120\n\n### \u2705 Processing Status: **COMPLETED SUCCESSFULLY**\n\n### Pipeline Stages Executed:\n\n1. **Video Format Validation** \u2713\n   - Format: HEVC\n   - Resolution: 3840\u00d72160 (4K)\n   - Frame Rate: 45.0 fps\n   - Bit Depth: 8-bit\n   - Channels: 3 (RGB)\n   - Scene: Crowded high-rise district\n   - Weather: Drizzle\n   - Camera Position: Dash\n\n2. **Camera Calibrat"
+    },
+    {
+      "key": "vid_00081",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Processing Complete - vid_00081\n\nI have successfully processed video **vid_00081** through the complete annotation SOP pipeline. Here's a summary of the results:\n\n### Processing Summary:\n\n**\u2713 Video Format Validation:**\n- Format: HEVC\n- Resolution: 3840x2160 (4K)\n- Frame Rate: 30 fps\n- Bit Depth: 10-bit\n- Channels: 4 (RGBA)\n- Scene: Mixed-use street\n- Weather: Hazy sunshine\n\n**\u2713 Camera Calibration & Analysis:**\n- Camera position: Driver seat\n- Intrinsics: Available and validat"
+    },
+    {
+      "key": "vid_00162",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 5,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00162\n\n**Final Status**: \u274c **NOT ANNOTATED**\n\n**Reason**: Video vid_00162 failed multiple critical input validation requirements according to the SOP:\n\n**Video Format Issues:**\n- Format: AVI (required: HEVC or H.264)\n- Resolution: 1024x720 (required: minimum 1920x1080)\n- Frame Rate: 18.57 fps (required: 24.0-60.0 fps)\n- Color Channels: 2 (required: minimum 3)\n- Bit Depth: 12-bit (acceptable, 8 or 10-bit preferred)\n\n**Environmental & Positioning Issues:**\n- Scene Typ"
+    },
+    {
+      "key": "vid_00092",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Processing Summary - vid_00092\n\n**\u2713 ANNOTATION SUCCESSFULLY COMPLETED**\n\nI have successfully processed video **vid_00092** through the complete autonomous vehicle annotation pipeline following the SOP protocol. Here are the comprehensive results:\n\n### Processing Pipeline Completion:\n\n1. **Input Validation** \u2713\n   - Video Format: HEVC H.265\n   - Resolution: 1920\u00d72160 (4K)\n   - Frame Rate: 30.0 fps\n   - Bit Depth: 8-bit\n   - Color Channels: 3 (RGB)\n   - Scene Context: University District ("
+    },
+    {
+      "key": "vid_00180",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline for video vid_00180 has been completed successfully. Here's a summary of the processing:\n\n## Annotation Pipeline Summary for vid_00180\n\n### \u2705 Processing Status: COMPLETED SUCCESSFULLY\n\n**Video Specifications:**\n- Format: H.264\n- Resolution: 1920x1080\n- Frame Rate: 45.0 fps\n- Bit Depth: 8-bit\n- Channels: 3 (RGB)\n- Scene Type: Crowded high-rise district\n- Weather: Shower\n- Lighting: Golden Hour\n\n**Processing Results:**\n1. **Video Format Validation**: \u2705 PASSED\n2. **"
+    },
+    {
+      "key": "vid_00157",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Completion Summary\n\nSuccessfully processed video `vid_00157` through the complete annotation SOP pipeline. Here's the comprehensive execution report:\n\n### Pipeline Execution Results:\n\n**1. Video Format Validation \u2713**\n- Format: HEVC (H.265)\n- Resolution: 1920x1080 pixels\n- Frame Rate: 45.0 fps\n- Bit Depth: 10-bit\n- Color Channels: 3 (RGB)\n- Scene Type: Mixed use street\n- Weather: Golden hour\n- Lighting: Visible horizon\n- Camera Position: Dash\n\n**2. LiDAR Data Validation \u2713**"
+    },
+    {
+      "key": "vid_00118",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Processing Complete\n\nSuccessfully processed video **vid_00118** through the comprehensive annotation SOP pipeline. Here's the summary:\n\n### Processing Pipeline Summary:\n\n1. **Video Format Validation** \u2713\n   - Format: HEVC, Resolution: 3840x2160, Frame Rate: 45.0 fps\n   - Bit Depth: 10-bit, Channels: 4 (RGBA)\n   - Scene: Urban cityscape with smoky weather conditions\n\n2. **Camera & Sensor Validation** \u2713\n   - Camera intrinsics available and validated\n   - Camera stability analyze"
+    },
+    {
+      "key": "vid_00103",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00103.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00103.mp4.binary\",\n  \"inter_annotator_score\": 0.9222579713708604,\n  \"processing_summary\": {\n    \"video_id\": \"vid_00103\",\n    \"video_path\": \"/data/videos/vid_00103.mp4\",\n    \"format\": \"H.264\",\n    \"resolution\": \"1920x1080\",\n    \"frame_rate\": \"45.0 fps\",\n    \"predicted_object\": \"traffic signs\",\n    \"predicted_iou\": 0.8003149854654742,"
+    },
+    {
+      "key": "vid_00188",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Processing Summary for vid_00188\n\n**Final Status**: \u274c **NOT ANNOTATED**\n\n**Reason**: Video vid_00188 fails multiple critical SOP compliance requirements that prevent it from entering the annotation pipeline:\n\n| Requirement | SOP Section | Required | Actual | Status |\n|------------|-------------|----------|--------|--------|\n| Video Format | 4.1 | HEVC/H.264 | AVI | \u274c FAIL |\n| Resolution | 4.1 | \u22651920x1080 | 1024x720 | \u274c FAIL |\n| Frame Rate | 4.1 | 24.0-60.0 fps | 13.96 fps | \u274c FAIL"
+    },
+    {
+      "key": "vid_00006",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary - Video Annotation Processing Complete \u2713\n\nSuccessfully processed video `vid_00006` through the comprehensive autonomous vehicle perception system annotation SOP pipeline:\n\n### **Processing Pipeline Results:**\n\n**1. Input Validation Phase:**\n- \u2713 Video Format: HEVC, 3840x2160 resolution, 30 FPS, 8-bit, 4 channels\n- \u2713 Scene Context: Crowded high-rise district (urban)\n- \u2713 Weather Conditions: Bright/sunny, clear lighting\n- \u2713 Camera Position: Dashboard-mounted\n\n**2. Sensor Integration Phase"
+    },
+    {
+      "key": "vid_00123",
+      "want": {
+        "final_status": true
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I'll process the video through the annotation SOP pipeline. However, I need some additional information to proceed with the required tools. Let me start by gathering the necessary input parameters:\n\n**Required Information:**\n\n1. **Video Path** - What is the full path to the video file? (e.g., `/data/videos/vid_00123.mp4`)\n2. **LiDAR Point Cloud Path** - What is the path to the LiDAR point cloud data? (e.g., `/data/videos/vid_00123.pcd`)\n3. **Environmental Parameters:**\n   - Weather conditions (e"
+    },
+    {
+      "key": "vid_00124",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete \u2713\n\nI have successfully processed video **vid_00124** through the complete annotation SOP pipeline. Here's the summary:\n\n### Pipeline Execution Summary:\n\n**Phase 1: Input Validation** \u2713\n- Video Format: H.264 MP4 (1920x2160, 30 FPS, 8-bit, 4 channels)\n- Scene Context: Riverfront\n- Weather Conditions: Bright/Clear\n- Camera Position: Dash\n\n**Phase 2: Sensor Calibration & Validation** \u2713\n- Camera Calibration: Complete\n- Camera Intrinsics: Available and validated\n- Camera Stabili"
+    },
+    {
+      "key": "vid_00153",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00153\n\n**Final Status: \u274c NOT ANNOTATED**\n\nThe video has been **rejected during input validation** per SOP Section 5.1 and Section 10.1 protocols. The video does not meet the mandatory specifications required for annotation and processing.\n\n### Key Failures:\n- **Video Format**: AVI (non-compliant; requires HEVC/H.264)\n- **Spatial Resolution**: 1024x800 (below 1920x1080 minimum)\n- **Temporal Resolution**: 11.55 fps (below 24.0 fps minimum)\n- **Bit Depth**: 12-bit (inv"
+    },
+    {
+      "key": "vid_00155",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has completed successfully. Here's a summary of the processing:\n\n## Video Annotation SOP Processing Summary - vid_00155\n\n### Input Validation \u2705\n- **Video Format**: HEVC, 1920x1080 @ 30.0fps, 8-bit, 3 channels\n- **Scene Type**: Cityscape (urban environment)\n- **Weather Conditions**: Gloomy (acceptable)\n- **Camera Position**: Dashboard\n- **Camera Intrinsics**: Available\n\n### LiDAR Integration \u2705\n- **Point Cloud Data**: Successfully validated at `/data/lidar/vi"
+    },
+    {
+      "key": "vid_00193",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Processing Complete\n\nThe video `vid_00193` has been successfully processed through the complete annotation SOP pipeline. Here is the final output:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00193.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00193.mp4.binary\",\n  \"inter_annotator_score\": 0.812\n}\n</final_output>\n```\n\n### Processing Summary:\n\n**Video Validation:**\n- Format: HEVC (compliant)\n- Resolution: 1920\u00d72160 pixels (va"
+    },
+    {
+      "key": "vid_00112",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Final Summary\n\nVideo **vid_00112** has been successfully processed through the complete annotation SOP pipeline. Here's the comprehensive summary:\n\n### **Pipeline Stages Executed:**\n\n1. **Input Validation** \u2713\n   - Video Format: H.264, 1920x2160, 45.0 fps, 10-bit depth\n   - Scene Context: Union Station (Urban)\n   - Weather: Golden Hour\n   - Camera Position: Front\n\n2. **LiDAR Integration** \u2713\n   - LiDAR data validated and synchronized\n   - Depth maps generated\n   - Camera i"
+    },
+    {
+      "key": "vid_00143",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Processing Complete - vid_00143\n\nSuccessfully processed video through the entire annotation SOP pipeline. Here's the summary:\n\n### Processing Summary:\n\n**Phase 1: Input Validation** \u2713\n- Video Format: HEVC (1920x1080 @ 30fps, 10-bit, 3-channel) - Valid\n- Scene Context: Crowded high-rise district (urban) - Valid\n- Weather Conditions: Dim light - Valid\n- Camera Position: Camera beside HUD - Valid\n\n**Phase 2: Sensor Calibration & Enhancement** \u2713\n- Camera calibration completed\n- Camera "
+    },
+    {
+      "key": "vid_00089",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been completed successfully. Here's a summary of the processing:\n\n## Video vid_00089 - Annotation Pipeline Summary\n\n### \u2705 **PROCESSING COMPLETED SUCCESSFULLY**\n\n**Video Format Validation:**\n- Video ID: vid_00089\n- Format: H.264\n- Resolution: 1920x1080 (Full HD)\n- Frame Rate: 45 FPS \u2713\n- Bit Depth: 8-bit \u2713\n- Channels: 3 (RGB) \u2713\n- Scene Context: Dense street (Urban) \u2713\n- Weather: Golden hour \u2713\n- Camera Position: Dash-mounted \u2713\n\n**Sensor Calibration & Synchr"
+    },
+    {
+      "key": "vid_00055",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video `vid_00055` through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Video Annotation Processing Summary - vid_00055\n\n### \u2705 Processing Status: **COMPLETED SUCCESSFULLY**\n\n**Pipeline Stages Executed:**\n\n1. **Video Format Validation** \u2705\n   - Format: H.264 (MP4)\n   - Resolution: 1920x2160\n   - Frame Rate: 60.0 fps\n   - Bit Depth: 8-bit\n   - Channels: 3 (RGB)\n\n2. **Environmental Validation** \u2705\n   - Scene Type: Riverfront\n   - Wea"
+    },
+    {
+      "key": "vid_00171",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Summary - Video vid_00171\n\n**\u2705 SUCCESSFULLY COMPLETED**\n\n### Pipeline Execution Flow:\n1. \u2705 **Video Format Validation** - H.264 format, 3840x1080 resolution, 60fps\n2. \u2705 **Camera Calibration** - Front-mounted camera calibrated\n3. \u2705 **Environmental Validation** - Urban scene, hazy weather conditions\n4. \u2705 **LiDAR Data Validation** - Point cloud synchronized (0.58s offset corrected)\n5. \u2705 **Object Detection** - Buildings detected with 0.986 confidence\n6. \u2705 **Segmentation Process"
+    },
+    {
+      "key": "vid_00119",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing completed successfully. Here's the final output in XML format:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00119.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00119.binary\",\n  \"inter_annotator_score\": 0.97,\n  \"video_id\": \"vid_00119\"\n}\n</final_output>\n```\n\n## Summary of Processing Pipeline for vid_00119:\n\n**\u2713 Input Validation Phase:**\n- Video Format: HEVC, 3840x2160 resolution, 60 fps, 10-bit depth, 4 channels\n"
+    },
+    {
+      "key": "vid_00032",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\n**Video ID:** vid_00032  \n**Final Status:** \u274c NOT ANNOTATED\n\n**Reason:** Video vid_00032 failed multiple critical SOP compliance requirements:\n\n**Video Format Failures:**\n- Format: RAW (non-compliant; requires HEVC/H.264)\n- Resolution: 1280x720 (below minimum 1920x1080)\n- Frame Rate: 14.0 fps (below minimum 24.0 fps)\n\n**Environmental Compliance Failures:**\n- Scene Type: Arcade (non-urban; requires urban setting)\n- Lighting: Artificial Sunlight (non-daylight; violates Section 5.1)\n\n**"
+    },
+    {
+      "key": "vid_00142",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00142 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Annotation Processing Summary for vid_00142\n\n### Video Information\n- **Video ID**: vid_00142\n- **Format**: H.264 (3840x1080 @ 45.0 fps)\n- **Scene Type**: Crowded high-rise district\n- **Weather**: Bright (Golden Hour lighting)\n- **Camera Position**: Driver seat\n\n### Processing Pipeline Results\n\n\u2705 **Input Validation**\n- Video format: Valid\n- Camera intrinsics:"
+    },
+    {
+      "key": "vid_00023",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Video Processing Summary for vid_00023\n\n### \u2705 Pipeline Completion Status: **SUCCESSFULLY ANNOTATED**\n\n### Processing Steps Completed:\n1. **Video Format Validation** \u2705\n   - Format: HEVC\n   - Resolution: 1920x1080\n   - Frame Rate: 30.0 fps\n   - Bit Depth: 10-bit\n   - Channels: 3 (RGB)\n\n2. **LiDAR Data Validation** \u2705\n   - LiDAR Point Cloud: `/data/lidar/vid_00023.pcd"
+    },
+    {
+      "key": "vid_00038",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline has been completed successfully for video `vid_00038`. Here's a summary of the comprehensive processing:\n\n## Video Annotation Processing Summary - vid_00038\n\n### \u2705 Input Validation Phase\n- **Video Format**: HEVC, 1920x2160 resolution, 45 FPS, 8-bit depth, 3 channels\n- **Scene Context**: Urban crowded high-rise district\n- **Weather Conditions**: Obscured but suitable\n- **Camera Position**: Dash (front-facing) \u2713\n\n### \u2705 Sensor Integration Phase\n- **LiDAR Data Valida"
+    },
+    {
+      "key": "vid_00050",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Processing Complete - vid_00050\n\n### Final Output\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00050.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00050.binary\",\n  \"inter_annotator_score\": 0.89,\n  \"reason\": null\n}\n</final_output>\n```\n\n### Summary of Processing Pipeline\n\n\u2705 **Stage 1: Input Validation**\n- Video Format: H.264, 1920x1080, 30fps, 8-bit, 3 channels\n- Scene Context: Downtown square (Urban)\n- Weather Conditions: Clear "
+    },
+    {
+      "key": "vid_00156",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 6,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\n**Video ID**: vid_00156\n**Final Status**: \u274c **NOT ANNOTATED**\n\n### Validation Failure Summary\n\nThe video failed to meet mandatory SOP input specifications at the initial validation stage (Section 4). The following critical violations were identified:\n\n| Requirement | Required | Actual | Status |\n|---|---|---|---|\n| **Video Format** | HEVC/H.264 | RAW | \u274c FAIL |\n| **Resolution** | \u22651920x1080 | 1280x720 | \u274c FAIL |\n| **Frame Rate** | 24.0-60.0 fps | 18.35 fps | \u274c FAIL |\n| **Bit Depth** "
+    },
+    {
+      "key": "vid_00080",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing complete. Here's the summary of the annotation pipeline execution for **vid_00080**:\n\n## Processing Summary\n\n### \u2713 Input Validation Phase\n- **Video Format**: HEVC, 3840x1080 resolution, 45 fps, 8-bit, 3 channels\n- **Scene Context**: Crowded high-rise district (urban)\n- **Weather**: Shaded conditions with Golden Hour lighting\n- **Camera Position**: Camera beside HUD\n\n### \u2713 Sensor Integration Phase\n- **LiDAR Data**: Successfully validated and synchronized\n- **P"
+    },
+    {
+      "key": "vid_00041",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation process for video vid_00041 has been successfully completed. Here's the summary:\n\n## Processing Summary for vid_00041\n\n**Final Status:** \u2705 Successfully Annotated\n\n### Video Specifications:\n- **Format:** H.264 MP4\n- **Resolution:** 3840 x 1080 pixels\n- **Frame Rate:** 60 FPS\n- **Bit Depth:** 8-bit\n- **Channels:** 3 (RGB)\n- **Scene Type:** Riverfront\n- **Weather:** Clear sky\n\n### Processing Pipeline Results:\n\n1. \u2705 **Video Validation:** Passed\n2. \u2705 **LiDAR Validation:** Pass"
+    },
+    {
+      "key": "vid_00154",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 4,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Output\n\n```xml\n<final_output>\n{\n  \"final_status\": false,\n  \"coco_json_path\": null,\n  \"segmentation_mask_path\": null,\n  \"inter_annotator_score\": 0.51,\n  \"reason\": \"Video vid_00154 failed to meet SOP compliance requirements across multiple critical domains: (1) Input format non-compliance: resolution 1024x800 below minimum 1920x1080, frame rate 12.04 fps below minimum 24 fps, single channel (grayscale) below required 3+ channels, scene type skybridge instead of urban, dim lighting instead"
+    },
+    {
+      "key": "vid_00186",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 5,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Report: Video vid_00186 Annotation Processing\n\n**FINAL STATUS: \u274c NOT ANNOTATED**\n\n### Summary of Processing Results\n\nThe video `vid_00186` has been processed through the complete annotation SOP pipeline and **failed to meet quality requirements** at multiple critical stages. The video is **NOT SUITABLE** for training autonomous vehicle perception systems.\n\n### Critical Failures Identified\n\n**1. Input Specification Violations (Section 4.1)**\n- \u274c Format: RAW (Required: HEVC/H.264)\n- \u274c Res"
+    },
+    {
+      "key": "vid_00048",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nVideo **vid_00048** has been processed through the annotation SOP pipeline and **rejected at the input validation stage**. \n\n**Final Status**: \u274c **NOT ANNOTATED**\n\n**Primary Reasons for Rejection:**\n- Fails multiple critical technical specifications per Section 4 of the SOP\n- Insufficient color channels (2 vs required 3+)\n- Below minimum frame rate (19 fps vs required 24-60 fps)\n- Below minimum resolution (1280x720 vs required 1920x1080+)\n- Incorrect video format (MOV vs required HEV"
+    },
+    {
+      "key": "vid_00170",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Final Summary\n\n**Video ID**: vid_00170  \n**Annotation Status**: \u274c **NOT ANNOTATED**\n\n**Reason for Rejection:**\nVideo vid_00170 has been rejected at the input validation stage (Section 5.1 of SOP) due to multiple critical compliance failures:\n\n- **Technical Specification Failures:**\n  - Resolution: 1024x720 (Required: \u22651920x1080)\n  - Frame Rate: 16.87 fps (Required: 24.0-60.0 fps)\n  - Color Channels: 1 (Required: \u22653 for RGB)\n  - Bit Depth: 12-bit (acceptable)\n\n- **Environmental Requirement Fai"
+    },
+    {
+      "key": "vid_00099",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation pipeline completed successfully. Here's a summary of the complete processing:\n\n## **Annotation Pipeline Summary for vid_00099**\n\n### **\u2713 Validation Stages Completed:**\n1. **Video Format Validation** \u2713\n   - Format: HEVC (1920x1080, 30fps, 10-bit, 3-channel)\n   - Scene: Mixed-use street\n   - Weather: Bright/Golden Hour conditions\n   - Camera: Front-mounted (driver seat)\n\n2. **Sensor Calibration** \u2713\n   - Camera intrinsics available and validated\n   - Camera sensors calibra"
+    },
+    {
+      "key": "vid_00102",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline has been successfully completed for video vid_00102. Here's a summary of the complete processing workflow:\n\n## Video Annotation SOP Processing Summary for vid_00102\n\n### Phase 1: Input Validation \u2713\n- **Video Format**: H.264 encoded, 1920x2160 resolution, 30.0 fps, 8-bit depth, 4 channels\n- **Scene Context**: Union Station (urban environment)\n- **Weather/Lighting**: Hazy sunshine with Golden Hour lighting\n- **Camera Position**: Dash-mounted (front view)\n\n### Phase"
+    },
+    {
+      "key": "vid_00148",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00148 through the complete annotation SOP pipeline. Here's a summary of the workflow:\n\n## Processing Summary for vid_00148\n\n### \u2705 Input Validation Phase\n- **Video Format**: HEVC, 3840x1080 resolution, 45 fps, 8-bit depth, 3 channels\n- **Scene Context**: Dense street environment\n- **Weather Conditions**: Hazy sunshine with clear lighting\n- **Camera Position**: Camera beside HUD\n\n### \u2705 Sensor Calibration & Data Alignment\n- **LiDAR Data Validation**:"
+    },
+    {
+      "key": "vid_00015",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Final Report for vid_00015\n\nThe video has been **successfully annotated** through the complete SOP pipeline. Here's a summary of the processing results:\n\n### Quality Metrics Summary:\n- **Spatial Accuracy Score**: 0.909 \u2713 (exceeds 0.85 threshold)\n- **Temporal Consistency Score**: 0.985 \u2713 (exceeds 0.80 threshold)\n- **Predicted IoU (Segmentation)**: 0.835 \u2713 (exceeds 0.75 threshold)\n- **Inter-Annotator Agreement**: 0.933 \u2713 (exceeds 0.75 threshold)\n- **Object Detection Confid"
+    },
+    {
+      "key": "vid_00132",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video Annotation Summary\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00132.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00132.mp4.binary\",\n  \"inter_annotator_score\": 0.8033657893328879,\n  \"reason\": null\n}\n</final_output>\n```\n\n### Pipeline Execution Summary\n\n**Video ID:** vid_00132\n\n**Processing Results:**\n- \u2705 **Video Format Validation**: HEVC, 4K (3840x2160), 60fps, 10-bit depth, 3 channels - **PASSED**\n- \u2705 **Environ"
+    },
+    {
+      "key": "vid_00158",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been successfully completed. Here's the comprehensive summary:\n\n## Video Annotation Processing Summary - vid_00158\n\n### \u2705 **Pipeline Completion Status: SUCCESSFUL**\n\n**Final Output:**\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00158.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00158.mp4.binary\",\n  \"inter_annotator_score\": 0.8293250175717257\n}\n</final_output>\n```\n\n### Processing Details:\n\n**1. Input "
+    },
+    {
+      "key": "vid_00151",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Completion Summary\n\n**Video vid_00151 has been successfully processed through the complete annotation SOP pipeline.**\n\n### Processing Results:\n\n**Final Status:** \u2705 **ANNOTATED**\n\n### Quality Metrics Achieved:\n- **Predicted IoU (Segmentation):** 0.939 (exceeds 0.75 minimum threshold)\n- **Spatial Accuracy Score:** 0.873 (exceeds 0.85 minimum threshold)\n- **Temporal Consistency Score:** 0.932 (exceeds 0.80 minimum threshold)\n- **Inter-annotator Agreement:** 0.753 (meets 0.75 "
+    },
+    {
+      "key": "vid_00029",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 15,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete: Video vid_00029 Successfully Annotated\n\nI have successfully processed video **vid_00029** through the complete annotation SOP pipeline. Here's a comprehensive summary:\n\n### **Pipeline Execution Summary:**\n\n**\u2705 Phase 1: Input Validation & Sensor Calibration**\n- Video Format: H.264 (3840\u00d71080 @ 45fps, 10-bit, 3-channels)\n- Camera Position: Camera beside HUD\n- Scene Context: Bus Terminal\n- Weather Conditions: Muted/Clear\n- Camera Intrinsics: Available and validated\n- Camera "
+    },
+    {
+      "key": "vid_00051",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00051 through the complete annotation SOP pipeline. Here's a summary of the workflow:\n\n## Processing Summary for vid_00051\n\n### Input Validation Phase\n\u2705 **Video Format Validation**\n- Format: HEVC\n- Resolution: 1920x1080 (1080p)\n- Frame Rate: 24.0 fps\n- Bit Depth: 8-bit\n- Channels: 3 (RGB)\n- Scene Type: Car Park\n- Weather: Hazy Sunshine\n- Lighting: Golden Hour\n- Camera Position: Bird's Eye\n\n\u2705 **LiDAR Data Validation**\n- Point Cloud Path: /data/lida"
+    },
+    {
+      "key": "vid_00098",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Complete - Summary Report\n\n**Video ID:** vid_00098\n\n### Processing Pipeline Results:\n\n**\u2713 Input Validation Phase**\n- Video Format: H.264 compliant\n- Resolution: 3840x1080 (exceeds minimum 1920x1080)\n- Frame Rate: 45.0 fps (within 24-60 range)\n- Bit Depth: 10-bit (compliant)\n- Channel Count: 4 (RGBA - exceeds minimum 3)\n- Scene Type: Cityscape (urban context validated)\n- Weather: Hazy (environmental validation passed)\n- Camera Position: Passenger seat near driver\n\n**\u2713 LiDAR"
+    },
+    {
+      "key": "vid_00011",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00011 has been successfully processed through the complete annotation SOP pipeline. Here's the comprehensive summary:\n\n## Annotation Pipeline Completion Summary for vid_00011\n\n### \u2705 Processing Steps Completed:\n\n1. **Input Validation** \u2713\n   - Video Format: H.264, 3840x2160 resolution, 45 fps, 8-bit depth, 3 channels\n   - Scene Context: Urban/Cityscape confirmed\n   - Weather Conditions: Validated (sleet)\n\n2. **Sensor Calibration & Synchronization** \u2713\n   - Camera sensors calibrat"
+    },
+    {
+      "key": "vid_00068",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 5,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nI have completed processing video **vid_00068** through the comprehensive Autonomous Vehicle Video Annotation Protocol (SOP). The video has been **rejected** and not annotated due to critical compliance failures across multiple dimensions:\n\n### Critical Issues Identified:\n\n**Input Validation Failures:**\n- Channel count: 2 (requires minimum 3 for RGB)\n- Frame rate: 17.0 fps (requires minimum 24.0 fps)\n- Lighting: Dark/smoky (requires daylight conditions)\n- Camera position: Driver assi"
+    },
+    {
+      "key": "vid_00083",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00083 has been successfully processed through the complete annotation SOP pipeline.\n\n## Final Output Summary\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00083.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00083.binary\",\n  \"inter_annotator_score\": 0.92\n}\n</final_output>\n```\n\n### Pipeline Execution Summary:\n\n\u2705 **Video Format Validation**: Passed\n- Format: HEVC, Resolution: 1920x1080, Frame Rate: 30.0 fps, Bit Depth: 10-bit, Chann"
+    },
+    {
+      "key": "vid_00169",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation has been successfully completed and submitted. Here's a summary of the processing pipeline for vid_00169:\n\n## Annotation SOP Completion Summary\n\n**Video ID:** vid_00169\n\n### Pipeline Steps Completed:\n\n1. **Video Format Validation** \u2713\n   - Format: HEVC, Resolution: 1920x1080, Frame Rate: 45 fps, Bit Depth: 8-bit, Channels: 3\n\n2. **Environmental & Scene Validation** \u2713\n   - Scene Type: University District (Urban)\n   - Weather: Drizzle, Lighting: Clear\n\n3. **Camera Cali"
+    },
+    {
+      "key": "vid_00078",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary\n\nVideo **vid_00078** has been processed through the SOP validation framework with the following outcome:\n\n**Final Status: NOT ANNOTATED \u2717**\n\n**Reason for Rejection:**\nThe video failed multiple critical compliance requirements per the Autonomous Vehicle Video Annotation Protocol:\n\n| Requirement | SOP Specification | Actual Value | Status |\n|-------------|------------------|--------------|--------|\n| Frame Rate | 24.0-60.0 fps | 19.0 fps | \u274c FAIL |\n| Color Channels | Minimum 3 | 2 chann"
+    },
+    {
+      "key": "vid_00093",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline for video vid_00093 has been successfully completed. Here's a comprehensive summary:\n\n## **Video Annotation SOP Processing Summary - vid_00093**\n\n### **Processing Pipeline Status: \u2705 COMPLETE**\n\n---\n\n### **Step-by-Step Execution Results:**\n\n**1. Input Validation Architecture** \u2705\n- Video Format: HEVC (Compliant)\n- Resolution: 1920x2160 pixels (Exceeds minimum 1920x1080)\n- Frame Rate: 60.0 fps (Within 24-60 fps range)\n- Bit Depth: 10-bit (Compliant)\n- Color Channels"
+    },
+    {
+      "key": "vid_00114",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Video Annotation Processing Summary - vid_00114\n\n### \u2705 **Processing Complete**\n\n**Pipeline Steps Executed:**\n1. \u2705 Video Format Validation - H.264, 1920x1080, 45fps, 8-bit, 4 channels\n2. \u2705 Scene Context Validation - University district (urban setting approved)\n3. \u2705 Weather Conditions Validation - Hazy sunshine (acceptable conditions)\n4. \u2705 LiDAR Data Validation - Po"
+    },
+    {
+      "key": "vid_00082",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00082 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Annotation Pipeline Processing Summary for vid_00082\n\n### \u2705 All Pipeline Stages Completed Successfully\n\n**Input Validation:**\n- \u2705 Video Format: HEVC, 1920x2160, 30fps, 8-bit, 4-channel\n- \u2705 Scene Type: Downtown square\n- \u2705 Weather: Bright conditions\n- \u2705 LiDAR Data: Validated and synchronized (time_offset: 0.899s)\n- \u2705 Camera Intrinsics: Available\n- \u2705 Camera Pos"
+    },
+    {
+      "key": "vid_00185",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video vid_00185 through the complete annotation SOP pipeline. Here's a summary of the processing:\n\n## Processing Summary for vid_00185\n\n### Video Format Validation \u2713\n- Format: HEVC (H.265)\n- Resolution: 1920x2160 (high resolution)\n- Frame Rate: 60.0 fps\n- Bit Depth: 10-bit\n- Channel Count: 3 (RGB)\n- Scene Type: Mixed use street\n- Weather: Drizzle\n- Lighting: Visible horizon\n- Camera Position: Dash\n\n### LiDAR Integration \u2713\n- Point Cloud: `/data/lidar/vid_001"
+    },
+    {
+      "key": "vid_00001",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation process has been completed successfully. Here's a summary of the annotation pipeline execution for **vid_00001**:\n\n## Annotation SOP Pipeline Summary\n\n### \u2705 Input Validation Phase\n- **Video Format**: HEVC, 1920x1080, 30fps, 8-bit, 3-channel RGB\n- **Scene Context**: Urban mixed-use street environment\n- **Weather**: Clear sky with visible horizon\n- **Camera Position**: Front dash camera\n- **Camera Intrinsics**: Available and validated\n- **LiDAR Data**: Valid with 0.1s"
+    },
+    {
+      "key": "vid_00129",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete: vid_00129\n\nSuccessfully processed video **vid_00129** through the comprehensive Autonomous Vehicle Video Annotation Protocol. Here's a summary of the pipeline execution:\n\n### \u2705 **Pipeline Summary**\n\n**Input Validation Stage:**\n- Video Format: HEVC, 3840x2160 resolution, 60 fps, 10-bit depth, 4 channels\n- Scene Type: Dense street (urban environment)\n- Weather: Clear sky with clear lighting conditions\n- Camera Position: Driver seat with stable calibration\n\n**LiDAR Integrati"
+    },
+    {
+      "key": "vid_00064",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00064 Annotation Summary\n\nI have successfully processed video **vid_00064** through the complete annotation SOP pipeline. Here's a comprehensive summary:\n\n### **Pipeline Execution Summary:**\n\n#### **1. Input Validation \u2713**\n- **Video Format**: HEVC, 1920x2160 resolution, 45.0 fps\n- **Bit Depth**: 10-bit\n- **Channels**: 3 (RGB)\n- **Scene**: Crowded high-rise district (Urban)\n- **Weather**: Hazy sunshine\n- **Camera**: Dashboard position\n\n#### **2. LiDAR Data Integ"
+    },
+    {
+      "key": "vid_00079",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation processing is complete. Here's a summary of the full pipeline execution for **vid_00079**:\n\n## Processing Summary\n\n### \u2705 Phase 1: Input Validation\n- **Video Format**: HEVC, 3840x2160 resolution, 60 fps, 10-bit, 4 channels\n- **Scene Context**: University district (urban)\n- **Weather**: Clear sky (Golden Hour lighting)\n- **Camera Position**: Driver seat\n- **Status**: \u2705 PASSED\n\n### \u2705 Phase 2: Camera & LiDAR Integration\n- **Camera Intrinsics**: Available and validated\n-"
+    },
+    {
+      "key": "vid_00045",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The annotation pipeline for video vid_00045 has been successfully completed. Here's a summary of the processing results:\n\n## Annotation SOP Pipeline Completion Summary\n\n**Video ID:** vid_00045\n\n### Pipeline Execution Results:\n\n\u2705 **Input Validation Phase**\n- Video Format Validation: PASSED (H.264, 1920\u00d72160, 45 FPS, 8-bit, 3 channels)\n- Scene Context: Urban (dense street)\n- Weather Conditions: Icy (acceptable)\n- Camera Position: Passenger seat near driver\n\n\u2705 **Technical Processing Phase*"
+    },
+    {
+      "key": "vid_00053",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 8,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been successfully completed. Here's the summary:\n\n## Video Annotation Pipeline Results for vid_00053\n\n### Pipeline Execution Summary:\n\n**1. Input Validation \u2713**\n- Video Format: HEVC (1920x1080, 30fps, 10-bit, 3 channels)\n- LiDAR Data: Valid with 0.1s time offset, 60m range\n- Scene Context: Dense street environment\n- Weather: Gray conditions with Golden Hour lighting\n- Camera Position: Driver seat\n\n**2. Object Detection \u2713**\n- Predicted Object: Buildings\n"
+    },
+    {
+      "key": "vid_00030",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00030 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Annotation Processing Summary for vid_00030\n\n### \u2705 Pipeline Completion Status: SUCCESS\n\n**Input Validation Phase:**\n- Video Format: H.264 (1920x1080 @ 30.0 fps, 8-bit, 3 channels) \u2713\n- Scene Context: Mixed use street \u2713\n- Weather Conditions: Hazy sunshine \u2713\n- LiDAR Data: Synchronized with 0 offset \u2713\n- Camera Intrinsics: Available \u2713\n- LiDAR Transform: Available"
+    },
+    {
+      "key": "vid_00179",
+      "ok": false,
+      "status": "error",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "key": "vid_00104",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Processing Complete for vid_00104\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00104.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00104.binary\",\n  \"inter_annotator_score\": 0.93,\n  \"reason\": null\n}\n</final_output>\n```\n\n### Processing Summary:\n\n\u2705 **Video Format Validation**: Passed\n- Format: H.264, Resolution: 1920x1080, Frame Rate: 30.0 fps\n- Bit Depth: 8, Channels: 3\n- Scene Context: Expressway, Weather: Bright\n\n\u2705 **Camera & Sensor "
+    },
+    {
+      "key": "vid_00043",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Video Annotation Pipeline Summary - vid_00043\n\n**Processing Status: \u2705 SUCCESSFUL**\n\n### Pipeline Execution Summary\n\nThe video `vid_00043` has been successfully processed through the complete Autonomous Vehicle Video Annotation SOP pipeline. Here's a comprehensive overview:\n\n#### 1. **Input Validation Phase**\n- \u2705 Video Format Validation: PASSED\n  - Format: HEVC\n  - Resolution: 1920x1080\n  - Frame Rate: 30.0 fps\n  - Bit Depth: 10-bit\n  - Channels: 3 (RGB)\n  - Scene: Dense street (urban)\n  - Lig"
+    },
+    {
+      "key": "vid_00039",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 12,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00039 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Final Output Summary\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00039.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00039.mp4.binary\",\n  \"inter_annotator_score\": 0.941262010554837,\n  \"detected_object\": \"traffic signs\",\n  \"quality_metrics\": {\n    \"predicted_iou\": 0.9215324697685968,\n    \"spatial_accuracy_"
+    },
+    {
+      "key": "vid_00042",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 13,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Summary of Video Annotation Processing for vid_00042\n\n**Processing Status: \u2705 COMPLETED SUCCESSFULLY**\n\n### Annotation Pipeline Execution Summary:\n\n**1. Input Validation Phase:**\n- \u2705 Video Format Validation: HEVC codec, 3840x1080 resolution, 45 FPS, 8-bit, 3 channels\n- \u2705 LiDAR Data Validation: Point cloud synchronized with 0.47s offset, intrinsics and transforms available\n- \u2705 Environmental Validation: Golden hour conditions, crowded high-rise district context\n- \u2705 Camera Intrinsics Confirmed: A"
+    },
+    {
+      "key": "vid_00160",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Annotation Pipeline Summary for vid_00160\n\n**Final Status:** \u274c **NOT ANNOTATED**\n\n**Reason:** Video failed input validation with multiple critical compliance violations:\n\n| Requirement | Specification | Actual Value | Status |\n|---|---|---|---|\n| Resolution | Minimum 1920x1080 | 1280x800 | \u274c FAIL |\n| Frame Rate | 24.0-60.0 fps | 14.14 fps | \u274c FAIL |\n| Bit Depth | 8 or 10 bits | 6 bits | \u274c FAIL |\n| Color Channels | Minimum 3 (RGB) | 2 channels | \u274c FAIL |\n| Camera Intrinsics | Required | Not Av"
+    },
+    {
+      "key": "vid_00152",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation has been successfully completed. Here's the comprehensive summary:\n\n## Video Annotation Processing Summary for vid_00152\n\n### \u2705 Processing Status: COMPLETE\n\n**Video Specifications:**\n- Video ID: vid_00152\n- Format: H.264\n- Resolution: 1920x1080\n- Frame Rate: 60.0 fps\n- Bit Depth: 8-bit\n- Channels: 3 (RGB)\n- Scene Type: Cityscape\n\n**LiDAR Integration:**\n- Point Cloud: /data/lidar/vid_00152.pcd\n- Time Offset: 0.142 seconds (within tolerance)\n- Camera Intrinsics: Avail"
+    },
+    {
+      "key": "vid_00014",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": false
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "validateLidarData",
+            "contracts": [
+              "validateLidarData requires video_ok"
+            ]
+          },
+          {
+            "tool": "performObjectDetection",
+            "contracts": [
+              "performObjectDetection requires lidar_ok"
+            ]
+          },
+          {
+            "tool": "executeSegmentation",
+            "contracts": [
+              "executeSegmentation requires detect_ok"
+            ]
+          },
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          },
+          {
+            "tool": "performHumanValidation",
+            "contracts": [
+              "performHumanValidation requires qc_ok"
+            ]
+          }
+        ],
+        "violation_count": 5,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "validateLidarData requires video_ok",
+            "performObjectDetection requires lidar_ok",
+            "executeSegmentation requires detect_ok",
+            "runAutomatedQC requires seg_ok",
+            "performHumanValidation requires qc_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Summary for vid_00014\n\n**Final Status: NOT ANNOTATED \u274c**\n\n### Quality Control Results:\n\n| Metric | Result | Threshold | Status |\n|--------|--------|-----------|--------|\n| Spatial Accuracy | 0.73 | \u2265 0.85 | \u274c FAILED |\n| Temporal Consistency | 0.75 | \u2265 0.80 | \u274c FAILED |\n| Segmentation IoU | 0.71 | \u2265 0.75 | \u274c FAILED |\n| Inter-annotator Score | 0.74 | \u2265 0.75 | \u274c FAILED |\n| LiDAR Time Offset | 1.1s | \u00b11.0s | \u274c OUT OF TOLERANCE |\n| Camera Intrinsics | Not Available | Required | \u274c MISSIN"
+    },
+    {
+      "key": "vid_00109",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing completed successfully. Here's the summary:\n\n## Annotation Pipeline Completion Summary for vid_00109\n\n**Final Status:** \u2705 **SUCCESSFULLY ANNOTATED**\n\n### Processing Pipeline Results:\n\n1. **Input Validation** \u2705\n   - Video Format: HEVC (3840x2160, 60fps, 10-bit, 4 channels)\n   - Scene Context: Crowded high-rise district (Urban)\n   - Weather: Clear sky with golden hour lighting\n   - Camera Position: Passenger seat near driver\n\n2. **LiDAR Integration** \u2705\n   - Poi"
+    },
+    {
+      "key": "vid_00125",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00125 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the workflow:\n\n## Processing Summary for vid_00125\n\n**\u2705 All Pipeline Stages Completed Successfully**\n\n### 1. **Input Validation Stage**\n- Video Format: \u2705 HEVC compliant\n- Resolution: 1920x2160 pixels\n- Frame Rate: 45.0 fps\n- Bit Depth: 8-bit\n- Channels: 4 (RGBA)\n- Scene Type: Crowded high-rise district (Urban)\n- Weather: Frosty with visible horizon\n- Camera Position: Dashboa"
+    },
+    {
+      "key": "vid_00035",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00035 Successfully Annotated\n\nI have successfully processed video vid_00035 through the complete annotation SOP pipeline. Here's a comprehensive summary:\n\n### **Pipeline Execution Summary:**\n\n**1. Input Validation (PASSED)**\n- Video Format: H.264 codec with 3840x2160 resolution\n- Frame Rate: 30 fps (compliant)\n- Bit Depth: 8-bit with 3 color channels (RGB)\n- Scene Context: Urban/cityscape environment\n- Weather: Flurries with clear lighting conditions\n- Camera I"
+    },
+    {
+      "key": "vid_00184",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Excellent! Video vid_00184 has been successfully processed through the complete annotation SOP pipeline. Here's a summary:\n\n## Annotation Pipeline Summary for vid_00184\n\n### \u2705 **Final Status: SUCCESSFULLY ANNOTATED**\n\n### Pipeline Execution Results:\n\n**1. Input Validation Phase:**\n- \u2705 Video Format: HEVC, 1920x2160 @ 30fps, 8-bit depth, 4 channels\n- \u2705 Scene Context: Urban cityscape \n- \u2705 Weather: Hazy conditions (acceptable)\n- \u2705 Camera Intrinsics: Available\n- \u2705 LiDAR Data: Validated and synchroniz"
+    },
+    {
+      "key": "vid_00074",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 9,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Excellent! Video annotation processing complete. Here's the comprehensive summary:\n\n## Video Annotation Pipeline Summary for vid_00074\n\n### \u2705 **Processing Status: SUCCESSFULLY COMPLETED**\n\n### **Input Validation Results:**\n- **Video Format**: H.264, 1920x1080 @ 60fps, 8-bit, 3-channel RGB \u2713\n- **Scene Context**: University district (urban) \u2713\n- **Weather Conditions**: Hazy sunshine \u2713\n- **Camera Position**: Front-facing (dash cam) \u2713\n- **Camera Intrinsics**: Available \u2713\n- **Temporal Consistency**: 0"
+    },
+    {
+      "key": "vid_00175",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete \u2713\n\n**Video ID**: vid_00175\n\n**Final Status**: **ANNOTATED**\n\n### Final Output Summary:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00175.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00175.mp4.binary\",\n  \"inter_annotator_score\": 0.7942\n}\n</final_output>\n```\n\n### Quality Metrics Achieved:\n- \u2713 **Spatial Accuracy**: 0.9939 (Target: \u22650.85)\n- \u2713 **Temporal Consistency**: 0.8125 (Target: \u22650.80)\n- \u2713 **Inter-annotator Agreement*"
+    },
+    {
+      "key": "vid_00003",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00003 Annotation Summary\n\nI have successfully processed video `vid_00003` through the complete annotation SOP pipeline. Here's the final output in XML format:\n\n```xml\n<final_output>\n{\n  \"final_status\": true,\n  \"coco_json_path\": \"/data/videos/vid_00003.mp4.json\",\n  \"segmentation_mask_path\": \"/data/videos/vid_00003.mp4.binary\",\n  \"inter_annotator_score\": 0.7896435231518452\n}\n</final_output>\n```\n\n### Processing Pipeline Summary:\n\n**Phase 1: Input Validation** \u2713\n- "
+    },
+    {
+      "key": "vid_00012",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been successfully completed. Here's a summary of the processing results:\n\n## Annotation Pipeline Summary for vid_00012\n\n### \u2705 Pipeline Completion Status: SUCCESS\n\n**Video Information:**\n- Video ID: `vid_00012`\n- Format: HEVC\n- Resolution: 3840\u00d71080 (4K ultra-wide)\n- Frame Rate: 30.0 fps\n- Bit Depth: 10-bit\n- Scene Type: Cityscape\n- Weather: Bright with clear lighting\n\n**Processing Steps Completed:**\n\n1. \u2705 **Video Format Validation** - PASSED\n2. \u2705 **LiDA"
+    },
+    {
+      "key": "vid_00190",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! I have successfully processed video `vid_00190` through the complete annotation SOP pipeline. Here's a summary of the comprehensive workflow execution:\n\n## Video Annotation Pipeline Summary for vid_00190\n\n### \u2705 Input Validation Phase\n- **Video Format**: H.264 encoded MP4\n- **Resolution**: 1920x2160 pixels (high resolution)\n- **Frame Rate**: 45.0 fps (within 24-60 fps specification)\n- **Color Depth**: 8-bit with 3 channels (RGB)\n- **Scene Context**: Riverfront environment\n- **Weather Con"
+    },
+    {
+      "key": "vid_00034",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00034 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Processing Summary for vid_00034\n\n### \u2705 Pipeline Completion Status: **SUCCESS**\n\n**Video Specifications:**\n- Format: H.264\n- Resolution: 3840x1080\n- Frame Rate: 30.0 fps\n- Bit Depth: 8-bit\n- Scene Type: Dense Street\n- Weather: Clear Sky\n- Camera Position: Driver Seat\n\n**Processing Results:**\n\n1. **Input Validation:** \u2705 PASSED\n   - Video format validated\n   -"
+    },
+    {
+      "key": "vid_00090",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Excellent! Video `vid_00090` has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the results:\n\n## Processing Summary for vid_00090\n\n### \u2705 Pipeline Completion Status: **SUCCESSFULLY ANNOTATED**\n\n### Key Metrics Achieved:\n- **Spatial Accuracy Score**: 0.866 (\u2713 exceeds 0.85 threshold)\n- **Temporal Consistency Score**: 0.895 (\u2713 exceeds 0.80 threshold)\n- **Inter-annotator Score**: 0.922 (\u2713 exceeds 0.75 threshold)\n- **Predicted IoU**: 0.768 (\u2713 exceeds 0.75"
+    },
+    {
+      "key": "vid_00094",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "## Processing Complete - Video vid_00094 Annotation Summary\n\nI have successfully processed video **vid_00094** through the complete annotation SOP pipeline. Here's a comprehensive summary:\n\n### **Pipeline Execution Results:**\n\n#### **1. Input Validation Phase \u2713**\n- **Video Format**: H.264 compliant\n- **Resolution**: 1920x1080 (meets minimum requirements)\n- **Frame Rate**: 30.0 fps (within 24-60 fps range)\n- **Bit Depth**: 8-bit (valid)\n- **Color Channels**: 3 (RGB compliant)\n- **Scene Context**:"
+    },
+    {
+      "key": "vid_00100",
+      "want": {
+        "final_status": true
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 1,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "I'll process the video through the annotation SOP pipeline systematically. However, I need some additional information to proceed, as the tools require specific parameters that should be provided or inferred from your video metadata.\n\nLet me start by validating the video format, but I'll need you to provide the following information:\n\n1. **video_path**: The full path to the video file (e.g., `/data/videos/vid_00100.mp4`)\n2. **weather_condition**: Weather during recording (e.g., sunny, rainy, fog"
+    },
+    {
+      "key": "vid_00072",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 10,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video vid_00072 has been successfully processed through the complete annotation SOP pipeline. Here's a summary of the processing results:\n\n## Processing Summary for vid_00072\n\n**Final Status:** \u2705 ANNOTATED SUCCESSFULLY\n\n**Video Specifications:**\n- Format: HEVC\n- Resolution: 1920x2160 (exceeds minimum of 1920x1080)\n- Frame Rate: 45.0 fps (within 24-60 fps range)\n- Bit Depth: 8-bit\n- Color Channels: 3 (RGB)\n- Scene Type: Urban cityscape\n- Weather: Clear sky\n- Lighting: Good visibility\n\n**"
+    },
+    {
+      "key": "vid_00070",
+      "want": {
+        "final_status": false
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": false,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [
+          {
+            "tool": "runAutomatedQC",
+            "contracts": [
+              "runAutomatedQC requires seg_ok"
+            ]
+          }
+        ],
+        "violation_count": 1,
+        "proc_clean": false,
+        "finalize": {
+          "ltlf_violations": [
+            "runAutomatedQC requires seg_ok"
+          ],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Excellent! The annotation pipeline has been successfully completed. Here's a comprehensive summary:\n\n## Video Annotation SOP Processing Summary for vid_00070\n\n### \u2705 **FINAL STATUS: SUCCESSFULLY ANNOTATED**\n\n---\n\n### **Processing Pipeline Completion:**\n\n**1. Input Validation Phase:**\n- \u2705 Video Format: H.264 compliant (1920x1080, 30fps, 8-bit, 3-channel)\n- \u2705 Scene Context: Freeway environment\n- \u2705 Weather: Shower conditions (acceptable)\n- \u2705 Lighting: Clear conditions\n- \u2705 Camera Position: Passenger "
+    },
+    {
+      "key": "vid_00187",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! The video annotation pipeline has been completed successfully. Here's a comprehensive summary of the processing:\n\n## **Video Annotation SOP Pipeline - Final Report**\n\n**Video ID:** vid_00187\n\n### **Pipeline Execution Summary:**\n\n\u2705 **Stage 1: Input Validation**\n- Video Format: HEVC (3840x1080 @ 30fps, 8-bit, 3 channels)\n- LiDAR Data: Valid (offset: 0.055s, range: 133.94m)\n- Scene: Crowded high-rise district\n- Weather: Frosty conditions\n- Lighting: Golden Hour\n\n\u2705 **Stage 2: Sensor Calibra"
+    },
+    {
+      "key": "vid_00018",
+      "want": {
+        "final_status": true
+      },
+      "got": {
+        "final_status": true
+      },
+      "ok": true,
+      "model_calls": 11,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "Perfect! Video annotation processing complete. Here's the final summary:\n\n## Video Annotation Processing Summary for vid_00018\n\n### Processing Pipeline Results\n\n\u2705 **Input Validation**\n- Video Format: HEVC (1920x1080 @ 45 fps)\n- Color Space: RGB (3 channels, 8-bit)\n- Scene Context: Riverfront\n- Weather Conditions: Smoky\n- Camera Position: Dash-mounted\n\n\u2705 **Sensor Calibration & Synchronization**\n- Camera Intrinsics: Validated\n- LiDAR Data: Synchronized (0 sec offset)\n- Depth Maps: Generated\n- Came"
+    }
+  ]
+}

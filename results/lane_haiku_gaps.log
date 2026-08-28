@@ -11,3 +11,6 @@ wrote /Users/yifengxiao/Documents/acorn/results/haiku_content_flagging_baseline.
 }
 wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_acorn.json
 === [haiku@us-west-2] video_annotation baseline  ===
+}
+wrote /Users/yifengxiao/Documents/acorn/results/haiku_video_annotation_baseline.json
+=== [haiku@us-west-2] video_classification baseline  ===

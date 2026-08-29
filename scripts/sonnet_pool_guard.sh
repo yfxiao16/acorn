@@ -17,8 +17,10 @@ lane_in() { pgrep -f "lane_runner.sh.*sonnet $1" ; }
 while true; do
   left=$(python3 scripts/sonnet_missing.py)
   [ "$left" = "0" ] && { echo "$(date '+%m-%d %H:%M') all sonnet cells present"; break; }
-  for REG in us-east-1 us-west-2; do
-    LIST=$R/cells_sonnet.txt; [ $REG = us-west-2 ] && LIST=$R/cells_sonnet_rev.txt
+  for REG in us-east-1 us-west-2 us-east-2; do
+    LIST=$R/cells_sonnet.txt
+    [ $REG = us-west-2 ] && LIST=$R/cells_sonnet_rev.txt
+    [ $REG = us-east-2 ] && LIST=$R/cells_sonnet_mid.txt
     if probe $REG; then
       if [ -z "$(lane_in $REG)" ]; then
         echo "$(date '+%m-%d %H:%M') $REG open + idle -> launch"

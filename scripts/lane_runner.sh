@@ -10,6 +10,9 @@ while read -r D C EXTRA; do
   SUF=$(echo "$EXTRA" | sed 's/--flow-profile /prof_/;s/--scaffold /scaf_/;s/ /_/g')
   OUT=$R/${TAG}_${D}_${C}${SUF:+_$SUF}.json
   [ -f $OUT ] && { echo "skip $OUT"; continue }
+  if [ -f $OUT.partial.json ] && [ $(( $(date +%s) - $(stat -f %m $OUT.partial.json) )) -lt 1200 ]; then
+    echo "skip $OUT (another lane active on it)"; continue
+  fi
   echo "=== [$TAG@$3] $D $C $EXTRA ==="
   $PY benchmarks/amazon_sopbench/run_pack.py \
     --pack benchmarks/amazon_sopbench/data/${D}_sop \

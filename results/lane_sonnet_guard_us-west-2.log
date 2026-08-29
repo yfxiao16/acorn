@@ -18,3 +18,20 @@
 === [sonnet@us-west-2] video_classification acorn  ===
 === [sonnet@us-west-2] video_classification baseline  ===
 === [sonnet@us-west-2] video_classification acorn  ===
+=== [sonnet@us-west-2] video_classification baseline  ===
+[1/147] quota exhausted — pausing cell (resume later)
+paused at 0/147 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json.partial.json
+=== [sonnet@us-west-2] video_classification acorn  ===
+[6/147] quota exhausted — pausing cell (resume later)
+paused at 5/147 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json.partial.json
+=== [sonnet@us-west-2] video_annotation baseline  ===
+[6/147] quota exhausted — pausing cell (resume later)
+paused at 5/147 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json.partial.json
+[1/125] quota exhausted — pausing cell (resume later)
+paused at 0/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+=== [sonnet@us-west-2] video_annotation acorn  ===
+=== [sonnet@us-west-2] video_classification baseline  ===
+=== [sonnet@us-west-2] video_classification acorn  ===
+=== [sonnet@us-west-2] video_classification baseline  ===
+[9/147] quota exhausted — pausing cell (resume later)
+paused at 8/147 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json.partial.json

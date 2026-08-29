@@ -459,3 +459,22 @@ Findings:
    67.3→**98.1** (viol 0.04→0), patient_intake 98.5→**100.0**. ACORN is
    not a competitor to neural strategies; it is a compliance layer on
    top of any of them.
+
+### Sonnet × acorn max_steps clusters (provisional — traced rebuild pending)
+
+`claude-4.5-sonnet` under the acorn condition shows rows that exhaust
+max_steps (14 model calls) without submitting, while every Sonnet
+baseline cell completes: video_classification acorn **48.3%, reproduced
+exactly across two runs with 0 error rows** (kept as
+`results/sonnet_video_classification_acorn.run2.keep`), aircraft acorn
+40/112, warehouse acorn 8/150. Persisted traces show the cluster is
+**100% escalated rows** (74/74; all 71 non-escalated rows pass), only 3–4
+real tool calls per row, zero blocked proposals and empty final text —
+i.e. ~10 model turns that produced neither text nor a registry tool
+name. The controller never declared a dead end (an admissible tool was
+exposed), so the model was emitting tool names outside the registry,
+which the loop dropped silently. Fixes shipped: unknown-tool proposals
+are now traced (`UNKNOWN:<name>` in per-row traces), the obligation
+nudge loop is bounded, Bedrock stopReason is recorded. The cell is being
+rebuilt with tracing; until then treat the Sonnet column as a
+strongest-model sample and do not read 48.3% as a capability number.

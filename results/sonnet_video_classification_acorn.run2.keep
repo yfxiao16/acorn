@@ -1,0 +1,5085 @@
+{
+  "summary": {
+    "pack": "video_classification_sop",
+    "model": "bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "condition": "acorn",
+    "mask_granularity": "step",
+    "scaffold": "none",
+    "flow_profile": null,
+    "freedom": 1.0,
+    "n": 147,
+    "TSR": 0.48299319727891155,
+    "ECR": 0.4965986394557823,
+    "avg_model_calls": 8.551020408163266,
+    "avg_symbolic_steps": 0.4965986394557823,
+    "symbolic_ratio": 0.05488721804511278,
+    "blocked_proposals": 0,
+    "proc_clean_rate": 1.0,
+    "avg_committed_violations": 0.0,
+    "total_tokens": 4108146,
+    "cached_tokens": 0,
+    "avg_latency_s": 201.4,
+    "time_model_s": 29603.9,
+    "time_controller_s": 1.256,
+    "time_tools_s": 0.03,
+    "controller_share": 4e-05,
+    "decision_states": 1330,
+    "unique_states": 457,
+    "state_reuse_rate": 0.6564,
+    "cache": {
+      "hits": 2430,
+      "misses": 10,
+      "hit_rate": 0.9959,
+      "entries": 10
+    },
+    "wall_clock_s": 32399.5
+  },
+  "rows": [
+    {
+      "key": "42",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "66",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "158",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "78",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "118",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "125",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "29",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "136",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "161",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "51",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "167",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "38",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "31",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "96",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "159",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "41",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "192",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "101",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "26",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": true,
+        "final_decision": "warning"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "171",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "195",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "183",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "2",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "46",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "104",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "145",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "138",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "36",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "187",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "22",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "128",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "90",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "33",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "11",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "126",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "156",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "6",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "27",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "109",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "4",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "32",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "194",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "142",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "98",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "141",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "10",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "62",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "100",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "143",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "0",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "176",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "150",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "70",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "111",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "64",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "44",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "127",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "28",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "40",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "117",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "152",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "153",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": false,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "25",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "23",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "148",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "144",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "81",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "108",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "79",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "84",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "39",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "61",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "120",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "123",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "86",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "77",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "191",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "165",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "47",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "94",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "181",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "43",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "135",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "3",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "105",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "53",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "133",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "177",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "154",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "182",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "49",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 4,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "80",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "34",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "7",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "110",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "91",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "83",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "173",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "178",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "89",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "8",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "13",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "59",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "168",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "131",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "17",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "72",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "172",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "134",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "164",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "180",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "63",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "54",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "107",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "50",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "193",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "58",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "48",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "88",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "21",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "57",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "160",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "189",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "129",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "37",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "157",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "185",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "1",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "age restrict",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "age restrict"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "52",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "149",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "130",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "151",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "103",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "99",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "116",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "87",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "74",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "121",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "196",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "warning"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "20",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "188",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "71",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "106",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "14",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "remove"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "92",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "allow"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    },
+    {
+      "key": "179",
+      "want": {
+        "escalated": true,
+        "moderation_actions": [
+          "remove",
+          "strike issued"
+        ],
+        "content_warning_applied": true,
+        "final_decision": "remove"
+      },
+      "got": null,
+      "ok": false,
+      "model_calls": 14,
+      "symbolic_steps": 0,
+      "blocked": 0,
+      "status": "max_steps",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview",
+        "submitContentModeration"
+      ]
+    },
+    {
+      "key": "102",
+      "want": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "got": {
+        "escalated": false,
+        "moderation_actions": [],
+        "content_warning_applied": false,
+        "final_decision": "age restrict"
+      },
+      "ok": true,
+      "model_calls": 3,
+      "symbolic_steps": 1,
+      "blocked": 0,
+      "status": "completed",
+      "audit": {
+        "committed_violations": [],
+        "violation_count": 0,
+        "proc_clean": true,
+        "finalize": {
+          "ltlf_violations": [],
+          "pending_obligations": []
+        }
+      },
+      "final_text": "",
+      "trace": [
+        "validateVideo",
+        "assignReviewer",
+        "getReview"
+      ]
+    }
+  ]
+}

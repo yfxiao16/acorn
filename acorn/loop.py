@@ -258,6 +258,15 @@ def iterate(
                                     reason=f"floor-yield obligation: {ob.desc}",
                                     records=tracer.records[rec_start:])
                         continue
+                if nudges >= max_nudges:
+                    # Bounded like the completion gate: a model that answers
+                    # the obligation nudge with text (or nothing) forever must
+                    # not be re-prompted until max_steps — end with the
+                    # obligation reported as pending.
+                    status, final_text = "completed", turn.text
+                    yield Frame(step=step, kind="final", exposed=decision.actions, masked=masked,
+                                text=turn.text, records=tracer.records[rec_start:])
+                    break
                 nudges += 1
                 tracer.record("controller/nudge", step=step, reason=f"pending obligation: {ob.desc}")
                 flow.nudge(f"[ACORN] Before finishing, you must still: {ob.desc}. Complete it now using the tools.")
@@ -291,6 +300,10 @@ def iterate(
         last_action = last_result = None
         for call in turn.tool_calls:
             if call.name not in tools:
+                # A hallucinated tool name is a real proposal that failed —
+                # trace it so loops of invented names are visible, not silent.
+                tracer.record("action/unknown", step=step, tool=call.name)
+                frame_blocked.append({"tool": call.name, "reasons": ["unknown tool"]})
                 flow.add_tool_result(
                     call, json.dumps({"ok": False, "error": f"unknown tool {call.name}"})
                 )

@@ -253,5 +253,6 @@ class BedrockModel(Model):
                 "prompt": usage.get("inputTokens", 0),
                 "completion": usage.get("outputTokens", 0),
                 "total": usage.get("totalTokens", 0),
+                "stop_reason": resp.get("stopReason"),
             },
         )

@@ -471,10 +471,17 @@ exactly across two runs with 0 error rows** (kept as
 **100% escalated rows** (74/74; all 71 non-escalated rows pass), only 3–4
 real tool calls per row, zero blocked proposals and empty final text —
 i.e. ~10 model turns that produced neither text nor a registry tool
-name. The controller never declared a dead end (an admissible tool was
-exposed), so the model was emitting tool names outside the registry,
-which the loop dropped silently. Fixes shipped: unknown-tool proposals
-are now traced (`UNKNOWN:<name>` in per-row traces), the obligation
-nudge loop is bounded, Bedrock stopReason is recorded. The cell is being
-rebuilt with tracing; until then treat the Sonnet column as a
-strongest-model sample and do not read 48.3% as a capability number.
+name. **Resolved by the traced rebuild (first 27 rows: 12/13 escalated rows
+loop):** after `getReview`, Sonnet emits a stream of *invented* tool
+names matching the SOP's prose ("escalate to a moderator") —
+`escalateToModerator`, `assignModerator`, `getModeratorNotes`,
+`requestModeration`, `moderatorReview`, ... 10+ per row — while the real
+escalation tool `submitContentModeration` is exposed. The other four
+families map "escalate" onto the exposed tool; Sonnet insists on the
+literal name, and the loop's bare `unknown tool X` error only invited the
+next guess. This is a model×harness interaction, not a capability limit
+of either. Fixes shipped: unknown-tool proposals are traced
+(`UNKNOWN:<name>`), and the unknown-tool error now carries
+`available_tools` (actionable feedback). The before-fix cell is kept as
+the documented failure mode; after-fix reruns of the three cluster
+cells (`*_acorn_fix.json`) are queued to quantify the remedy.

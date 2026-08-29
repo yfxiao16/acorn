@@ -1,0 +1,6 @@
+=== [sonnet@us-east-1] dangerous_goods acorn  ===
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json

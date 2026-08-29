@@ -30,3 +30,13 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.jso
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
 === [sonnet@us-east-1] video_annotation acorn  ===
 === [sonnet@us-east-1] video_annotation baseline  ===
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
+=== [sonnet@us-east-1] aircraft_inspection baseline  ===

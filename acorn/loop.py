@@ -304,8 +304,16 @@ def iterate(
                 # trace it so loops of invented names are visible, not silent.
                 tracer.record("action/unknown", step=step, tool=call.name)
                 frame_blocked.append({"tool": call.name, "reasons": ["unknown tool"]})
+                # Actionable feedback: a bare "unknown tool" invites another
+                # guess (observed: 10+ invented names per row); naming the
+                # currently permitted tools closes the loop.
                 flow.add_tool_result(
-                    call, json.dumps({"ok": False, "error": f"unknown tool {call.name}"})
+                    call,
+                    json.dumps({
+                        "ok": False,
+                        "error": f"unknown tool {call.name}",
+                        "available_tools": list(decision.actions),
+                    }),
                 )
                 continue
             call_state = flow.get_state()

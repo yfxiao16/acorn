@@ -210,3 +210,25 @@ def test_residual_policy_cache_equivalence_and_hits():
             assert stats["hits"] > 0, stats
             assert stats["hit_rate"] > 0.5, stats  # runs 2-3 fully reuse run 1
     assert masked_seq[False] == masked_seq[True]  # identical decisions
+
+
+def test_unknown_tool_feedback_lists_available_tools():
+    import json
+    import acorn
+    from acorn.models import MockModel, ModelTurn, ToolCall
+    from acorn.tools import ToolRegistry
+
+    reg = ToolRegistry()
+    # Two tools with required args: no singleton jump, so the model is asked.
+    schema = {"type": "object", "properties": {"x": {"type": "string"}}, "required": ["x"]}
+    reg.tool(lambda x: {"ok": True}, name="real_tool", description="d", parameters=schema)
+    reg.tool(lambda x: {"ok": True}, name="other_tool", description="d", parameters=schema)
+    model = MockModel([
+        ModelTurn(tool_calls=[ToolCall("made_up_tool", {})]),
+        ModelTurn(text="done"),
+    ])
+    agent = acorn.Agent(model, tools=reg, instructions="x", max_steps=4)
+    result = agent.run("go")
+    feedback = [m for m in result.flow.build_context() if m.get("role") == "tool"]
+    assert feedback and "available_tools" in feedback[0]["content"]
+    assert "real_tool" in feedback[0]["content"]

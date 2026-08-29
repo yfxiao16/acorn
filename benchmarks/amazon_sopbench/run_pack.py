@@ -102,7 +102,27 @@ def main() -> None:
     freedom_samples: list[int] = []  # |exposed actions| at each neural decision
     t_model = t_ctrl = t_tools = 0.0
     t0 = time.time()
+    # Per-row checkpoint: a killed/paused run resumes instead of restarting.
+    # Rows are scored live, so resumed rows re-enter the aggregates below.
+    partial_path = pathlib.Path(args.out + ".partial.json") if args.out else None
+    done_rows: dict[str, dict] = {}
+    if partial_path and partial_path.exists():
+        try:
+            done_rows = {r["key"]: r for r in json.loads(partial_path.read_text())}
+            print(f"resuming: {len(done_rows)} rows already done")
+        except (ValueError, KeyError):
+            done_rows = {}
+    quota_paused = False
     for i, row in enumerate(rows):
+        prev = done_rows.get(row[pack.key_field])
+        if prev is not None and prev.get("status") != "error":
+            per_row.append(prev)
+            correct += bool(prev.get("ok")); completed += prev.get("got") is not None
+            tot_model_calls += prev.get("model_calls", 0); tot_symbolic += prev.get("symbolic_steps", 0)
+            tot_blocked += prev.get("blocked", 0)
+            audit = prev.get("audit") or {}
+            proc_clean += bool(audit.get("proc_clean")); tot_violations += audit.get("violation_count", 0)
+            continue
         try:
             extra = {"flow_profile": args.flow_profile} if args.flow_profile else {}
             def _mk():
@@ -118,9 +138,19 @@ def main() -> None:
                 probe_cache=probe_cache, mask_granularity=args.mask_granularity, **extra,
             )
         except Exception as exc:  # noqa: BLE001 — a row must never kill the run
-            print(f"[{i + 1}/{len(rows)}] {row[pack.key_field]}: ERROR {str(exc)[:120]}")
+            msg = str(exc)
+            if "tokens per day" in msg:
+                # Daily quota exhausted: burning the remaining rows as errors
+                # only contaminates the cell. Checkpoint and stop; a later
+                # launch resumes from here.
+                print(f"[{i + 1}/{len(rows)}] quota exhausted — pausing cell (resume later)")
+                quota_paused = True
+                break
+            print(f"[{i + 1}/{len(rows)}] {row[pack.key_field]}: ERROR {msg[:120]}")
             per_row.append({"key": row[pack.key_field], "ok": False, "status": "error",
-                            "error": str(exc)[:300]})
+                            "error": msg[:300]})
+            if partial_path:
+                partial_path.write_text(json.dumps(per_row))
             continue
         if submitted is None:  # official-protocol fallback: XML tags in text
             submitted = domain.parse_text_answer(result.final_text)
@@ -173,7 +203,12 @@ def main() -> None:
             f"[{i + 1}/{len(rows)}] {row[pack.key_field]}: "
             f"{'OK ' if ok else 'FAIL'} calls={result.model_calls} sym={result.symbolic_steps}"
         )
+        if partial_path:
+            partial_path.write_text(json.dumps(per_row))
 
+    if quota_paused:
+        print(f"paused at {len(per_row)}/{len(rows)} rows; checkpoint kept at {partial_path}")
+        raise SystemExit(75)  # EX_TEMPFAIL: lane keeps the cell pending
     n = len(rows)
     summary = {
         "pack": pack.name,
@@ -210,6 +245,8 @@ def main() -> None:
         with open(args.out, "w") as fh:
             json.dump({"summary": summary, "rows": per_row}, fh, indent=2)
         print(f"wrote {args.out}")
+        if partial_path and partial_path.exists():
+            partial_path.unlink()
 
 
 if __name__ == "__main__":

@@ -28,6 +28,8 @@ PRETTY = {d: d.replace("_", " ").title().replace("Package Inspection", "Pkg Insp
 def load_cells():
     cells = {}
     for f in glob.glob(os.path.join(RESULTS, "*.json")):
+        if f.endswith(".partial.json"):
+            continue
         b = os.path.basename(f)[:-5]
         if "prof_" in b or "scaf_" in b:
             continue

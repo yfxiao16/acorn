@@ -26,3 +26,8 @@
 08-29 06:59 us-west-2 capped -> kill runner 1772
 08-29 06:59 us-west-2 capped -> kill runner 78908
 08-29 07:15 us-west-2 open + idle -> launch
+08-29 08:03 us-east-1 capped -> kill runner 75454
+08-29 08:19 us-east-1 capped -> kill runner 21442
+08-29 08:21 us-west-2 capped -> kill runner 26360
+08-29 08:21 us-west-2 capped -> kill runner 49815
+08-29 08:37 us-west-2 capped -> kill runner 46978

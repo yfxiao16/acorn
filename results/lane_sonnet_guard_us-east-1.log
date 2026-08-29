@@ -29,3 +29,4 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
 === [sonnet@us-east-1] video_annotation acorn  ===
+=== [sonnet@us-east-1] video_annotation baseline  ===

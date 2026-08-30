@@ -113,6 +113,17 @@ def main() -> None:
         except (ValueError, KeyError):
             done_rows = {}
     quota_paused = False
+
+    def _checkpoint() -> None:
+        # Persist the union of what this run has processed and what an earlier
+        # run finished beyond the current position; writing per_row alone would
+        # drop every not-yet-reached row on the first write, so a run killed
+        # mid-way lost them (once: 35 Sonnet rows).
+        seen = {r["key"] for r in per_row}
+        rest = [r for k, r in done_rows.items()
+                if k not in seen and r.get("status") != "error"]
+        partial_path.write_text(json.dumps(per_row + rest))
+
     for i, row in enumerate(rows):
         prev = done_rows.get(row[pack.key_field])
         if prev is not None and prev.get("status") != "error":

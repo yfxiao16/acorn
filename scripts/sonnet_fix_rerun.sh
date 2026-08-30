@@ -13,7 +13,9 @@ from acorn import models
 models.resolve('bedrock:us.anthropic.claude-sonnet-4-5-20250929-v1:0').generate([{"role":"user","content":"reply with exactly: ok"}], [])
 PYX
 }
-for D in video_classification aircraft_inspection warehouse_package_inspection; do
+# video_classification is not listed: its main cell was rebuilt from scratch
+# under the fixed loop (before-fix records: .run2.keep and .prefix135.keep).
+for D in aircraft_inspection warehouse_package_inspection; do
   OUT=$R/sonnet_${D}_acorn_fix.json
   until [ -f $OUT ]; do
     for REG in us-east-2 us-east-1 us-west-2; do

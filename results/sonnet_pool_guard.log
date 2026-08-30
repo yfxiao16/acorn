@@ -182,3 +182,9 @@ DIRTY sonnet_video_classification_acorn.json 9
 08-30 14:30 us-east-2 open + idle -> launch
 08-30 14:46 us-east-1 open + idle -> launch
 08-30 14:46 us-east-2 open + idle -> launch
+08-30 15:02 us-east-1 capped -> kill runner 9552
+08-30 15:02 us-east-2 open + idle -> launch
+08-30 15:18 us-east-1 open + idle -> launch
+08-30 15:19 us-west-2 open + idle -> launch
+08-30 15:34 us-east-1 open + idle -> launch
+08-30 15:34 us-west-2 open + idle -> launch

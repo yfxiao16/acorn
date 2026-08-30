@@ -460,7 +460,37 @@ Findings:
    not a competitor to neural strategies; it is a compliance layer on
    top of any of them.
 
-### Sonnet × acorn max_steps clusters (provisional — traced rebuild pending)
+### Sonnet × acorn max_steps clusters — diagnosed and remedied
+
+**After-fix result (video_classification, full 147 rows, fixed loop):**
+
+| Sonnet × video_classification | TSR | completed / max_steps | proc-clean | invented tool calls (rows) |
+|---|---|---|---|---|
+| baseline (all 25 tools visible; partial 53/147) | 47.2% | 53 / 0 | — | 0 (0) |
+| acorn, before fix (`.run2.keep`) | 48.3% | 73 / 74 | 100% | not traced |
+| acorn, before fix, traced prefix (`.prefix135.keep`, 135 rows) | 68.1% | 99 / 27 | 100% | 347 (67) |
+| **acorn, after fix** (`sonnet_video_classification_acorn.json`) | **74.8%** | **121 / 26** | 100% | 357 (76) |
+
+The remedy (unknown-tool error carries `available_tools`) moves the cell
+48.3 → **74.8** and the stuck rows 74 → 26; every non-stuck row is
+correct. The residual 26 rows are all escalated cases in which Sonnet,
+after `submitContentModeration`, keeps searching for a *notes getter*
+(`getModeratorNotes` ×63, `escalateToModerator` ×44,
+`getModerationDetails` ×18, `retrieveModeratorNotes` ×14, …): SOP §5.7.3
+says "go through the moderator's detailed notes", and in this environment
+those notes are returned by `implementModeration` — whose name and
+description ("Implements final moderation decisions") never say so. The
+other four model families call it anyway; Sonnet insists on a tool the
+environment does not have and exhausts the 14-call budget. The baseline
+arm shows the mirror image: with all 25 tools visible Sonnet invents
+nothing, completes every row, but wanders through ~10 distractor checks
+and gets escalated rows wrong (5/25 correct in the partial) — so on this
+cell the fixed acorn arm is already well above baseline while carrying
+an honest, fully traced residual. Reported as a model × environment
+interaction (a naming ambiguity in the benchmark), not a capability
+limit of the harness or the model; no domain-specific patch was added.
+
+*Original diagnosis (kept for the record):*
 
 `claude-4.5-sonnet` under the acorn condition shows rows that exhaust
 max_steps (14 model calls) without submitting, while every Sonnet

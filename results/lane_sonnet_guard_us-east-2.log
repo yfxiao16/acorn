@@ -176,3 +176,29 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
 === [sonnet@us-east-2] video_annotation acorn  ===
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[93/125] quota exhausted — pausing cell (resume later)
+paused at 92/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+=== [sonnet@us-east-2] video_annotation acorn  ===
+[90/125] quota exhausted — pausing cell (resume later)
+paused at 89/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json.partial.json
+=== [sonnet@us-east-2] video_annotation baseline  ===
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json (another lane active on it)
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json (another lane active on it)
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[94/125] quota exhausted — pausing cell (resume later)
+paused at 93/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json (another lane active on it)
+=== [sonnet@us-east-2] video_classification baseline  ===

@@ -106,3 +106,8 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
 LANE_sonnet_DONE
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json (another lane active on it)
 === [sonnet@us-west-2] video_classification acorn  ===
+=== [sonnet@us-west-2] video_annotation baseline  ===
+[93/125] quota exhausted — pausing cell (resume later)
+paused at 92/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json (another lane active on it)
+=== [sonnet@us-west-2] video_classification acorn  ===

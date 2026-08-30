@@ -13,6 +13,7 @@ while read -r D C EXTRA; do
   if [ -f $OUT.partial.json ] && [ $(( $(date +%s) - $(stat -f %m $OUT.partial.json) )) -lt 1200 ]; then
     echo "skip $OUT (another lane active on it)"; continue
   fi
+  touch $OUT.partial.json   # claim the cell now: lanes launched seconds apart otherwise pick the same one
   echo "=== [$TAG@$3] $D $C $EXTRA ==="
   $PY benchmarks/amazon_sopbench/run_pack.py \
     --pack benchmarks/amazon_sopbench/data/${D}_sop \

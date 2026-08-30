@@ -8,3 +8,13 @@ paused at 2/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acor
 [3/112] quota exhausted — pausing cell (resume later)
 paused at 2/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acorn_fix.json.partial.json
 08-30 06:36 fix-rerun aircraft_inspection on us-east-1
+[5/112] quota exhausted — pausing cell (resume later)
+paused at 4/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acorn_fix.json.partial.json
+08-30 07:07 fix-rerun aircraft_inspection on us-east-2
+[5/112] quota exhausted — pausing cell (resume later)
+paused at 4/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acorn_fix.json.partial.json
+08-30 07:25 fix-rerun aircraft_inspection on us-east-2
+08-30 07:38 fix-rerun aircraft_inspection on us-east-1
+[6/112] quota exhausted — pausing cell (resume later)
+paused at 5/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acorn_fix.json.partial.json
+08-30 07:39 fix-rerun aircraft_inspection on us-west-2

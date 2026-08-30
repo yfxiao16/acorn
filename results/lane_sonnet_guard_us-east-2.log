@@ -313,3 +313,99 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baselin
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_baseline.json
 LANE_sonnet_DONE
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json (another lane active on it)
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[116/125] quota exhausted — pausing cell (resume later)
+paused at 115/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json (another lane active on it)
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_baseline.json
+LANE_sonnet_DONE
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+=== [sonnet@us-east-2] video_annotation acorn  ===
+[105/125] quota exhausted — pausing cell (resume later)
+paused at 104/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json.partial.json
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[116/125] quota exhausted — pausing cell (resume later)
+paused at 115/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json (another lane active on it)
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_baseline.json
+LANE_sonnet_DONE
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json (another lane active on it)
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[116/125] quota exhausted — pausing cell (resume later)
+paused at 115/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
+=== [sonnet@us-east-2] video_classification baseline  ===
+[55/147] quota exhausted — pausing cell (resume later)
+paused at 54/147 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_baseline.json
+LANE_sonnet_DONE
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_warehouse_package_inspection_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_email_intent_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_content_flagging_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.json (another lane active on it)
+=== [sonnet@us-east-2] video_annotation baseline  ===
+[116/125] quota exhausted — pausing cell (resume later)
+paused at 115/125 rows; checkpoint kept at /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json.partial.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_baseline.json (another lane active on it)
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_patient_intake_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_know_your_business_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_aircraft_inspection_baseline.json
+LANE_sonnet_DONE

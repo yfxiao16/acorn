@@ -674,3 +674,7 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.jso
 === [sonnet@us-east-2] video_annotation baseline  ===
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
 === [sonnet@us-east-2] video_classification baseline  ===
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_dangerous_goods_baseline.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_acorn.json
+skip /Users/yifengxiao/Documents/acorn/results/sonnet_customer_service_baseline.json

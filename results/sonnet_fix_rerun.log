@@ -37,3 +37,4 @@ paused at 15/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_aco
 [23/112] quota exhausted — pausing cell (resume later)
 paused at 22/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_acorn_fix.json.partial.json
 08-30 10:29 fix-rerun aircraft_inspection on us-east-1
+08-30 10:53 fix-rerun aircraft_inspection on us-east-2

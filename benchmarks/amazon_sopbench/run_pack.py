@@ -161,7 +161,7 @@ def main() -> None:
             per_row.append({"key": row[pack.key_field], "ok": False, "status": "error",
                             "error": msg[:300]})
             if partial_path:
-                partial_path.write_text(json.dumps(per_row))
+                _checkpoint()
             continue
         if submitted is None:  # official-protocol fallback: XML tags in text
             submitted = domain.parse_text_answer(result.final_text)
@@ -215,7 +215,7 @@ def main() -> None:
             f"{'OK ' if ok else 'FAIL'} calls={result.model_calls} sym={result.symbolic_steps}"
         )
         if partial_path:
-            partial_path.write_text(json.dumps(per_row))
+            _checkpoint()
 
     if quota_paused:
         print(f"paused at {len(per_row)}/{len(rows)} rows; checkpoint kept at {partial_path}")

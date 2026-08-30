@@ -10,8 +10,12 @@ while read -r D C EXTRA; do
   SUF=$(echo "$EXTRA" | sed 's/--flow-profile /prof_/;s/--scaffold /scaf_/;s/ /_/g')
   OUT=$R/${TAG}_${D}_${C}${SUF:+_$SUF}.json
   [ -f $OUT ] && { echo "skip $OUT"; continue }
-  if [ -f $OUT.partial.json ] && [ $(( $(date +%s) - $(stat -f %m $OUT.partial.json) )) -lt 1200 ]; then
-    echo "skip $OUT (another lane active on it)"; continue
+  if pgrep -f "run_pack.py.*--out $OUT" >/dev/null; then
+    echo "skip $OUT (a runner owns it)"; continue
+  fi
+  # 2-min claim window covers the gap between a lane claiming a cell and its runner appearing
+  if [ -f $OUT.partial.json ] && [ $(( $(date +%s) - $(stat -f %m $OUT.partial.json) )) -lt 120 ]; then
+    echo "skip $OUT (just claimed)"; continue
   fi
   touch $OUT.partial.json   # claim the cell now: lanes launched seconds apart otherwise pick the same one
   echo "=== [$TAG@$3] $D $C $EXTRA ==="

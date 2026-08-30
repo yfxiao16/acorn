@@ -22,7 +22,7 @@ while true; do
     [ $REG = us-west-2 ] && LIST=$R/cells_sonnet_rev.txt
     [ $REG = us-east-2 ] && LIST=$R/cells_sonnet_mid.txt
     if probe $REG; then
-      if [ -z "$(lane_in $REG)" ]; then
+      if [ -z "$(lane_in $REG)" ] && [ -z "$(runner_in $REG)" ]; then  # idle = no lane AND no runner (fix-rerun may own the pool)
         echo "$(date '+%m-%d %H:%M') $REG open + idle -> launch"
         $S/lane_runner.sh "$M" sonnet $REG $LIST >> $R/lane_sonnet_guard_$REG.log 2>&1 &
       fi

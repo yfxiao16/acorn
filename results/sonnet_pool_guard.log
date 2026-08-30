@@ -73,3 +73,7 @@ DIRTY sonnet_aircraft_inspection_baseline.json 9
 DIRTY sonnet_video_classification_acorn.json 9
 08-30 00:00 us-east-1 open + idle -> launch
 08-30 00:00 us-west-2 open + idle -> launch
+08-30 00:47 us-east-1 capped -> kill runner 49158
+08-30 00:47 us-east-2 open + idle -> launch
+08-30 01:02 us-east-1 open + idle -> launch
+08-30 01:17 us-east-2 open + idle -> launch

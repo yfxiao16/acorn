@@ -19,6 +19,8 @@ for D in aircraft_inspection warehouse_package_inspection; do
   OUT=$R/sonnet_${D}_acorn_fix.json
   until [ -f $OUT ]; do
     for REG in us-east-2 us-east-1 us-west-2; do
+      busy=""; for p in $(pgrep -f "run_pack.py.*sonnet"); do ps -E -o command= -p $p | grep -q "AWS_REGION=$REG" && busy=1; done
+      [ -n "$busy" ] && continue   # one runner per pool: never double-book a region a lane owns
       if probe $REG; then
         echo "$(date '+%m-%d %H:%M') fix-rerun $D on $REG"
         AWS_REGION=$REG $PY benchmarks/amazon_sopbench/run_pack.py \

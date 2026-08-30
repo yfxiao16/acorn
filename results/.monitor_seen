@@ -101,3 +101,4 @@ sonnet_warehouse_package_inspection_baseline.json
 sonnet_aircraft_inspection_baseline.json
 sonnet_video_classification_acorn.json
 sonnet_video_annotation_acorn.json
+sonnet_video_annotation_baseline.json

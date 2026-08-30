@@ -843,3 +843,4 @@ skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_acorn.jso
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_annotation_baseline.json (another lane active on it)
 skip /Users/yifengxiao/Documents/acorn/results/sonnet_video_classification_acorn.json
 === [sonnet@us-east-1] video_classification baseline  ===
+LANE_sonnet_DONE

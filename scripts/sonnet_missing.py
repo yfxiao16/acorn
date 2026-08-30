@@ -8,6 +8,12 @@ for f in [x for x in glob.glob('results/sonnet_*.json') if not x.endswith('.part
     except Exception:
         e = 99
     if e > 3:
-        print('DIRTY', os.path.basename(f), e, file=sys.stderr); os.remove(f)
+        # Demote to a checkpoint instead of discarding: keep the good rows,
+        # drop the error rows, and let the resume path redo only those.
+        d = json.load(open(f))
+        good = [r for r in d['rows'] if r.get('status') != 'error']
+        open(f + '.partial.json', 'w').write(json.dumps(good))
+        print('DIRTY->checkpoint', os.path.basename(f), 'errors', e, 'kept', len(good), file=sys.stderr)
+        os.remove(f)
 have = {os.path.basename(f)[:-5] for f in glob.glob('results/sonnet_*.json') if not f.endswith('.partial.json')}
 print(sum(1 for d in D for c in ('acorn', 'baseline') if f'sonnet_{d}_{c}' not in have))

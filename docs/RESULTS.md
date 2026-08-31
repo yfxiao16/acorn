@@ -509,6 +509,15 @@ as-is; no domain patch. (The `40/112` in the note below and the 64.3%
 cell are the same run — 72/112 correct; its rows predate per-row trace
 persistence.)
 
+**After-fix warehouse_package_inspection (full 150 rows, fixed loop):**
+TSR **96.7%** (clean 100%, 2 max_steps rows, 12 invented calls total) vs
+93.3% on the current main cell — the mildest of the three clusters is
+essentially gone. Cluster summary across the three cells: the remedy
+resolves video_classification (48.3→74.8) and warehouse (93.3→96.7),
+and does not move aircraft (64.3→57.1, within run-to-run variance),
+where Sonnet permutes the names of tools whose schemas it has in front
+of it.
+
 *Original diagnosis (kept for the record):*
 
 `claude-4.5-sonnet` under the acorn condition shows rows that exhaust

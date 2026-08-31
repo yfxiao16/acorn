@@ -47,3 +47,6 @@ paused at 74/112 rows; checkpoint kept at results/sonnet_aircraft_inspection_aco
 08-30 15:34 fix-rerun aircraft_inspection on us-east-2
 08-30 16:05 fix-rerun aircraft_inspection on us-west-2
 08-30 16:36 fix-rerun aircraft_inspection on us-east-2
+}
+wrote results/sonnet_aircraft_inspection_acorn_fix.json
+08-30 18:28 fix-rerun warehouse_package_inspection on us-east-2

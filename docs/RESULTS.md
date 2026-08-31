@@ -389,15 +389,40 @@ the same domains as for the other families (warehouse 49%, video_classification
 (86% — the wide-tool domain where the step mask still lets a few
 out-of-stage calls through before the fact layer catches up; TSR is 100%).
 video_classification acorn carries a 9/147 max_steps cluster (6%; below the
-damage threshold, reported as-is). Four complete columns now agree:
-acorn macro 89.7–94.5% for every family against baselines of 44–75%.
+damage threshold, reported as-is). ### claude-4.5-sonnet column (complete, 20/20)
+
+| dangerous_goods | claude-4.5-sonnet | 274 | 83.2% | **100.0%** | 100% | **100%** | 2.86 | 1.05 |
+| customer_service | claude-4.5-sonnet | 156 | 74.4% | **98.7%** | 64% | **99%** | 7.54 | 5.15 |
+| patient_intake | claude-4.5-sonnet | 66 | 98.5% | **100.0%** | 100% | **100%** | 4.94 | 3.03 |
+| know_your_business | claude-4.5-sonnet | 90 | 55.6% | **51.1%** | 98% | **100%** | 6.52 | 1.01 |
+| aircraft_inspection | claude-4.5-sonnet | 112 | 77.7% | 64.3% | 79% | **100%** | 6.86 | 7.81 |
+| warehouse_package_inspection | claude-4.5-sonnet | 150 | 51.3% | **93.3%** | 74% | **100%** | 5.60 | 3.92 |
+| email_intent | claude-4.5-sonnet | 186 | 96.2% | **98.4%** | 99% | **100%** | 2.97 | 1.00 |
+| content_flagging | claude-4.5-sonnet | 168 | 98.2% | **98.8%** | 98% | **99%** | 4.93 | 3.05 |
+| video_annotation | claude-4.5-sonnet | 125 | 77.6% | **100.0%** | 69% | **100%** | 8.26 | 5.07 |
+| video_classification | claude-4.5-sonnet | 147 | 49.7% | **74.8%** | 90% | **100%** | 9.64 | 6.36 |
+| **macro (claude-4.5-sonnet, 10/10 domains)** | | | **76.2%** | **87.9%** | | | | |
+
+Sonnet macro: **76.2% → 87.9%** (+11.7pp) — the strongest baseline of the
+Bedrock families and, consistently with the inverse-uplift trend, the
+smallest gain. proc-clean is 100% (99% twice) in every acorn cell.
+Two acorn cells sit below their baselines: know_your_business
+(55.6→51.1, the model-invariant semantic wall — same inversion as the
+other strong models) and aircraft_inspection (77.7→64.3, the
+max_steps/name-permutation cluster dissected in the Sonnet section
+below; after-fix rerun 57.1 confirms it is not resolved by feedback).
+video_classification carries the diagnosed 26-row residual (74.8 after
+the loop fix vs 48.3 before; its baseline arm scores 49.7 with 90%
+clean). All five columns now agree:
+acorn macro 87.9–94.5% for every family against baselines of 44–76%.
 
 ### What the complete columns add
 
 1. **Uplift scales inversely with base capability, ceiling is shared.**
    Llama +46.3pp (44.3→90.6), gpt-oss +23.8pp (65.9→89.7), gpt-5-mini
-   +23.1pp (71.4→94.5). The acorn macro sits in 89.7–94.5% for every
-   family despite baselines spanning 44–71%.
+   +23.1pp (71.4→94.5), Haiku +19.3pp (74.8→94.1), Sonnet +11.7pp
+   (76.2→87.9). The acorn macro sits in 87.9–94.5% for every family
+   despite baselines spanning 44–76%.
 2. **Baseline compliance collapses for weaker models — and the harness
    restores it exactly.** Llama's baseline proc-clean is 0% on three
    domains (aircraft, video_annotation, video_classification) and 6% on

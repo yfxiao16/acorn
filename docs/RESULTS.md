@@ -490,6 +490,25 @@ an honest, fully traced residual. Reported as a model × environment
 interaction (a naming ambiguity in the benchmark), not a capability
 limit of the harness or the model; no domain-specific patch was added.
 
+**After-fix aircraft_inspection (full 112 rows, fixed loop):** TSR
+**57.1%** vs 64.3% before the fix — the unknown-tool remedy does *not*
+move this cell (run-to-run variance dominates; both runs carry a ~40-48
+row max_steps cluster). The traced rerun shows a different signature
+from video_classification: every stuck row reaches the reporting chain,
+tries `submit_result` (correctly blocked — the report is not ready),
+then invents *name permutations* of the real remaining tools —
+`CrossCheckReporting` ×77 for the exposed `ReportCrossCheck`,
+`FinalizeInspection`/`CompleteInspection`/`SubmitAirworthinessReport`
+for the submit step — while the real tools' schemas are in its request
+(step masking exposes `ReportComponentMismatch` etc. at exactly that
+point) and the unknown-tool error lists them. All 64 rows that do
+finish are correct. Same phenomenon class as video_classification
+(Sonnet trusts its internal narrative over the presented tool list),
+but here actionable feedback is not sufficient to break it. Reported
+as-is; no domain patch. (The `40/112` in the note below and the 64.3%
+cell are the same run — 72/112 correct; its rows predate per-row trace
+persistence.)
+
 *Original diagnosis (kept for the record):*
 
 `claude-4.5-sonnet` under the acorn condition shows rows that exhaust

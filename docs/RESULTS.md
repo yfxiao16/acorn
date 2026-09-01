@@ -568,3 +568,60 @@ of either. Fixes shipped: unknown-tool proposals are traced
 `available_tools` (actionable feedback). The before-fix cell is kept as
 the documented failure mode; after-fix reruns of the three cluster
 cells (`*_acorn_fix.json`) are queued to quantify the remedy.
+
+## Held-out authoring split (scripts/split_stability.py, scripts/heldout_tsr.py; seed 0 fixed in advance)
+
+Protocol: every data-dependent authoring decision (Appendix D provenance
+list) re-derived from a seeded authoring subset of the labeled rows;
+TSR re-aggregated from the existing per-row result JSONs on the
+held-out complement (no new model calls; per-cell full-set TSR
+reproduces the tables above exactly, validating the aggregation).
+
+- At 30/70: 8/10 decisions re-derive identically; two legs unwitnessed
+  (warehouse no-problem chargeable branch, 8 rows; VC Warning leg, 1 row).
+- At 50/50: every decision re-derives identically -> split-authored
+  library is bit-identical; held-out half is a legitimate eval set.
+
+Macro TSR, full / held-out 50% (acorn | baseline):
+| model | acorn full | acorn held-out | base full | base held-out |
+|---|---|---|---|---|
+| claude-4.5-haiku | 94.1 | 93.8 | 74.8 | 74.1 |
+| gpt-oss-120b | 89.7 | 87.9 | 65.9 | 65.6 |
+| llama-3.3-70b | 90.6 | 89.7 | 44.3 | 45.4 |
+| claude-4.5-sonnet | 87.9 | 87.2 | 76.2 | 76.1 |
+
+Uplift essentially unchanged (e.g., haiku +19.3 -> +19.7; llama +46.3
+-> +44.3); baselines move comparably in both directions => no
+authoring-set inflation. gpt-5-mini per-row JSONs were not archived
+(pre-date results/ policy), so that column cannot be re-aggregated
+without a rerun.
+
+## Bootstrap 95% CIs on macro TSR (scripts: scratchpad bootstrap, 10k resamples)
+
+Nonparametric over recorded per-row results (Bedrock columns); parametric
+Binomial per domain for gpt-5-mini (per-row not archived). acorn | baseline:
+gpt-5-mini [93.4,95.7] | [69.0,73.7]; haiku [92.9,95.3] | [72.7,76.9];
+gpt-oss-120b [88.0,91.3] | [63.6,68.1]; llama [89.2,92.0] | [42.3,46.3];
+sonnet [86.3,89.6] | [74.1,78.3]. All acorn intervals disjoint from baseline.
+
+## Audit survey of the OFFICIAL published tau2 runs (scripts/audit_official_tau2.py; zero model calls)
+
+Source: sierra-research/tau2-bench repo, data/tau2/results/final/ (the runs
+behind the paper's reported numbers; 456 sims = 114 tasks x 4 trials each).
+Grounded-17 audit, same library as the paper's Table 2 column.
+
+| model | pass1 | pass4 | viol% | blind% (of passing) | clean4 | joint4 |
+|---|---|---|---|---|---|---|
+| gpt-4.1-mini | 66.0 | 38.6 | 36.8 | 32.6 | 24.6 | 14.0 |
+| gpt-4.1 | 74.1 | 52.6 | 2.0 | 2.1 | 93.0 | 49.1 |
+| claude-3-7-sonnet | 78.7 | 59.6 | 98.9 | 98.6 | 0.0 | 0.0 |
+| o4-mini | 71.5 | 45.6 | 0.0 | 0.0 | 100.0 | 45.6 |
+
+Findings: (1) blind spot REPLICATES on the authors' own gpt-4.1-mini runs
+(36.8/32.6 vs our rerun 37.3/35.9). (2) Every firing across all 1,824 sims
+is ONE policy rule: same-turn user text + tool call (output/protocol
+family); no argument_spec or forbidden_edges rule fires in any official
+run. Rate is model-idiosyncratic: 0% (o4-mini) -> 98.9% (claude-3.7).
+(3) Compliance-adjusting inverts the ranking: claude-3.7 is best on pass4
+(59.6) and worst on joint4 (0.0); o4-mini keeps its full 45.6.
+Conversion health checked (events/trace normal in every file).

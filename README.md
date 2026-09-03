@@ -7,8 +7,10 @@ runtime control for LLM agents.
 > The agent chooses when there is freedom. ACORN executes when there isn't.
 
 Procedural knowledge is declared once, as contracts over the agent's
-tool-call trace. The harness turns their runtime state into four
-mechanisms:
+tool-call trace. At runtime the harness walks their joint monitor
+state as a residual policy graph: each node carries the set of
+admissible actions and, when only one remains, the action itself.
+Four mechanisms read this graph:
 
 - **Dynamic tool masking.** At every step the model sees only the
   contract-admissible subset of tools, at `step`, `phase`, or `hint`

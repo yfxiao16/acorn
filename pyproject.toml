@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "acorn"
 version = "0.1.0"
 description = "ACORN: Agent Contract Orchestration for Runtime Navigation — a neuro-symbolic agent harness"
-license = { text = "MIT" }
+license = { text = "Apache-2.0" }
 authors = [{ name = "Yifeng Xiao" }]
 requires-python = ">=3.10"
 # contragent is a sibling-repo dependency, installed editable:

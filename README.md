@@ -1,6 +1,6 @@
 # ACORN
 
-**Agent Contract Orchestration for Runtime Navigation** — a neuro-symbolic
+**Agent Contract Orchestration for Runtime Navigation**: a neuro-symbolic
 agent harness that compiles assume-guarantee contract libraries into
 runtime control for LLM agents.
 
@@ -10,21 +10,21 @@ Procedural knowledge is declared once, as contracts over the agent's
 tool-call trace. The harness turns their runtime state into four
 mechanisms:
 
-- **Dynamic tool masking** — at every step the model sees only the
+- **Dynamic tool masking.** At every step the model sees only the
   contract-admissible subset of tools, at `step`, `phase`, or `hint`
   granularity.
-- **Symbolic jump-forward** — when exactly one admissible action remains
+- **Symbolic jump-forward.** When exactly one admissible action remains
   with deterministically bindable arguments, or an obligation falls due,
-  the controller executes it with **no model call**.
-- **Hard validation** — every concrete call crosses a pre-execution
+  the controller executes it with no model call.
+- **Hard validation.** Every concrete call crosses a pre-execution
   boundary; recoverable blocks name the missing prerequisite.
-- **Active obligations** — prescriptive duties ("after X you must do Y")
+- **Active obligations.** Prescriptive duties ("after X you must do Y")
   are scheduled and executed, not merely detected after the fact.
 
 On all ten domains of Amazon SOP-Bench, ACORN lifts macro-average task
 success from 71.4% to 94.5% (`gpt-5-mini`) with zero committed procedure
-violations in every domain, at lower cost than the unguarded baseline —
-and the same contract libraries transfer unchanged across five model
+violations in every domain, at lower cost than the unguarded baseline.
+The same contract libraries transfer unchanged across five model
 families. On τ²-bench retail, enforcing the policy's own rules costs no
 outcome performance. The full per-cell ledger is
 [docs/RESULTS.md](docs/RESULTS.md).
@@ -49,8 +49,8 @@ back to a sibling `../ContrAgent` checkout automatically.)
 
 Three orthogonal declarations: **tools** say what the agent *can* do,
 **flow** says how the application *wants* to organize the task, and the
-**contract library** says what is *allowed and required* — attached
-explicitly, never encoded into the flow.
+**contract library** says what is *allowed and required*, attached
+explicitly and never encoded into the flow.
 
 ```python
 import acorn
@@ -96,8 +96,8 @@ print(result.status, result.final_text)
 print("symbolic execution ratio:", result.symbolic_execution_ratio)
 ```
 
-A complete, runnable walkthrough (no API key needed — scripted model by
-default) is [`examples/bank_demo.py`](examples/bank_demo.py):
+A complete, runnable walkthrough (no API key needed; it uses a scripted
+model by default) is [`examples/bank_demo.py`](examples/bank_demo.py):
 
 ```bash
 python3 examples/bank_demo.py
@@ -131,8 +131,8 @@ Each domain's adapter (`benchmarks/amazon_sopbench/<domain>.py`)
 documents, next to the contract library it defines, which rules are
 SOP-derived, which are data-validated, and where deterministic rules are
 deliberately not fitted. `--scaffold react` wraps the model in a
-text-protocol ReAct loop; `--flow-profile` selects the
-workflow↔agent-sweep profiles on the domains that support them. Runs
+text-protocol ReAct loop; `--flow-profile` selects the profiles of the
+workflow-to-agent sweep on the domains that support them. Runs
 checkpoint per row (`<out>.partial.json`) and resume on relaunch.
 
 **τ²-bench retail.** The adapter in `benchmarks/tau2_acorn/` implements
@@ -157,7 +157,7 @@ benchmarks/       Amazon SOP-Bench adapters (10 domains) and τ²-bench
                   adapter, with their contract libraries
 examples/         runnable demo (scripted model, no API key)
 scripts/          result aggregation and table generation
-results/          per-cell JSON results — the paper's data ledger
+results/          per-cell JSON results (the paper's data ledger)
 docs/RESULTS.md   every reported number, with provenance notes
 docs/DESIGN.md    architecture and the ContrAgent reuse map
 tests/            pytest suite (contract semantics, adapters, binders)
@@ -171,4 +171,4 @@ once available.
 
 ## License
 
-[MIT](LICENSE).
+[Apache-2.0](LICENSE).

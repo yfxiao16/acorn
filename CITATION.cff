@@ -6,7 +6,7 @@ authors:
     given-names: Yifeng
 type: software
 repository-code: "https://github.com/yfxiao16/acorn"
-license: MIT
+license: Apache-2.0
 preferred-citation:
   type: article
   title: "ACORN: Compliant and Efficient LLM Agents via Contract-Based Symbolic Control"

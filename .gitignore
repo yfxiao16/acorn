@@ -10,3 +10,6 @@ traces/
 *.jsonl
 benchmarks/amazon_sopbench/data/
 .env
+*.partial.json
+results/*.log
+texput.log

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ACORN: Agent Contract Orchestration for Runtime Navigation"
+authors:
+  - family-names: Xiao
+    given-names: Yifeng
+type: software
+repository-code: "https://github.com/yfxiao16/acorn"
+license: MIT
+preferred-citation:
+  type: article
+  title: "ACORN: Compliant and Efficient LLM Agents via Contract-Based Symbolic Control"
+  authors:
+    - family-names: Xiao
+      given-names: Yifeng
+  year: 2026
+  notes: "Under review."

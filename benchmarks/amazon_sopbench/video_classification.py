@@ -51,6 +51,7 @@ from __future__ import annotations
 
 import ast
 import json
+import os
 import re
 
 import acorn
@@ -107,6 +108,12 @@ GRADED_FIELDS = ["escalated", "moderation_actions", "content_warning_applied", "
 
 VALID_FORMATS = ("mp4", "hevc", "h264")
 ESCALATION_CONF = 0.8
+# SOP-literal ablation: strip every rule component induced from the labeled
+# rows (the 0.8 escalation threshold and the package-composition rules).
+# The harness keeps its SOP-derived control (ordering, masking, at-most);
+# escalation and the final package become the model's judgment, i.e. the
+# same information a baseline agent has.
+SOP_LITERAL = os.environ.get("ACORN_SOP_LITERAL", "") == "1"
 
 
 # ---------------------------------------------------------------------------
@@ -151,6 +158,8 @@ def should_escalate(categories: list, confidences: list) -> bool:
 def ready(facts: FactStore) -> bool:
     """Final package procedurally determined? Non-escalated: after the
     review. Escalated: after the moderator's notes are retrieved."""
+    if SOP_LITERAL:
+        return bool(facts.truthy("review_done"))
     if facts.get("escalate") is None:
         return False
     if not facts.truthy("escalate"):
@@ -234,6 +243,11 @@ def build_library() -> acorn.ContractLibrary:
         .asserts("initial_reviewer_id", value=lambda r: r.output.get("initial_reviewer_id")),
         # §5.3-§5.4: the review consumes the assigned reviewer id.
         acorn.action("getReview").requires("reviewer_assigned").at_most(1),
+        (acorn.after("getReview")
+        .asserts("review_done")
+        .asserts("detected_categories", value=lambda r: r.output.get("detected_categories"))
+        .asserts("confidence_scores", value=lambda r: r.output.get("confidence_scores"))
+        if SOP_LITERAL else
         acorn.after("getReview")
         .asserts("review_done")
         .asserts("detected_categories", value=lambda r: r.output.get("detected_categories"))
@@ -244,7 +258,7 @@ def build_library() -> acorn.ContractLibrary:
                 parse_list(r.output.get("detected_categories")),
                 parse_list(r.output.get("confidence_scores")),
             ),
-        ),
+        )),
         # §5.5.3: escalation assigns a moderator via the recorded findings.
         acorn.action("submitContentModeration").requires("review_done").at_most(1),
         acorn.after("submitContentModeration")
@@ -304,14 +318,34 @@ def build_agent(model, pack: Pack, sink: dict, *, condition: str = "acorn", row:
         parameters=SUBMIT_SCHEMA,
         # The binder abstains (None) on escalated Bullying-only cases; the
         # controller then leaves the singleton submit decision to the model.
-        args_binder=(lambda ctx: compute_final(ctx.facts)) if condition == "acorn" else None,
+        args_binder=(lambda ctx: compute_final(ctx.facts)) if (condition == "acorn" and not SOP_LITERAL) else None,
     )
 
     if condition == "baseline":
         return acorn.Agent(model, tools=registry, instructions=pack.sop_text, max_steps=14)
 
     flow = None
-    if condition in ("mask", "acorn"):
+    if condition in ("mask", "acorn") and SOP_LITERAL:
+        flow = (
+            acorn.GraphFlow(start="intake")
+            .state(
+                "intake",
+                tools=["validateVideo", "assignReviewer"],
+                next=lambda ctx: "review" if ctx.facts.truthy("reviewer_assigned") else None,
+            )
+            .state(
+                "review",
+                tools=["getReview"],
+                next=lambda ctx: "finalize" if ctx.facts.truthy("review_done") else None,
+            )
+            .state(
+                "finalize",
+                tools=["submitContentModeration", "implementModeration", "submit_result"],
+                next=lambda ctx: "done" if ctx.facts.truthy("result_submitted") else None,
+            )
+            .state("done", tools=[], terminal=True)
+        )
+    elif condition in ("mask", "acorn"):
         def _next(target: str, done_fact: str):
             def nxt(ctx):
                 if ready(ctx.facts):

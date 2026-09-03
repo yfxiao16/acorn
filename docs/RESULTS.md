@@ -64,7 +64,7 @@ in 6/10.
 - **know_your_business** is the semantic-wall exhibit. The verification
   chain is fully bindable (sym ratio 0.89, exactly 1 model call/row) and
   the hard gates (TIN format, license >42d, sanctions/PEP/bank/registry
-  flags) enforce with zero counterexamples — but the escalate-vs-awaiting
+  flags) enforce with zero counterexamples, but the escalate-vs-awaiting
   verdict is a judgment call the SOP itself assigns to human experience.
   gpt-5-mini outputs "awaiting information" **0/34 times under every
   condition**, so the ~50–56% ceiling is model capability, condition-
@@ -79,11 +79,11 @@ in 6/10.
   Counterpoint to patient_intake, where mask alone reaches 100%
   (+54.5pp) because that domain's failure mode is ordering, not relay.
 - **warehouse_package_inspection**: passive **collapses below baseline**
-  (24.7% vs 57.3%) — 335 block-and-reprompt events leave 27% of rows
+  (24.7% vs 57.3%): 335 block-and-reprompt events leave 27% of rows
   without a submitted report. Enforcement that only says "no" is worse
   than no enforcement; reshaping the action space (mask 51.3% with 100%
   proc-clean) and binding the computation (acorn 100%) is the fix.
-  Baseline commits 1.59 violations/row (proc-clean 16%) — mostly the
+  Baseline commits 1.59 violations/row (proc-clean 16%), mostly the
   Wrong-Item "skip the damage assessment" prohibition.
 - **video_annotation / video_classification** are the tool-exposure
   stress tests (26 and 25 tools, 20 of each being no-op distractors).
@@ -137,7 +137,7 @@ Billed-equivalent tokens = uncached + 0.1×cached (OpenAI cache discount).
 
 phase matches step on TSR (macro −0.2pp) at −30% billed tokens overall
 (up to −51%) and up to 2.4× lower latency. The only non-saving domains
-(dangerous_goods, know_your_business) are the fully-jumped ones —
+(dangerous_goods, know_your_business) are the fully-jumped ones:
 ≈1 model call per row leaves no cache to recover.
 
 ### Three granularities incl. hint (PI + CS)
@@ -160,12 +160,12 @@ all settings).
 
 acorn, 3 independent full-set runs per domain:
 
-- **customer_service** (156 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
-- **patient_intake** (66 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
-- **warehouse_package_inspection** (150 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
-- **dangerous_goods** (20 rows × 3): 100% / 100% / 100% — 100.0% ± 0.0pp
+- **customer_service** (156 rows × 3): 100% / 100% / 100% = 100.0% ± 0.0pp
+- **patient_intake** (66 rows × 3): 100% / 100% / 100% = 100.0% ± 0.0pp
+- **warehouse_package_inspection** (150 rows × 3): 100% / 100% / 100% = 100.0% ± 0.0pp
+- **dangerous_goods** (20 rows × 3): 100% / 100% / 100% = 100.0% ± 0.0pp
 
-baseline (dangerous_goods, 20 rows × 3): 65% / 75% / 75% — 71.7% ± 5.8pp.
+baseline (dangerous_goods, 20 rows × 3): 65% / 75% / 75% = 71.7% ± 5.8pp.
 Symbolic control eliminates cross-run sampling variance at the ceiling;
 baseline repeats retain ±5.8pp. Baseline single-run numbers for the other
 domains are in the main matrix (per the no-rerun-of-referenced-data
@@ -179,9 +179,9 @@ arm before the final run: identical system prompt (official
 `<instructions>` + `<policy>` template, imported), temperature 0.0,
 litellm-equivalent retries, faithful tool schemas and message-role
 rendering. Three earlier acorn runs under partial parity scored
-pass^1 0.550/0.561/0.555 — the final number is stable, not tuned.
+pass^1 0.550/0.561/0.555; the final number is stable, not tuned.
 
-### Layer 1 — native pass^k (with the decomposition arm)
+### Layer 1: native pass^k (with the decomposition arm)
 
 | arm | avg reward | pass^1 | pass^2 | pass^3 | pass^4 |
 |---|---|---|---|---|---|
@@ -194,20 +194,20 @@ pass^1 0.550/0.561/0.555 — the final number is stable, not tuned.
 arm ties official pass^1 (63.4 vs 63.6), posts the best pass^4 of any
 arm (39.5), and audits perfectly clean (joint^4 = its own pass^4 =
 39.5, 4.5× official's 8.8). The full-53 arm's −7.9pp is the price of
-enforcing mined pseudo-rules — contract quality, not enforcement, is
+enforcing mined pseudo-rules: contract quality, not enforcement, is
 the price driver. Attribution note: the shell also audits clean on the
 grounded ruler (official's grounded violations are protocol-family,
 which our agent interface prevents structurally); the contract layer
 upgrades that empirical cleanliness to a guarantee.
 
 Causal decomposition: shell ≈ official on pass^1 (−1.1pp, within noise;
-pass^4 actually HIGHER, 0.377 vs 0.316 — our protocol shell is more
+pass^4 actually HIGHER, 0.377 vs 0.316; our protocol shell is more
 consistent across trials than the litellm agent). The entire ~7pp
 official-vs-acorn gap is therefore the price of the control
 interventions under this 53-contract set, not harness infrastructure.
 What that price buys is the Layer-3 result below.
 
-### Layer 3 — procedure compliance (offline audit of the same saved
+### Layer 3: procedure compliance (offline audit of the same saved
 conversations; 53 honest contracts, evaluated condition-independently)
 
 | arm | sims firing ≥1 violation | blind-spot (τ²-pass ∧ violating) | proc-clean^4 | joint^4 (pass ∧ clean) |
@@ -216,11 +216,11 @@ conversations; 53 honest contracts, evaluated condition-independently)
 | acorn | 26.8% | 23.3% | **64.9%** | **21.9%** |
 
 - **61% of the official agent's "successful" conversations violate
-  procedure** — native pass^k rewards non-compliant successes.
+  procedure**: native pass^k rewards non-compliant successes.
 - Under the joint success-and-compliance criterion acorn is **2.8×**
   the official agent (21.9% vs 7.9%).
-- acorn's residual violations are **100% in the `transition` category**
-  — exactly the trace-mined conventions the two-tier design deliberately
+- acorn's residual violations are **100% in the `transition` category**,
+  exactly the trace-mined conventions the two-tier design deliberately
   demotes to feedback-only enforcement; hard categories (`output_spec`
   etc.) are at **0.0%** vs official's 37.3%.
 - Reference anchors (same offline audit, tau2's published runs):
@@ -233,7 +233,7 @@ The 53-contract set mixes 17 contracts written from the policy text with
 36 trace-mined "conventions" (transition_spec / predicted_plan). A mined
 pattern that fires on 43.8% of the OFFICIAL agent's own passing traces
 is not a rule (traces witness ∃; rules claim ∀). Restricting the audit
-to the 17 policy-grounded contracts — immune to the "your contracts are
+to the 17 policy-grounded contracts, immune to the "your contracts are
 too tight" objection:
 
 | arm (17 grounded contracts) | violation rate | blind spot | clean^4 | joint^4 |
@@ -248,7 +248,7 @@ measure how much of the ~7pp enforcement price was mined-contract noise.
 
 Framing: acorn trades ~8pp of native pass^1 for near-elimination of
 committed procedure violations and a 2.8× joint success-and-compliance
-rate — and the 61% blind-spot number is a critique of pass^k-only
+rate; the 61% blind-spot number is a critique of pass^k-only
 evaluation, independent of our system.
 
 ### Baseline-parity checklist (methodology note)
@@ -257,7 +257,7 @@ Confounds found and eliminated while matching the official arm, each
 worth carrying into any harness-vs-harness comparison: (1) system-prompt
 framing (bare policy text vs the official instruction wrapper measurably
 degrades the same model); (2) sampling temperature (unset = provider
-default 1.0 vs official 0.0 — depresses pass^k through cross-trial
+default 1.0 vs official 0.0, which depresses pass^k through cross-trial
 inconsistency); (3) retry policy under shared-key 429 windows; (4) tool
 schema and message-role fidelity through the adapter.
 
@@ -272,29 +272,29 @@ lists, LangGraph-style) can express declaratively:
 
 | constraint class | count | share | partition-expressible? |
 |---|---|---|---|
-| ordering (A before B) | 54 | 32% | yes — state sequencing |
+| ordering (A before B) | 54 | 32% | yes (state sequencing) |
 | counting (at_most N) | 113 | 66% | only via product states (2^k blowup; video_annotation alone needs 2^27) |
-| argument-level (same tool, some argument values forbidden) | 1 (+3 in τ² grounded set) | ~1% | no — tool lists cannot see arguments |
-| liveness/obligations ("eventually X"; 10 derived in τ²) | — | — | no — hiding other tools cannot force an action |
+| argument-level (same tool, some argument values forbidden) | 1 (+3 in τ² grounded set) | ~1% | no (tool lists cannot see arguments) |
+| liveness/obligations ("eventually X"; 10 derived in τ²) | n/a | n/a | no (hiding other tools cannot force an action) |
 
 Only ~1/3 of real SOP constraints are declaratively expressible by
 tool-list partitioning. The rest must either explode the graph or sink
-into imperative node code — losing certificates (SAT/conflict checks),
+into imperative node code, losing certificates (SAT/conflict checks),
 condition-independent auditability, portability, and composability.
 ACORN keeps all 170 as declarative, verifiable first-class objects at
 O(n) representation cost. (Practice anchor: published LangGraph
-tutorials and production case studies use 4–30 nodes — the faithful
+tutorials and production case studies use 4–30 nodes; the faithful
 product machine for video_annotation alone would need ≥10^9 states.)
 
 ## Workflow↔agent sweep (enforcement-medium transfer, claude-4.5-haiku)
 
-Each movable constraint enforced exactly once — either as external
+Each movable constraint enforced exactly once, either as external
 contract (restrictive: prune violations only) or internalized flow
 structure (prescriptive: stage-machine). Full-library observe auditor
 throughout (medium-independent accounting). freedom = mean exposed
 actions per neural decision.
 
-### KYB — linear regime (6 orderings, 5 cuts, 90 rows/profile)
+### KYB: linear regime (6 orderings, 5 cuts, 90 rows/profile)
 
 | profile | freedom | TSR | proc-clean | sym steps/row | latency |
 |---|---|---|---|---|---|
@@ -309,7 +309,7 @@ Quality flat within noise; compliance invariant; internalization buys
 modest efficiency (more singleton stages → more jumps). Media are
 interchangeable for simple sequential procedure.
 
-### WH — branching regime (150 rows/profile, clean reruns, 0 error rows)
+### WH: branching regime (150 rows/profile, clean reruns, 0 error rows)
 
 | profile | TSR | proc-clean | viol/row | Wrong-Item viol |
 |---|---|---|---|---|
@@ -318,12 +318,12 @@ interchangeable for simple sequential procedure.
 | branch (correct internalization) | 100% | 100% | 0 | 0 |
 | naive (branch-blind internalization, no external net) | 100% | **64%** | **1.08** | **3.00** |
 
-naive's damage is invisible to outcome metrics (TSR 100% — the fact
+naive's damage is invisible to outcome metrics (TSR 100%; the fact
 layer rescues outputs) and fully visible to the audit. free's 94% is
 completion discipline (prose instead of submit; fixable with an
 eventually-submit obligation).
 
-### VA — wide-tool regime (26 tools, 20 distractors, 125 rows/profile)
+### VA: wide-tool regime (26 tools, 20 distractors, 125 rows/profile)
 
 | profile | freedom | TSR | proc-clean | calls/row | latency |
 |---|---|---|---|---|---|
@@ -332,11 +332,11 @@ eventually-submit obligation).
 | pipeline (full internalization) | 1.00 | 100% | 100% | 4.86 | 116s |
 
 Two mechanisms: (1) **contracts forbid the illegal; exposure removes
-the useless** — calling a distractor violates nothing, so external
+the useless**: calling a distractor violates nothing, so external
 enforcement alone cannot fix distraction (11.75 calls/row, −13.6pp);
 attention needs prescriptive scoping. (2) Coarse internalization
 under-enforces: phases dropped the intra-stage orderings it claimed to
-internalize (2-tool stages don't order their members) — audit catches
+internalize (2-tool stages don't order their members); the audit catches
 12% of rows; enforce-exactly-once bookkeeping must be exact.
 
 ## Matched-model matrix (Bedrock lane, step masking, complete columns)
@@ -369,7 +369,7 @@ audited by the full library in observe mode in every cell.
 | video_classification | llama | 147 | 10.2% | **86.4%** | 0% | **100%** | 2.00 | 5.31 |
 | **macro (llama-3.3-70b)** | | | **44.3%** | **90.6%** | | | | |
 
-### claude-4.5-haiku column (complete, 20/20 — the model used for every sweep experiment)
+### claude-4.5-haiku column (complete, 20/20; the model used for every sweep experiment)
 
 | dangerous_goods | claude-4.5-haiku | 274 | 81.8% | **100.0%** | 99% | **100%** | 2.99 | 0.98 |
 | customer_service | claude-4.5-haiku | 156 | 51.3% | **100.0%** | 62% | **100%** | 7.94 | 5.18 |
@@ -386,10 +386,12 @@ audited by the full library in observe mode in every cell.
 Haiku macro: **74.8% → 94.1%** (+19.3pp). Baseline proc-clean collapses on
 the same domains as for the other families (warehouse 49%, video_classification
 50%, customer_service 62%) and acorn restores 100% on all but video_annotation
-(86% — the wide-tool domain where the step mask still lets a few
+(86%; the wide-tool domain where the step mask still lets a few
 out-of-stage calls through before the fact layer catches up; TSR is 100%).
 video_classification acorn carries a 9/147 max_steps cluster (6%; below the
-damage threshold, reported as-is). ### claude-4.5-sonnet column (complete, 20/20)
+damage threshold, reported as-is).
+
+### claude-4.5-sonnet column (complete, 20/20)
 
 | dangerous_goods | claude-4.5-sonnet | 274 | 83.2% | **100.0%** | 100% | **100%** | 2.86 | 1.05 |
 | customer_service | claude-4.5-sonnet | 156 | 74.4% | **98.7%** | 64% | **99%** | 7.54 | 5.15 |
@@ -403,11 +405,11 @@ damage threshold, reported as-is). ### claude-4.5-sonnet column (complete, 20/20
 | video_classification | claude-4.5-sonnet | 147 | 49.7% | **74.8%** | 90% | **100%** | 9.64 | 6.36 |
 | **macro (claude-4.5-sonnet, 10/10 domains)** | | | **76.2%** | **87.9%** | | | | |
 
-Sonnet macro: **76.2% → 87.9%** (+11.7pp) — the strongest baseline of the
+Sonnet macro: **76.2% → 87.9%** (+11.7pp): the strongest baseline of the
 Bedrock families and, consistently with the inverse-uplift trend, the
 smallest gain. proc-clean is 100% (99% twice) in every acorn cell.
 Two acorn cells sit below their baselines: know_your_business
-(55.6→51.1, the model-invariant semantic wall — same inversion as the
+(55.6→51.1, the model-invariant semantic wall, the same inversion as the
 other strong models) and aircraft_inspection (77.7→64.3, the
 max_steps/name-permutation cluster dissected in the Sonnet section
 below; after-fix rerun 57.1 confirms it is not resolved by feedback).
@@ -423,7 +425,7 @@ acorn macro 87.9–94.5% for every family against baselines of 44–76%.
    +23.1pp (71.4→94.5), Haiku +19.3pp (74.8→94.1), Sonnet +11.7pp
    (76.2→87.9). The acorn macro sits in 87.9–94.5% for every family
    despite baselines spanning 44–76%.
-2. **Baseline compliance collapses for weaker models — and the harness
+2. **Baseline compliance collapses for weaker models, and the harness
    restores it exactly.** Llama's baseline proc-clean is 0% on three
    domains (aircraft, video_annotation, video_classification) and 6% on
    warehouse; gpt-oss is at 11–25% on its hard domains. Under acorn every
@@ -431,7 +433,7 @@ acorn macro 87.9–94.5% for every family against baselines of 44–76%.
    first, and it is precisely what the contract layer supplies.
 3. **The semantic wall is model-invariant.** know_your_business shows no
    TSR gain for gpt-oss (56.7→56.7) and a partial one for Llama
-   (38.9→52.2) — while its proc-clean goes 20%→100% and 19%→99%. The
+   (38.9→52.2), while its proc-clean goes 20%→100% and 19%→99%. The
    ceiling is a property of the task's judgment content, not of the
    harness or the model tier.
 4. **Honest negative: llama/email_intent inverts (91.9→81.7).** 26 of 34
@@ -449,7 +451,7 @@ a ReAct agent; our `--scaffold react` wrapper implements the classic
 Thought/Action/Observation text protocol around the same model, tools
 and prompts. Fairness audit: ReAct answers that never reached
 submit_result were re-parsed with a lenient tag/key-value parser across
-all saved runs — at most 1 row in 93 cells changes, so the comparison is
+all saved runs; at most 1 row in 93 cells changes, so the comparison is
 not a parsing artifact.
 
 | domain | FC base | ReAct base | acorn | FC clean | ReAct clean | acorn clean |
@@ -474,24 +476,24 @@ Findings:
    an enforcement layer.
 2. **ReAct is not uniformly better than FC either**: it helps
    aircraft (+4.5pp) and patient_intake (+6.1pp) but collapses on the
-   branching warehouse domain (18.0% vs FC's 49.3%) — 95 of its 123
+   branching warehouse domain (18.0% vs FC's 49.3%): 95 of its 123
    failures there are submitted-but-wrong (chargeback/classification
    reasoning errors), plus single-call hallucinated "completion
    reports". Scaffold quality is regime-dependent, echoing the sweep.
 3. **Orthogonality (ReAct + acorn combo arms):** the contract layer
-   composes with the scaffold and lifts it to the ceiling —
+   composes with the scaffold and lifts it to the ceiling:
    dangerous_goods 77.4→**100.0** (viol 0.08→0), customer_service
    67.3→**98.1** (viol 0.04→0), patient_intake 98.5→**100.0**. ACORN is
    not a competitor to neural strategies; it is a compliance layer on
    top of any of them.
 
-### Sonnet × acorn max_steps clusters — diagnosed and remedied
+### Sonnet × acorn max_steps clusters: diagnosed and remedied
 
 **After-fix result (video_classification, full 147 rows, fixed loop):**
 
 | Sonnet × video_classification | TSR | completed / max_steps | proc-clean | invented tool calls (rows) |
 |---|---|---|---|---|
-| baseline (all 25 tools visible; partial 53/147) | 47.2% | 53 / 0 | — | 0 (0) |
+| baseline (all 25 tools visible; partial 53/147) | 47.2% | 53 / 0 | n/a | 0 (0) |
 | acorn, before fix (`.run2.keep`) | 48.3% | 73 / 74 | 100% | not traced |
 | acorn, before fix, traced prefix (`.prefix135.keep`, 135 rows) | 68.1% | 99 / 27 | 100% | 347 (67) |
 | **acorn, after fix** (`sonnet_video_classification_acorn.json`) | **74.8%** | **121 / 26** | 100% | 357 (76) |
@@ -503,40 +505,40 @@ after `submitContentModeration`, keeps searching for a *notes getter*
 (`getModeratorNotes` ×63, `escalateToModerator` ×44,
 `getModerationDetails` ×18, `retrieveModeratorNotes` ×14, …): SOP §5.7.3
 says "go through the moderator's detailed notes", and in this environment
-those notes are returned by `implementModeration` — whose name and
+those notes are returned by `implementModeration`, whose name and
 description ("Implements final moderation decisions") never say so. The
 other four model families call it anyway; Sonnet insists on a tool the
 environment does not have and exhausts the 14-call budget. The baseline
 arm shows the mirror image: with all 25 tools visible Sonnet invents
 nothing, completes every row, but wanders through ~10 distractor checks
-and gets escalated rows wrong (5/25 correct in the partial) — so on this
+and gets escalated rows wrong (5/25 correct in the partial), so on this
 cell the fixed acorn arm is already well above baseline while carrying
 an honest, fully traced residual. Reported as a model × environment
 interaction (a naming ambiguity in the benchmark), not a capability
 limit of the harness or the model; no domain-specific patch was added.
 
 **After-fix aircraft_inspection (full 112 rows, fixed loop):** TSR
-**57.1%** vs 64.3% before the fix — the unknown-tool remedy does *not*
+**57.1%** vs 64.3% before the fix: the unknown-tool remedy does *not*
 move this cell (run-to-run variance dominates; both runs carry a ~40-48
 row max_steps cluster). The traced rerun shows a different signature
 from video_classification: every stuck row reaches the reporting chain,
-tries `submit_result` (correctly blocked — the report is not ready),
-then invents *name permutations* of the real remaining tools —
+tries `submit_result` (correctly blocked, since the report is not ready),
+then invents *name permutations* of the real remaining tools:
 `CrossCheckReporting` ×77 for the exposed `ReportCrossCheck`,
 `FinalizeInspection`/`CompleteInspection`/`SubmitAirworthinessReport`
-for the submit step — while the real tools' schemas are in its request
+for the submit step, while the real tools' schemas are in its request
 (step masking exposes `ReportComponentMismatch` etc. at exactly that
 point) and the unknown-tool error lists them. All 64 rows that do
 finish are correct. Same phenomenon class as video_classification
 (Sonnet trusts its internal narrative over the presented tool list),
 but here actionable feedback is not sufficient to break it. Reported
 as-is; no domain patch. (The `40/112` in the note below and the 64.3%
-cell are the same run — 72/112 correct; its rows predate per-row trace
+cell are the same run, 72/112 correct; its rows predate per-row trace
 persistence.)
 
 **After-fix warehouse_package_inspection (full 150 rows, fixed loop):**
 TSR **96.7%** (clean 100%, 2 max_steps rows, 12 invented calls total) vs
-93.3% on the current main cell — the mildest of the three clusters is
+93.3% on the current main cell: the mildest of the three clusters is
 essentially gone. Cluster summary across the three cells: the remedy
 resolves video_classification (48.3→74.8) and warehouse (93.3→96.7),
 and does not move aircraft (64.3→57.1, within run-to-run variance),
@@ -552,13 +554,13 @@ exactly across two runs with 0 error rows** (kept as
 `results/sonnet_video_classification_acorn.run2.keep`), aircraft acorn
 40/112, warehouse acorn 8/150. Persisted traces show the cluster is
 **100% escalated rows** (74/74; all 71 non-escalated rows pass), only 3–4
-real tool calls per row, zero blocked proposals and empty final text —
+real tool calls per row, zero blocked proposals and empty final text,
 i.e. ~10 model turns that produced neither text nor a registry tool
 name. **Resolved by the traced rebuild (first 27 rows: 12/13 escalated rows
 loop):** after `getReview`, Sonnet emits a stream of *invented* tool
-names matching the SOP's prose ("escalate to a moderator") —
+names matching the SOP's prose ("escalate to a moderator"):
 `escalateToModerator`, `assignModerator`, `getModeratorNotes`,
-`requestModeration`, `moderatorReview`, ... 10+ per row — while the real
+`requestModeration`, `moderatorReview`, ... 10+ per row, while the real
 escalation tool `submitContentModeration` is exposed. The other four
 families map "escalate" onto the exposed tool; Sonnet insists on the
 literal name, and the loop's bare `unknown tool X` error only invited the

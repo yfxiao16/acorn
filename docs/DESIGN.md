@@ -9,12 +9,12 @@ deliberately deferred.
 
 ## 1. Two kinds of state
 
-- **Agent state** — owned by the agent/application (messages, working
+- **Agent state**: owned by the agent/application (messages, working
   memory, workflow node, arbitrary user data). ACORN never formalizes it;
   the controller receives it only as a read-only view (`agent_state`
   parameter), which is the extension point for future predicates whose
   truth depends on application state.
-- **Symbolic control state** — owned by the `SymbolicController`: LTLf
+- **Symbolic control state**: owned by the `SymbolicController`, holding LTLf
   residuals (one DFA monitor per compiled rule), the `FactStore`, the
   `ObligationEngine`, and the grounding accumulators. It answers "what is
   the agent allowed or required to do", never "what is the agent doing".
@@ -98,21 +98,21 @@ must happen next.
 
 ## 5. The controller's four questions
 
-- `admissible_actions(candidates, agent_state)` — cheap, tool-level.
+- `admissible_actions(candidates, agent_state)`: cheap, tool-level.
   Per candidate: deepcopy grounding → hypothetical `called(t)` valuation →
   `probe` every monitor via snapshot/step/peek/restore. Rules whose
   formulas reference argument-level atoms (`arg_value`, `arg_has`, ...)
-  are *excluded* here (args don't exist yet — optimistic, false-positive-
+  are *excluded* here (args don't exist yet; optimistic, false-positive-
   free) and enforced only at validate time.
-- `validate(action, agent_state)` — the hard pre-execution boundary, all
+- `validate(action, agent_state)`: the hard pre-execution boundary, all
   rules, concrete args. Returns a structured `Decision`:
   - `ALLOW`;
-  - `REQUIRE` (all violated rules recoverable in-session — missing facts /
+  - `REQUIRE` (all violated rules recoverable in-session: missing facts /
     precedence): carries `requirements` and concrete `hints` ("call
-    `verify_identity` to establish identity_verified") — the deterministic
+    `verify_identity` to establish identity_verified"), the deterministic
     recovery channel validated by the SOPBench LiveEnforcer;
   - `BLOCK` (hard: forbidden_when / at_most / custom): "do not retry".
-- `next_decision(candidates, agent_state)` — the control handoff:
+- `next_decision(candidates, agent_state)`: the control handoff:
   - **Case C** (obligation due): `SYMBOLIC_EXECUTE` if args resolve via
     the spec's constant args / deterministic binder; else `NEURAL_CHOICE`
     restricted to the obligated tool.
@@ -122,7 +122,7 @@ must happen next.
     singleton (model fills args only).
   - **Case A** (genuine freedom): `NEURAL_CHOICE` over the admissible set.
   - `DEAD_END` when nothing is admissible.
-- `update(action, result)` — commit: ground the executed event (with a
+- `update(action, result)`: commit; ground the executed event (with a
   `succeeded` arg for future gate-scoped contracts), step all monitors,
   then run the tool-result → fact extractors and invalidations, then
   discharge obligations. Tools never write controller state directly.
@@ -133,7 +133,7 @@ constraints, evidence, external predicates).
 
 ## 6. The runtime loop (`acorn/loop.py`)
 
-Minimal by design — no procedural semantics live in the loop:
+Minimal by design; no procedural semantics live in the loop:
 
 ```
 candidates = agent.available_actions(all tools)      # A_agent
@@ -146,27 +146,27 @@ DEAD_END         → stop (v0; recovery policies later)
 
 `FreeAgent` returns all tools as candidates (A_effective = A_contract).
 A stateful/workflow adapter (LangGraph, later) returns its node's
-candidate set; the effective space is the intersection — same runtime.
+candidate set; the effective space is the intersection, on the same runtime.
 
 ## 7. Extension seams preserved (not implemented)
 
 Design test: *can a local boolean predicate later become evidence-backed or
 externally evaluated without rewriting the loop, backend, or controller?*
 
-- **`PredicateEvaluator`** — all predicate reads go through it;
+- **`PredicateEvaluator`**: all predicate reads go through it;
   `LocalPredicateEvaluator` (FactStore lookup) is the only v0 impl.
-- **`Fact`** — stable identity, arbitrary `value`, optional `metadata`
+- **`Fact`**: stable identity, arbitrary `value`, optional `metadata`
   (source/timestamp today; provenance, expiry, dependencies later). Never
   assumed to be a raw boolean.
-- **Explicit invalidation** — `assert_fact` / `invalidate_fact`; facts are
+- **Explicit invalidation**: `assert_fact` / `invalidate_fact`; facts are
   not monotonic. Automatic dependency propagation deferred.
-- **Structured decisions** — `Decision {ALLOW, BLOCK, REQUIRE}` +
+- **Structured decisions**: `Decision {ALLOW, BLOCK, REQUIRE}` +
   `StepDecision {NEURAL_CHOICE, SYMBOLIC_EXECUTE, DEAD_END}`; never a bool.
-- **Tool-result → symbolic-event boundary** — `ToolResult` → extractors →
+- **Tool-result → symbolic-event boundary**: `ToolResult` → extractors →
   facts; execution and symbolic interpretation stay separate.
-- **`ContractBackend` protocol** — probe/step/finalize over valuations;
+- **`ContractBackend` protocol**: probe/step/finalize over valuations;
   the LTLf/DFA backend is one implementation.
-- **Model adapter** — provider logic stays outside the runtime; neutral
+- **Model adapter**: provider logic stays outside the runtime; neutral
   message format; Gemini REST + Mock today, Anthropic/OpenAI-compat next.
 
 ## 8. Deferred (explicitly out of v0)
@@ -176,18 +176,18 @@ semantic/LLM predicates; automatic evidence invalidation; SMT integration;
 token-level constrained decoding; vLLM/SGLang; generalized policy IR;
 NL→formal translation as a core dependency; GUI/sandbox/browser/MCP/
 multi-agent/distributed; realizability lookahead via `contragent.formulas.sat`
-(one-step probes can still walk into `G(¬goal)`-style dead ends — the sat
+(one-step probes can still walk into `G(¬goal)`-style dead ends; the sat
 machinery exists upstream when we need it); latch policy (permanent goal
-blocking on immutable-state violations — port from the SOPBench
+blocking on immutable-state violations; port from the SOPBench
 LiveEnforcer together with the benchmark adapter).
 
 ## 9. Roadmap
 
-- **P0/P1/P2 (this repo, done)** — harness foundation (model adapter, loop,
+- **P0/P1/P2 (this repo, done)**: harness foundation (model adapter, loop,
   registry/executor, tracing), ACORN core (contracts, control state,
   DFA/LTLf backend, dynamic tool exposure, admissible/validate), symbolic
   handoff (Case A/B/C, jump-forward, obligations), extension seams.
-- **M1 — SOPBench adapter** (`benchmarks/sopbench/`): reuse
+- **M1: SOPBench adapter** (`benchmarks/sopbench/`): reuse
   `contragent/contracts/sopbench/*.yaml` + `compile_tree.py` via
   `CustomRule`; ground live world state at decision time (as the
   LiveEnforcer does); port the latch + soft-recovery policies. Conditions:
@@ -196,9 +196,9 @@ LiveEnforcer together with the benchmark adapter).
   success, procedural compliance, invalid proposals, tool-schema tokens,
   LLM calls, recovery turns, **symbolic execution ratio**, **neural
   decision ratio**.
-- **M2** — Anthropic/OpenAI-compat adapters; LangGraph stateful-agent
+- **M2**: Anthropic/OpenAI-compat adapters; LangGraph stateful-agent
   adapter (A_agent ∩ A_contract); upstream `GroundingState.clone()` + DFA
   probe fast path into ContrAgent.
-- **M3** — dead-end lookahead via `sat.py`; Amazon SOP-Bench; offline
+- **M3**: dead-end lookahead via `sat.py`; Amazon SOP-Bench; offline
   testing mode sharing the same contract core (replay a recorded trace
   through the same backend).

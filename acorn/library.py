@@ -134,7 +134,13 @@ class ContractLibrary:
                 )
 
         if isinstance(source, (str, __import__("pathlib").Path)):
-            from contragent.config import resolve_entry
+            try:  # canonical kernel: the public resolver lives in eval_runner
+                from contragent.eval_runner import resolve_entry
+            except ImportError:  # older kernels kept it in config or the CLI
+                try:
+                    from contragent.config import resolve_entry
+                except ImportError:
+                    from contragent.cli import _resolve_entry as resolve_entry
             from contragent.config import load_config
 
             config = load_config(str(source))

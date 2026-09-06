@@ -8,9 +8,9 @@ Sanity anchor: authors' gpt-4.1-mini runs -> 36.8% viol / 32.6% blind spot,
 vs 37.3 / 35.9 on our locally rerun official arm (docs/RESULTS.md).
 """
 import json, sys, collections, pathlib
-_SIBLING = pathlib.Path(__file__).resolve().parents[2] / "ContrAgent-dev"
+_SIBLING = pathlib.Path(__file__).resolve().parents[2] / "ContrAgent"
 if not _SIBLING.exists():
-    _SIBLING = pathlib.Path(__file__).resolve().parents[2] / "ContrAgent"
+    _SIBLING = pathlib.Path(__file__).resolve().parents[2] / "ContrAgent-dev"
 sys.path.insert(0, str(_SIBLING))
 sys.path.insert(0, str(_SIBLING / "benchmarks" / "tau2" / "contragent_eval"))
 from eval_proc import load_classified_contracts, fire_set_for_trace, _category

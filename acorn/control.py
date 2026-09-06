@@ -31,7 +31,10 @@ from __future__ import annotations
 import copy
 from typing import Any
 
-from contragent.formulas import pred_key
+try:
+    from contragent.formulas import pred_key
+except ImportError:  # kernels without the package-level re-export
+    from contragent.formulas._pred_key import pred_key
 from contragent.models.trace import Event
 from contragent.tracer.grounding import GroundingState, ground_event
 

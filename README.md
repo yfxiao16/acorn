@@ -6,6 +6,12 @@ runtime control for LLM agents.
 
 > The agent chooses when there is freedom. ACORN executes when there isn't.
 
+> 📄 **Paper:** coming soon; the link will be added here on release.
+
+<p align="center">
+  <img src="assets/acorn_fig1.png" alt="The ACORN framework: the contract library compiles to monitors, facts, and obligations; each step masks the toolset, routes to or past the model, and validates every call" width="88%">
+</p>
+
 Procedural knowledge is declared once, as contracts over the agent's
 tool-call trace. At runtime the harness walks their joint monitor
 state as a residual policy graph: each node carries the set of

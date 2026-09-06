@@ -1,8 +1,9 @@
 """Held-out authoring split, step 2: re-aggregate existing per-row results
 on the held-out half (seed 0, 50/50; library bit-identical per step 1)."""
 import csv, json, random, glob, os
-DATA = "/Users/yifengxiao/Documents/acorn/benchmarks/amazon_sopbench/data"
-RES  = "/Users/yifengxiao/Documents/acorn/results"
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(_ROOT, "benchmarks", "amazon_sopbench", "data")
+RES = os.path.join(_ROOT, "results")
 SEED, FRAC = 0, 0.5
 DOMAINS = ["dangerous_goods","customer_service","patient_intake","know_your_business",
            "aircraft_inspection","warehouse_package_inspection","email_intent",

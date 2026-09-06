@@ -5,8 +5,9 @@ re-derive it from a seeded 30% 'authoring' subset and check the conclusion
 matches the full-set derivation. Seed fixed at 0, chosen before looking.
 """
 import csv, json, random, ast, sys, re
-DATA = "/Users/yifengxiao/Documents/acorn/benchmarks/amazon_sopbench/data"
 import os
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(_ROOT, "benchmarks", "amazon_sopbench", "data")
 SEED, FRAC = 0, float(os.environ.get("FRAC","0.30"))
 report = []
 

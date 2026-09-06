@@ -8,8 +8,9 @@ Sanity anchor: authors' gpt-4.1-mini runs -> 36.8% viol / 32.6% blind spot,
 vs 37.3 / 35.9 on our locally rerun official arm (docs/RESULTS.md).
 """
 import json, sys, collections, pathlib
-sys.path.insert(0, '/Users/yifengxiao/Documents/ContrAgent')
-sys.path.insert(0, '/Users/yifengxiao/Documents/ContrAgent/benchmarks/tau2/contragent_eval')
+_SIBLING = pathlib.Path(__file__).resolve().parents[2] / "ContrAgent"
+sys.path.insert(0, str(_SIBLING))
+sys.path.insert(0, str(_SIBLING / "benchmarks" / "tau2" / "contragent_eval"))
 from eval_proc import load_classified_contracts, fire_set_for_trace, _category
 from convert import tau2_sim_to_trace
 from contragent.models.trace import Trace

@@ -2,7 +2,7 @@
 (per-domain resample, macro = unweighted mean). gpt-5-mini: parametric
 (Binomial(n, p-hat) per domain) since per-row results were not archived."""
 import csv, json, random, os
-RES="/Users/yifengxiao/Documents/acorn/results"
+RES = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
 DOMS=["dangerous_goods","customer_service","patient_intake","know_your_business",
       "aircraft_inspection","warehouse_package_inspection","email_intent",
       "content_flagging","video_annotation","video_classification"]

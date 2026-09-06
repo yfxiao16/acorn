@@ -134,7 +134,7 @@ class ContractLibrary:
                 )
 
         if isinstance(source, (str, __import__("pathlib").Path)):
-            from contragent.cli import _resolve_entry
+            from contragent.config import resolve_entry
             from contragent.config import load_config
 
             config = load_config(str(source))
@@ -148,7 +148,7 @@ class ContractLibrary:
                     entries = part if isinstance(part, list) else [part]
                     out = []
                     for e in entries:
-                        _nl, parsed = _resolve_entry(e)
+                        _nl, parsed = resolve_entry(e)
                         if parsed is not None and getattr(parsed, "is_det", True):
                             out.append(parsed)
                     return out
@@ -207,7 +207,7 @@ class ContractLibrary:
         satisfiability of the core's assumptions). Returns ContrAgent's
         ConflictReport (`.ok`, `.render()`). Complements `verify()`, which
         certifies per-contract satisfiability and joint satisfiability."""
-        from contragent.analysis.conflicts import check_conflicts
+        from contragent.analysis import check_conflicts
 
         return check_conflicts(self.to_contragent(), **kwargs)
 

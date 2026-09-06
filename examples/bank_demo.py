@@ -41,8 +41,6 @@ try:
     import contragent  # noqa: F401
 except ModuleNotFoundError:
     _kernel = _ROOT.parent / "ContrAgent"
-    if not _kernel.exists():
-        _kernel = _ROOT.parent / "ContrAgent-dev"
     sys.path.insert(0, str(_kernel))
 
 import acorn

@@ -15,8 +15,6 @@ import sys
 _ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_ROOT))
 _KERNEL = _ROOT.parent / "ContrAgent"
-if not _KERNEL.exists():
-    _KERNEL = _ROOT.parent / "ContrAgent-dev"
 TAU2 = _KERNEL / "benchmarks" / "tau2"
 sys.path.insert(0, str(TAU2 / "src"))
 try:

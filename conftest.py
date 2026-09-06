@@ -11,7 +11,5 @@ try:
     import contragent  # noqa: F401
 except ModuleNotFoundError:
     sibling = pathlib.Path(__file__).resolve().parent.parent / "ContrAgent"
-    if not sibling.exists():
-        sibling = pathlib.Path(__file__).resolve().parent.parent / "ContrAgent-dev"
     if (sibling / "contragent").exists():
         sys.path.insert(0, str(sibling))

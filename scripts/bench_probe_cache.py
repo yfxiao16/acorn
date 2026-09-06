@@ -12,8 +12,6 @@ try:
 except ModuleNotFoundError:
     _docs = pathlib.Path(__file__).resolve().parent.parent.parent
     _kernel = _docs / "ContrAgent"
-    if not _kernel.exists():
-        _kernel = _docs / "ContrAgent-dev"
     sys.path.insert(0, str(_kernel))
 
 from acorn.cache import ResidualPolicyCache

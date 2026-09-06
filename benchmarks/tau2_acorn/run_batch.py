@@ -21,12 +21,15 @@ import sys
 
 _ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_ROOT))
-TAU2 = _ROOT.parent / "ContrAgent" / "benchmarks" / "tau2"
+_KERNEL = _ROOT.parent / "ContrAgent-dev"
+if not _KERNEL.exists():
+    _KERNEL = _ROOT.parent / "ContrAgent"
+TAU2 = _KERNEL / "benchmarks" / "tau2"
 sys.path.insert(0, str(TAU2 / "src"))
 try:
     import contragent  # noqa: F401
 except ModuleNotFoundError:
-    sys.path.insert(0, str(_ROOT.parent / "ContrAgent"))
+    sys.path.insert(0, str(_KERNEL))
 
 import os
 

@@ -40,7 +40,10 @@ sys.path.insert(0, str(_ROOT))
 try:
     import contragent  # noqa: F401
 except ModuleNotFoundError:
-    sys.path.insert(0, str(_ROOT.parent / "ContrAgent"))
+    _kernel = _ROOT.parent / "ContrAgent-dev"
+    if not _kernel.exists():
+        _kernel = _ROOT.parent / "ContrAgent"
+    sys.path.insert(0, str(_kernel))
 
 import acorn
 from acorn.models import MockModel, ModelTurn, ToolCall

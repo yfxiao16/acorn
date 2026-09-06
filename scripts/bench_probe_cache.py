@@ -10,7 +10,11 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 try:
     import contragent  # noqa: F401
 except ModuleNotFoundError:
-    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent / "ContrAgent"))
+    _docs = pathlib.Path(__file__).resolve().parent.parent.parent
+    _kernel = _docs / "ContrAgent-dev"
+    if not _kernel.exists():
+        _kernel = _docs / "ContrAgent"
+    sys.path.insert(0, str(_kernel))
 
 from acorn.cache import ResidualPolicyCache
 from acorn.models import MockModel, ModelTurn, ToolCall

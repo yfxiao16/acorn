@@ -1,10 +1,24 @@
 # ACORN
 
-**Agent Contract Orchestration for Runtime Navigation**: a neuro-symbolic
-agent harness that compiles assume-guarantee contract libraries into
-runtime control for LLM agents.
+ACORN (**Agent Contract Orchestration for Runtime Navigation**) is a
+neuro-symbolic agent harness: it compiles assume-guarantee contract
+libraries into runtime control for LLM agents. On all ten domains of
+Amazon SOP-Bench it raises macro-average task success from **71.4% to
+94.5%** with **zero committed procedure violations**, at **lower cost
+than the unguarded baseline**, and the same contract libraries transfer
+unchanged across five model families (GPT, Claude, Llama, gpt-oss; via
+OpenAI, Anthropic, Gemini, or Bedrock).
 
 > The agent chooses when there is freedom. ACORN executes when there isn't.
+
+> **Research framing.** ACORN is the *control* sibling of
+> [ContrAgent](https://github.com/yfxiao16/ContrAgent): ContrAgent
+> supervises an agent's tool calls, observing and vetoing at the action
+> boundary, while ACORN turns the same contracts into the action space
+> itself, masking what the model may do, executing what the procedure
+> determines, and scheduling what must follow. Same substrate,
+> assume/guarantee contracts over the tool-call trace, moved from
+> checking to control.
 
 > 📄 **Paper:** coming soon; the link will be added here on release.
 
@@ -12,11 +26,13 @@ runtime control for LLM agents.
   <img src="assets/acorn_fig1.png" alt="The ACORN framework: the contract library compiles to monitors, facts, and obligations; each step masks the toolset, routes to or past the model, and validates every call" width="88%">
 </p>
 
-Procedural knowledge is declared once, as contracts over the agent's
-tool-call trace. At runtime the harness walks their joint monitor
-state as a residual policy graph: each node carries the set of
-admissible actions and, when only one remains, the action itself.
-Four mechanisms read this graph:
+## How ACORN works
+
+A procedure is declared once, as contracts over the agent's tool-call
+trace. At runtime the harness walks their joint monitor state as a
+residual policy graph: each node carries the set of admissible actions
+and, when only one remains, the action itself. Four mechanisms read
+this graph:
 
 - **Dynamic tool masking.** At every step the model sees only the
   contract-admissible subset of tools, at `step`, `phase`, or `hint`

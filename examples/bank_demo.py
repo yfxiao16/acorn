@@ -1,6 +1,6 @@
 """ACORN showcase: a bank card-replacement desk with a real SOP.
 
-Run it (no API key needed — scripted model by default):
+Run it (no API key needed; it drives a scripted model by default):
 
     python3 examples/bank_demo.py            # both scenarios
     python3 examples/bank_demo.py --fraud    # fraud scenario only
@@ -11,7 +11,7 @@ The SOP (all enforced by ACORN, none of it prompted):
 
   1. Every case starts by loading the customer record.       (jump #1: Case B)
   2. replace_card REQUIRES identity_verified, fraud_checked,
-     address_confirmed — and at most once per session.       (dynamic masking)
+     address_confirmed, and at most once per session.        (dynamic masking)
   3. change_address INVALIDATES address_confirmed.           (fact retraction)
   4. fraud_detected OBLIGATES freeze_account NOW.            (jump #2: Case C)
   5. replace_card is FORBIDDEN while fraud_detected.         (hard block)
@@ -24,7 +24,7 @@ What to watch in the output:
     hold (dynamic per-step tool exposure); if it proposes it anyway, the
     hard pre-execution boundary blocks it and names the exact recovery
     tools (REQUIRE feedback).
-  * on the fraud path, freeze_account happens between two model turns —
+  * on the fraud path, freeze_account happens between two model turns:
     obligation-driven symbolic execution, zero model involvement.
 """
 
@@ -207,7 +207,16 @@ def fraud_script() -> MockModel:
 # ---------------------------------------------------------------------------
 
 
+LEGEND = """  legend
+     [masked]        tool hidden from the model this step (contracts forbid it now)
+     [LLM]           a model call: the model picks among the exposed tools
+     [JUMP-FORWARD]  the controller executes the step itself, with NO LLM CALL
+     [BLOCKED]       a proposed call refused at the boundary, before execution
+     [REQUIRE]       refused, with the missing prerequisite named back to the model"""
+
+
 def render(result: acorn.RunResult) -> None:
+    print(LEGEND)
     pending_masked: list[dict] = []
     for rec in result.tracer.records:
         kind = rec["kind"]
@@ -216,44 +225,51 @@ def render(result: acorn.RunResult) -> None:
         elif kind == "controller/decision":
             print(f"\n  ── step {rec['step']} " + "─" * 48)
             for m in pending_masked:
-                print(f"     [masked]    {m['tool']:<18} <- {'; '.join(m['contracts'])}")
+                print(f"     [masked]        {m['tool']:<18} {'; '.join(m['contracts'])}")
             pending_masked = []
             d = rec["decision"]
             if d == "neural_choice":
-                print(f"     [neural]    exposed tools: {', '.join(rec['actions'])}")
+                print(f"     [LLM]           exposed: {', '.join(rec['actions'])}")
             elif d == "symbolic_execute":
-                print(f"     [SYMBOLIC]  {rec['action']}   ({rec['reason']})")
+                print(f"     [JUMP-FORWARD]  {rec['action']}")
+                print(f"                     NO LLM CALL ({rec['reason']})")
             else:
-                print(f"     [dead end]  {rec['reason']}")
+                print(f"     [dead end]      {rec['reason']}")
         elif kind == "model/response":
             for c in rec["tool_calls"]:
-                print(f"     model proposes -> {c['name']}({json.dumps(c['args'])})")
+                print(f"                     model proposes -> {c['name']}({json.dumps(c['args'])})")
             if rec.get("text"):
-                print(f"     model says     -> {rec['text']}")
+                print(f"                     model says     -> {rec['text']}")
         elif kind == "action/blocked":
-            tag = "REQUIRE" if rec.get("verdict") == "require" else "BLOCK"
-            print(f"     ** {tag} **   {rec['tool']}: {'; '.join(rec['reasons'])}")
+            tag = "REQUIRE" if rec.get("verdict") == "require" else "BLOCKED"
+            print(f"     [{tag}]{' ' * (14 - len(tag))}{rec['tool']}: {'; '.join(rec['reasons'])}")
         elif kind == "tool/result":
-            print(f"     executed       {rec['tool']} ok={rec['ok']}")
+            mark = "" if rec["ok"] else "   [TOOL ERROR]"
+            print(f"                     executed {rec['tool']} ok={rec['ok']}{mark}")
         elif kind == "action/symbolic":
-            print(f"     ACORN executed {rec['tool']}({json.dumps(rec['args'])}) ok={rec['ok']}  [no model call]")
+            mark = "" if rec["ok"] else "   [TOOL ERROR]"
+            print(f"                     executed {rec['tool']}({json.dumps(rec['args'])}) "
+                  f"ok={rec['ok']}{mark}")
         elif kind == "fact/asserted":
-            print(f"        + fact {rec['predicate']} = {rec['value']}")
+            print(f"                        + fact {rec['predicate']} = {rec['value']}")
         elif kind == "fact/invalidated":
-            print(f"        - fact {rec['predicate']} retracted")
+            print(f"                        - fact {rec['predicate']} retracted")
         elif kind == "obligation/created":
-            print(f"        ! OBLIGATION: {rec['obligation']}")
+            print(f"                        ! OBLIGATION: {rec['obligation']}")
         elif kind == "obligation/satisfied":
-            print(f"        * obligation satisfied: {rec['obligation']}")
+            print(f"                        * obligation satisfied: {rec['obligation']}")
 
-    print("\n  metrics:")
-    print(f"     status={result.status!r}  final={result.final_text!r}")
-    print(
-        f"     model_calls={result.model_calls}  symbolic_steps={result.symbolic_steps}  "
-        f"blocked_proposals={result.blocked_proposals}  "
-        f"symbolic_execution_ratio={result.symbolic_execution_ratio:.2f}"
-    )
-    print(f"     finalize={result.finalize}")
+    steps = result.model_calls + result.symbolic_steps
+    viols = result.finalize.get("ltlf_violations", []) if result.finalize else []
+    pend = result.finalize.get("pending_obligations", []) if result.finalize else []
+    print("\n  summary")
+    print(f"     {steps} steps: {result.model_calls} LLM calls, "
+          f"{result.symbolic_steps} executed by the controller with no LLM call "
+          f"({result.symbolic_execution_ratio:.0%} of actions)")
+    print(f"     {result.blocked_proposals} proposal(s) blocked before execution; "
+          f"{len(viols)} committed violation(s), {len(pend)} obligation(s) left pending")
+    print(f"     status={result.status!r}")
+    print(f"     final={result.final_text!r}")
 
 
 def run_scenario(name: str, *, fraud: bool, live: bool) -> None:
@@ -287,9 +303,9 @@ def main() -> None:
     args = ap.parse_args()
     both = not (args.happy or args.fraud)
     if args.happy or both:
-        run_scenario("card replacement — happy path", fraud=False, live=args.live)
+        run_scenario("card replacement: happy path", fraud=False, live=args.live)
     if args.fraud or both:
-        run_scenario("card replacement — fraud detected", fraud=True, live=args.live)
+        run_scenario("card replacement: fraud detected", fraud=True, live=args.live)
 
 
 if __name__ == "__main__":

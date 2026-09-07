@@ -153,8 +153,8 @@ DEAD_END         → stop (v0; recovery policies later)
 ```
 
 `FreeAgent` returns all tools as candidates (A_effective = A_contract).
-A stateful/workflow adapter (LangGraph, later) returns its node's
-candidate set; the effective space is the intersection, on the same runtime.
+A staged flow (`GraphFlow`) returns its state's candidate set instead;
+the effective space is the intersection, on the same runtime.
 
 ## 7. Extension seams preserved (not implemented)
 
@@ -204,8 +204,8 @@ LiveEnforcer together with the benchmark adapter).
   success, procedural compliance, invalid proposals, tool-schema tokens,
   LLM calls, recovery turns, **symbolic execution ratio**, **neural
   decision ratio**.
-- **M2**: Anthropic/OpenAI-compat adapters; LangGraph stateful-agent
-  adapter (A_agent ∩ A_contract); upstream `GroundingState.clone()` + DFA
+- **M2**: Anthropic/OpenAI-compat adapters; staged flows
+  (A_agent ∩ A_contract); upstream `GroundingState.clone()` + DFA
   probe fast path into ContrAgent.
 - **M3**: dead-end lookahead via `sat.py`; Amazon SOP-Bench; offline
   testing mode sharing the same contract core (replay a recorded trace

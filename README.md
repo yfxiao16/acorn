@@ -45,6 +45,13 @@ this graph:
 - **Active obligations.** Prescriptive duties ("after X you must do Y")
   are scheduled and executed, not merely detected after the fact.
 
+ACORN is a complete harness rather than a layer bolted onto another
+framework, and that follows from the guarantee rather than from
+packaging: compliance holds because every executed action, whether the
+model proposed it or the controller scheduled it, crosses the same
+validation boundary. Tools, the optional flow, and the contract library
+are declared to ACORN, and it drives the loop.
+
 Five words carry the whole design. A **contract** is one rule about the
 tool-call trace ("issue_refund requires identity_verified"). A **fact**
 is something a tool result established ("identity_verified"). An
@@ -143,28 +150,35 @@ Its fraud scenario shows every mechanism in one trace: a tool result sets
 model's next proposal is refused before it can execute.
 
 ```text
-  -- step 2 --
-     model proposes -> check_fraud({"customer_id": "C-1024"})
-     executed       check_fraud ok=True
-        + fact fraud_checked = True
-        + fact fraud_detected = True
-        ! OBLIGATION: fraud detected: freeze the account immediately
+  ── step 2 ────────────────────────────────────────────────
+     [masked]        replace_card       replace_card requires identity_verified, ...
+     [LLM]           exposed: lookup_customer, verify_identity, check_fraud, ...
+                     model proposes -> check_fraud({"customer_id": "C-1024"})
+                     executed check_fraud ok=True
+                        + fact fraud_checked = True
+                        + fact fraud_detected = True
+                        ! OBLIGATION: fraud detected: freeze the account immediately
 
-  -- step 3 --
-     [SYMBOLIC]  freeze_account({'customer_id': 'C-1024'})   (obligation: ...)
-     ACORN executed freeze_account({"customer_id": "C-1024"}) ok=True  [no model call]
-        * obligation satisfied: fraud detected: freeze the account immediately
+  ── step 3 ────────────────────────────────────────────────
+     [JUMP-FORWARD]  freeze_account({'customer_id': 'C-1024'})
+                     NO LLM CALL (obligation: fraud detected: freeze the account)
+                     executed freeze_account(...) ok=True
+                        * obligation satisfied
 
-  -- step 4 --
-     [masked]    replace_card       <- replace_card is forbidden while fraud_detected
-     model proposes -> replace_card({"customer_id": "C-1024"})
-     ** BLOCK **   replace_card: replace_card is forbidden while fraud_detected
+  ── step 4 ────────────────────────────────────────────────
+     [masked]        replace_card       ...; replace_card is forbidden while fraud_detected
+     [LLM]           exposed: lookup_customer, verify_identity, check_fraud, ...
+                     model proposes -> replace_card({"customer_id": "C-1024"})
+     [BLOCKED]       replace_card: replace_card is forbidden while fraud_detected
+
+  summary
+     7 steps: 5 LLM calls, 2 executed by the controller with no LLM call (40% of actions)
+     1 proposal(s) blocked before execution; 0 committed violation(s), 0 obligation(s) left pending
 ```
 
-(Abridged from the real run: step headers and the per-step masking
-lines are shortened.) The run ends with
-`model_calls=5  symbolic_steps=2  blocked_proposals=1`, and the
-end-of-session check reports no violations and no pending obligations.
+(Verbatim, with the exposed-tool lists elided.) The obligation in step 3
+is discharged by the controller with no model call, and in step 4 the
+model's forbidden proposal is refused before it can execute.
 
 For staged tasks, `acorn.GraphFlow` exposes a candidate toolset per state
 with fact-reactive transitions; the effective toolset at each step is
@@ -228,19 +242,6 @@ docs/RESULTS.md   every reported number, with provenance notes
 docs/DESIGN.md    architecture and the ContrAgent reuse map
 tests/            pytest suite (contract semantics, adapters, binders)
 ```
-
-## Using ACORN with an existing agent
-
-Today ACORN owns the loop: `acorn.Agent` calls the model, applies the
-contracts, and executes tools. The seam for other frameworks is
-`A_eff = A_agent ∩ A_contract`, the intersection of the tools your
-framework would offer at this step with the tools the contracts admit,
-so any host that can present candidate tools, accept a narrowed schema
-set, route proposed calls through the validation boundary, and report
-results back can drive the controller. A LangGraph adapter is on the
-roadmap ([docs/DESIGN.md](docs/DESIGN.md)); until then, the way to use
-ACORN inside another stack is to run an `acorn.Agent` for the
-contract-governed part of the task.
 
 ## Citation
 

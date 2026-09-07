@@ -1,3 +1,5 @@
+import os
+
 from acorn.models.anthropic import AnthropicModel
 from acorn.models.base import Model, ModelTurn, ToolCall
 from acorn.models.bedrock import BedrockModel
@@ -11,6 +13,34 @@ _PROVIDERS = {
     "gemini": GeminiModel,
     "openai": OpenAICompatModel,
 }
+
+# Credentials each provider needs, so a missing key fails here with one
+# actionable line instead of inside the HTTP layer with a 401 traceback.
+_KEY_ENV = {
+    "anthropic": ("ANTHROPIC_API_KEY",),
+    "gemini": ("GEMINI_API_KEY",),
+    "openai": ("OPENAI_API_KEY",),
+    "bedrock": ("AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"),
+}
+
+
+class MissingCredentials(RuntimeError):
+    """Raised before any request when a provider's credentials are absent."""
+
+
+def _check_credentials(provider: str, kwargs: dict) -> None:
+    if kwargs.get("api_key") or kwargs.get("secret_key"):
+        return
+    names = (kwargs["api_key_env"],) if kwargs.get("api_key_env") else _KEY_ENV.get(provider, ())
+    missing = [n for n in names if not os.environ.get(n)]
+    if not missing:
+        return
+    raise MissingCredentials(
+        f"provider {provider!r} needs {' and '.join(missing)}, which is not set. "
+        f"Export it, put it in a .env file and call acorn.envfile.load_dotenv(), "
+        f"or pass api_key=... to resolve(). To try ACORN without any credentials, "
+        f"run examples/bank_demo.py, which drives a scripted model."
+    )
 
 
 def resolve(spec: str, **kwargs) -> Model:
@@ -32,6 +62,7 @@ def resolve(spec: str, **kwargs) -> Model:
         raise ValueError(f"unknown provider {provider!r}; known: {sorted(_PROVIDERS)}")
     if not model:
         raise ValueError(f"model name missing in spec {spec!r} (want 'provider:model')")
+    _check_credentials(provider, kwargs)
     return _PROVIDERS[provider](model, **kwargs)
 
 

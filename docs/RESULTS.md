@@ -9,6 +9,17 @@ exposure, no jump), `acorn` (mask + symbolic jump-forward with binders).
 Mask granularity: `step` throughout (the paper's headline setting; see
 the granularity spectrum below).
 
+Metrics used throughout: **TSR** is task success rate, the graded final
+report matching ground truth; **proc-clean** is the fraction of rows with
+zero committed contract violations and no pending obligations;
+**calls/row** is model calls per row; **sym ratio** is the share of
+executed actions that needed no model call; **ECR** is the fraction of
+rows that submitted a report at all; **ctrl share** is the controller's
+share of wall-clock time; **state reuse** is the residual policy cache
+hit rate. For the tau2 layers, **pass^k** is the benchmark's own
+all-of-k-trials success, **clean^k** the same over compliance, and
+**joint^k** over both at once.
+
 ## Amazon SOP-Bench: 10-domain × 4-condition matrix
 
 | domain | model | condition | n | TSR | calls/row | sym ratio | proc-clean | tokens | est. cost | avg latency | ctrl share | state reuse |

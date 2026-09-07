@@ -6,8 +6,8 @@ libraries into runtime control for LLM agents. On all ten domains of
 Amazon SOP-Bench it raises macro-average task success from **71.4% to
 94.5%** with **zero committed procedure violations**, at **lower cost
 than the unguarded baseline**, and the same contract libraries transfer
-unchanged across five model families (GPT, Claude, Llama, gpt-oss; via
-OpenAI, Anthropic, Gemini, or Bedrock).
+unchanged across all five models evaluated (GPT-5-mini, Claude 4.5
+Haiku and Sonnet, gpt-oss-120B, Llama-3.3-70B).
 
 > The agent chooses when there is freedom. ACORN executes when there isn't.
 
@@ -45,6 +45,14 @@ this graph:
 - **Active obligations.** Prescriptive duties ("after X you must do Y")
   are scheduled and executed, not merely detected after the fact.
 
+Five words carry the whole design. A **contract** is one rule about the
+tool-call trace ("issue_refund requires identity_verified"). A **fact**
+is something a tool result established ("identity_verified"). An
+**obligation** is a duty a fact creates ("once fraud is detected, freeze
+the account"). **Masking** hides the tools the contracts currently
+forbid. **Jump-forward** executes the step when the contracts leave
+exactly one legal move, without asking the model.
+
 On all ten domains of Amazon SOP-Bench, ACORN lifts macro-average task
 success from 71.4% to 94.5% (`gpt-5-mini`) with zero committed procedure
 violations in every domain, at lower cost than the unguarded baseline.
@@ -79,8 +87,10 @@ explicitly and never encoded into the flow.
 ```python
 import acorn
 
+# Needs ANTHROPIC_API_KEY (or use bedrock:/openai:/gemini: with their keys).
+# To run ACORN with no credentials at all, see examples/bank_demo.py below.
 agent = acorn.Agent(
-    model=acorn.models.resolve("anthropic:claude-sonnet-5"),  # or bedrock:/openai:/gemini:
+    model=acorn.models.resolve("anthropic:claude-sonnet-5"),
     instructions="You are a bank service agent.",
 )
 
@@ -112,7 +122,8 @@ library = acorn.ContractLibrary("refund-desk-v1", [
         binder=lambda ctx: {"user_id": ctx.facts.value("customer_id")},
     ),
 ])
-library.verify()      # symbolic certificates: satisfiable, falsifiable, conflict-free
+print(library.verify())   # certificate: each contract satisfiable and
+                         # falsifiable, the library conflict-free
 agent.attach(library)
 
 result = agent.run("Refund order #123 for customer u1")
@@ -126,6 +137,34 @@ model by default) is [`examples/bank_demo.py`](examples/bank_demo.py):
 ```bash
 python3 examples/bank_demo.py
 ```
+
+Its fraud scenario shows every mechanism in one trace: a tool result sets
+`fraud_detected`, the obligation fires without a model call, and the
+model's next proposal is refused before it can execute.
+
+```text
+  -- step 2 --
+     model proposes -> check_fraud({"customer_id": "C-1024"})
+     executed       check_fraud ok=True
+        + fact fraud_checked = True
+        + fact fraud_detected = True
+        ! OBLIGATION: fraud detected: freeze the account immediately
+
+  -- step 3 --
+     [SYMBOLIC]  freeze_account({'customer_id': 'C-1024'})   (obligation: ...)
+     ACORN executed freeze_account({"customer_id": "C-1024"}) ok=True  [no model call]
+        * obligation satisfied: fraud detected: freeze the account immediately
+
+  -- step 4 --
+     [masked]    replace_card       <- replace_card is forbidden while fraud_detected
+     model proposes -> replace_card({"customer_id": "C-1024"})
+     ** BLOCK **   replace_card: replace_card is forbidden while fraud_detected
+```
+
+(Abridged from the real run: step headers and the per-step masking
+lines are shortened.) The run ends with
+`model_calls=5  symbolic_steps=2  blocked_proposals=1`, and the
+end-of-session check reports no violations and no pending obligations.
 
 For staged tasks, `acorn.GraphFlow` exposes a candidate toolset per state
 with fact-reactive transitions; the effective toolset at each step is
@@ -146,10 +185,13 @@ git-ignored; packs are not redistributed here). Then:
 python3 -m benchmarks.amazon_sopbench.run_pack \
     --pack benchmarks/amazon_sopbench/data/dangerous_goods_sop \
     --model openai:gpt-5-mini \
-    --condition acorn \            # baseline | passive | mask | acorn
-    --mask-granularity step \      # step | phase | hint
+    --condition acorn \
+    --mask-granularity step \
     --out results/mini_dangerous_goods_acorn.json
 ```
+
+`--condition` is one of `baseline | passive | mask | acorn`, and
+`--mask-granularity` one of `step | phase | hint`.
 
 Each domain's adapter (`benchmarks/amazon_sopbench/<domain>.py`)
 documents, next to the contract library it defines, which rules are
@@ -186,6 +228,19 @@ docs/RESULTS.md   every reported number, with provenance notes
 docs/DESIGN.md    architecture and the ContrAgent reuse map
 tests/            pytest suite (contract semantics, adapters, binders)
 ```
+
+## Using ACORN with an existing agent
+
+Today ACORN owns the loop: `acorn.Agent` calls the model, applies the
+contracts, and executes tools. The seam for other frameworks is
+`A_eff = A_agent ∩ A_contract`, the intersection of the tools your
+framework would offer at this step with the tools the contracts admit,
+so any host that can present candidate tools, accept a narrowed schema
+set, route proposed calls through the validation boundary, and report
+results back can drive the controller. A LangGraph adapter is on the
+roadmap ([docs/DESIGN.md](docs/DESIGN.md)); until then, the way to use
+ACORN inside another stack is to run an `acorn.Agent` for the
+contract-governed part of the task.
 
 ## Citation
 

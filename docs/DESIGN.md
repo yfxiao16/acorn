@@ -1,5 +1,13 @@
 # ACORN v0 Design
 
+> This document records the v0 architecture and the reasoning behind it.
+> It is deliberately not rewritten as the system grows: the roadmap in
+> section 9 is the plan as it stood at v0, and several items listed
+> there as future work have since landed (the Anthropic, OpenAI-compatible
+> and Bedrock adapters, and the Amazon SOP-Bench benchmark suite, which
+> lives in `benchmarks/amazon_sopbench/`). For what the system does
+> today, read [../README.md](../README.md).
+
 ACORN is a neuro-symbolic agent harness: the LLM decides *how* to accomplish
 a task when genuine choices remain; a symbolic controller determines *what*
 is admissible and directly executes actions when the procedure leaves no

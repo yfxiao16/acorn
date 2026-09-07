@@ -9,14 +9,15 @@ Two built-ins:
 
 * :class:`FreeFlow` — no developer-authored workflow; candidates are all
   registered tools every step (``A_eff = A_contract``).
-* :class:`GraphFlow` — ACORN's native stateful flow: named states, each
+* :class:`GraphFlow`: ACORN's native stateful flow: named states, each
   exposing a candidate toolset, with transition functions that may react
   to symbolic facts. Deliberately thin: GraphFlow organizes the *task*
   (phases, candidate surfaces); compliance logic belongs in the
   ContractLibrary, never in transition conditions.
 
-Framework adapters (e.g. a LangGraph shim) are interop, not core — they
-live under ``acorn.integrations`` when they exist.
+Both are ACORN's own; the harness drives the loop, because the
+compliance guarantee requires every executed action to cross its
+validation boundary.
 """
 
 from __future__ import annotations

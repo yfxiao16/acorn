@@ -60,13 +60,24 @@ the account"). **Masking** hides the tools the contracts currently
 forbid. **Jump-forward** executes the step when the contracts leave
 exactly one legal move, without asking the model.
 
-On all ten domains of Amazon SOP-Bench, ACORN lifts macro-average task
-success from 71.4% to 94.5% (`gpt-5-mini`) with zero committed procedure
-violations in every domain, at lower cost than the unguarded baseline.
-The same contract libraries transfer unchanged across five model
-families. On τ²-bench retail, enforcing the policy's own rules costs no
-outcome performance. The full per-cell ledger is
-[docs/RESULTS.md](docs/RESULTS.md).
+## Results
+
+The headline numbers are macro-averages over the ten domains' full
+labeled dev sets (1,474 rows), with compliance audited by the same
+contract library in observe mode under every condition, so the
+accounting does not depend on which controller ran. On τ²-bench retail,
+enforcing the policy's own rules costs no outcome performance while
+removing committed violations.
+
+Every per-cell number is in [docs/RESULTS.md](docs/RESULTS.md),
+including the results that run against the system: the veto-only
+condition scores 32.6 points *below* the unguarded baseline on one
+domain, masking alone underperforms the baseline on another, and one
+domain's ceiling is a judgment the SOP itself assigns to human
+experience rather than anything the harness can enforce. Each domain
+adapter documents, next to the library it defines, which rules come
+from the SOP, which were validated against labeled data, and where
+deterministic rules are deliberately not fitted.
 
 ## Install
 
